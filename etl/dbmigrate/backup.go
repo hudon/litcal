@@ -12,7 +12,7 @@ import (
 func backup(sqliteFilePath string) error {
 	backupDir := filepath.Dir(sqliteFilePath)
 	timestamp := time.Now().Format("20060102_150405")
-	backupFileName := fmt.Sprintf("%s_%s.%s", getFileNameWithoutExtension(sqliteFilePath), timestamp,
+	backupFileName := fmt.Sprintf("%s_%s%s", getFileNameWithoutExtension(sqliteFilePath), timestamp,
 		filepath.Ext(sqliteFilePath))
 	backupFilePath := filepath.Join(backupDir, backupFileName)
 

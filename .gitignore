@@ -1,2 +1,4 @@
 etl/dbmigrate/.DS_Store
 etl/dbmigrate/dbmigrate
+# ignore database backups
+litcal_*_*.sqlite
