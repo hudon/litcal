@@ -81,12 +81,12 @@ func main() {
 	// migrate, then migrate again only if a second target version was specified
 	err = migrate(migrationsDirPath, targetVersion, db)
 	if err != nil {
-		log.Fatal(err)
+		log.Fatalf("Failed to migrate: %v", err)
 	}
 	if secondTargetVersion != -1 {
 		err = migrate(migrationsDirPath, secondTargetVersion, db)
 		if err != nil {
-			log.Fatal(err)
+			log.Fatalf("Failed to migrate: %v", err)
 		}
 	}
 
@@ -96,5 +96,5 @@ func main() {
 	//log.Fatal(fmt.Errorf("generateSchemaFiles: %w", err))
 	//}
 
-	log.Println("INFO: Schema files have been generated in the migrations directory.")
+	//log.Println("INFO: Schema files have been generated in the migrations directory.")
 }
