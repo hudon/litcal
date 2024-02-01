@@ -18,6 +18,10 @@
 		5E71CCEF2B6C47640010B9A7 /* litcal_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E71CCEE2B6C47640010B9A7 /* litcal_iosUITests.m */; };
 		5E71CCF12B6C47640010B9A7 /* litcal_iosUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E71CCF02B6C47640010B9A7 /* litcal_iosUITestsLaunchTests.m */; };
 		5E71CCFE2B6C48110010B9A7 /* db in Resources */ = {isa = PBXBuildFile; fileRef = 5E71CCFD2B6C48110010B9A7 /* db */; };
+		5E71CD052B6C4AA40010B9A7 /* Shared in Resources */ = {isa = PBXBuildFile; fileRef = 5E71CD012B6C4AA40010B9A7 /* Shared */; };
+		5E71CD062B6C4AA40010B9A7 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 5E71CD022B6C4AA40010B9A7 /* Resources */; };
+		5E71CD072B6C4AA40010B9A7 /* litcal-darwin in Resources */ = {isa = PBXBuildFile; fileRef = 5E71CD032B6C4AA40010B9A7 /* litcal-darwin */; };
+		5E71CD082B6C4AA40010B9A7 /* widget in Resources */ = {isa = PBXBuildFile; fileRef = 5E71CD042B6C4AA40010B9A7 /* widget */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,11 @@
 		5E71CCEE2B6C47640010B9A7 /* litcal_iosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = litcal_iosUITests.m; sourceTree = "<group>"; };
 		5E71CCF02B6C47640010B9A7 /* litcal_iosUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = litcal_iosUITestsLaunchTests.m; sourceTree = "<group>"; };
 		5E71CCFD2B6C48110010B9A7 /* db */ = {isa = PBXFileReference; lastKnownFileType = folder; name = db; path = ../db; sourceTree = "<group>"; };
+		5E71CCFF2B6C49D80010B9A7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5E71CD012B6C4AA40010B9A7 /* Shared */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Shared; path = "../../../litcal-darwin/Shared"; sourceTree = "<group>"; };
+		5E71CD022B6C4AA40010B9A7 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Resources; path = "../../../litcal-darwin/Resources"; sourceTree = "<group>"; };
+		5E71CD032B6C4AA40010B9A7 /* litcal-darwin */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "litcal-darwin"; path = "../../../litcal-darwin/litcal-darwin"; sourceTree = "<group>"; };
+		5E71CD042B6C4AA40010B9A7 /* widget */ = {isa = PBXFileReference; lastKnownFileType = folder; name = widget; path = "../../../litcal-darwin/widget"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +95,8 @@
 		5E71CCBC2B6C47620010B9A7 = {
 			isa = PBXGroup;
 			children = (
+				5E71CD002B6C4A520010B9A7 /* litcal-swiftui */,
+				5E71CCFF2B6C49D80010B9A7 /* README.md */,
 				5E71CCFD2B6C48110010B9A7 /* db */,
 				5E71CCC72B6C47620010B9A7 /* litcal-ios */,
 				5E71CCE32B6C47640010B9A7 /* litcal-iosTests */,
@@ -137,6 +148,17 @@
 				5E71CCF02B6C47640010B9A7 /* litcal_iosUITestsLaunchTests.m */,
 			);
 			path = "litcal-iosUITests";
+			sourceTree = "<group>";
+		};
+		5E71CD002B6C4A520010B9A7 /* litcal-swiftui */ = {
+			isa = PBXGroup;
+			children = (
+				5E71CD032B6C4AA40010B9A7 /* litcal-darwin */,
+				5E71CD022B6C4AA40010B9A7 /* Resources */,
+				5E71CD012B6C4AA40010B9A7 /* Shared */,
+				5E71CD042B6C4AA40010B9A7 /* widget */,
+			);
+			path = "litcal-swiftui";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,7 +264,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E71CD052B6C4AA40010B9A7 /* Shared in Resources */,
+				5E71CD072B6C4AA40010B9A7 /* litcal-darwin in Resources */,
+				5E71CD082B6C4AA40010B9A7 /* widget in Resources */,
 				5E71CCFE2B6C48110010B9A7 /* db in Resources */,
+				5E71CD062B6C4AA40010B9A7 /* Resources in Resources */,
 				5E71CCD82B6C47640010B9A7 /* LaunchScreen.storyboard in Resources */,
 				5E71CCD52B6C47640010B9A7 /* Assets.xcassets in Resources */,
 				5E71CCD32B6C47620010B9A7 /* Main.storyboard in Resources */,

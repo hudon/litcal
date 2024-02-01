@@ -1,4 +1,11 @@
 .DS_Store
-etl/dbmigrate/dbmigrate
+
+
 # ignore database backups
 litcal_*_*.sqlite
+
+# etl
+etl/dbmigrate/dbmigrate
+
+# ios
+UserInterfaceState.xcuserstate
