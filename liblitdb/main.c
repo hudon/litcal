@@ -1,7 +1,6 @@
 #include <sqlite3.h>
 #include <stdio.h>
 
-// Function to open a SQLite database
 sqlite3 *openDatabase(const char *filepath) {
   sqlite3 *db;
   int rc = sqlite3_open(filepath, &db);
