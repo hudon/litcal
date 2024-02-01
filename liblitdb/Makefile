@@ -3,11 +3,14 @@ CFLAGS=-I.
 
 all: main
 
-main: main.o
-	$(CC) -o main main.o
+check: liblitdb.o liblitdb_test.o
+	$(CC) -o main $^
 
-main.o: main.c
-	$(CC) $(CFLAGS) -c main.c
+liblitdb.o: liblitdb.c
+	$(CC) $(CFLAGS) -c $^
+
+liblitdb_test.o: liblitdb_test.c
+	$(CC) $(CFLAGS) -c $^
 
 clean:
 	rm -f main main.o
