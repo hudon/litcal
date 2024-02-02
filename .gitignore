@@ -12,3 +12,4 @@ UserInterfaceState.xcuserstate
 
 # liblitdb
 liblitdb/*.o
+liblitdb_test
