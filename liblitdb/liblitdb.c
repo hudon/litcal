@@ -22,7 +22,8 @@ bool lit_color_from_string(const char *color_str, lit_color_t *color_out) {
   return false;
 }
 
-lit_status_t lit_get_celebration(sqlite3 *db, int64_t epoch_seconds,
+lit_status_t lit_get_celebration(sqlite3 *db, uint64_t cal_id,
+                                 int64_t epoch_seconds,
                                  lit_celebration_t *cel_out) {
   if (db == NULL || cel_out == NULL || epoch_seconds < 0) {
     return LIT_INVALID_ARGUMENT;
@@ -34,7 +35,8 @@ lit_status_t lit_get_celebration(sqlite3 *db, int64_t epoch_seconds,
       "join lit_day ld on lc.lit_day_id = ld.id "
       "join lit_color lcol on lc.lit_color_id = lcol.id "
       "join lit_season ls on ld.lit_season_id = ls.id "
-      "where ld.secular_date_s = ?;";
+      "join lit_year ly on ls.lit_year_id = ly.id "
+      "where ld.secular_date_s = ? and ly.lit_calendar_id = ?;";
 
   sqlite3_stmt *stmt;
   int rc = sqlite3_prepare_v2(db, query, -1, &stmt, NULL);
@@ -46,6 +48,12 @@ lit_status_t lit_get_celebration(sqlite3 *db, int64_t epoch_seconds,
   int ret = LIT_OK;
 
   rc = sqlite3_bind_int64(stmt, 1, epoch_seconds);
+  if (rc != SQLITE_OK) {
+    fprintf(stderr, "Failed to bind parameter: %s\n", sqlite3_errmsg(db));
+    goto error_out;
+  }
+
+  rc = sqlite3_bind_int64(stmt, 2, cal_id);
   if (rc != SQLITE_OK) {
     fprintf(stderr, "Failed to bind parameter: %s\n", sqlite3_errmsg(db));
     goto error_out;
@@ -88,6 +96,52 @@ lit_status_t lit_get_celebration(sqlite3 *db, int64_t epoch_seconds,
   } else {
     fprintf(stderr, "Failed to step: %s\n", sqlite3_errmsg(db));
     goto error_out;
+  }
+
+  goto out;
+error_out:
+  ret = LIT_ERROR;
+out:
+  sqlite3_finalize(stmt);
+  return ret;
+}
+
+lit_status_t lit_get_min_and_max(sqlite3 *db, uint64_t cal_id, int64_t *min_out,
+                                 int64_t *max_out) {
+  if (db == NULL || min_out == NULL || max_out == NULL) {
+    return LIT_INVALID_ARGUMENT;
+  }
+  char *query =
+      "select min(ld.secular_date_s), max(ld.secular_date_s) "
+      "from lit_day ld, lit_season ls, lit_year ly, lit_calendar lc "
+      "where ld.lit_season_id = ls.id "
+      "and ls.lit_year_id = ly.id "
+      "and ly.lit_calendar_id = ?;";
+
+  sqlite3_stmt *stmt;
+  int rc = sqlite3_prepare_v2(db, query, -1, &stmt, NULL);
+  if (rc != SQLITE_OK) {
+    fprintf(stderr, "Failed to prepare statement: %s\n", sqlite3_errmsg(db));
+    return LIT_ERROR;
+  }
+
+  int ret = LIT_OK;
+
+  rc = sqlite3_bind_int64(stmt, 1, cal_id);
+  if (rc != SQLITE_OK) {
+    fprintf(stderr, "Failed to bind parameter: %s\n", sqlite3_errmsg(db));
+    sqlite3_finalize(stmt);
+    return LIT_ERROR;
+  }
+
+  rc = sqlite3_step(stmt);
+  if (rc == SQLITE_ROW) {
+    *min_out = sqlite3_column_int64(stmt, 0);
+    *max_out = sqlite3_column_int64(stmt, 1);
+  } else {
+    fprintf(stderr, "Failed to step: %s\n", sqlite3_errmsg(db));
+    sqlite3_finalize(stmt);
+    return LIT_ERROR;
   }
 
   goto out;

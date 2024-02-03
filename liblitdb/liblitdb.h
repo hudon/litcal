@@ -47,9 +47,12 @@ typedef struct lit_celebration {
 
 // If is_valid is false but the return is LIT_OK, it means that the celebration
 // wasn't found
-lit_status_t lit_get_celebration(sqlite3 *db, int64_t epoch_seconds,
+lit_status_t lit_get_celebration(sqlite3 *db, uint64_t cal_id,
+                                 int64_t epoch_seconds,
                                  lit_celebration_t *cel_out);
 
 // TODO: min and max
+lit_status_t lit_get_min_and_max(sqlite3 *db, uint64_t cal_id, int64_t *min_out,
+                                 int64_t *max_out);
 
 #endif /* LITDB_H */
