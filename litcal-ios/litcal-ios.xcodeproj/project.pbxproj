@@ -18,6 +18,9 @@
 		5E71CCEF2B6C47640010B9A7 /* litcal_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E71CCEE2B6C47640010B9A7 /* litcal_iosUITests.m */; };
 		5E71CCF12B6C47640010B9A7 /* litcal_iosUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E71CCF02B6C47640010B9A7 /* litcal_iosUITestsLaunchTests.m */; };
 		5E71CCFE2B6C48110010B9A7 /* liblitdb in Resources */ = {isa = PBXBuildFile; fileRef = 5E71CCFD2B6C48110010B9A7 /* liblitdb */; };
+		5E852BEB2B6EB1BA0030F938 /* TiemposHeadline-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E852BE82B6EB1BA0030F938 /* TiemposHeadline-Medium.ttf */; };
+		5E852BEC2B6EB1BA0030F938 /* EuclidSquare-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E852BE92B6EB1BA0030F938 /* EuclidSquare-Regular.ttf */; };
+		5E852BED2B6EB1BA0030F938 /* EuclidSquare-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E852BEA2B6EB1BA0030F938 /* EuclidSquare-Semibold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +60,9 @@
 		5E71CCF02B6C47640010B9A7 /* litcal_iosUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = litcal_iosUITestsLaunchTests.m; sourceTree = "<group>"; };
 		5E71CCFD2B6C48110010B9A7 /* liblitdb */ = {isa = PBXFileReference; lastKnownFileType = folder; name = liblitdb; path = ../liblitdb; sourceTree = "<group>"; };
 		5E71CCFF2B6C49D80010B9A7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		5E71CD012B6C4AA40010B9A7 /* Shared */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Shared; path = "../../../litcal-darwin/Shared"; sourceTree = "<group>"; };
-		5E71CD022B6C4AA40010B9A7 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Resources; path = "../../../litcal-darwin/Resources"; sourceTree = "<group>"; };
-		5E71CD032B6C4AA40010B9A7 /* litcal-darwin */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "litcal-darwin"; path = "../../../litcal-darwin/litcal-darwin"; sourceTree = "<group>"; };
-		5E71CD042B6C4AA40010B9A7 /* widget */ = {isa = PBXFileReference; lastKnownFileType = folder; name = widget; path = "../../../litcal-darwin/widget"; sourceTree = "<group>"; };
+		5E852BE82B6EB1BA0030F938 /* TiemposHeadline-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TiemposHeadline-Medium.ttf"; sourceTree = "<group>"; };
+		5E852BE92B6EB1BA0030F938 /* EuclidSquare-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-Regular.ttf"; sourceTree = "<group>"; };
+		5E852BEA2B6EB1BA0030F938 /* EuclidSquare-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-Semibold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +93,7 @@
 		5E71CCBC2B6C47620010B9A7 = {
 			isa = PBXGroup;
 			children = (
-				5E71CD002B6C4A520010B9A7 /* litcal-swiftui */,
+				5E852BE62B6EB18F0030F938 /* Shared */,
 				5E71CCFF2B6C49D80010B9A7 /* README.md */,
 				5E71CCFD2B6C48110010B9A7 /* liblitdb */,
 				5E71CCC72B6C47620010B9A7 /* litcal-ios */,
@@ -146,15 +148,22 @@
 			path = "litcal-iosUITests";
 			sourceTree = "<group>";
 		};
-		5E71CD002B6C4A520010B9A7 /* litcal-swiftui */ = {
+		5E852BE62B6EB18F0030F938 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				5E71CD032B6C4AA40010B9A7 /* litcal-darwin */,
-				5E71CD022B6C4AA40010B9A7 /* Resources */,
-				5E71CD012B6C4AA40010B9A7 /* Shared */,
-				5E71CD042B6C4AA40010B9A7 /* widget */,
+				5E852BE72B6EB1960030F938 /* Fonts */,
 			);
-			path = "litcal-swiftui";
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		5E852BE72B6EB1960030F938 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5E852BE92B6EB1BA0030F938 /* EuclidSquare-Regular.ttf */,
+				5E852BEA2B6EB1BA0030F938 /* EuclidSquare-Semibold.ttf */,
+				5E852BE82B6EB1BA0030F938 /* TiemposHeadline-Medium.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +270,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E71CCFE2B6C48110010B9A7 /* liblitdb in Resources */,
+				5E852BEB2B6EB1BA0030F938 /* TiemposHeadline-Medium.ttf in Resources */,
+				5E852BEC2B6EB1BA0030F938 /* EuclidSquare-Regular.ttf in Resources */,
+				5E852BED2B6EB1BA0030F938 /* EuclidSquare-Semibold.ttf in Resources */,
 				5E71CCD82B6C47640010B9A7 /* LaunchScreen.storyboard in Resources */,
 				5E71CCD52B6C47640010B9A7 /* Assets.xcassets in Resources */,
 				5E71CCD32B6C47620010B9A7 /* Main.storyboard in Resources */,

@@ -1,5 +1,10 @@
 #  litcal-ios
 
+## Notes
+* TODO: add tests. Try the UI tests.
+
+## Hosting
+
 Yes, it is definitely possible to embed a SwiftUI view into a UIKit application, even if your UIKit app is written in Objective-C. `UIHostingController` is a UIKit controller that can host a SwiftUI view, enabling you to integrate SwiftUI components seamlessly into your UIKit-based projects. Here's how you can do it:
 
 ### Step 1: Create Your SwiftUI View
