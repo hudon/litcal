@@ -1,5 +1,5 @@
 .DS_Store
-
+.vs_code
 
 # ignore database backups
 litcal_*_*.sqlite
