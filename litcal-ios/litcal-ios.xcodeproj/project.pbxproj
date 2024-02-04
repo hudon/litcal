@@ -21,6 +21,7 @@
 		5E852BEB2B6EB1BA0030F938 /* TiemposHeadline-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E852BE82B6EB1BA0030F938 /* TiemposHeadline-Medium.ttf */; };
 		5E852BEC2B6EB1BA0030F938 /* EuclidSquare-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E852BE92B6EB1BA0030F938 /* EuclidSquare-Regular.ttf */; };
 		5E852BED2B6EB1BA0030F938 /* EuclidSquare-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E852BEA2B6EB1BA0030F938 /* EuclidSquare-Semibold.ttf */; };
+		5E852BEF2B6F04560030F938 /* CircularView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E852BEE2B6F04560030F938 /* CircularView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		5E852BE82B6EB1BA0030F938 /* TiemposHeadline-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TiemposHeadline-Medium.ttf"; sourceTree = "<group>"; };
 		5E852BE92B6EB1BA0030F938 /* EuclidSquare-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-Regular.ttf"; sourceTree = "<group>"; };
 		5E852BEA2B6EB1BA0030F938 /* EuclidSquare-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-Semibold.ttf"; sourceTree = "<group>"; };
+		5E852BEE2B6F04560030F938 /* CircularView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircularView.m; sourceTree = "<group>"; };
+		5E852BF02B6F046E0030F938 /* CircularView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircularView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,8 @@
 				5E71CCD62B6C47640010B9A7 /* LaunchScreen.storyboard */,
 				5E71CCD92B6C47640010B9A7 /* Info.plist */,
 				5E71CCDA2B6C47640010B9A7 /* main.m */,
+				5E852BEE2B6F04560030F938 /* CircularView.m */,
+				5E852BF02B6F046E0030F938 /* CircularView.h */,
 			);
 			path = "litcal-ios";
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E71CCD02B6C47620010B9A7 /* ViewController.m in Sources */,
+				5E852BEF2B6F04560030F938 /* CircularView.m in Sources */,
 				5E71CCCA2B6C47620010B9A7 /* AppDelegate.m in Sources */,
 				5E71CCDB2B6C47640010B9A7 /* main.m in Sources */,
 				5E71CCCD2B6C47620010B9A7 /* SceneDelegate.m in Sources */,

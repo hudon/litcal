@@ -8,5 +8,12 @@
 #ifndef CircularView_h
 #define CircularView_h
 
+#import <UIKit/UIKit.h>
+
+IB_DESIGNABLE
+@interface CircularView : UIView
+
+@end
+
 
 #endif /* CircularView_h */
