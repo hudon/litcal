@@ -1,6 +1,12 @@
 #  litcal-ios
 
 ## Notes
+* TODO: read https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html
+* this is super helpful https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/AnatomyofaConstraint.html#//apple_ref/doc/uid/TP40010853-CH9-SW1
+* one question remains, though: do I need to put a view to hold all the content within the scroll view?
+    * helpful: https://stackoverflow.com/questions/55707730/content-view-inside-scroll-view-why
+    
+* TODO: fix the scroll view. Start with this guide https://fluffy.es/scrollview-storyboard-xcode-11/
 * TODO: add tests. Try the UI tests.
 
 ## Hosting
