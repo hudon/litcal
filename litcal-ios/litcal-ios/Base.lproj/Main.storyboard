@@ -24,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehy-wW-ILM" userLabel="HeaderView">
+                            <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ehy-wW-ILM" userLabel="HeaderView">
                                 <rect key="frame" x="0.0" y="50" width="375" height="50"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="OwH-O7-eSu">
@@ -49,7 +49,7 @@
                                     <constraint firstAttribute="height" constant="50" id="9ab-4M-AsX"/>
                                     <constraint firstItem="ZsC-z8-yMB" firstAttribute="centerY" secondItem="OwH-O7-eSu" secondAttribute="centerY" id="Mat-7b-Ztb"/>
                                     <constraint firstItem="ZsC-z8-yMB" firstAttribute="leading" secondItem="OwH-O7-eSu" secondAttribute="trailing" constant="8" id="QZp-ya-Sx8"/>
-                                    <constraint firstItem="OwH-O7-eSu" firstAttribute="leading" secondItem="ehy-wW-ILM" secondAttribute="leading" constant="22" id="u1F-QM-vn3"/>
+                                    <constraint firstItem="OwH-O7-eSu" firstAttribute="leading" secondItem="ehy-wW-ILM" secondAttribute="leadingMargin" id="u1F-QM-vn3"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ij-1M-504" userLabel="Divider">
@@ -59,20 +59,20 @@
                                     <constraint firstAttribute="height" constant="1" id="Q6H-fv-4iK"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pMl-j7-O3H" userLabel="CalWheel">
+                            <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pMl-j7-O3H" userLabel="CalWheel">
                                 <rect key="frame" x="0.0" y="101" width="375" height="110"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHo-ut-MYc" userLabel="CalWheel Header">
+                                    <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HHo-ut-MYc" userLabel="CalWheel Header">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7q-kE-7ez" userLabel="MonthLabel">
-                                                <rect key="frame" x="8" y="14.999999999999998" width="41.333333333333336" height="20.333333333333329"/>
+                                                <rect key="frame" x="22.000000000000004" y="14.999999999999998" width="41.333333333333343" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Oe0-SX-Q3o">
-                                                <rect key="frame" x="238.33333333333337" y="11" width="128.66666666666663" height="28"/>
+                                                <rect key="frame" x="224.33333333333337" y="11" width="128.66666666666663" height="28"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4c-wZ-6Yf">
                                                         <rect key="frame" x="0.0" y="0.0" width="64.333333333333329" height="28"/>
@@ -104,10 +104,10 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="j7q-kE-7ez" firstAttribute="leading" secondItem="HHo-ut-MYc" secondAttribute="leading" constant="8" id="Aef-Tw-ZnR"/>
+                                            <constraint firstItem="j7q-kE-7ez" firstAttribute="leading" secondItem="HHo-ut-MYc" secondAttribute="leadingMargin" id="Aef-Tw-ZnR"/>
                                             <constraint firstItem="j7q-kE-7ez" firstAttribute="centerY" secondItem="HHo-ut-MYc" secondAttribute="centerY" id="AsA-2n-ZfN"/>
                                             <constraint firstItem="Oe0-SX-Q3o" firstAttribute="centerY" secondItem="HHo-ut-MYc" secondAttribute="centerY" id="PKd-8g-YkF"/>
-                                            <constraint firstAttribute="trailing" secondItem="Oe0-SX-Q3o" secondAttribute="trailing" constant="8" id="T8o-WP-tI1"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Oe0-SX-Q3o" secondAttribute="trailing" id="T8o-WP-tI1"/>
                                             <constraint firstItem="Oe0-SX-Q3o" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="j7q-kE-7ez" secondAttribute="trailing" id="opH-TB-E61"/>
                                         </constraints>
                                     </view>
@@ -177,11 +177,11 @@
                                     <constraint firstAttribute="height" secondItem="vgB-cu-j61" secondAttribute="height" constant="50" id="x54-K8-Ha2"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="Xho-QK-fim">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xho-QK-fim">
                                 <rect key="frame" x="0.0" y="211" width="375" height="567"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSp-9S-lGr" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="489"/>
+                                    <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DSp-9S-lGr" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="589.33333333333337"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="hero_ordinary_time" translatesAutoresizingMaskIntoConstraints="NO" id="GSM-pI-03s" userLabel="img">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
@@ -189,8 +189,15 @@
                                                     <constraint firstAttribute="width" secondItem="GSM-pI-03s" secondAttribute="height" multiplier="5:3" id="XBy-Vb-6CV"/>
                                                 </constraints>
                                             </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEc-XV-8DW" userLabel="popup">
+                                                <rect key="frame" x="37.666666666666657" y="185" width="300" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="h2V-YY-nrz"/>
+                                                </constraints>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSX-My-ZGd" userLabel="gospelText">
-                                                <rect key="frame" x="0.0" y="225" width="375" height="264"/>
+                                                <rect key="frame" x="22" y="285" width="331" height="304.33333333333326"/>
                                                 <string key="text">The shepherds went in haste to Bethlehem and found Mary and Joseph, and the infant lying in the manger. When they saw this, they made known the message that had been told them about this child. All who heard it were amazed by what had been told them by the shepherds. And Mary kept all these things, reflecting on them in her heart. Then the shepherds returned, glorifying and praising God for all they had heard and seen, just as it had been told to them. When eight days were completed for his circumcision, he was named Jesus, the name given him by the angel before he was conceived in the womb.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -201,11 +208,14 @@
                                         <constraints>
                                             <constraint firstItem="GSM-pI-03s" firstAttribute="top" secondItem="DSp-9S-lGr" secondAttribute="top" id="1c2-Sm-2nt"/>
                                             <constraint firstItem="GSM-pI-03s" firstAttribute="leading" secondItem="DSp-9S-lGr" secondAttribute="leading" id="35P-v0-LRI"/>
-                                            <constraint firstAttribute="trailing" secondItem="qSX-My-ZGd" secondAttribute="trailing" id="euI-fF-ziO"/>
+                                            <constraint firstItem="uEc-XV-8DW" firstAttribute="centerX" secondItem="DSp-9S-lGr" secondAttribute="centerX" id="ByD-3q-43T"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="qSX-My-ZGd" secondAttribute="trailing" id="euI-fF-ziO"/>
+                                            <constraint firstItem="uEc-XV-8DW" firstAttribute="width" secondItem="DSp-9S-lGr" secondAttribute="width" multiplier="0.8" id="fe8-fP-5yH"/>
                                             <constraint firstItem="GSM-pI-03s" firstAttribute="width" secondItem="DSp-9S-lGr" secondAttribute="width" id="keB-HZ-014"/>
-                                            <constraint firstItem="qSX-My-ZGd" firstAttribute="top" secondItem="GSM-pI-03s" secondAttribute="bottom" id="kfl-jW-3HL"/>
+                                            <constraint firstItem="qSX-My-ZGd" firstAttribute="top" secondItem="uEc-XV-8DW" secondAttribute="bottom" id="kfl-jW-3HL"/>
                                             <constraint firstAttribute="bottom" secondItem="qSX-My-ZGd" secondAttribute="bottom" id="pAi-2u-0Th"/>
-                                            <constraint firstItem="qSX-My-ZGd" firstAttribute="leading" secondItem="DSp-9S-lGr" secondAttribute="leading" id="wYa-oh-4Hz"/>
+                                            <constraint firstItem="uEc-XV-8DW" firstAttribute="centerY" secondItem="GSM-pI-03s" secondAttribute="bottom" constant="10" id="pdh-5U-Jxe"/>
+                                            <constraint firstItem="qSX-My-ZGd" firstAttribute="leading" secondItem="DSp-9S-lGr" secondAttribute="leadingMargin" id="wYa-oh-4Hz"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -237,6 +247,7 @@
                             <constraint firstItem="ehy-wW-ILM" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="uax-v9-nH9"/>
                             <constraint firstItem="7Ij-1M-504" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="vsE-3o-dVa"/>
                         </constraints>
+                        <edgeInsets key="layoutMargins" top="0.0" left="22" bottom="0.0" right="22"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -273,6 +284,9 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
