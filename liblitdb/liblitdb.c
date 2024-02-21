@@ -1,4 +1,4 @@
-#include "liblitdb.h"
+#include "private.h"
 
 #include <stdio.h>
 #include <string.h>

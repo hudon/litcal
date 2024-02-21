@@ -10,6 +10,7 @@
 @interface ViewController ()
 
 @property (strong, nonatomic) UICollectionViewDiffableDataSource *dataSource;
+@property NSDictionary *celebrations;
 
 @end
 
@@ -17,19 +18,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Setup the CalWheel dates
-    // TODO: do I make a snapshot of dates and then pull from SQLite in the cellProvider block? or do I make a snapshot of the LitCelebration objects (and pre-fetch everything)?
+
+    // wire each cell to its corresponding celebration
     [self setDataSource: [[UICollectionViewDiffableDataSource alloc]
                           initWithCollectionView:[self collView]
                           cellProvider:^UICollectionViewCell * (UICollectionView * collView,
                                                                 NSIndexPath * indexPath,
                                                                 NSString *itemIdentifier) {
         UICollectionViewCell *cell = [collView dequeueReusableCellWithReuseIdentifier:@"dayCell" forIndexPath: indexPath];
+        // TODO: get from celebrations dict the celebration for the given identifier
+        // change the identifier to the date (NSNumber? NSDate?)
         UILabel *lbl = (UILabel *)[cell viewWithTag:1];
         lbl.text = itemIdentifier;
         return cell;
     }]];
+
+    // Fetch the dates and store them in a dictionary
+    // TODO
+    // get min and max
+    // iterate over dates
+    // get celebration for date, error if hole
+    // insert into dict
     NSDiffableDataSourceSnapshot *snap = [[NSDiffableDataSourceSnapshot alloc] init];
     [snap appendSectionsWithIdentifiers:@[@(0)]];
     // NOTE: the identifiers need to be unique
