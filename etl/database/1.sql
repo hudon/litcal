@@ -1,6 +1,6 @@
-  --UP
-  create table lit_calendar (id integer primary key, name text);
-  create table lit_color (id integer primary key, name text);
+--UP
+create table lit_calendar (id integer primary key, name text);
+create table lit_color (id integer primary key, name text);
 create table lit_season (
     id integer primary key,
     name text, 

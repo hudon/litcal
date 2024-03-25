@@ -1,8 +1,0 @@
-get real data into app
-have something automatically format and lint C, and Objective-C code (like I had in VSCode). Do it on save.
-add the right compiler flags and warnings to build step
-write styleguide for C, Go, and Objective-C. include difference between comments and doc comments (eg. // and ///)
-add C error tests,
-remove typedefs. setup my own styleguide. Maybe try to align my Go style with C style (eg. for camelCase versus snake_case?) on second thought, each language can have its own style...
-
-add ui tests

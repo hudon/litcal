@@ -9,6 +9,7 @@ etl/dbmigrate/dbmigrate
 
 # ios
 UserInterfaceState.xcuserstate
+build/
 
 # liblitdb
 liblitdb/*.o

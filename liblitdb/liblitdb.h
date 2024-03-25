@@ -5,21 +5,22 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-enum LitStatus {
+enum lit_status {
   LIT_OK = 0,
   LIT_ERROR = 1,
   LIT_INVALID_ARGUMENT = 2,
+  LIT_NOT_FOUND = 3,
 };
 
-struct LitError {
-  enum LitStatus status;
+struct lit_error {
+  enum lit_status status;
   char message[256];
 };
 
-void lit_error_free(struct LitError *err);
+void lit_error_free(struct lit_error *err);
 
 
-enum LitColor {
+enum lit_color {
   LIT_WHITE,
   LIT_BLACK,
   LIT_RED,
@@ -32,54 +33,35 @@ enum LitColor {
   LIT_COLOR_COUNT,
 };
 
-static const char *lit_color_name[LIT_COLOR_COUNT];
-bool lit_color_from_string(const char *colorStr, enum LitColor *outColor);
+static const char *lit_color_names[LIT_COLOR_COUNT];
+bool lit_color_from_string(const char *col_str, enum lit_color *out_col);
 
 
-struct LitCelebration {
+struct lit_celebration {
   /// The key is unique among other celebrations, but if the celebration appears
   /// on a different year, the key is the same
-  char eventKey[128];  // should be less brittle than "name" as it isn't used
+  char event_key[128];  // should be less brittle than "name" as it isn't used
                         // for display purposes
   int rank;
-  enum LitColor color;
+  enum lit_color color;
   char title[256];
   char subtitle[128];
-  char gospelRef[64];
-  char *gospelText;
-  char *readingsURL;
+  char gospel_ref[64];
+  char *gospel_text;
+  char *readings_url;
+
+  int64_t epoch_seconds; /// seconds from 19700101 to 00:00 (midnight the morning of) on the day of this celebration
 };
 
-bool lit_get_celebration(sqlite3 *db, uint64_t cal_id,
-                                 int64_t epochSeconds,
-                                 struct LitCelebration *outCel,
-                                 struct LitError **outErr);
+bool lit_get_celebration(
+    sqlite3 *db, uint64_t cal_id,
+    int64_t epoch_econds,
+    struct lit_celebration *out_cel,
+    struct lit_error **out_err);
 
-bool lit_get_min_and_max(sqlite3 *db, uint64_t cal_id, int64_t *outMin,
-                                 int64_t *outMax, struct LitError **outErr);
-
-//**ACTUALLY THERE IS NO NEED FOR THIS NEW DATA STRUCTURE, JUST PUT THE DATE IN THE CELEBRATION STRUCT AND CALL IT A DAY**//
-struct LitCelebrationKey {
-  struct LitCelebration *celebration;
-  int64_t epochSeconds;
-}
-
-bool lit_all_celebrations(sqlite3 *db,
-   struct LitCelebrationKey **outCelebrations, struct LitError **outErr);
-//{ impl:
-  // get all celebrations from sqlite
-  // with the count, malloc result
-  //LitCelebrationKey result[] = malloc...
-  // end with *outCelebrations = result;
-  // return true
-  //
-  // call this function like so
-  // struct LitCelebrationKey allCelebrations[] = {}; // this is proper 0-init right?
-  // struct LitError *err = {};
-  // if (!lit_all_celebrations(db, &allCelebrations, &err)) {
-  // report error
-  // }
-  // this'll be called from ObjC, though
-//}
+bool lit_get_min_and_max(
+    sqlite3 *db, uint64_t cal_id,
+    int64_t *out_min, int64_t *out_max,
+    struct lit_error **out_err);
 
 #endif /* LITDB_H */
