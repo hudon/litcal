@@ -14,3 +14,4 @@ build/
 # liblitdb
 liblitdb/*.o
 liblitdb_test
+liblitdb.a
