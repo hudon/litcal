@@ -1,12 +1,11 @@
 #include "private.h"
 
-#include <stdio.h>
 #include <string.h>
 
 static const char *lit_color_names[LIT_COLOR_COUNT] = {
-	[LIT_WHITE] = "white",   [LIT_BLACK] = "black",   [LIT_RED] = "red",
-	[LIT_GREEN] = "green",   [LIT_VIOLET] = "violet", [LIT_GOLD] = "gold",
-	[LIT_SILVER] = "silver", [LIT_ROSE] = "rose"};
+   [LIT_WHITE] = "white",   [LIT_BLACK] = "black",   [LIT_RED] = "red",
+   [LIT_GREEN] = "green",   [LIT_VIOLET] = "violet", [LIT_GOLD] = "gold",
+   [LIT_SILVER] = "silver", [LIT_ROSE] = "rose"};
 
 bool lit_color_from_string(const char *col_str, enum lit_color *out_col) {
 	if (col_str == NULL || out_col == NULL) {
@@ -14,7 +13,7 @@ bool lit_color_from_string(const char *col_str, enum lit_color *out_col) {
 	}
 	for (int i = 0; i < LIT_COLOR_COUNT; i++) {
 		if (lit_color_names[i] != NULL &&
-				strcmp(lit_color_names[i], col_str) == 0) {
+		    strcmp(lit_color_names[i], col_str) == 0) {
 			*out_col = i;
 			return true;
 		}
@@ -22,10 +21,11 @@ bool lit_color_from_string(const char *col_str, enum lit_color *out_col) {
 	return false;
 }
 
-bool lit_get_celebration(sqlite3 *db, uint64_t cal_id,
-		int64_t epoch_seconds,
-		struct lit_celebration *out_cel,
-		struct lit_error **out_err) {
+bool lit_get_celebration(
+   sqlite3 *db, uint64_t cal_id,
+   int64_t epoch_seconds,
+   struct lit_celebration *out_cel,
+   struct lit_error **out_err) {
 
 	bool ret = false;
 
@@ -43,34 +43,35 @@ bool lit_get_celebration(sqlite3 *db, uint64_t cal_id,
 	}
 
 	char *query =
-		"SELECT lc.event_key, lc.rank, lc.title, lc.subtitle, lc.gospel, "
-		"lc.gospel_ref, lc.readings_url, lcol.name AS color "
-		"FROM lit_celebration lc "
-		"JOIN lit_day ld ON lc.lit_day_id = ld.id "
-		"JOIN lit_color lcol ON lc.lit_color_id = lcol.id "
-		"JOIN lit_season ls ON ld.lit_season_id = ls.id "
-		"JOIN lit_year ly ON ls.lit_year_id = ly.id "
-		"WHERE ld.secular_date_s = ? AND ly.lit_calendar_id = ?;";
+	   "SELECT lc.event_key, lc.rank, lc.title, lc.subtitle, lc.gospel, "
+	   "lc.gospel_ref, lc.readings_url, lcol.name AS color "
+	   "FROM lit_celebration lc "
+	   "JOIN lit_day ld ON lc.lit_day_id = ld.id "
+	   "JOIN lit_color lcol ON lc.lit_color_id = lcol.id "
+	   "JOIN lit_season ls ON ld.lit_season_id = ls.id "
+	   "JOIN lit_year ly ON ls.lit_year_id = ly.id "
+	   "WHERE ld.secular_date_s = ? AND ly.lit_calendar_id = ?;";
 
 	sqlite3_stmt *stmt;
 	int rc = sqlite3_prepare_v2(db, query, -1, &stmt, NULL);
 	if (rc != SQLITE_OK) {
-		lit_error_new_fmt(LIT_ERROR,
-				"Failed to prepare statement: %s", sqlite3_errmsg(db), out_err);
+		lit_error_new_fmt(
+		   LIT_ERROR,
+		   "Failed to prepare statement: %s", sqlite3_errmsg(db), out_err);
 		return false;
 	}
 
 	rc = sqlite3_bind_int64(stmt, 1, epoch_seconds);
 	if (rc != SQLITE_OK) {
 		lit_error_new_fmt(LIT_ERROR,
-				"Failed to bind parameter: %s", sqlite3_errmsg(db), out_err);
+		                  "Failed to bind parameter: %s", sqlite3_errmsg(db), out_err);
 		goto error_out;
 	}
 
 	rc = sqlite3_bind_int64(stmt, 2, cal_id);
 	if (rc != SQLITE_OK) {
 		lit_error_new_fmt(LIT_ERROR,
-				"Failed to bind parameter: %s", sqlite3_errmsg(db), out_err);
+		                  "Failed to bind parameter: %s", sqlite3_errmsg(db), out_err);
 		goto error_out;
 	}
 
@@ -122,9 +123,9 @@ out:
 }
 
 bool lit_get_min_and_max(
-		sqlite3 *db, uint64_t cal_id,
-		int64_t *out_min, int64_t *out_max,
-		struct lit_error **out_err) {
+   sqlite3 *db, uint64_t cal_id,
+   int64_t *out_min, int64_t *out_max,
+   struct lit_error **out_err) {
 
 	bool ret = false;
 
@@ -133,24 +134,24 @@ bool lit_get_min_and_max(
 		return false;
 	}
 	char *query =
-		"SELECT MIN(ld.secular_date_s), MAX(ld.secular_date_s) "
-		"FROM lit_day ld, lit_season ls, lit_year ly, lit_calendar lc "
-		"WHERE ld.lit_season_id = ls.id "
-		"AND ls.lit_year_id = ly.id "
-		"AND ly.lit_calendar_id = ?;";
+	   "SELECT MIN(ld.secular_date_s), MAX(ld.secular_date_s) "
+	   "FROM lit_day ld, lit_season ls, lit_year ly, lit_calendar lc "
+	   "WHERE ld.lit_season_id = ls.id "
+	   "AND ls.lit_year_id = ly.id "
+	   "AND ly.lit_calendar_id = ?;";
 
 	sqlite3_stmt *stmt;
 	int rc = sqlite3_prepare_v2(db, query, -1, &stmt, NULL);
 	if (rc != SQLITE_OK) {
 		lit_error_new_fmt(LIT_ERROR,
-				"Failed to prepare statement: %s", sqlite3_errmsg(db), out_err);
+		                  "Failed to prepare statement: %s", sqlite3_errmsg(db), out_err);
 		return false;
 	}
 
 	rc = sqlite3_bind_int64(stmt, 1, cal_id);
 	if (rc != SQLITE_OK) {
 		lit_error_new_fmt(LIT_ERROR,
-				"Failed to bind parameter: %s", sqlite3_errmsg(db), out_err);
+		                  "Failed to bind parameter: %s", sqlite3_errmsg(db), out_err);
 		goto error_out;
 	}
 

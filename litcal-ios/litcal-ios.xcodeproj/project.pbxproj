@@ -17,7 +17,7 @@
 		5E71CCE52B6C47640010B9A7 /* litcal_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E71CCE42B6C47640010B9A7 /* litcal_iosTests.m */; };
 		5E71CCEF2B6C47640010B9A7 /* litcal_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E71CCEE2B6C47640010B9A7 /* litcal_iosUITests.m */; };
 		5E71CCF12B6C47640010B9A7 /* litcal_iosUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E71CCF02B6C47640010B9A7 /* litcal_iosUITestsLaunchTests.m */; };
-		5E71CCFE2B6C48110010B9A7 /* liblitdb in Resources */ = {isa = PBXBuildFile; fileRef = 5E71CCFD2B6C48110010B9A7 /* liblitdb */; };
+		5E71CCFE2B6C48110010B9A7 /* litdb in Resources */ = {isa = PBXBuildFile; fileRef = 5E71CCFD2B6C48110010B9A7 /* litdb */; };
 		5E852BEB2B6EB1BA0030F938 /* TiemposHeadline-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E852BE82B6EB1BA0030F938 /* TiemposHeadline-Medium.ttf */; };
 		5E852BEC2B6EB1BA0030F938 /* EuclidSquare-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E852BE92B6EB1BA0030F938 /* EuclidSquare-Regular.ttf */; };
 		5E852BED2B6EB1BA0030F938 /* EuclidSquare-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E852BEA2B6EB1BA0030F938 /* EuclidSquare-Semibold.ttf */; };
@@ -41,6 +41,18 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5EA346F22BB3717600E2DF5A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5E71CCC52B6C47620010B9A7 /* litcal-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "litcal-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E71CCC82B6C47620010B9A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -59,13 +71,14 @@
 		5E71CCEA2B6C47640010B9A7 /* litcal-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "litcal-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E71CCEE2B6C47640010B9A7 /* litcal_iosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = litcal_iosUITests.m; sourceTree = "<group>"; };
 		5E71CCF02B6C47640010B9A7 /* litcal_iosUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = litcal_iosUITestsLaunchTests.m; sourceTree = "<group>"; };
-		5E71CCFD2B6C48110010B9A7 /* liblitdb */ = {isa = PBXFileReference; lastKnownFileType = folder; name = liblitdb; path = ../liblitdb; sourceTree = "<group>"; };
+		5E71CCFD2B6C48110010B9A7 /* litdb */ = {isa = PBXFileReference; lastKnownFileType = folder; name = litdb; path = ../litdb; sourceTree = "<group>"; };
 		5E71CCFF2B6C49D80010B9A7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5E852BE82B6EB1BA0030F938 /* TiemposHeadline-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TiemposHeadline-Medium.ttf"; sourceTree = "<group>"; };
 		5E852BE92B6EB1BA0030F938 /* EuclidSquare-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-Regular.ttf"; sourceTree = "<group>"; };
 		5E852BEA2B6EB1BA0030F938 /* EuclidSquare-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-Semibold.ttf"; sourceTree = "<group>"; };
 		5E852BEE2B6F04560030F938 /* CircularView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircularView.m; sourceTree = "<group>"; };
 		5E852BF02B6F046E0030F938 /* CircularView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircularView.h; sourceTree = "<group>"; };
+		5EA346F42BB3717600E2DF5A /* liblitdb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblitdb.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +103,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5EA346F12BB3717600E2DF5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -98,7 +118,7 @@
 			children = (
 				5E852BE62B6EB18F0030F938 /* Shared */,
 				5E71CCFF2B6C49D80010B9A7 /* README.md */,
-				5E71CCFD2B6C48110010B9A7 /* liblitdb */,
+				5E71CCFD2B6C48110010B9A7 /* litdb */,
 				5E71CCC72B6C47620010B9A7 /* litcal-ios */,
 				5E71CCE32B6C47640010B9A7 /* litcal-iosTests */,
 				5E71CCED2B6C47640010B9A7 /* litcal-iosUITests */,
@@ -112,6 +132,7 @@
 				5E71CCC52B6C47620010B9A7 /* litcal-ios.app */,
 				5E71CCE02B6C47640010B9A7 /* litcal-iosTests.xctest */,
 				5E71CCEA2B6C47640010B9A7 /* litcal-iosUITests.xctest */,
+				5EA346F42BB3717600E2DF5A /* liblitdb.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,6 +248,23 @@
 			productReference = 5E71CCEA2B6C47640010B9A7 /* litcal-iosUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		5EA346F32BB3717600E2DF5A /* litdb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EA346FC2BB3717600E2DF5A /* Build configuration list for PBXNativeTarget "litdb" */;
+			buildPhases = (
+				5EA346F02BB3717600E2DF5A /* Sources */,
+				5EA346F12BB3717600E2DF5A /* Frameworks */,
+				5EA346F22BB3717600E2DF5A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = litdb;
+			productName = litdb;
+			productReference = 5EA346F42BB3717600E2DF5A /* liblitdb.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -250,6 +288,9 @@
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = 5E71CCC42B6C47620010B9A7;
 					};
+					5EA346F32BB3717600E2DF5A = {
+						CreatedOnToolsVersion = 15.3;
+					};
 				};
 			};
 			buildConfigurationList = 5E71CCC02B6C47620010B9A7 /* Build configuration list for PBXProject "litcal-ios" */;
@@ -268,6 +309,7 @@
 				5E71CCC42B6C47620010B9A7 /* litcal-ios */,
 				5E71CCDF2B6C47640010B9A7 /* litcal-iosTests */,
 				5E71CCE92B6C47640010B9A7 /* litcal-iosUITests */,
+				5EA346F32BB3717600E2DF5A /* litdb */,
 			);
 		};
 /* End PBXProject section */
@@ -277,7 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E71CCFE2B6C48110010B9A7 /* liblitdb in Resources */,
+				5E71CCFE2B6C48110010B9A7 /* litdb in Resources */,
 				5E852BEB2B6EB1BA0030F938 /* TiemposHeadline-Medium.ttf in Resources */,
 				5E852BEC2B6EB1BA0030F938 /* EuclidSquare-Regular.ttf in Resources */,
 				5E852BED2B6EB1BA0030F938 /* EuclidSquare-Semibold.ttf in Resources */,
@@ -330,6 +372,13 @@
 			files = (
 				5E71CCEF2B6C47640010B9A7 /* litcal_iosUITests.m in Sources */,
 				5E71CCF12B6C47640010B9A7 /* litcal_iosUITestsLaunchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EA346F02BB3717600E2DF5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,6 +655,32 @@
 			};
 			name = Release;
 		};
+		5EA346FA2BB3717600E2DF5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JCRQGL8873;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5EA346FB2BB3717600E2DF5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JCRQGL8873;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -641,6 +716,15 @@
 			buildConfigurations = (
 				5E71CCFB2B6C47640010B9A7 /* Debug */,
 				5E71CCFC2B6C47640010B9A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EA346FC2BB3717600E2DF5A /* Build configuration list for PBXNativeTarget "litdb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EA346FA2BB3717600E2DF5A /* Debug */,
+				5EA346FB2BB3717600E2DF5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

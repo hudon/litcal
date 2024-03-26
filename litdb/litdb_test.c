@@ -1,4 +1,4 @@
-#include "liblitdb.h"
+#include "litdb.h"
 #include "private_test.h"
 
 #include <assert.h>

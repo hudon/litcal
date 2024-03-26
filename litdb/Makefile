@@ -10,20 +10,20 @@ TEST_OBJECTS = $(TEST_SOURCES:.c=.o)
 
 .PHONY: all clean check
 
-all: liblitdb.a
+all: liblitdb.a check
 
-check: liblitdb_test
-	./liblitdb_test
+check: litdb_test
+	./litdb_test
 
 liblitdb.a: $(OBJECTS)
 	ar rcs $@ $^
 
-liblitdb_test: liblitdb.o errors.o liblitdb_test.o errors_test.o
-	$(CC) -o liblitdb_test $^ $(LDFLAGS)
+litdb_test: $(OBJECTS) $(TEST_OBJECTS)
+	$(CC) -o litdb_test $^ $(LDFLAGS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f main $(OBJECTS)
+	rm -f main $(OBJECTS) $(TEST_OBJECTS)
 

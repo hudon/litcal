@@ -20,12 +20,17 @@
     [super viewDidLoad];
 
     // wire each cell to its corresponding celebration
-    [self setDataSource: [[UICollectionViewDiffableDataSource alloc]
-                          initWithCollectionView:[self collView]
-                          cellProvider:^UICollectionViewCell * (UICollectionView * collView,
-                                                                NSIndexPath * indexPath,
-                                                                NSString *itemIdentifier) {
-        UICollectionViewCell *cell = [collView dequeueReusableCellWithReuseIdentifier:@"dayCell" forIndexPath: indexPath];
+    [self setDataSource: [
+        [UICollectionViewDiffableDataSource alloc]
+        initWithCollectionView:[self collView]
+        cellProvider:^UICollectionViewCell*(
+                                            UICollectionView * collView,
+                                            NSIndexPath * indexPath,
+                                            NSString *itemIdentifier) {
+        UICollectionViewCell *cell = [
+            collView
+            dequeueReusableCellWithReuseIdentifier:@"dayCell"
+            forIndexPath: indexPath];
         // TODO: get from celebrations dict the celebration for the given identifier
         // change the identifier to the date (NSNumber? NSDate?)
         UILabel *lbl = (UILabel *)[cell viewWithTag:1];
