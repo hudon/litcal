@@ -84,6 +84,9 @@
                                                             <color key="baseForegroundColor" name="Color_Ashes"/>
                                                             <color key="baseBackgroundColor" name="Color_Dove"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="handleTodayTriggered" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="RvG-6X-9ea"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfH-1v-k0E">
                                                         <rect key="frame" x="69.999999999999972" y="0.0" width="58.666666666666657" height="28"/>
