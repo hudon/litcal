@@ -23,42 +23,37 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    NSString *pathToDB = [[NSBundle mainBundle] pathForResource:@"litcal" ofType:@"sqlite"];
-    struct lit_error *err;
-    if (!open_db([pathToDB cStringUsingEncoding:NSASCIIStringEncoding], &db, &err)) {
-        NSLog(@"Failed to open the litcal database: %s", err->message);
-        // TODO: is returning the best thing to do here?
-        return;
-    }
-
-    // Fetch the dates and store them in a dictionary
-
-    int64_t min, max;
-    uint64_t calID = 1;
-    if (!lit_get_min_and_max(db, calID, &min, &max, &err)) {
-        NSLog(@"Failed to get min/max: %s", err->message);
-        // TODO: is returning the best thing to do here?
-        return;
-    }
-
-    int count = 0;
     NSMutableArray *keyArray = [[NSMutableArray alloc] init];
     NSMutableArray *valueArray = [[NSMutableArray alloc] init];
-    for (int64_t curr = min; curr <= max; curr += 86400) {
-        count++;
-        struct lit_celebration cel;
-        if (!lit_get_celebration(db, calID, curr, &cel, &err)) {
-            NSLog(@"Failed to get celebration at time %lld: %s", curr, err->message);
-            // TODO is return the best thing here?
+    {
+        NSString *pathToDB = [[NSBundle mainBundle] pathForResource:@"litcal" ofType:@"sqlite"];
+        struct lit_error *err;
+        if (!open_db([pathToDB cStringUsingEncoding:NSASCIIStringEncoding], &db, &err)) {
+            NSLog(@"Failed to open the litcal database: %s", err->message);
+            // TODO: is returning the best thing to do here?
             return;
         }
-        [keyArray addObject:[[NSNumber alloc] initWithLongLong:curr]];
-        [valueArray addObject:[[LitCelebrationBridge alloc] initWithCLitCelebration:cel]];
+
+        int64_t min, max;
+        uint64_t calID = 1;
+        if (!lit_get_min_and_max(db, calID, &min, &max, &err)) {
+            NSLog(@"Failed to get min/max: %s", err->message);
+            // TODO: is returning the best thing to do here?
+            return;
+        }
+
+        for (int64_t curr = min; curr <= max; curr += 86400) {
+            struct lit_celebration cel;
+            if (!lit_get_celebration(db, calID, curr, &cel, &err)) {
+                NSLog(@"Failed to get celebration at time %lld: %s", curr, err->message);
+                // TODO is return the best thing here?
+                return;
+            }
+            [keyArray addObject:[[NSNumber alloc] initWithLongLong:curr]];
+            [valueArray addObject:[[LitCelebrationBridge alloc] initWithCLitCelebration:cel]];
+        }
+        [self setCelebrations:[[NSDictionary alloc] initWithObjects:valueArray forKeys:keyArray]];
     }
-    [self setCelebrations:[[NSDictionary alloc] initWithObjects:valueArray forKeys:keyArray]];
-    NSLog(@"The count is %d", count);
-    NSLog(@"here it is: %@", [[[self celebrations] objectForKey:[[NSNumber alloc] initWithLongLong:max]] title]);
-    // TODO: now you can use the key/vals to set up the data source below
 
 
     // wire each cell to its corresponding celebration
@@ -84,12 +79,8 @@
         [dateFormatter setDateFormat:@"EEEEE"];
         lbl.text = [dateFormatter stringFromDate:d];
 
-
         return cell;
     }]];
-
-
-
 
     NSDiffableDataSourceSnapshot *snap = [[NSDiffableDataSourceSnapshot alloc] init];
     [snap appendSectionsWithIdentifiers:@[@(0)]];
