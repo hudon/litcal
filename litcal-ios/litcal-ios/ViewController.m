@@ -15,16 +15,27 @@
 
 @property (strong, nonatomic) UICollectionViewDiffableDataSource *dataSource;
 @property (strong) NSDictionary *celebrations;
+@property (strong, nonatomic) NSNumber *selectedKey;
 
 @end
 
+
 @implementation ViewController
+
+- (void)handleGesture:(UITapGestureRecognizer*)sender {
+    // reocognizer is on cell's inner contentView
+    UICollectionViewCell *cell = (UICollectionViewCell *)[[sender view] superview];
+    NSIndexPath *indexPath = [self.collView indexPathForCell:cell];
+    [self setSelectedKey:[[self dataSource] itemIdentifierForIndexPath:indexPath]];
+    NSLog(@"selecting key! %@ %@", [self selectedKey], indexPath);
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    NSMutableArray *keyArray = [[NSMutableArray alloc] init];
-    NSMutableArray *valueArray = [[NSMutableArray alloc] init];
+    // Get all celebrations and insert them into the lookup table
+    NSMutableArray *celTimes = [[NSMutableArray alloc] init];
+    NSMutableArray *celValues = [[NSMutableArray alloc] init];
     {
         NSString *pathToDB = [[NSBundle mainBundle] pathForResource:@"litcal" ofType:@"sqlite"];
         struct lit_error *err;
@@ -49,46 +60,43 @@
                 // TODO is return the best thing here?
                 return;
             }
-            [keyArray addObject:[[NSNumber alloc] initWithLongLong:curr]];
-            [valueArray addObject:[[LitCelebrationBridge alloc] initWithCLitCelebration:cel]];
+            [celTimes addObject:[[NSNumber alloc] initWithLongLong:curr]];
+            [celValues addObject:[[LitCelebrationBridge alloc] initWithCLitCelebration:cel]];
         }
-        [self setCelebrations:[[NSDictionary alloc] initWithObjects:valueArray forKeys:keyArray]];
+        [self setCelebrations:[[NSDictionary alloc] initWithObjects:celValues forKeys:celTimes]];
     }
 
 
     // wire each cell to its corresponding celebration
-    [self setDataSource: [[UICollectionViewDiffableDataSource alloc]
-                          initWithCollectionView:[self collView]
-                          cellProvider:^UICollectionViewCell*(UICollectionView * collView,
-                                                              NSIndexPath * indexPath,
-                                                              id epochSeconds) {
+    [self setDataSource:[[UICollectionViewDiffableDataSource alloc]
+                         initWithCollectionView:[self collView]
+                         cellProvider:^UICollectionViewCell*(UICollectionView * collView,
+                                                             NSIndexPath * indexPath,
+                                                             id epochSeconds) {
         UICollectionViewCell *cell = [collView
                                       dequeueReusableCellWithReuseIdentifier:@"dayCell"
                                       forIndexPath: indexPath];
-        UILabel *lbl = (UILabel *)[cell viewWithTag:1];
+
+        UITapGestureRecognizer *tapped = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
+        [[cell contentView] addGestureRecognizer:tapped];
 
         NSDate *d = [[NSDate alloc] initWithTimeIntervalSince1970:[epochSeconds doubleValue]];
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
-        dateFormatter.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
-        NSString *s = [[[self celebrations] objectForKey:epochSeconds] title];
+        [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
+        [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+        //        NSString *s = [[[self celebrations] objectForKey:epochSeconds] title];
 
         [dateFormatter setDateFormat:@"d"];
-        lbl.text = [dateFormatter stringFromDate:d];
-
+        [[cell viewWithTag:1] setText:[dateFormatter stringFromDate:d]];
         [dateFormatter setDateFormat:@"EEEEE"];
-        lbl.text = [dateFormatter stringFromDate:d];
+        [[cell viewWithTag:2] setText:[dateFormatter stringFromDate:d]];
 
         return cell;
     }]];
 
     NSDiffableDataSourceSnapshot *snap = [[NSDiffableDataSourceSnapshot alloc] init];
     [snap appendSectionsWithIdentifiers:@[@(0)]];
-    // NOTE: the identifiers need to be unique
-    // TODO: look into how these identifiers should be used
-    [snap appendItemsWithIdentifiers:keyArray];
+    [snap appendItemsWithIdentifiers:celTimes];
     [[self dataSource] applySnapshotUsingReloadData:snap];
 }
-
 @end
-
