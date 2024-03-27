@@ -24,7 +24,6 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 @property (nonatomic) sqlite3 *db;
 @property (nonatomic) NSUInteger minEpochSeconds;
 @property (nonatomic) NSUInteger maxEpochSeconds;
-@property (nonatomic, readonly) LitCelebrationBridge *selectedCelebration;
 
 @end
 
@@ -32,10 +31,9 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 @implementation ViewController
 
 - (IBAction)handleTodayTriggered {
-    NSDate *today = [[NSDate alloc] init];
     NSCalendar *cal = [NSCalendar currentCalendar];
     cal.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
-    int epochSeconds = [[cal startOfDayForDate:today] timeIntervalSince1970];
+    int epochSeconds = [[cal startOfDayForDate:[NSDate date]] timeIntervalSince1970];
 
     // find today in the existing range of dates, as a percentage
     CGFloat todayPosition = (CGFloat)(epochSeconds - _minEpochSeconds) /
