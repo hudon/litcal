@@ -34,7 +34,7 @@ static const NSTimeInterval kSecondsPerDay = 86400;
     return [[self celebrations] objectForKey:[self selectedKey]];
 }
 
-- (void)handleGesture:(UITapGestureRecognizer*)sender {
+- (void)handleCellTap:(UITapGestureRecognizer*)sender {
     // the sender view is the contentView, and the cell view contains it
     UICollectionViewCell *cell = (UICollectionViewCell *)[[sender view] superview];
     NSIndexPath *indexPath = [self.collView indexPathForCell:cell];
@@ -42,6 +42,7 @@ static const NSTimeInterval kSecondsPerDay = 86400;
     [[self gospelText] setText:[[self selectedCelebration] gospelText]];
 }
 
+// respond to scrolling the collection view ("cal wheel")
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     NSUInteger epochAtIndex;
     {
@@ -116,11 +117,10 @@ static const NSTimeInterval kSecondsPerDay = 86400;
                                       dequeueReusableCellWithReuseIdentifier:@"dayCell"
                                       forIndexPath: indexPath];
 
-        UITapGestureRecognizer *tapped = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
+        UITapGestureRecognizer *tapped = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleCellTap:)];
         [[cell contentView] addGestureRecognizer:tapped];
 
         NSDate *d = [[NSDate alloc] initWithTimeIntervalSince1970:[epochSeconds doubleValue]];
-
         NSDateFormatter *df = [self dateFormatter];
         [df setDateFormat:@"d"];
         [[cell viewWithTag:1] setText:[df stringFromDate:d]];
