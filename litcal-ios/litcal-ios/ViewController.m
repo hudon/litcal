@@ -13,14 +13,22 @@
     sqlite3 *db;
 }
 
+@property (weak, nonatomic) IBOutlet UICollectionView *collView;
+@property (weak, nonatomic) IBOutlet UILabel *gospelText;
+
 @property (strong, nonatomic) UICollectionViewDiffableDataSource *dataSource;
-@property (strong) NSDictionary *celebrations;
+@property (strong, nonatomic) NSDictionary *celebrations;
 @property (strong, nonatomic) NSNumber *selectedKey;
+@property (nonatomic, readonly) LitCelebrationBridge *selectedCelebration;
 
 @end
 
 
 @implementation ViewController
+
+- (LitCelebrationBridge*)selectedCelebration {
+    return [[self celebrations] objectForKey:[self selectedKey]];
+}
 
 - (void)handleGesture:(UITapGestureRecognizer*)sender {
     // reocognizer is on cell's inner contentView
@@ -28,6 +36,8 @@
     NSIndexPath *indexPath = [self.collView indexPathForCell:cell];
     [self setSelectedKey:[[self dataSource] itemIdentifierForIndexPath:indexPath]];
     NSLog(@"selecting key! %@ %@", [self selectedKey], indexPath);
+    // redrawSelectionDetails() 
+    [[self gospelText] setText:[[self selectedCelebration] gospelText]];
 }
 
 - (void)viewDidLoad {

@@ -252,6 +252,7 @@
                     </view>
                     <connections>
                         <outlet property="collView" destination="vgB-cu-j61" id="gQR-hR-uKH"/>
+                        <outlet property="gospelText" destination="qSX-My-ZGd" id="UTC-yG-ylY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -260,9 +261,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bookmark" catalog="system" width="110" height="128"/>
-        <image name="calendar" catalog="system" width="128" height="107"/>
-        <image name="chevron.up" catalog="system" width="128" height="70"/>
+        <image name="bookmark" catalog="system" width="32" height="32"/>
+        <image name="calendar" catalog="system" width="32" height="32"/>
+        <image name="chevron.up" catalog="system" width="32" height="32"/>
         <image name="header" width="228" height="72"/>
         <image name="hero_ordinary_time" width="400" height="240"/>
         <namedColor name="Color_Ashes">

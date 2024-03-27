@@ -9,7 +9,5 @@
 
 @interface ViewController : UIViewController
 
-@property (weak) IBOutlet UICollectionView *collView;
-
 @end
 
