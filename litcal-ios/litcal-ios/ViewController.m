@@ -9,16 +9,20 @@
 #import "litdb.h"
 #import "litdbBridge/LitCelebrationBridge.h"
 
-@interface ViewController () {
-    sqlite3 *db;
-}
+static const NSTimeInterval kSecondsPerDay = 86400;
+
+@interface ViewController () <UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collView;
 @property (weak, nonatomic) IBOutlet UILabel *gospelText;
+@property (weak, nonatomic) IBOutlet UILabel *monthLabel;
 
 @property (strong, nonatomic) UICollectionViewDiffableDataSource *dataSource;
 @property (strong, nonatomic) NSDictionary *celebrations;
 @property (strong, nonatomic) NSNumber *selectedKey;
+@property (strong, nonatomic) NSDateFormatter *dateFormatter;
+@property (nonatomic) sqlite3 *db;
+@property (nonatomic) NSUInteger minEpochSeconds;
 @property (nonatomic, readonly) LitCelebrationBridge *selectedCelebration;
 
 @end
@@ -31,17 +35,42 @@
 }
 
 - (void)handleGesture:(UITapGestureRecognizer*)sender {
-    // reocognizer is on cell's inner contentView
+    // the sender view is the contentView, and the cell view contains it
     UICollectionViewCell *cell = (UICollectionViewCell *)[[sender view] superview];
     NSIndexPath *indexPath = [self.collView indexPathForCell:cell];
     [self setSelectedKey:[[self dataSource] itemIdentifierForIndexPath:indexPath]];
-    NSLog(@"selecting key! %@ %@", [self selectedKey], indexPath);
-    // redrawSelectionDetails() 
     [[self gospelText] setText:[[self selectedCelebration] gospelText]];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSUInteger epochAtIndex;
+    {
+        static int prevIndex = 0;
+        CGFloat scrollPositionPercentage = [scrollView contentOffset].x / [scrollView contentSize].width;
+        NSUInteger lastIndex = [[self celebrations] count];
+        int indexAtViewLeadingEdge = (int)(scrollPositionPercentage * lastIndex);
+        // add N to make the month transition happen before the "day 1" cell reaches the edge of the screen
+        indexAtViewLeadingEdge += 3;
+        if (indexAtViewLeadingEdge == prevIndex || indexAtViewLeadingEdge < 0) {
+            // we haven't scrolled enough to warrant an update, bail
+            // also bail if user scrolled too far off the view and the index is negative
+            return;
+        }
+        prevIndex = indexAtViewLeadingEdge;
+        epochAtIndex = _minEpochSeconds + prevIndex * kSecondsPerDay;
+    }
+
+    NSDate *d = [[NSDate alloc] initWithTimeIntervalSince1970:epochAtIndex];
+    [_dateFormatter setDateFormat:@"MMMM y"];
+    [[self monthLabel] setText:[_dateFormatter stringFromDate:d]];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [self setDateFormatter:[[NSDateFormatter alloc] init]];
+    [[self dateFormatter] setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
+    [[self dateFormatter] setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
 
     // Get all celebrations and insert them into the lookup table
     NSMutableArray *celTimes = [[NSMutableArray alloc] init];
@@ -49,7 +78,7 @@
     {
         NSString *pathToDB = [[NSBundle mainBundle] pathForResource:@"litcal" ofType:@"sqlite"];
         struct lit_error *err;
-        if (!open_db([pathToDB cStringUsingEncoding:NSASCIIStringEncoding], &db, &err)) {
+        if (!open_db([pathToDB cStringUsingEncoding:NSASCIIStringEncoding], &_db, &err)) {
             NSLog(@"Failed to open the litcal database: %s", err->message);
             // TODO: is returning the best thing to do here?
             return;
@@ -57,15 +86,16 @@
 
         int64_t min, max;
         uint64_t calID = 1;
-        if (!lit_get_min_and_max(db, calID, &min, &max, &err)) {
+        if (!lit_get_min_and_max(_db, calID, &min, &max, &err)) {
             NSLog(@"Failed to get min/max: %s", err->message);
             // TODO: is returning the best thing to do here?
             return;
         }
+        _minEpochSeconds = min;
 
-        for (int64_t curr = min; curr <= max; curr += 86400) {
+        for (int64_t curr = min; curr <= max; curr += kSecondsPerDay) {
             struct lit_celebration cel;
-            if (!lit_get_celebration(db, calID, curr, &cel, &err)) {
+            if (!lit_get_celebration(_db, calID, curr, &cel, &err)) {
                 NSLog(@"Failed to get celebration at time %lld: %s", curr, err->message);
                 // TODO is return the best thing here?
                 return;
@@ -91,15 +121,12 @@
         [[cell contentView] addGestureRecognizer:tapped];
 
         NSDate *d = [[NSDate alloc] initWithTimeIntervalSince1970:[epochSeconds doubleValue]];
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
-        [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
-        //        NSString *s = [[[self celebrations] objectForKey:epochSeconds] title];
 
-        [dateFormatter setDateFormat:@"d"];
-        [[cell viewWithTag:1] setText:[dateFormatter stringFromDate:d]];
-        [dateFormatter setDateFormat:@"EEEEE"];
-        [[cell viewWithTag:2] setText:[dateFormatter stringFromDate:d]];
+        NSDateFormatter *df = [self dateFormatter];
+        [df setDateFormat:@"d"];
+        [[cell viewWithTag:1] setText:[df stringFromDate:d]];
+        [df setDateFormat:@"EEEEE"];
+        [[cell viewWithTag:2] setText:[df stringFromDate:d]];
 
         return cell;
     }]];

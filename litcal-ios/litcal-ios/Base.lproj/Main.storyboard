@@ -163,6 +163,9 @@
                                                 <gestureRecognizers/>
                                             </collectionViewCell>
                                         </cells>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="ePD-lr-afN"/>
+                                        </connections>
                                     </collectionView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -253,6 +256,7 @@
                     <connections>
                         <outlet property="collView" destination="vgB-cu-j61" id="gQR-hR-uKH"/>
                         <outlet property="gospelText" destination="qSX-My-ZGd" id="UTC-yG-ylY"/>
+                        <outlet property="monthLabel" destination="j7q-kE-7ez" id="yZ1-t1-UTw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
