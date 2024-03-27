@@ -59,7 +59,6 @@ static const NSTimeInterval kSecondsPerDay = 86400;
         prevIndex = indexAtViewLeadingEdge;
         epochAtIndex = _minEpochSeconds + prevIndex * kSecondsPerDay;
     }
-
     NSDate *d = [[NSDate alloc] initWithTimeIntervalSince1970:epochAtIndex];
     [_dateFormatter setDateFormat:@"MMMM y"];
     [[self monthLabel] setText:[_dateFormatter stringFromDate:d]];
@@ -135,5 +134,12 @@ static const NSTimeInterval kSecondsPerDay = 86400;
     [snap appendSectionsWithIdentifiers:@[@(0)]];
     [snap appendItemsWithIdentifiers:celTimes];
     [[self dataSource] applySnapshotUsingReloadData:snap];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    // set initial scroll position
+    CGFloat scrollToX = [[self collView] contentSize].width / 2;
+    CGRect r = CGRectMake(scrollToX, 0, 1, 1);
+    [[self collView] scrollRectToVisible:r animated:YES];
 }
 @end
