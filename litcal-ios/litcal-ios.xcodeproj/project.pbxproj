@@ -17,11 +17,16 @@
 		5E71CCE52B6C47640010B9A7 /* litcal_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E71CCE42B6C47640010B9A7 /* litcal_iosTests.m */; };
 		5E71CCEF2B6C47640010B9A7 /* litcal_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E71CCEE2B6C47640010B9A7 /* litcal_iosUITests.m */; };
 		5E71CCF12B6C47640010B9A7 /* litcal_iosUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E71CCF02B6C47640010B9A7 /* litcal_iosUITestsLaunchTests.m */; };
-		5E71CCFE2B6C48110010B9A7 /* litdb in Resources */ = {isa = PBXBuildFile; fileRef = 5E71CCFD2B6C48110010B9A7 /* litdb */; };
 		5E852BEB2B6EB1BA0030F938 /* TiemposHeadline-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E852BE82B6EB1BA0030F938 /* TiemposHeadline-Medium.ttf */; };
 		5E852BEC2B6EB1BA0030F938 /* EuclidSquare-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E852BE92B6EB1BA0030F938 /* EuclidSquare-Regular.ttf */; };
 		5E852BED2B6EB1BA0030F938 /* EuclidSquare-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E852BEA2B6EB1BA0030F938 /* EuclidSquare-Semibold.ttf */; };
 		5E852BEF2B6F04560030F938 /* CircularView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E852BEE2B6F04560030F938 /* CircularView.m */; };
+		5EA347142BB373BF00E2DF5A /* errors.c in Sources */ = {isa = PBXBuildFile; fileRef = 5EA347102BB373BF00E2DF5A /* errors.c */; };
+		5EA347152BB373BF00E2DF5A /* litdb.c in Sources */ = {isa = PBXBuildFile; fileRef = 5EA347122BB373BF00E2DF5A /* litdb.c */; };
+		5EA347172BB373D900E2DF5A /* liblitdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA347052BB3735700E2DF5A /* liblitdb.a */; };
+		5EA3471B2BB374BC00E2DF5A /* LitCelebrationBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3471A2BB374BC00E2DF5A /* LitCelebrationBridge.m */; };
+		5EA3471E2BB3795300E2DF5A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA3471D2BB3794B00E2DF5A /* libsqlite3.tbd */; };
+		5EA347212BB37CE200E2DF5A /* litcal.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5EA347202BB37CE200E2DF5A /* litcal.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +44,17 @@
 			remoteGlobalIDString = 5E71CCC42B6C47620010B9A7;
 			remoteInfo = "litcal-ios";
 		};
+		5EA347182BB373D900E2DF5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E71CCBD2B6C47620010B9A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EA347042BB3735700E2DF5A;
+			remoteInfo = litdb;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		5EA346F22BB3717600E2DF5A /* CopyFiles */ = {
+		5EA347032BB3735700E2DF5A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
@@ -71,14 +83,21 @@
 		5E71CCEA2B6C47640010B9A7 /* litcal-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "litcal-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E71CCEE2B6C47640010B9A7 /* litcal_iosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = litcal_iosUITests.m; sourceTree = "<group>"; };
 		5E71CCF02B6C47640010B9A7 /* litcal_iosUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = litcal_iosUITestsLaunchTests.m; sourceTree = "<group>"; };
-		5E71CCFD2B6C48110010B9A7 /* litdb */ = {isa = PBXFileReference; lastKnownFileType = folder; name = litdb; path = ../litdb; sourceTree = "<group>"; };
 		5E71CCFF2B6C49D80010B9A7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5E852BE82B6EB1BA0030F938 /* TiemposHeadline-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TiemposHeadline-Medium.ttf"; sourceTree = "<group>"; };
 		5E852BE92B6EB1BA0030F938 /* EuclidSquare-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-Regular.ttf"; sourceTree = "<group>"; };
 		5E852BEA2B6EB1BA0030F938 /* EuclidSquare-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-Semibold.ttf"; sourceTree = "<group>"; };
 		5E852BEE2B6F04560030F938 /* CircularView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircularView.m; sourceTree = "<group>"; };
 		5E852BF02B6F046E0030F938 /* CircularView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircularView.h; sourceTree = "<group>"; };
-		5EA346F42BB3717600E2DF5A /* liblitdb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblitdb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EA347052BB3735700E2DF5A /* liblitdb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblitdb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EA347102BB373BF00E2DF5A /* errors.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = errors.c; path = ../litdb/errors.c; sourceTree = "<group>"; };
+		5EA347112BB373BF00E2DF5A /* litdb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = litdb.h; path = ../litdb/litdb.h; sourceTree = "<group>"; };
+		5EA347122BB373BF00E2DF5A /* litdb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = litdb.c; path = ../litdb/litdb.c; sourceTree = "<group>"; };
+		5EA347132BB373BF00E2DF5A /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = private.h; path = ../litdb/private.h; sourceTree = "<group>"; };
+		5EA3471A2BB374BC00E2DF5A /* LitCelebrationBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LitCelebrationBridge.m; sourceTree = "<group>"; };
+		5EA3471C2BB374CC00E2DF5A /* LitCelebrationBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LitCelebrationBridge.h; sourceTree = "<group>"; };
+		5EA3471D2BB3794B00E2DF5A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		5EA347202BB37CE200E2DF5A /* litcal.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = litcal.sqlite; path = ../litcal.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +105,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EA3471E2BB3795300E2DF5A /* libsqlite3.tbd in Frameworks */,
+				5EA347172BB373D900E2DF5A /* liblitdb.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +124,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5EA346F12BB3717600E2DF5A /* Frameworks */ = {
+		5EA347022BB3735700E2DF5A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -116,13 +137,15 @@
 		5E71CCBC2B6C47620010B9A7 = {
 			isa = PBXGroup;
 			children = (
+				5EA3471F2BB37CCB00E2DF5A /* Resources */,
+				5EA3470F2BB3737F00E2DF5A /* litdb */,
 				5E852BE62B6EB18F0030F938 /* Shared */,
 				5E71CCFF2B6C49D80010B9A7 /* README.md */,
-				5E71CCFD2B6C48110010B9A7 /* litdb */,
 				5E71CCC72B6C47620010B9A7 /* litcal-ios */,
 				5E71CCE32B6C47640010B9A7 /* litcal-iosTests */,
 				5E71CCED2B6C47640010B9A7 /* litcal-iosUITests */,
 				5E71CCC62B6C47620010B9A7 /* Products */,
+				5EA347162BB373D900E2DF5A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,7 +155,7 @@
 				5E71CCC52B6C47620010B9A7 /* litcal-ios.app */,
 				5E71CCE02B6C47640010B9A7 /* litcal-iosTests.xctest */,
 				5E71CCEA2B6C47640010B9A7 /* litcal-iosUITests.xctest */,
-				5EA346F42BB3717600E2DF5A /* liblitdb.a */,
+				5EA347052BB3735700E2DF5A /* liblitdb.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,6 +163,7 @@
 		5E71CCC72B6C47620010B9A7 /* litcal-ios */ = {
 			isa = PBXGroup;
 			children = (
+				5EA347222BB3880000E2DF5A /* litdbBridge */,
 				5E71CCC82B6C47620010B9A7 /* AppDelegate.h */,
 				5E71CCC92B6C47620010B9A7 /* AppDelegate.m */,
 				5E71CCCB2B6C47620010B9A7 /* SceneDelegate.h */,
@@ -192,6 +216,42 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		5EA3470F2BB3737F00E2DF5A /* litdb */ = {
+			isa = PBXGroup;
+			children = (
+				5EA347102BB373BF00E2DF5A /* errors.c */,
+				5EA347122BB373BF00E2DF5A /* litdb.c */,
+				5EA347112BB373BF00E2DF5A /* litdb.h */,
+				5EA347132BB373BF00E2DF5A /* private.h */,
+			);
+			name = litdb;
+			sourceTree = "<group>";
+		};
+		5EA347162BB373D900E2DF5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5EA3471D2BB3794B00E2DF5A /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5EA3471F2BB37CCB00E2DF5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5EA347202BB37CE200E2DF5A /* litcal.sqlite */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5EA347222BB3880000E2DF5A /* litdbBridge */ = {
+			isa = PBXGroup;
+			children = (
+				5EA3471A2BB374BC00E2DF5A /* LitCelebrationBridge.m */,
+				5EA3471C2BB374CC00E2DF5A /* LitCelebrationBridge.h */,
+			);
+			path = litdbBridge;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -206,6 +266,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				5EA347192BB373D900E2DF5A /* PBXTargetDependency */,
 			);
 			name = "litcal-ios";
 			productName = "litcal-ios";
@@ -248,13 +309,13 @@
 			productReference = 5E71CCEA2B6C47640010B9A7 /* litcal-iosUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		5EA346F32BB3717600E2DF5A /* litdb */ = {
+		5EA347042BB3735700E2DF5A /* litdb */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5EA346FC2BB3717600E2DF5A /* Build configuration list for PBXNativeTarget "litdb" */;
+			buildConfigurationList = 5EA3470B2BB3735700E2DF5A /* Build configuration list for PBXNativeTarget "litdb" */;
 			buildPhases = (
-				5EA346F02BB3717600E2DF5A /* Sources */,
-				5EA346F12BB3717600E2DF5A /* Frameworks */,
-				5EA346F22BB3717600E2DF5A /* CopyFiles */,
+				5EA347012BB3735700E2DF5A /* Sources */,
+				5EA347022BB3735700E2DF5A /* Frameworks */,
+				5EA347032BB3735700E2DF5A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -262,7 +323,7 @@
 			);
 			name = litdb;
 			productName = litdb;
-			productReference = 5EA346F42BB3717600E2DF5A /* liblitdb.a */;
+			productReference = 5EA347052BB3735700E2DF5A /* liblitdb.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -288,7 +349,7 @@
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = 5E71CCC42B6C47620010B9A7;
 					};
-					5EA346F32BB3717600E2DF5A = {
+					5EA347042BB3735700E2DF5A = {
 						CreatedOnToolsVersion = 15.3;
 					};
 				};
@@ -309,7 +370,7 @@
 				5E71CCC42B6C47620010B9A7 /* litcal-ios */,
 				5E71CCDF2B6C47640010B9A7 /* litcal-iosTests */,
 				5E71CCE92B6C47640010B9A7 /* litcal-iosUITests */,
-				5EA346F32BB3717600E2DF5A /* litdb */,
+				5EA347042BB3735700E2DF5A /* litdb */,
 			);
 		};
 /* End PBXProject section */
@@ -319,10 +380,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E71CCFE2B6C48110010B9A7 /* litdb in Resources */,
 				5E852BEB2B6EB1BA0030F938 /* TiemposHeadline-Medium.ttf in Resources */,
 				5E852BEC2B6EB1BA0030F938 /* EuclidSquare-Regular.ttf in Resources */,
 				5E852BED2B6EB1BA0030F938 /* EuclidSquare-Semibold.ttf in Resources */,
+				5EA347212BB37CE200E2DF5A /* litcal.sqlite in Resources */,
 				5E71CCD82B6C47640010B9A7 /* LaunchScreen.storyboard in Resources */,
 				5E71CCD52B6C47640010B9A7 /* Assets.xcassets in Resources */,
 				5E71CCD32B6C47620010B9A7 /* Main.storyboard in Resources */,
@@ -353,6 +414,7 @@
 				5E71CCD02B6C47620010B9A7 /* ViewController.m in Sources */,
 				5E852BEF2B6F04560030F938 /* CircularView.m in Sources */,
 				5E71CCCA2B6C47620010B9A7 /* AppDelegate.m in Sources */,
+				5EA3471B2BB374BC00E2DF5A /* LitCelebrationBridge.m in Sources */,
 				5E71CCDB2B6C47640010B9A7 /* main.m in Sources */,
 				5E71CCCD2B6C47620010B9A7 /* SceneDelegate.m in Sources */,
 			);
@@ -375,10 +437,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5EA346F02BB3717600E2DF5A /* Sources */ = {
+		5EA347012BB3735700E2DF5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EA347142BB373BF00E2DF5A /* errors.c in Sources */,
+				5EA347152BB373BF00E2DF5A /* litdb.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +458,11 @@
 			isa = PBXTargetDependency;
 			target = 5E71CCC42B6C47620010B9A7 /* litcal-ios */;
 			targetProxy = 5E71CCEB2B6C47640010B9A7 /* PBXContainerItemProxy */;
+		};
+		5EA347192BB373D900E2DF5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5EA347042BB3735700E2DF5A /* litdb */;
+			targetProxy = 5EA347182BB373D900E2DF5A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -655,7 +724,7 @@
 			};
 			name = Release;
 		};
-		5EA346FA2BB3717600E2DF5A /* Debug */ = {
+		5EA3470C2BB3735700E2DF5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -668,7 +737,7 @@
 			};
 			name = Debug;
 		};
-		5EA346FB2BB3717600E2DF5A /* Release */ = {
+		5EA3470D2BB3735700E2DF5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -720,11 +789,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5EA346FC2BB3717600E2DF5A /* Build configuration list for PBXNativeTarget "litdb" */ = {
+		5EA3470B2BB3735700E2DF5A /* Build configuration list for PBXNativeTarget "litdb" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5EA346FA2BB3717600E2DF5A /* Debug */,
-				5EA346FB2BB3717600E2DF5A /* Release */,
+				5EA3470C2BB3735700E2DF5A /* Debug */,
+				5EA3470D2BB3735700E2DF5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

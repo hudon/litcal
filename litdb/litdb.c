@@ -7,6 +7,21 @@ static const char *lit_color_names[LIT_COLOR_COUNT] = {
    [LIT_GREEN] = "green",   [LIT_VIOLET] = "violet", [LIT_GOLD] = "gold",
    [LIT_SILVER] = "silver", [LIT_ROSE] = "rose"};
 
+
+bool open_db(const char *filename, sqlite3 **out_db, struct lit_error **out_err) {
+	sqlite3 *db;
+	if (filename == NULL) {
+		filename = ":memory:";
+	}
+	if (sqlite3_open(filename, &db) != SQLITE_OK) {
+		lit_error_new_fmt(LIT_ERROR, "Can't open database: %s", sqlite3_errmsg(db), out_err);
+		sqlite3_close(db);
+		return false;
+	}
+	*out_db = db;
+	return true;
+}
+
 bool lit_color_from_string(const char *col_str, enum lit_color *out_col) {
 	if (col_str == NULL || out_col == NULL) {
 		return false;
@@ -90,8 +105,11 @@ bool lit_get_celebration(
 		out_cel->epoch_seconds = epoch_seconds;
 		strlcpy(out_cel->event_key, event_key, sizeof(out_cel->event_key));
 		strlcpy(out_cel->title, title, sizeof(out_cel->title));
-		if (subtitle != NULL)
-			strlcpy(out_cel->subtitle, subtitle, sizeof(out_cel->subtitle));
+        if (subtitle == NULL) {
+            out_cel->subtitle[0] = '\0'; // ensure subtitle is set to empty
+        } else {
+            strlcpy(out_cel->subtitle, subtitle, sizeof(out_cel->subtitle));
+        }
 		strlcpy(out_cel->gospel_ref, gospel_ref, sizeof(out_cel->gospel_ref));
 		if ((out_cel->gospel_text = strdup(gospel_text)) == NULL) {
 			lit_error_new(LIT_ERROR, "Failed to strdup gospel_text", out_err);

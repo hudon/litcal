@@ -7,20 +7,6 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-sqlite3 *open_db(const char *filename) {
-	sqlite3 *db;
-	if (filename == NULL) {
-		filename = ":memory:";
-	}
-	if (sqlite3_open(filename, &db) != SQLITE_OK) {
-		fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
-		sqlite3_close(db);
-		return NULL;
-	}
-
-	return db;
-}
-
 void test_get_celebration__nulldb() {
 	struct lit_error *err = NULL;
 	bool res = lit_get_celebration(NULL, 1, 0, NULL, &err);
@@ -39,10 +25,8 @@ void test_get_celebration__negative_epoch() {
 // test that the function returns an empty celebration when the epoch is missing
 // in the database
 void test_get_celebration__missing() {
-	sqlite3 *db = open_db("data/litcal.test.sqlite");
-	if (db == NULL) {
-		return;
-	}
+	sqlite3 *db;
+	assert(open_db("data/litcal.test.sqlite", &db, NULL));
 
 	struct lit_celebration cel = {};
 	struct lit_error *err = NULL;
@@ -56,10 +40,8 @@ void test_get_celebration__missing() {
 
 // test that the function returns an error when the table is missing
 void test_get_celebration__error_no_table() {
-	sqlite3 *db = open_db("data/empty.test.sqlite");
-	if (db == NULL) {
-		return;
-	}
+	sqlite3 *db;
+	assert(open_db("data/empty.test.sqlite", &db, NULL));
 
 	struct lit_celebration cel = {};
 	struct lit_error *err = NULL;
@@ -74,10 +56,8 @@ void test_get_celebration__error_no_table() {
 // test that the function returns a valid celebration when the epoch is present
 // in the database
 void test_get_celebration__valid() {
-	sqlite3 *db = open_db("./data/litcal.test.sqlite");
-	if (db == NULL) {
-		return;
-	}
+	sqlite3 *db;
+	assert(open_db("./data/litcal.test.sqlite", &db, NULL));
 
 	struct lit_celebration cel = {};
 	int64_t epoch = 1704931200;
@@ -91,7 +71,8 @@ void test_get_celebration__valid() {
 }
 
 void test_get_min_and_max__nullargs() {
-	sqlite3 *db = open_db(NULL);
+	sqlite3 *db;
+	assert(open_db(NULL, &db, NULL));
 	int64_t min, max;
 	struct lit_error *err = NULL;
 	bool res = lit_get_min_and_max(NULL, 1, &min, &max, &err);
@@ -108,10 +89,8 @@ void test_get_min_and_max__nullargs() {
 }
 
 void test_get_min_and_max__valid() {
-	sqlite3 *db = open_db("./data/litcal.test.sqlite");
-	if (db == NULL) {
-		return;
-	}
+	sqlite3 *db;
+	assert(open_db("./data/litcal.test.sqlite", &db, NULL));
 
 	int64_t min, max;
 	bool res = lit_get_min_and_max(db, 1, &min, &max, NULL);

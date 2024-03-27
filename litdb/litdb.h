@@ -53,6 +53,8 @@ struct lit_celebration {
   int64_t epoch_seconds; /// seconds from 19700101 to 00:00 (midnight the morning of) on the day of this celebration
 };
 
+bool open_db(const char *filename, sqlite3 **out_db, struct lit_error **out_err);
+
 bool lit_get_celebration(
     sqlite3 *db, uint64_t cal_id,
     int64_t epoch_econds,

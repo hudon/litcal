@@ -12,6 +12,6 @@ UserInterfaceState.xcuserstate
 build/
 
 # liblitdb
-liblitdb/*.o
-liblitdb_test
-liblitdb.a
+litdb/*.o
+litdb_test
+litdb.a

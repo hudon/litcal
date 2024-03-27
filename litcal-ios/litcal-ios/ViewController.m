@@ -6,11 +6,15 @@
 //
 
 #import "ViewController.h"
+#import "litdb.h"
+#import "litdbBridge/LitCelebrationBridge.h"
 
-@interface ViewController ()
+@interface ViewController () {
+    sqlite3 *db;
+}
 
 @property (strong, nonatomic) UICollectionViewDiffableDataSource *dataSource;
-@property NSDictionary *celebrations;
+@property (strong) NSDictionary *celebrations;
 
 @end
 
@@ -19,36 +23,79 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    NSString *pathToDB = [[NSBundle mainBundle] pathForResource:@"litcal" ofType:@"sqlite"];
+    struct lit_error *err;
+    if (!open_db([pathToDB cStringUsingEncoding:NSASCIIStringEncoding], &db, &err)) {
+        NSLog(@"Failed to open the litcal database: %s", err->message);
+        // TODO: is returning the best thing to do here?
+        return;
+    }
+
+    // Fetch the dates and store them in a dictionary
+
+    int64_t min, max;
+    uint64_t calID = 1;
+    if (!lit_get_min_and_max(db, calID, &min, &max, &err)) {
+        NSLog(@"Failed to get min/max: %s", err->message);
+        // TODO: is returning the best thing to do here?
+        return;
+    }
+
+    int count = 0;
+    NSMutableArray *keyArray = [[NSMutableArray alloc] init];
+    NSMutableArray *valueArray = [[NSMutableArray alloc] init];
+    for (int64_t curr = min; curr <= max; curr += 86400) {
+        count++;
+        struct lit_celebration cel;
+        if (!lit_get_celebration(db, calID, curr, &cel, &err)) {
+            NSLog(@"Failed to get celebration at time %lld: %s", curr, err->message);
+            // TODO is return the best thing here?
+            return;
+        }
+        [keyArray addObject:[[NSNumber alloc] initWithLongLong:curr]];
+        [valueArray addObject:[[LitCelebrationBridge alloc] initWithCLitCelebration:cel]];
+    }
+    [self setCelebrations:[[NSDictionary alloc] initWithObjects:valueArray forKeys:keyArray]];
+    NSLog(@"The count is %d", count);
+    NSLog(@"here it is: %@", [[[self celebrations] objectForKey:[[NSNumber alloc] initWithLongLong:max]] title]);
+    // TODO: now you can use the key/vals to set up the data source below
+
+
     // wire each cell to its corresponding celebration
-    [self setDataSource: [
-        [UICollectionViewDiffableDataSource alloc]
-        initWithCollectionView:[self collView]
-        cellProvider:^UICollectionViewCell*(
-                                            UICollectionView * collView,
-                                            NSIndexPath * indexPath,
-                                            NSString *itemIdentifier) {
-        UICollectionViewCell *cell = [
-            collView
-            dequeueReusableCellWithReuseIdentifier:@"dayCell"
-            forIndexPath: indexPath];
-        // TODO: get from celebrations dict the celebration for the given identifier
-        // change the identifier to the date (NSNumber? NSDate?)
+    [self setDataSource: [[UICollectionViewDiffableDataSource alloc]
+                          initWithCollectionView:[self collView]
+                          cellProvider:^UICollectionViewCell*(UICollectionView * collView,
+                                                              NSIndexPath * indexPath,
+                                                              id epochSeconds) {
+        UICollectionViewCell *cell = [collView
+                                      dequeueReusableCellWithReuseIdentifier:@"dayCell"
+                                      forIndexPath: indexPath];
         UILabel *lbl = (UILabel *)[cell viewWithTag:1];
-        lbl.text = itemIdentifier;
+
+        NSDate *d = [[NSDate alloc] initWithTimeIntervalSince1970:[epochSeconds doubleValue]];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+        dateFormatter.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+        NSString *s = [[[self celebrations] objectForKey:epochSeconds] title];
+
+        [dateFormatter setDateFormat:@"d"];
+        lbl.text = [dateFormatter stringFromDate:d];
+
+        [dateFormatter setDateFormat:@"EEEEE"];
+        lbl.text = [dateFormatter stringFromDate:d];
+
+
         return cell;
     }]];
 
-    // Fetch the dates and store them in a dictionary
-    // TODO
-    // get min and max
-    // iterate over dates
-    // get celebration for date, error if hole
-    // insert into dict
+
+
+
     NSDiffableDataSourceSnapshot *snap = [[NSDiffableDataSourceSnapshot alloc] init];
     [snap appendSectionsWithIdentifiers:@[@(0)]];
     // NOTE: the identifiers need to be unique
     // TODO: look into how these identifiers should be used
-    [snap appendItemsWithIdentifiers:@[@"98", @"34", @"11",@"91", @"4", @"1",@"8", @"31", @"21",@"92", @"22", @"81",@"88", @"74", @"17"]];
+    [snap appendItemsWithIdentifiers:keyArray];
     [[self dataSource] applySnapshotUsingReloadData:snap];
 }
 
