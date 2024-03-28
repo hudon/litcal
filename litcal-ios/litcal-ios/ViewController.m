@@ -41,13 +41,15 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 		(CGFloat)(epochSeconds - _minEpochSeconds) /
 		(_maxEpochSeconds - _minEpochSeconds);
 
-	CGFloat scrollViewWidth = [[self collView] visibleSize].width;
-	CGFloat x = [[self collView] contentSize].width * todayPosition;
 	UICollectionViewFlowLayout *layout =
-	(UICollectionViewFlowLayout*)[[self collView] collectionViewLayout];
+		(UICollectionViewFlowLayout*)[[self collView] collectionViewLayout];
+	CGFloat scrollViewWidth = [[self collView] visibleSize].width;
+	// The first operand is the distance from cell_first.x to cell_last.x. So if todayPosition=100%,
+	// then x will be the X origin of the last cell
+	CGFloat x = ([[self collView] contentSize].width - [layout itemSize].width) * todayPosition;
 	// center today cell by moving x away from the center of
-	// the scrollView width and the center of the cell
-	x -= scrollViewWidth / 2 - [layout itemSize].width / 2;
+	// the scrollView width and away from the center of the cell
+	x = x - scrollViewWidth / 2 + [layout itemSize].width / 2;
 
 	// we give the rect a minimal arbitrary height to avoid UIKit ignoring our request
 	CGRect r = CGRectMake(x, 0, scrollViewWidth, 1);
