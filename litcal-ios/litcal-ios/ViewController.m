@@ -66,9 +66,8 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 		[[cal startOfDayForDate:[NSDate date]] timeIntervalSince1970];
 
 	// find today in the existing range of dates, as a percentage
-	CGFloat todayPosition = 
-		(CGFloat)(epochSeconds - _minEpochSeconds) /
-		(_maxEpochSeconds - _minEpochSeconds);
+	NSUInteger min = [self minEpochSeconds], max = [self maxEpochSeconds];
+	CGFloat todayPosition = (CGFloat)(epochSeconds - min) / (max - min);
 
 	UICollectionViewFlowLayout *layout =
 		(UICollectionViewFlowLayout*)[[self collView] collectionViewLayout];
@@ -121,11 +120,12 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 			return;
 		}
 		prevIndex = indexAtViewLeadingEdge;
-		epochAtIndex = _minEpochSeconds + prevIndex * kSecondsPerDay;
+		epochAtIndex = [self minEpochSeconds] + prevIndex * kSecondsPerDay;
 	}
 	NSDate *d = [[NSDate alloc] initWithTimeIntervalSince1970:epochAtIndex];
-	[_dateFormatter setDateFormat:@"MMMM y"];
-	[[self monthLabel] setText:[_dateFormatter stringFromDate:d]];
+	NSDateFormatter *df = [self dateFormatter];
+	[df setDateFormat:@"MMMM y"];
+	[[self monthLabel] setText:[df stringFromDate:d]];
 }
 
 - (void)viewDidLoad {
@@ -160,8 +160,8 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 			// TODO: is returning the best thing to do here?
 			return;
 		}
-		_minEpochSeconds = min;
-		_maxEpochSeconds = max;
+		[self setMinEpochSeconds:min];
+		[self setMaxEpochSeconds:max];
 
 		for (int64_t curr = min; curr <= max; curr += kSecondsPerDay) {
 			struct lit_celebration cel;
