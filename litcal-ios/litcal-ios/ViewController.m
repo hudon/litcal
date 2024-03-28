@@ -42,11 +42,20 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 	[[[self drawer] superview] sendSubviewToBack:[self drawer]];
 
 	CGFloat drawerHeight = [[self drawer] frame].size.height;
-	[[self scrollViewTopConstraint] setConstant:shouldShow ? 0.0 : -drawerHeight];
 
+	[[self scrollViewTopConstraint] setConstant:shouldShow ? 0.0 : -drawerHeight];
 	[UIView animateWithDuration:0.25 animations:^{
+		// force animated layout bc the constraints changed
 		[[[self drawer] superview] layoutIfNeeded];
 		[[self drawer] setAlpha:shouldShow ? 1.0 : 0.0];
+		// Without the small offset, animations choose the shortest path,
+		// but the shortest path to 180 deg can be clockwise or counter-clockwise,
+		// and clockwise is always chosen in a tie. However, we do not want it to
+		// always be clockwise, because we want a "bounce" effect.
+		[[self chevron]
+		 	setTransform:CGAffineTransformRotate(
+				[[self chevron] transform],
+				shouldShow ? -M_PI+0.01 : M_PI-0.01)];
 	}];
 }
 
