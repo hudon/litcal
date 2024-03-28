@@ -48,10 +48,17 @@ static const NSTimeInterval kSecondsPerDay = 86400;
     // we give the rect a minimal arbitrary height to avoid UIKit ignoring our request
     CGRect r = CGRectMake(x, 0, scrollViewWidth, 1);
     [[self collView] scrollRectToVisible:r animated:YES];
+
+    [self setSelectedKey:[NSNumber numberWithInt:epochSeconds]];
 }
 
 - (LitCelebrationBridge*)selectedCelebration {
     return [[self celebrations] objectForKey:[self selectedKey]];
+}
+
+- (void)setSelectedKey:(NSNumber *)selectedKey {
+    _selectedKey = selectedKey;
+    [[self gospelText] setText:[[self selectedCelebration] gospelText]];
 }
 
 - (void)handleCellTap:(UITapGestureRecognizer*)sender {
@@ -59,7 +66,6 @@ static const NSTimeInterval kSecondsPerDay = 86400;
     UICollectionViewCell *cell = (UICollectionViewCell *)[[sender view] superview];
     NSIndexPath *indexPath = [self.collView indexPathForCell:cell];
     [self setSelectedKey:[[self dataSource] itemIdentifierForIndexPath:indexPath]];
-    [[self gospelText] setText:[[self selectedCelebration] gospelText]];
 }
 
 // respond to scrolling the collection view ("cal wheel")
