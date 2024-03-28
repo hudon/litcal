@@ -31,140 +31,163 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 @implementation ViewController
 
 - (IBAction)handleTodayTriggered {
-    NSCalendar *cal = [NSCalendar currentCalendar];
-    cal.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
-    int epochSeconds = [[cal startOfDayForDate:[NSDate date]] timeIntervalSince1970];
+	NSCalendar *cal = [NSCalendar currentCalendar];
+	cal.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+	int epochSeconds =
+		[[cal startOfDayForDate:[NSDate date]] timeIntervalSince1970];
 
-    // find today in the existing range of dates, as a percentage
-    CGFloat todayPosition = (CGFloat)(epochSeconds - _minEpochSeconds) /
-        (_maxEpochSeconds - _minEpochSeconds);
+	// find today in the existing range of dates, as a percentage
+	CGFloat todayPosition = 
+		(CGFloat)(epochSeconds - _minEpochSeconds) /
+		(_maxEpochSeconds - _minEpochSeconds);
 
-    CGFloat scrollViewWidth = [[self collView] visibleSize].width;
-    CGFloat x = [[self collView] contentSize].width * todayPosition;
-    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout*)[[self collView] collectionViewLayout];
-    // center today cell by moving x away from the center of the scrollView width and the center of the cell
-    x -= scrollViewWidth / 2 - [layout itemSize].width / 2;
+	CGFloat scrollViewWidth = [[self collView] visibleSize].width;
+	CGFloat x = [[self collView] contentSize].width * todayPosition;
+	UICollectionViewFlowLayout *layout =
+	(UICollectionViewFlowLayout*)[[self collView] collectionViewLayout];
+	// center today cell by moving x away from the center of
+	// the scrollView width and the center of the cell
+	x -= scrollViewWidth / 2 - [layout itemSize].width / 2;
 
-    // we give the rect a minimal arbitrary height to avoid UIKit ignoring our request
-    CGRect r = CGRectMake(x, 0, scrollViewWidth, 1);
-    [[self collView] scrollRectToVisible:r animated:YES];
+	// we give the rect a minimal arbitrary height to avoid UIKit ignoring our request
+	CGRect r = CGRectMake(x, 0, scrollViewWidth, 1);
+	[[self collView] scrollRectToVisible:r animated:YES];
 
-    [self setSelectedKey:[NSNumber numberWithInt:epochSeconds]];
+	[self setSelectedKey:[NSNumber numberWithInt:epochSeconds]];
 }
 
 - (LitCelebrationBridge*)selectedCelebration {
-    return [[self celebrations] objectForKey:[self selectedKey]];
+	return [[self celebrations] objectForKey:[self selectedKey]];
 }
 
 - (void)setSelectedKey:(NSNumber *)selectedKey {
-    _selectedKey = selectedKey;
-    [[self gospelText] setText:[[self selectedCelebration] gospelText]];
+	_selectedKey = selectedKey;
+	[[self gospelText] setText:[[self selectedCelebration] gospelText]];
 }
 
 - (void)handleCellTap:(UITapGestureRecognizer*)sender {
-    // the sender view is the contentView, and the cell view contains it
-    UICollectionViewCell *cell = (UICollectionViewCell *)[[sender view] superview];
-    NSIndexPath *indexPath = [self.collView indexPathForCell:cell];
-    [self setSelectedKey:[[self dataSource] itemIdentifierForIndexPath:indexPath]];
+	// the sender view is the contentView, and the cell view contains it
+	UICollectionViewCell *cell = (UICollectionViewCell *)[[sender view] superview];
+	NSIndexPath *indexPath = [self.collView indexPathForCell:cell];
+	[self setSelectedKey:[[self dataSource] itemIdentifierForIndexPath:indexPath]];
 }
 
 // respond to scrolling the collection view ("cal wheel")
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    NSUInteger epochAtIndex;
-    {
-        static int prevIndex = 0;
-        CGFloat scrollPositionPercentage = [scrollView contentOffset].x / [scrollView contentSize].width;
-        NSUInteger lastIndex = [[self celebrations] count];
-        int indexAtViewLeadingEdge = (int)(scrollPositionPercentage * lastIndex);
-        // add N to make the month transition happen before the "day 1" cell reaches the edge of the screen
-        indexAtViewLeadingEdge += 3;
-        if (indexAtViewLeadingEdge == prevIndex || indexAtViewLeadingEdge < 0) {
-            // we haven't scrolled enough to warrant an update, bail
-            // also bail if user scrolled too far off the view and the index is negative
-            return;
-        }
-        prevIndex = indexAtViewLeadingEdge;
-        epochAtIndex = _minEpochSeconds + prevIndex * kSecondsPerDay;
-    }
-    NSDate *d = [[NSDate alloc] initWithTimeIntervalSince1970:epochAtIndex];
-    [_dateFormatter setDateFormat:@"MMMM y"];
-    [[self monthLabel] setText:[_dateFormatter stringFromDate:d]];
+	NSUInteger epochAtIndex;
+	{
+		static int prevIndex = 0;
+		CGFloat scrollPositionPercentage =
+			[scrollView contentOffset].x / [scrollView contentSize].width;
+		NSUInteger lastIndex = [[self celebrations] count];
+		int indexAtViewLeadingEdge = (int)(scrollPositionPercentage * lastIndex);
+		// add N to make the month transition happen before 
+		// the "day 1" cell reaches the edge of the screen
+		indexAtViewLeadingEdge += 3;
+		if (indexAtViewLeadingEdge == prevIndex || indexAtViewLeadingEdge < 0) {
+			// we haven't scrolled enough to warrant an update, bail
+			// also bail if user scrolled too far off the view and the index is negative
+			return;
+		}
+		prevIndex = indexAtViewLeadingEdge;
+		epochAtIndex = _minEpochSeconds + prevIndex * kSecondsPerDay;
+	}
+	NSDate *d = [[NSDate alloc] initWithTimeIntervalSince1970:epochAtIndex];
+	[_dateFormatter setDateFormat:@"MMMM y"];
+	[[self monthLabel] setText:[_dateFormatter stringFromDate:d]];
 }
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+	[super viewDidLoad];
 
-    [self setDateFormatter:[[NSDateFormatter alloc] init]];
-    [[self dateFormatter] setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
-    [[self dateFormatter] setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+	[self setDateFormatter:[[NSDateFormatter alloc] init]];
+	[
+		[self dateFormatter]
+		setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]
+	];
+	[[self dateFormatter] setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
 
-    // Get all celebrations and insert them into the lookup table
-    NSMutableArray *celTimes = [[NSMutableArray alloc] init];
-    NSMutableArray *celValues = [[NSMutableArray alloc] init];
-    {
-        NSString *pathToDB = [[NSBundle mainBundle] pathForResource:@"litcal" ofType:@"sqlite"];
-        struct lit_error *err;
-        if (!open_db([pathToDB cStringUsingEncoding:NSASCIIStringEncoding], &_db, &err)) {
-            NSLog(@"Failed to open the litcal database: %s", err->message);
-            // TODO: is returning the best thing to do here?
-            return;
-        }
+	// Get all celebrations and insert them into the lookup table
+	NSMutableArray *celTimes = [[NSMutableArray alloc] init];
+	NSMutableArray *celValues = [[NSMutableArray alloc] init];
+	{
+		NSString *pathToDB = [[NSBundle mainBundle] pathForResource:@"litcal" ofType:@"sqlite"];
+		struct lit_error *err;
+		if (!open_db([pathToDB cStringUsingEncoding:NSASCIIStringEncoding], &_db, &err)) {
+			NSLog(@"Failed to open the litcal database: %s", err->message);
+			// TODO: is returning the best thing to do here?
+			return;
+		}
 
-        int64_t min, max;
-        uint64_t calID = 1;
-        if (!lit_get_min_and_max(_db, calID, &min, &max, &err)) {
-            NSLog(@"Failed to get min/max: %s", err->message);
-            // TODO: is returning the best thing to do here?
-            return;
-        }
-        _minEpochSeconds = min;
-        _maxEpochSeconds = max;
+		int64_t min, max;
+		uint64_t calID = 1;
+		if (!lit_get_min_and_max(_db, calID, &min, &max, &err)) {
+			NSLog(@"Failed to get min/max: %s", err->message);
+			// TODO: is returning the best thing to do here?
+			return;
+		}
+		_minEpochSeconds = min;
+		_maxEpochSeconds = max;
 
-        for (int64_t curr = min; curr <= max; curr += kSecondsPerDay) {
-            struct lit_celebration cel;
-            if (!lit_get_celebration(_db, calID, curr, &cel, &err)) {
-                NSLog(@"Failed to get celebration at time %lld: %s", curr, err->message);
-                // TODO is return the best thing here?
-                return;
-            }
-            [celTimes addObject:[[NSNumber alloc] initWithLongLong:curr]];
-            [celValues addObject:[[LitCelebrationBridge alloc] initWithCLitCelebration:cel]];
-        }
-        [self setCelebrations:[[NSDictionary alloc] initWithObjects:celValues forKeys:celTimes]];
-    }
+		for (int64_t curr = min; curr <= max; curr += kSecondsPerDay) {
+			struct lit_celebration cel;
+			if (!lit_get_celebration(_db, calID, curr, &cel, &err)) {
+				NSLog(@"Failed to get celebration at time %lld: %s", curr, err->message);
+				// TODO is return the best thing here?
+				return;
+			}
+			[celTimes addObject:[[NSNumber alloc] initWithLongLong:curr]];
+			[celValues addObject:[[LitCelebrationBridge alloc] initWithCLitCelebration:cel]];
+		}
+		[self setCelebrations:[[NSDictionary alloc] initWithObjects:celValues forKeys:celTimes]];
+	}
 
 
-    // wire each cell to its corresponding celebration
-    [self setDataSource:[[UICollectionViewDiffableDataSource alloc]
-                         initWithCollectionView:[self collView]
-                         cellProvider:^UICollectionViewCell*(UICollectionView * collView,
-                                                             NSIndexPath * indexPath,
-                                                             id epochSeconds) {
-        UICollectionViewCell *cell = [collView
-                                      dequeueReusableCellWithReuseIdentifier:@"dayCell"
-                                      forIndexPath: indexPath];
+	// wire each cell to its corresponding celebration
+	[self setDataSource:[
+		[UICollectionViewDiffableDataSource alloc]
+		initWithCollectionView:[self collView]
+		cellProvider:^UICollectionViewCell*(
+			UICollectionView * collView,
+			NSIndexPath * indexPath,
+			id epochSeconds
+		) {
+			UICollectionViewCell *cell = [
+				collView
+				dequeueReusableCellWithReuseIdentifier:@"dayCell"
+				forIndexPath: indexPath
+			];
 
-        UITapGestureRecognizer *tapped = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleCellTap:)];
-        [[cell contentView] addGestureRecognizer:tapped];
+			UITapGestureRecognizer *tapped =
+				[
+					[UITapGestureRecognizer alloc]
+					initWithTarget:self
+					action:@selector(handleCellTap:)
+				];
+			[[cell contentView] addGestureRecognizer:tapped];
 
-        NSDate *d = [[NSDate alloc] initWithTimeIntervalSince1970:[epochSeconds doubleValue]];
-        NSDateFormatter *df = [self dateFormatter];
-        [df setDateFormat:@"d"];
-        [[cell viewWithTag:1] setText:[df stringFromDate:d]];
-        [df setDateFormat:@"EEEEE"];
-        [[cell viewWithTag:2] setText:[df stringFromDate:d]];
+			NSDate *d = [
+				[NSDate alloc]
+				initWithTimeIntervalSince1970:[epochSeconds doubleValue]
+			];
+			NSDateFormatter *df = [self dateFormatter];
+			[df setDateFormat:@"d"];
+			[[cell viewWithTag:1] setText:[df stringFromDate:d]];
+			[df setDateFormat:@"EEEEE"];
+			[[cell viewWithTag:2] setText:[df stringFromDate:d]];
 
-        return cell;
-    }]];
+			return cell;
+		}
+	]];
 
-    NSDiffableDataSourceSnapshot *snap = [[NSDiffableDataSourceSnapshot alloc] init];
-    [snap appendSectionsWithIdentifiers:@[@(0)]];
-    [snap appendItemsWithIdentifiers:celTimes];
-    [[self dataSource] applySnapshotUsingReloadData:snap];
+	NSDiffableDataSourceSnapshot *snap = [[NSDiffableDataSourceSnapshot alloc] init];
+	[snap appendSectionsWithIdentifiers:@[@(0)]];
+	[snap appendItemsWithIdentifiers:celTimes];
+	[[self dataSource] applySnapshotUsingReloadData:snap];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    // set initial scroll position
-    [self handleTodayTriggered];
+	// set initial scroll position
+	[self handleTodayTriggered];
 }
 @end
