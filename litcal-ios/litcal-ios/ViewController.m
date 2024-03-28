@@ -133,7 +133,7 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 			struct lit_celebration cel;
 			if (!lit_get_celebration(_db, calID, curr, &cel, &err)) {
 				NSLog(@"Failed to get celebration at time %lld: %s", curr, err->message);
-				// TODO is return the best thing here?
+				// TODO: is return the best thing here?
 				return;
 			}
 			[celTimes addObject:[[NSNumber alloc] initWithLongLong:curr]];
