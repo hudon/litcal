@@ -153,17 +153,14 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 			id epochSeconds
 		) {
 			UICollectionViewCell *cell = [
-				collView
-				dequeueReusableCellWithReuseIdentifier:@"dayCell"
-				forIndexPath: indexPath
+				collView dequeueReusableCellWithReuseIdentifier:@"dayCell"
+				forIndexPath:indexPath
 			];
 
-			UITapGestureRecognizer *tapped =
-				[
-					[UITapGestureRecognizer alloc]
-					initWithTarget:self
-					action:@selector(handleCellTap:)
-				];
+			UITapGestureRecognizer *tapped = [
+				[UITapGestureRecognizer alloc]
+				initWithTarget:self action:@selector(handleCellTap:)
+			];
 			[[cell contentView] addGestureRecognizer:tapped];
 
 			NSDate *d = [
