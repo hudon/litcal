@@ -34,13 +34,17 @@
                                             <constraint firstAttribute="width" constant="76" id="yMk-Zd-N6u"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="chevron.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZsC-z8-yMB">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="chevron.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZsC-z8-yMB">
                                         <rect key="frame" x="106" y="15.666666666666664" width="18.666666666666671" height="10.333333333333336"/>
                                         <color key="tintColor" name="Color_Ashes"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20.329999999999998" id="Ebx-sf-H6O"/>
                                             <constraint firstAttribute="width" constant="18.670000000000002" id="sni-bw-rGF"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="ABh-xz-oka" appends="YES" id="NKw-9h-1DU"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -52,58 +56,6 @@
                                     <constraint firstItem="OwH-O7-eSu" firstAttribute="leading" secondItem="ehy-wW-ILM" secondAttribute="leadingMargin" id="u1F-QM-vn3"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xho-QK-fim">
-                                <rect key="frame" x="0.0" y="239" width="375" height="539"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DSp-9S-lGr" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="589.33333333333337"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="hero_ordinary_time" translatesAutoresizingMaskIntoConstraints="NO" id="GSM-pI-03s" userLabel="img">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="GSM-pI-03s" secondAttribute="height" multiplier="5:3" id="XBy-Vb-6CV"/>
-                                                </constraints>
-                                            </imageView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEc-XV-8DW" userLabel="popup">
-                                                <rect key="frame" x="37.666666666666657" y="185" width="300" height="100"/>
-                                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="h2V-YY-nrz"/>
-                                                </constraints>
-                                            </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSX-My-ZGd" userLabel="gospelText">
-                                                <rect key="frame" x="22" y="285" width="331" height="304.33333333333326"/>
-                                                <string key="text">The shepherds went in haste to Bethlehem and found Mary and Joseph, and the infant lying in the manger. When they saw this, they made known the message that had been told them about this child. All who heard it were amazed by what had been told them by the shepherds. And Mary kept all these things, reflecting on them in her heart. Then the shepherds returned, glorifying and praising God for all they had heard and seen, just as it had been told to them. When eight days were completed for his circumcision, he was named Jesus, the name given him by the angel before he was conceived in the womb.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="GSM-pI-03s" firstAttribute="top" secondItem="DSp-9S-lGr" secondAttribute="top" id="1c2-Sm-2nt"/>
-                                            <constraint firstItem="GSM-pI-03s" firstAttribute="leading" secondItem="DSp-9S-lGr" secondAttribute="leading" id="35P-v0-LRI"/>
-                                            <constraint firstItem="uEc-XV-8DW" firstAttribute="centerX" secondItem="DSp-9S-lGr" secondAttribute="centerX" id="ByD-3q-43T"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="qSX-My-ZGd" secondAttribute="trailing" id="euI-fF-ziO"/>
-                                            <constraint firstItem="uEc-XV-8DW" firstAttribute="width" secondItem="DSp-9S-lGr" secondAttribute="width" multiplier="0.8" id="fe8-fP-5yH"/>
-                                            <constraint firstItem="GSM-pI-03s" firstAttribute="width" secondItem="DSp-9S-lGr" secondAttribute="width" id="keB-HZ-014"/>
-                                            <constraint firstItem="qSX-My-ZGd" firstAttribute="top" secondItem="uEc-XV-8DW" secondAttribute="bottom" id="kfl-jW-3HL"/>
-                                            <constraint firstAttribute="bottom" secondItem="qSX-My-ZGd" secondAttribute="bottom" id="pAi-2u-0Th"/>
-                                            <constraint firstItem="uEc-XV-8DW" firstAttribute="centerY" secondItem="GSM-pI-03s" secondAttribute="bottom" constant="10" id="pdh-5U-Jxe"/>
-                                            <constraint firstItem="qSX-My-ZGd" firstAttribute="leading" secondItem="DSp-9S-lGr" secondAttribute="leadingMargin" id="wYa-oh-4Hz"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="DSp-9S-lGr" firstAttribute="width" secondItem="NZw-tS-hft" secondAttribute="width" id="0at-DV-cp2"/>
-                                    <constraint firstItem="DSp-9S-lGr" firstAttribute="width" secondItem="hGJ-vN-aWf" secondAttribute="width" id="CRR-5L-QXw"/>
-                                    <constraint firstItem="DSp-9S-lGr" firstAttribute="top" secondItem="hGJ-vN-aWf" secondAttribute="top" id="dBe-y5-nha"/>
-                                    <constraint firstItem="DSp-9S-lGr" firstAttribute="height" secondItem="hGJ-vN-aWf" secondAttribute="height" id="s08-Vm-N6c"/>
-                                    <constraint firstItem="DSp-9S-lGr" firstAttribute="leading" secondItem="NZw-tS-hft" secondAttribute="leading" id="w44-yQ-S7Z"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="hGJ-vN-aWf"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="NZw-tS-hft"/>
-                            </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ofs-bx-7oy" userLabel="Drawer">
                                 <rect key="frame" x="0.0" y="100" width="375" height="131"/>
                                 <subviews>
@@ -242,9 +194,61 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xho-QK-fim">
+                                <rect key="frame" x="0.0" y="239" width="375" height="539"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DSp-9S-lGr" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="589.33333333333337"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="hero_ordinary_time" translatesAutoresizingMaskIntoConstraints="NO" id="GSM-pI-03s" userLabel="img">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="GSM-pI-03s" secondAttribute="height" multiplier="5:3" id="XBy-Vb-6CV"/>
+                                                </constraints>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEc-XV-8DW" userLabel="popup">
+                                                <rect key="frame" x="37.666666666666657" y="185" width="300" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="h2V-YY-nrz"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSX-My-ZGd" userLabel="gospelText">
+                                                <rect key="frame" x="22" y="285" width="331" height="304.33333333333326"/>
+                                                <string key="text">The shepherds went in haste to Bethlehem and found Mary and Joseph, and the infant lying in the manger. When they saw this, they made known the message that had been told them about this child. All who heard it were amazed by what had been told them by the shepherds. And Mary kept all these things, reflecting on them in her heart. Then the shepherds returned, glorifying and praising God for all they had heard and seen, just as it had been told to them. When eight days were completed for his circumcision, he was named Jesus, the name given him by the angel before he was conceived in the womb.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="GSM-pI-03s" firstAttribute="top" secondItem="DSp-9S-lGr" secondAttribute="top" id="1c2-Sm-2nt"/>
+                                            <constraint firstItem="GSM-pI-03s" firstAttribute="leading" secondItem="DSp-9S-lGr" secondAttribute="leading" id="35P-v0-LRI"/>
+                                            <constraint firstItem="uEc-XV-8DW" firstAttribute="centerX" secondItem="DSp-9S-lGr" secondAttribute="centerX" id="ByD-3q-43T"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="qSX-My-ZGd" secondAttribute="trailing" id="euI-fF-ziO"/>
+                                            <constraint firstItem="uEc-XV-8DW" firstAttribute="width" secondItem="DSp-9S-lGr" secondAttribute="width" multiplier="0.8" id="fe8-fP-5yH"/>
+                                            <constraint firstItem="GSM-pI-03s" firstAttribute="width" secondItem="DSp-9S-lGr" secondAttribute="width" id="keB-HZ-014"/>
+                                            <constraint firstItem="qSX-My-ZGd" firstAttribute="top" secondItem="uEc-XV-8DW" secondAttribute="bottom" id="kfl-jW-3HL"/>
+                                            <constraint firstAttribute="bottom" secondItem="qSX-My-ZGd" secondAttribute="bottom" id="pAi-2u-0Th"/>
+                                            <constraint firstItem="uEc-XV-8DW" firstAttribute="centerY" secondItem="GSM-pI-03s" secondAttribute="bottom" constant="10" id="pdh-5U-Jxe"/>
+                                            <constraint firstItem="qSX-My-ZGd" firstAttribute="leading" secondItem="DSp-9S-lGr" secondAttribute="leadingMargin" id="wYa-oh-4Hz"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="DSp-9S-lGr" firstAttribute="width" secondItem="NZw-tS-hft" secondAttribute="width" id="0at-DV-cp2"/>
+                                    <constraint firstItem="DSp-9S-lGr" firstAttribute="width" secondItem="hGJ-vN-aWf" secondAttribute="width" id="CRR-5L-QXw"/>
+                                    <constraint firstItem="DSp-9S-lGr" firstAttribute="top" secondItem="hGJ-vN-aWf" secondAttribute="top" id="dBe-y5-nha"/>
+                                    <constraint firstItem="DSp-9S-lGr" firstAttribute="height" secondItem="hGJ-vN-aWf" secondAttribute="height" id="s08-Vm-N6c"/>
+                                    <constraint firstItem="DSp-9S-lGr" firstAttribute="leading" secondItem="NZw-tS-hft" secondAttribute="leading" id="w44-yQ-S7Z"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="hGJ-vN-aWf"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="NZw-tS-hft"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY" userLabel="Root Safe Area"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Liturgicolor_Lily"/>
                         <constraints>
                             <constraint firstItem="ehy-wW-ILM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Iu-uD-gEE"/>
                             <constraint firstItem="Ofs-bx-7oy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="COU-yv-GGz"/>
@@ -260,12 +264,19 @@
                         <edgeInsets key="layoutMargins" top="0.0" left="22" bottom="0.0" right="22"/>
                     </view>
                     <connections>
+                        <outlet property="chevron" destination="ZsC-z8-yMB" id="oAg-xs-rOe"/>
                         <outlet property="collView" destination="vgB-cu-j61" id="gQR-hR-uKH"/>
+                        <outlet property="drawer" destination="Ofs-bx-7oy" id="0wl-KB-MQ1"/>
                         <outlet property="gospelText" destination="qSX-My-ZGd" id="UTC-yG-ylY"/>
                         <outlet property="monthLabel" destination="j7q-kE-7ez" id="yZ1-t1-UTw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ABh-xz-oka">
+                    <connections>
+                        <action selector="handleChevronTap:" destination="BYZ-38-t0r" id="FvF-we-txi"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="45.600000000000001" y="-2.2167487684729066"/>
         </scene>
@@ -289,7 +300,7 @@
             <color red="0.18400000035762787" green="0.6940000057220459" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Liturgicolor_Lily">
-            <color red="0.99999994039535522" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

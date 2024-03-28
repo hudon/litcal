@@ -16,6 +16,9 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 @property (weak, nonatomic) IBOutlet UICollectionView *collView;
 @property (weak, nonatomic) IBOutlet UILabel *gospelText;
 @property (weak, nonatomic) IBOutlet UILabel *monthLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *chevron;
+@property (weak, nonatomic) IBOutlet UIStackView *drawer;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollViewTopConstraint;
 
 @property (strong, nonatomic) UICollectionViewDiffableDataSource *dataSource;
 @property (strong, nonatomic) NSDictionary *celebrations;
@@ -24,11 +27,28 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 @property (nonatomic) sqlite3 *db;
 @property (nonatomic) NSUInteger minEpochSeconds;
 @property (nonatomic) NSUInteger maxEpochSeconds;
+@property (nonatomic) BOOL shouldShowDrawer;
 
 @end
 
 
 @implementation ViewController
+
+- (IBAction)handleChevronTap:(id)sender {
+	BOOL shouldShow = ![self shouldShowDrawer];
+	[self setShouldShowDrawer:shouldShow];
+
+	// We want drawer to hide underneath above view as it slides out of view
+	[[[self drawer] superview] sendSubviewToBack:[self drawer]];
+
+	CGFloat drawerHeight = [[self drawer] frame].size.height;
+	[[self scrollViewTopConstraint] setConstant:shouldShow ? 0.0 : -drawerHeight];
+
+	[UIView animateWithDuration:0.25 animations:^{
+		[[[self drawer] superview] layoutIfNeeded];
+		[[self drawer] setAlpha:shouldShow ? 1.0 : 0.0];
+	}];
+}
 
 - (IBAction)handleTodayTriggered {
 	NSCalendar *cal = [NSCalendar currentCalendar];
@@ -102,12 +122,15 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
+
 	[self setDateFormatter:[[NSDateFormatter alloc] init]];
-	[
-		[self dateFormatter]
-		setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]
-	];
+	[[self dateFormatter]
+		setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
 	[[self dateFormatter] setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+
+
+	[self setShouldShowDrawer:YES];
+
 
 	// Get all celebrations and insert them into the lookup table
 	NSMutableArray *celTimes = [[NSMutableArray alloc] init];
