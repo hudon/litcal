@@ -34,7 +34,7 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 
 @implementation ViewController
 
-- (IBAction)handleChevronTap:(id)sender {
+- (IBAction)handleTitleTap:(id)sender {
 	BOOL shouldShow = ![self shouldShowDrawer];
 	[self setShouldShowDrawer:shouldShow];
 
@@ -42,6 +42,7 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 	[[[self drawer] superview] sendSubviewToBack:[self drawer]];
 
 	CGFloat drawerHeight = [[self drawer] frame].size.height;
+	[[self drawer] layoutMargins];
 
 	[[self scrollViewTopConstraint] setConstant:shouldShow ? 0.0 : -drawerHeight];
 	[UIView animateWithDuration:0.25 animations:^{
