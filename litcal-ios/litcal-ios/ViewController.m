@@ -39,7 +39,8 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 }
 
 - (void)highlightCell:(UICollectionViewCell*)cell {
-	[[cell viewWithTag:1] setBackgroundColor:[UIColor cyanColor]];
+	[[cell viewWithTag:2] setBackgroundColor:[UIColor colorNamed:@"Color_StellaMaris"]];
+	[[cell viewWithTag:2] setTextColor:[UIColor colorNamed:@"Liturgicolor_Lily"]];
 	[[cell viewWithTag:3] setHidden:YES];
 }
 
@@ -58,7 +59,8 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 
 	NSIndexPath *oldIP = [[self dataSource] indexPathForItemIdentifier:_selectedKey];
 	UICollectionViewCell *oldCell = [[self collView] cellForItemAtIndexPath:oldIP];
-	[[oldCell viewWithTag:1] setBackgroundColor:[UIColor redColor]];
+	[[oldCell viewWithTag:2] setBackgroundColor:nil];
+	[[oldCell viewWithTag:2] setTextColor:[UIColor colorNamed:@"Color_StellaMaris"]];
 	[[oldCell viewWithTag:3] setHidden:NO];
 
 	_selectedKey = selectedKey;
@@ -230,10 +232,15 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 				initWithTimeIntervalSince1970:[epochSeconds doubleValue]
 			];
 			NSDateFormatter *df = [self dateFormatter];
+
 			[df setDateFormat:@"EEEEE"];
 			[[cell viewWithTag:1] setText:[df stringFromDate:d]];
+
+			UILabel *dateLbl = [cell viewWithTag:2];
 			[df setDateFormat:@"d"];
-			[[cell viewWithTag:2] setText:[df stringFromDate:d]];
+			[dateLbl setText:[df stringFromDate:d]];
+			[[dateLbl layer] setCornerRadius:[dateLbl frame].size.width / 2];
+			[dateLbl setClipsToBounds:YES];
 
 			if ([epochSeconds isEqual:today]) {
 				[self highlightCell:cell];
