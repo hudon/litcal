@@ -34,6 +34,42 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 
 @implementation ViewController
 
+- (LitCelebrationBridge*)selectedCelebration {
+	return [[self celebrations] objectForKey:[self selectedKey]];
+}
+
+- (void)highlightCell:(UICollectionViewCell*)cell {
+	[[cell viewWithTag:1] setBackgroundColor:[UIColor cyanColor]];
+	[[cell viewWithTag:3] setHidden:YES];
+}
+
+- (NSNumber*)today {
+	NSCalendar *cal = [NSCalendar currentCalendar];
+	cal.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+	long long epochSeconds =
+		[[cal startOfDayForDate:[NSDate date]] timeIntervalSince1970];
+	return [[NSNumber alloc] initWithLongLong:epochSeconds];
+}
+
+- (void)setSelectedKey:(NSNumber *)selectedKey {
+	if ([_selectedKey isEqual:selectedKey]) {
+		return;
+	}
+
+	NSIndexPath *oldIP = [[self dataSource] indexPathForItemIdentifier:_selectedKey];
+	UICollectionViewCell *oldCell = [[self collView] cellForItemAtIndexPath:oldIP];
+	[[oldCell viewWithTag:1] setBackgroundColor:[UIColor redColor]];
+	[[oldCell viewWithTag:3] setHidden:NO];
+
+	_selectedKey = selectedKey;
+
+	NSIndexPath *newIP = [[self dataSource] indexPathForItemIdentifier:_selectedKey];
+	[self highlightCell:(UICollectionViewCell *)[[self collView] cellForItemAtIndexPath:newIP]];
+
+	// celebration details
+	[[self gospelText] setText:[[self selectedCelebration] gospelText]];
+}
+
 - (IBAction)handleTitleTap:(id)sender {
 	BOOL shouldShow = ![self shouldShowDrawer];
 	[self setShouldShowDrawer:shouldShow];
@@ -61,14 +97,12 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 }
 
 - (IBAction)handleTodayTriggered {
-	NSCalendar *cal = [NSCalendar currentCalendar];
-	cal.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
-	int epochSeconds =
-		[[cal startOfDayForDate:[NSDate date]] timeIntervalSince1970];
+	NSNumber *epochSeconds = [self today];
 
 	// find today in the existing range of dates, as a percentage
 	NSUInteger min = [self minEpochSeconds], max = [self maxEpochSeconds];
-	CGFloat todayPosition = (CGFloat)(epochSeconds - min) / (max - min);
+	CGFloat todayPosition =
+		(CGFloat)([epochSeconds longLongValue] - min) / (max - min);
 
 	UICollectionViewFlowLayout *layout =
 		(UICollectionViewFlowLayout*)[[self collView] collectionViewLayout];
@@ -84,23 +118,14 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 	CGRect r = CGRectMake(x, 0, scrollViewWidth, 1);
 	[[self collView] scrollRectToVisible:r animated:YES];
 
-	[self setSelectedKey:[NSNumber numberWithInt:epochSeconds]];
-}
-
-- (LitCelebrationBridge*)selectedCelebration {
-	return [[self celebrations] objectForKey:[self selectedKey]];
-}
-
-- (void)setSelectedKey:(NSNumber *)selectedKey {
-	_selectedKey = selectedKey;
-	[[self gospelText] setText:[[self selectedCelebration] gospelText]];
+	[self setSelectedKey:epochSeconds];
 }
 
 - (void)handleCellTap:(UITapGestureRecognizer*)sender {
-	// the sender view is the contentView, and the cell view contains it
-	UICollectionViewCell *cell = (UICollectionViewCell *)[[sender view] superview];
-	NSIndexPath *indexPath = [self.collView indexPathForCell:cell];
-	[self setSelectedKey:[[self dataSource] itemIdentifierForIndexPath:indexPath]];
+	// the sender view is the contentView, which the cell view contains
+	UICollectionViewCell *newCell = (UICollectionViewCell *)[[sender view] superview];
+	NSIndexPath *newIP = [self.collView indexPathForCell:newCell];
+	[self setSelectedKey:[[self dataSource] itemIdentifierForIndexPath:newIP]];
 }
 
 // respond to scrolling the collection view ("cal wheel")
@@ -114,6 +139,7 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 		int indexAtViewLeadingEdge = (int)(scrollPositionPercentage * lastIndex);
 		// add N to make the month transition happen before 
 		// the "day 1" cell reaches the edge of the screen
+		// TODO: change from 3 to mid point
 		indexAtViewLeadingEdge += 3;
 		if (indexAtViewLeadingEdge == prevIndex || indexAtViewLeadingEdge < 0) {
 			// we haven't scrolled enough to warrant an update, bail
@@ -179,13 +205,14 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 
 
 	// wire each cell to its corresponding celebration
+	NSNumber *today = [self today];
 	[self setDataSource:[
 		[UICollectionViewDiffableDataSource alloc]
 		initWithCollectionView:[self collView]
 		cellProvider:^UICollectionViewCell*(
 			UICollectionView * collView,
 			NSIndexPath * indexPath,
-			id epochSeconds
+			NSNumber *epochSeconds
 		) {
 			UICollectionViewCell *cell = [
 				collView dequeueReusableCellWithReuseIdentifier:@"dayCell"
@@ -203,10 +230,14 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 				initWithTimeIntervalSince1970:[epochSeconds doubleValue]
 			];
 			NSDateFormatter *df = [self dateFormatter];
-			[df setDateFormat:@"d"];
-			[[cell viewWithTag:1] setText:[df stringFromDate:d]];
 			[df setDateFormat:@"EEEEE"];
+			[[cell viewWithTag:1] setText:[df stringFromDate:d]];
+			[df setDateFormat:@"d"];
 			[[cell viewWithTag:2] setText:[df stringFromDate:d]];
+
+			if ([epochSeconds isEqual:today]) {
+				[self highlightCell:cell];
+			}
 
 			return cell;
 		}
