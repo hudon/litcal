@@ -139,10 +139,16 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 			[scrollView contentOffset].x / [scrollView contentSize].width;
 		NSUInteger lastIndex = [[self celebrations] count];
 		int indexAtViewLeadingEdge = (int)(scrollPositionPercentage * lastIndex);
-		// add N to make the month transition happen before 
+
+		CGFloat scrollViewWidth = [[self collView] visibleSize].width;
+		UICollectionViewFlowLayout *layout =
+			(UICollectionViewFlowLayout*)[[self collView] collectionViewLayout];
+		CGFloat itemWidth = [layout itemSize].width;
+		int numItemsVisibleToCenter = scrollViewWidth / itemWidth / 2;
+		// add N to make the month transition happen before
 		// the "day 1" cell reaches the edge of the screen
-		// TODO: change from 3 to mid point
-		indexAtViewLeadingEdge += 3;
+		indexAtViewLeadingEdge += numItemsVisibleToCenter;
+
 		if (indexAtViewLeadingEdge == prevIndex || indexAtViewLeadingEdge < 0) {
 			// we haven't scrolled enough to warrant an update, bail
 			// also bail if user scrolled too far off the view and the index is negative
@@ -245,6 +251,7 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 			UIView *dot = [cell viewWithTag:3];
 			[[dot layer] setCornerRadius:[dot frame].size.width / 2];
 			[dot setClipsToBounds:YES];
+			// TODO: change color based on feast
 
 			if ([epochSeconds isEqual:today]) {
 				[self highlightCell:cell];
