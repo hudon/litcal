@@ -242,6 +242,10 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 			[[dateLbl layer] setCornerRadius:[dateLbl frame].size.width / 2];
 			[dateLbl setClipsToBounds:YES];
 
+			UIView *dot = [cell viewWithTag:3];
+			[[dot layer] setCornerRadius:[dot frame].size.width / 2];
+			[dot setClipsToBounds:YES];
+
 			if ([epochSeconds isEqual:today]) {
 				[self highlightCell:cell];
 			}

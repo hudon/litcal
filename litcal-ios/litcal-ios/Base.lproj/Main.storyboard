@@ -165,7 +165,7 @@
                                                                     <color key="textColor" name="Color_StellaMaris"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSa-hm-dH0" userLabel="dot" customClass="CircularView">
+                                                                <view clipsSubviews="YES" tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSa-hm-dH0" userLabel="dot">
                                                                     <rect key="frame" x="17.666666666666668" y="50.333333333333336" width="10" height="10"/>
                                                                     <color key="backgroundColor" name="Liturgicolor_FigTree"/>
                                                                     <constraints>
