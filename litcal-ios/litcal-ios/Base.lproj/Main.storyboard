@@ -14,6 +14,9 @@
         <array key="EuclidSquare-Regular.ttf">
             <string>EuclidSquare-Regular</string>
         </array>
+        <array key="EuclidSquare-Semibold.ttf">
+            <string>EuclidSquare-Semibold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
@@ -103,6 +106,9 @@
                                                                     <color key="baseForegroundColor" name="Liturgicolor_Lily"/>
                                                                     <color key="baseBackgroundColor" name="Color_OurLady"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <segue destination="XaO-xH-U0x" kind="presentation" modalPresentationStyle="pageSheet" id="20T-yo-eV6"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4c-wZ-6Yf">
                                                                 <rect key="frame" x="71.333333333333343" y="0.0" width="65.333333333333343" height="28"/>
@@ -291,6 +297,86 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="45.600000000000001" y="-2.2167487684729066"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aXP-kD-QSA">
+            <objects>
+                <viewController id="XaO-xH-U0x" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ahg-2K-96z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="802"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Zn-FS-32M">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="802"/>
+                                <subviews>
+                                    <view contentMode="right" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LOD-aN-mQF" userLabel="Header">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcQ-ZD-XNc">
+                                                <rect key="frame" x="283.66666666666669" y="8" width="83.333333333333314" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Dismiss"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="FcQ-ZD-XNc" firstAttribute="centerY" secondItem="LOD-aN-mQF" secondAttribute="centerY" id="QjN-CL-thR"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="FcQ-ZD-XNc" secondAttribute="trailing" id="UyJ-MS-PF1"/>
+                                            <constraint firstItem="FcQ-ZD-XNc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LOD-aN-mQF" secondAttribute="leading" id="bFQ-ZO-Yib"/>
+                                            <constraint firstAttribute="height" constant="50" id="ckW-6a-yRg"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSX-EG-kQ5" userLabel="Divider">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="1"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="OH9-4Z-Jte"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAK-WS-R8F" userLabel="Title">
+                                        <rect key="frame" x="0.0" y="51" width="375" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Holy Days of Obligation [USA]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d92-MK-Y0u">
+                                                <rect key="frame" x="74.000000000000014" y="14.999999999999998" width="227.33333333333337" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="EuclidSquare-Semibold" family="Euclid Square" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="d92-MK-Y0u" firstAttribute="centerY" secondItem="sAK-WS-R8F" secondAttribute="centerY" id="Lke-uc-mti"/>
+                                            <constraint firstItem="d92-MK-Y0u" firstAttribute="centerX" secondItem="sAK-WS-R8F" secondAttribute="centerX" id="ghq-YD-kK5"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9zS-vr-bZc" userLabel="Content">
+                                        <rect key="frame" x="0.0" y="101" width="375" height="701"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9zS-vr-bZc" firstAttribute="width" secondItem="5Zn-FS-32M" secondAttribute="width" id="IVF-Js-Paq"/>
+                                    <constraint firstItem="PSX-EG-kQ5" firstAttribute="width" secondItem="5Zn-FS-32M" secondAttribute="width" id="JKO-eL-up4"/>
+                                    <constraint firstItem="sAK-WS-R8F" firstAttribute="width" secondItem="5Zn-FS-32M" secondAttribute="width" id="Ops-E3-xya"/>
+                                    <constraint firstItem="sAK-WS-R8F" firstAttribute="height" secondItem="LOD-aN-mQF" secondAttribute="height" id="k5o-yv-X6U"/>
+                                    <constraint firstItem="LOD-aN-mQF" firstAttribute="width" secondItem="5Zn-FS-32M" secondAttribute="width" id="tIw-kn-cd1"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WDx-gi-qKM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Zn-FS-32M" firstAttribute="leading" secondItem="WDx-gi-qKM" secondAttribute="leading" id="8rc-Pk-duF"/>
+                            <constraint firstItem="5Zn-FS-32M" firstAttribute="width" secondItem="WDx-gi-qKM" secondAttribute="width" id="MJB-eK-Mqa"/>
+                            <constraint firstItem="5Zn-FS-32M" firstAttribute="top" secondItem="WDx-gi-qKM" secondAttribute="top" id="kYL-rq-vis"/>
+                            <constraint firstItem="5Zn-FS-32M" firstAttribute="height" secondItem="WDx-gi-qKM" secondAttribute="height" id="vjw-kp-XKD"/>
+                        </constraints>
+                        <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="22" bottom="0.0" trailing="22"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K51-Yn-m3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-534" y="-683"/>
         </scene>
     </scenes>
     <resources>
