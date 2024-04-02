@@ -10,6 +10,16 @@
 #import "litdbBridge/LitCelebrationBridge.h"
 
 static const NSTimeInterval kSecondsPerDay = 86400;
+static NSString *kColAllSouls = @"Color_AllSouls";
+static NSString *kColAshes = @"Color_Ashes";
+static NSString *kColStellaMaris = @"Color_StellaMaris";
+static NSString *kColChalice = @"Liturgicolor_Chalice";
+static NSString *kColFigTree = @"Liturgicolor_FigTree";
+static NSString *kColLily = @"Liturgicolor_Lily";
+static NSString *kColMatrimony = @"Liturgicolor_Matrimony";
+static NSString *kColPassion = @"Liturgicolor_Passion";
+static NSString *kColWine = @"Liturgicolor_Wine";
+
 
 @interface ViewController () <UIScrollViewDelegate>
 
@@ -34,14 +44,53 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 
 @implementation ViewController
 
+- (UIColor*)uiColorFromLitColor:(enum lit_color)c {
+	NSString *chosen;
+	switch (c) {
+		case LIT_BLACK:
+			chosen = kColAllSouls;
+			break;
+		case LIT_GREEN:
+			chosen = kColFigTree;
+			break;
+		case LIT_RED:
+			chosen = kColPassion;
+			break;
+		case LIT_WHITE:
+			chosen = kColLily;
+			break;
+		case LIT_VIOLET:
+			chosen = kColWine;
+			break;
+		case LIT_ROSE:
+			chosen = kColMatrimony;
+			break;
+		case LIT_GOLD:
+			chosen = kColChalice;
+			break;
+		case LIT_SILVER:
+			chosen = kColAshes;
+			break;
+		default:
+			break;
+	}
+	return [UIColor colorNamed:chosen];
+}
+
 - (LitCelebrationBridge*)selectedCelebration {
 	return [[self celebrations] objectForKey:[self selectedKey]];
 }
 
 - (void)highlightCell:(UICollectionViewCell*)cell {
-	[[cell viewWithTag:2] setBackgroundColor:[UIColor colorNamed:@"Color_StellaMaris"]];
-	[[cell viewWithTag:2] setTextColor:[UIColor colorNamed:@"Liturgicolor_Lily"]];
+	[[cell viewWithTag:2] setBackgroundColor:[UIColor colorNamed:kColStellaMaris]];
+	[[cell viewWithTag:2] setTextColor:[UIColor colorNamed:kColLily]];
 	[[cell viewWithTag:3] setHidden:YES];
+}
+
+- (void)unHighlightCell:(UICollectionViewCell*)cell {
+	[[cell viewWithTag:2] setBackgroundColor:nil];
+	[[cell viewWithTag:2] setTextColor:[UIColor colorNamed:kColStellaMaris]];
+	[[cell viewWithTag:3] setHidden:NO];
 }
 
 - (NSNumber*)today {
@@ -59,9 +108,7 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 
 	NSIndexPath *oldIP = [[self dataSource] indexPathForItemIdentifier:_selectedKey];
 	UICollectionViewCell *oldCell = [[self collView] cellForItemAtIndexPath:oldIP];
-	[[oldCell viewWithTag:2] setBackgroundColor:nil];
-	[[oldCell viewWithTag:2] setTextColor:[UIColor colorNamed:@"Color_StellaMaris"]];
-	[[oldCell viewWithTag:3] setHidden:NO];
+	[self unHighlightCell:oldCell];
 
 	_selectedKey = selectedKey;
 
@@ -249,12 +296,23 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 			[dateLbl setClipsToBounds:YES];
 
 			UIView *dot = [cell viewWithTag:3];
+			LitCelebrationBridge *litCel = [[self celebrations] objectForKey:epochSeconds];
 			[[dot layer] setCornerRadius:[dot frame].size.width / 2];
 			[dot setClipsToBounds:YES];
-			// TODO: change color based on feast
-
+			[[dot layer] setBorderWidth:0.0];
+			[dot setBackgroundColor:nil];
+			if ([litCel rank] <= 11) {
+				[dot setBackgroundColor:[self uiColorFromLitColor:[litCel color]]];
+				if ([litCel color] == LIT_WHITE) {
+					[[dot layer] setBorderColor:[[UIColor colorNamed:kColAshes] CGColor]];
+					[[dot layer] setBorderWidth:1.0];
+				}
+			}
+			
 			if ([epochSeconds isEqual:today]) {
 				[self highlightCell:cell];
+			} else {
+				[self unHighlightCell:cell];
 			}
 
 			return cell;
