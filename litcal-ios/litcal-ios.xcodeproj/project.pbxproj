@@ -27,6 +27,7 @@
 		5EA3471E2BB3795300E2DF5A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA3471D2BB3794B00E2DF5A /* libsqlite3.tbd */; };
 		5EA347212BB37CE200E2DF5A /* litcal.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5EA347202BB37CE200E2DF5A /* litcal.sqlite */; };
 		5EBBED702BBC5C0E0059BBD6 /* HolyDaysController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBED6F2BBC5C0E0059BBD6 /* HolyDaysController.m */; };
+		5EBBED732BBC7E6D0059BBD6 /* dates.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBED722BBC7E6D0059BBD6 /* dates.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,8 @@
 		5EA347202BB37CE200E2DF5A /* litcal.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = litcal.sqlite; path = ../litcal.sqlite; sourceTree = "<group>"; };
 		5EBBED6E2BBC58530059BBD6 /* HolyDaysController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HolyDaysController.h; sourceTree = "<group>"; };
 		5EBBED6F2BBC5C0E0059BBD6 /* HolyDaysController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HolyDaysController.m; sourceTree = "<group>"; };
+		5EBBED712BBC7E4D0059BBD6 /* dates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dates.h; sourceTree = "<group>"; };
+		5EBBED722BBC7E6D0059BBD6 /* dates.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dates.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +180,8 @@
 				5E71CCD62B6C47640010B9A7 /* LaunchScreen.storyboard */,
 				5E71CCD92B6C47640010B9A7 /* Info.plist */,
 				5E71CCDA2B6C47640010B9A7 /* main.m */,
+				5EBBED712BBC7E4D0059BBD6 /* dates.h */,
+				5EBBED722BBC7E6D0059BBD6 /* dates.m */,
 			);
 			path = "litcal-ios";
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EBBED702BBC5C0E0059BBD6 /* HolyDaysController.m in Sources */,
+				5EBBED732BBC7E6D0059BBD6 /* dates.m in Sources */,
 				5E71CCD02B6C47620010B9A7 /* ViewController.m in Sources */,
 				5E71CCCA2B6C47620010B9A7 /* AppDelegate.m in Sources */,
 				5EA3471B2BB374BC00E2DF5A /* LitCelebrationBridge.m in Sources */,

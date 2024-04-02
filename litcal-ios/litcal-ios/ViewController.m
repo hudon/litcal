@@ -8,6 +8,7 @@
 #import "ViewController.h"
 #import "litdb.h"
 #import "litdbBridge/LitCelebrationBridge.h"
+#import "dates.h"
 
 static const NSTimeInterval kSecondsPerDay = 86400;
 static NSString *kColAllSouls = @"Color_AllSouls";
@@ -93,14 +94,6 @@ static NSString *kColWine = @"Liturgicolor_Wine";
 	[[cell viewWithTag:3] setHidden:NO];
 }
 
-- (NSNumber*)today {
-	NSCalendar *cal = [NSCalendar currentCalendar];
-	cal.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
-	long long epochSeconds =
-		[[cal startOfDayForDate:[NSDate date]] timeIntervalSince1970];
-	return [[NSNumber alloc] initWithLongLong:epochSeconds];
-}
-
 - (void)setSelectedKey:(NSNumber *)selectedKey {
 	if ([_selectedKey isEqual:selectedKey]) {
 		return;
@@ -146,7 +139,7 @@ static NSString *kColWine = @"Liturgicolor_Wine";
 }
 
 - (IBAction)handleTodayTriggered {
-	NSNumber *epochSeconds = [self today];
+	NSNumber *epochSeconds = makeTodaySeconds();
 
 	// find today in the existing range of dates, as a percentage
 	NSUInteger min = [self minEpochSeconds], max = [self maxEpochSeconds];
@@ -214,10 +207,7 @@ static NSString *kColWine = @"Liturgicolor_Wine";
 	[super viewDidLoad];
 
 
-	[self setDateFormatter:[[NSDateFormatter alloc] init]];
-	[[self dateFormatter]
-		setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
-	[[self dateFormatter] setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+	[self setDateFormatter:makeDateFormatter()];
 
 
 	[self setShouldShowDrawer:YES];
@@ -260,7 +250,7 @@ static NSString *kColWine = @"Liturgicolor_Wine";
 
 
 	// wire each cell to its corresponding celebration
-	NSNumber *today = [self today];
+	NSNumber *today = makeTodaySeconds();
 	[self setDataSource:[
 		[UICollectionViewDiffableDataSource alloc]
 		initWithCollectionView:[self collView]

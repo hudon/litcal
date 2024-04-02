@@ -298,10 +298,10 @@
             </objects>
             <point key="canvasLocation" x="45.600000000000001" y="-2.2167487684729066"/>
         </scene>
-        <!--View Controller-->
+        <!--Holy Days Controller-->
         <scene sceneID="aXP-kD-QSA">
             <objects>
-                <viewController id="XaO-xH-U0x" sceneMemberID="viewController">
+                <viewController id="XaO-xH-U0x" customClass="HolyDaysController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ahg-2K-96z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="802"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -316,6 +316,9 @@
                                                 <rect key="frame" x="283.66666666666669" y="8" width="83.333333333333314" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Dismiss"/>
+                                                <connections>
+                                                    <action selector="dismissModal:" destination="XaO-xH-U0x" eventType="primaryActionTriggered" id="tBm-nr-JLX"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -349,15 +352,54 @@
                                             <constraint firstItem="d92-MK-Y0u" firstAttribute="centerX" secondItem="sAK-WS-R8F" secondAttribute="centerX" id="ghq-YD-kK5"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9zS-vr-bZc" userLabel="Content">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FRb-Ie-2Jj">
                                         <rect key="frame" x="0.0" y="101" width="375" height="701"/>
-                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                    </view>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <inset key="separatorInset" minX="22" minY="0.0" maxX="22" maxY="0.0"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dayCell" id="Bbh-Vx-Ltf">
+                                                <rect key="frame" x="0.0" y="50" width="375" height="43.666667938232422"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bbh-Vx-Ltf" id="KGh-Vo-QaE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0p-Ic-2sL">
+                                                            <rect key="frame" x="16" y="13" width="343" height="18"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Dec 25 ">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="14" name="EuclidSquare-Semibold"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                                <fragment content="- The Nativity of the Lord">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="14" name="EuclidSquare-Regular"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="V0p-Ic-2sL" firstAttribute="centerY" secondItem="KGh-Vo-QaE" secondAttribute="centerY" id="HoV-UG-4Nc"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="V0p-Ic-2sL" secondAttribute="trailing" id="Q25-vm-aLB"/>
+                                                        <constraint firstItem="V0p-Ic-2sL" firstAttribute="leading" secondItem="KGh-Vo-QaE" secondAttribute="leadingMargin" id="fno-8c-beG"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="XaO-xH-U0x" id="dHk-wv-qxn"/>
+                                        </connections>
+                                    </tableView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="9zS-vr-bZc" firstAttribute="width" secondItem="5Zn-FS-32M" secondAttribute="width" id="IVF-Js-Paq"/>
                                     <constraint firstItem="PSX-EG-kQ5" firstAttribute="width" secondItem="5Zn-FS-32M" secondAttribute="width" id="JKO-eL-up4"/>
                                     <constraint firstItem="sAK-WS-R8F" firstAttribute="width" secondItem="5Zn-FS-32M" secondAttribute="width" id="Ops-E3-xya"/>
+                                    <constraint firstItem="FRb-Ie-2Jj" firstAttribute="width" secondItem="5Zn-FS-32M" secondAttribute="width" id="W4Y-2w-rhd"/>
                                     <constraint firstItem="sAK-WS-R8F" firstAttribute="height" secondItem="LOD-aN-mQF" secondAttribute="height" id="k5o-yv-X6U"/>
                                     <constraint firstItem="LOD-aN-mQF" firstAttribute="width" secondItem="5Zn-FS-32M" secondAttribute="width" id="tIw-kn-cd1"/>
                                 </constraints>
