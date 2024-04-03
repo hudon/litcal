@@ -352,21 +352,20 @@
                                             <constraint firstItem="d92-MK-Y0u" firstAttribute="centerX" secondItem="sAK-WS-R8F" secondAttribute="centerX" id="ghq-YD-kK5"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FRb-Ie-2Jj">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FRb-Ie-2Jj">
                                         <rect key="frame" x="0.0" y="101" width="375" height="701"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <color key="sectionIndexBackgroundColor" name="Liturgicolor_Chalice"/>
+                                        <inset key="separatorInset" minX="22" minY="0.0" maxX="22" maxY="0.0"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="dayCell" id="Bbh-Vx-Ltf">
-                                                <rect key="frame" x="0.0" y="50" width="375" height="44"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="dayCell" id="Bbh-Vx-Ltf">
+                                                <rect key="frame" x="0.0" y="50" width="375" height="40.333332061767578"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bbh-Vx-Ltf" id="KGh-Vo-QaE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bbh-Vx-Ltf" id="KGh-Vo-QaE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="40.333332061767578"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0p-Ic-2sL" userLabel="lbl">
-                                                            <rect key="frame" x="0.0" y="13" width="375" height="18"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0p-Ic-2sL" userLabel="lbl">
+                                                            <rect key="frame" x="16" y="10.999999999999998" width="343" height="18.333333333333329"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Dec 25 ">
                                                                     <attributes>
@@ -386,10 +385,11 @@
                                                     </subviews>
                                                     <color key="backgroundColor" name="Liturgicolor_FigTree"/>
                                                     <constraints>
+                                                        <constraint firstItem="V0p-Ic-2sL" firstAttribute="top" secondItem="KGh-Vo-QaE" secondAttribute="topMargin" id="Dge-nf-ohd"/>
                                                         <constraint firstItem="V0p-Ic-2sL" firstAttribute="centerY" secondItem="KGh-Vo-QaE" secondAttribute="centerY" id="HoV-UG-4Nc"/>
-                                                        <constraint firstItem="V0p-Ic-2sL" firstAttribute="height" secondItem="KGh-Vo-QaE" secondAttribute="height" multiplier="0.412214" id="MSq-QC-k4q"/>
-                                                        <constraint firstAttribute="trailing" secondItem="V0p-Ic-2sL" secondAttribute="trailing" id="Q25-vm-aLB"/>
-                                                        <constraint firstItem="V0p-Ic-2sL" firstAttribute="leading" secondItem="KGh-Vo-QaE" secondAttribute="leading" id="fno-8c-beG"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="V0p-Ic-2sL" secondAttribute="trailing" id="Q25-vm-aLB"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="V0p-Ic-2sL" secondAttribute="bottom" id="daI-UQ-8tE"/>
+                                                        <constraint firstItem="V0p-Ic-2sL" firstAttribute="leading" secondItem="KGh-Vo-QaE" secondAttribute="leadingMargin" id="fno-8c-beG"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -442,9 +442,6 @@
         </namedColor>
         <namedColor name="Color_StellaMaris">
             <color red="0.0030000000260770321" green="0.0" blue="0.1379999965429306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Liturgicolor_Chalice">
-            <color red="0.92500001192092896" green="0.74199998378753662" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Liturgicolor_FigTree">
             <color red="0.18400000035762787" green="0.6940000057220459" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

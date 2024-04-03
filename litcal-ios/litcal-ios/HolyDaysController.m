@@ -46,8 +46,6 @@ viewForHeaderInSection:(NSInteger)section {
 	[lbl setText:[self tableView:tableView titleForHeaderInSection:section]];
 	[lbl setPreservesSuperviewLayoutMargins:YES];
 	[lbl setBackgroundColor:[UIColor redColor]];
-	UIEdgeInsets ei = [tableView contentInset];
-	
 	return lbl;
 }
 
@@ -59,34 +57,24 @@ viewForHeaderInSection:(NSInteger)section {
 		cornerRadii:CGSizeMake(10.0, 10.0)
 	];
 	CAShapeLayer *maskLayer = [CAShapeLayer layer];
-	maskLayer.frame = cell.bounds;
-	maskLayer.path = maskPath.CGPath;
-	cell.layer.mask = maskLayer;
+	[maskLayer setFrame:[cell bounds]];
+	[maskLayer setPath:[maskPath CGPath]];
+	[[cell layer] setMask:maskLayer];
 }
 
 // TODO: explain why we need this call and we can't round corners in cellForRow
 - (void)tableView:(UITableView *)tableView
 willDisplayCell:(UITableViewCell *)cell
 forRowAtIndexPath:(NSIndexPath *)indexPath {
-	// Determine if the cell is at the start or end of a section
+	// We only round the first and the last row
 	NSInteger totalRows = [tableView numberOfRowsInSection:indexPath.section];
 	if (indexPath.row == 0) {
-		// First cell in section, round top corners
 		[self roundCornersForCell:cell corners:UIRectCornerTopLeft | UIRectCornerTopRight];
 	} else if (indexPath.row == totalRows - 1) {
-		// Last cell in section, round bottom corners
-//		[self roundCornersForCell:cell corners:UIRectCornerBottomLeft | UIRectCornerBottomRight];
+		[self roundCornersForCell:cell corners:UIRectCornerBottomLeft | UIRectCornerBottomRight];
 	} else {
-		// Middle cells, no rounding
-		cell.layer.cornerRadius = 0;
+		[[cell layer] setMask:nil];
 	}
-//	CGRect cr = [cell frame];
-//	CGRect tr = [tableView frame];
-
-//	cell.contentView.layer.cornerRadius = 10;
-	// This messes with cell width:
-//	cell.layer.backgroundColor
-//	cell.contentView.layer.masksToBounds = YES;
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath { 
@@ -108,19 +96,6 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 	 	value:[self font]
 		range:NSMakeRange(splitIndex, txt.length - splitIndex)];
 	[lbl setAttributedText:attributedString];
-
-	// Set cell properties
-//	cell.contentView.backgroundColor = [UIColor blueColor];
-
-	CGRect cr = [cell frame];
-	CGRect crb = [cell bounds];
-	CGRect tr = [tableView frame];
-	UIEdgeInsets sss = [tableView contentInset];
-	UIEdgeInsets sss3 = [tableView separatorInset];
-
-
-	// Optional: Set the cell’s background color to clear to avoid a border around the rounded corners
-	cell.backgroundColor = [UIColor cyanColor];
 
 	return cell;
 }
@@ -148,7 +123,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSArray *days2024 = @[
 		[
 			[HolyDay alloc]
-			initWithName:@"The Assumption of the Blessed Virgin Mary"
+			initWithName:@"The Assumption of the Blessed Virgin Mary beep boop"
 			 date:makeDateFromComponents(2024, 8, 15)
 		],
 		[
