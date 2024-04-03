@@ -64,6 +64,31 @@ viewForHeaderInSection:(NSInteger)section {
 	cell.layer.mask = maskLayer;
 }
 
+// TODO: explain why we need this call and we can't round corners in cellForRow
+- (void)tableView:(UITableView *)tableView
+willDisplayCell:(UITableViewCell *)cell
+forRowAtIndexPath:(NSIndexPath *)indexPath {
+	// Determine if the cell is at the start or end of a section
+	NSInteger totalRows = [tableView numberOfRowsInSection:indexPath.section];
+	if (indexPath.row == 0) {
+		// First cell in section, round top corners
+		[self roundCornersForCell:cell corners:UIRectCornerTopLeft | UIRectCornerTopRight];
+	} else if (indexPath.row == totalRows - 1) {
+		// Last cell in section, round bottom corners
+//		[self roundCornersForCell:cell corners:UIRectCornerBottomLeft | UIRectCornerBottomRight];
+	} else {
+		// Middle cells, no rounding
+		cell.layer.cornerRadius = 0;
+	}
+//	CGRect cr = [cell frame];
+//	CGRect tr = [tableView frame];
+
+//	cell.contentView.layer.cornerRadius = 10;
+	// This messes with cell width:
+//	cell.layer.backgroundColor
+//	cell.contentView.layer.masksToBounds = YES;
+}
+
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath { 
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"dayCell"];
 	NSString *key = [self orderedKeys][[indexPath section]];
@@ -92,25 +117,7 @@ viewForHeaderInSection:(NSInteger)section {
 	CGRect tr = [tableView frame];
 	UIEdgeInsets sss = [tableView contentInset];
 	UIEdgeInsets sss3 = [tableView separatorInset];
-	// Determine if the cell is at the start or end of a section
-	NSInteger totalRows = [tableView numberOfRowsInSection:indexPath.section];
-	if (indexPath.row == 0) {
-		// First cell in section, round top corners
-		[self roundCornersForCell:cell corners:UIRectCornerTopLeft | UIRectCornerTopRight];
-	} else if (indexPath.row == totalRows - 1) {
-		// Last cell in section, round bottom corners
-//		[self roundCornersForCell:cell corners:UIRectCornerBottomLeft | UIRectCornerBottomRight];
-	} else {
-		// Middle cells, no rounding
-		cell.layer.cornerRadius = 0;
-	}
-//	CGRect cr = [cell frame];
-//	CGRect tr = [tableView frame];
 
-//	cell.contentView.layer.cornerRadius = 10;
-	// This messes with cell width:
-//	cell.layer.backgroundColor
-//	cell.contentView.layer.masksToBounds = YES;
 
 	// Optional: Set the cell’s background color to clear to avoid a border around the rounded corners
 	cell.backgroundColor = [UIColor cyanColor];
