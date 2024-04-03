@@ -22,6 +22,7 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 @property (weak, nonatomic) IBOutlet UIImageView *chevron;
 @property (weak, nonatomic) IBOutlet UIStackView *drawer;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollViewTopConstraint;
+@property (weak, nonatomic) IBOutlet UIStackView *popupStack;
 
 @property (strong, nonatomic) UICollectionViewDiffableDataSource *dataSource;
 @property (strong, nonatomic) NSDictionary *celebrations;
@@ -69,7 +70,23 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 	NSIndexPath *newIP = [[self dataSource] indexPathForItemIdentifier:_selectedKey];
 	[self highlightCell:(UICollectionViewCell *)[[self collView] cellForItemAtIndexPath:newIP]];
 
-	[[self gospelText] setText:[[self selectedCelebration] gospelText]];
+	LitCelebrationBridge *cel = [self selectedCelebration];
+	UILabel *date = [[self popupStack] viewWithTag:1];
+	enum lit_color c = [cel color];
+	UIColor *uc = uiColorFromLitColor(c);
+	if (c == LIT_WHITE) {
+		uc = [UIColor colorNamed:kColAshes];
+	}
+	[date setTextColor:uc];
+	NSDateFormatter *df = [self dateFormatter];
+	[df setDateFormat:@"MMM d, y"];
+	;
+	[NSString
+		stringWithFormat:@"%@ · %@",
+	 	[df stringFromDate:[cel date]],
+//	 	[cel sea]
+		]
+	[[self gospelText] setText:[cel gospelText]];
 }
 
 - (void)scrollTo:(NSNumber*)key {
@@ -186,6 +203,9 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 
 
 	[self setShouldShowDrawer:YES];
+
+
+	[[[[self popupStack] superview] layer] setCornerRadius:6.0];
 
 
 	// Get all celebrations and insert them into the lookup table

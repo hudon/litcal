@@ -24,6 +24,7 @@
 @property enum lit_color color;
 
 - (instancetype)initWithCLitCelebration:(struct lit_celebration)litCel;
+- (NSDate*)date;
 @end
 
 #endif /* LitCelebrationBridge_h */

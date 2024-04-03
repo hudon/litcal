@@ -24,6 +24,10 @@ NSNumber* makeTodaySeconds(void) {
 	return [[NSNumber alloc] initWithLongLong:epochSeconds];
 }
 
+NSDate* makeDateFromEpochSeconds(NSNumber* e) {
+	return [[NSDate alloc] initWithTimeIntervalSince1970:[e doubleValue]];
+}
+
 NSDate* makeDateFromComponents(int year, int month, int day) {
 	NSDateComponents *comps = [[NSDateComponents alloc] init];
 	[comps setYear:year];

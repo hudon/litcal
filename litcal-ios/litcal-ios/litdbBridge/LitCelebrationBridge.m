@@ -6,6 +6,7 @@
 //
 
 #import "LitCelebrationBridge.h"
+#import "../dates.h"
 
 @interface LitCelebrationBridge ()
 @end
@@ -29,6 +30,10 @@ NSString* fromCString(const char *str) {
         [self setColor:litCel.color];
     }
     return self;
+}
+
+- (NSDate*)date {
+	return makeDateFromEpochSeconds([NSNumber numberWithInteger:[self epochSeconds]]);
 }
 
 @end
