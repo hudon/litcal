@@ -31,6 +31,8 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 @property (nonatomic) NSUInteger maxEpochSeconds;
 @property (nonatomic) BOOL shouldShowDrawer;
 
+- (void)scrollTo:(NSNumber*)key;
+
 @end
 
 
@@ -70,6 +72,27 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 	[[self gospelText] setText:[[self selectedCelebration] gospelText]];
 }
 
+- (void)scrollTo:(NSNumber*)key {
+	// find today in the existing range of dates, as a percentage
+	NSUInteger min = [self minEpochSeconds], max = [self maxEpochSeconds];
+	CGFloat todayPosition =
+		(CGFloat)([key longLongValue] - min) / (max - min);
+
+	UICollectionViewFlowLayout *layout =
+		(UICollectionViewFlowLayout*)[[self collView] collectionViewLayout];
+	CGFloat scrollViewWidth = [[self collView] visibleSize].width;
+	// The first operand is the distance from cell_first.x to cell_last.x. So if todayPosition=100%,
+	// then x will be the X origin of the last cell
+	CGFloat x = ([[self collView] contentSize].width - [layout itemSize].width) * todayPosition;
+	// center today cell by moving x away from the center of
+	// the scrollView width and away from the center of the cell
+	x = x - scrollViewWidth / 2 + [layout itemSize].width / 2;
+
+	// we give the rect a minimal arbitrary height to avoid UIKit ignoring our request
+	CGRect r = CGRectMake(x, 0, scrollViewWidth, 1);
+	[[self collView] scrollRectToVisible:r animated:YES];
+}
+
 - (IBAction)handleTitleTap:(id)sender {
 	BOOL shouldShow = ![self shouldShowDrawer];
 	[self setShouldShowDrawer:shouldShow];
@@ -98,26 +121,7 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 
 - (IBAction)handleTodayTriggered {
 	NSNumber *epochSeconds = makeTodaySeconds();
-
-	// find today in the existing range of dates, as a percentage
-	NSUInteger min = [self minEpochSeconds], max = [self maxEpochSeconds];
-	CGFloat todayPosition =
-		(CGFloat)([epochSeconds longLongValue] - min) / (max - min);
-
-	UICollectionViewFlowLayout *layout =
-		(UICollectionViewFlowLayout*)[[self collView] collectionViewLayout];
-	CGFloat scrollViewWidth = [[self collView] visibleSize].width;
-	// The first operand is the distance from cell_first.x to cell_last.x. So if todayPosition=100%,
-	// then x will be the X origin of the last cell
-	CGFloat x = ([[self collView] contentSize].width - [layout itemSize].width) * todayPosition;
-	// center today cell by moving x away from the center of
-	// the scrollView width and away from the center of the cell
-	x = x - scrollViewWidth / 2 + [layout itemSize].width / 2;
-
-	// we give the rect a minimal arbitrary height to avoid UIKit ignoring our request
-	CGRect r = CGRectMake(x, 0, scrollViewWidth, 1);
-	[[self collView] scrollRectToVisible:r animated:YES];
-
+	[self scrollTo:epochSeconds];
 	[self setSelectedKey:epochSeconds];
 }
 

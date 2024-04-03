@@ -43,13 +43,17 @@ static const NSInteger leftMargin = 11;
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
+	[self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (UIView *)tableView:(UITableView *)tableView
 viewForHeaderInSection:(NSInteger)section {
 	UILabel *lbl = [[UILabel alloc] init];
 	[lbl setFont:[self font]];
 	[lbl setTextColor:[UIColor colorNamed:kColAshes]];
 	[lbl setTextColor:[UIColor grayColor]];
-	[lbl setText:[self tableView:tableView titleForHeaderInSection:section]];
+	[lbl setText:[self orderedKeys][section]];
 	[lbl setBackgroundColor:[UIColor colorNamed:kColDove]];
 
 	UIView *header = [[UIView alloc] init];
@@ -160,11 +164,6 @@ viewForHeaderInSection:(NSInteger)section {
 	return [[[self holyDays] objectForKey:sectionKey] count];
 }
 
-// TODO: del me
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	return [self orderedKeys][section];
-}
-
 - (void)viewDidLoad {
 	[self setDateFormatter:makeDateFormatter()];
 	[[self dateFormatter] setDateFormat:@"MMM d"];
@@ -174,7 +173,7 @@ viewForHeaderInSection:(NSInteger)section {
 	NSArray *days2024 = @[
 		[
 			[HolyDay alloc]
-			initWithName:@"The Assumption of the Blessed Virgin Mary beep boop"
+			initWithName:@"The Assumption of the Blessed Virgin Mary"
 			 date:makeDateFromComponents(2024, 8, 15)
 		],
 		[
