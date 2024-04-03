@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -24,11 +24,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ehy-wW-ILM" userLabel="Header Bar">
-                                <rect key="frame" x="0.0" y="50" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="50"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0H9-ha-HHo" userLabel="Title Button">
                                         <rect key="frame" x="22.000000000000007" y="13" width="126.66666666666669" height="24"/>
@@ -72,20 +72,20 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Ofs-bx-7oy" userLabel="Drawer">
-                                <rect key="frame" x="0.0" y="100" width="375" height="135"/>
+                                <rect key="frame" x="0.0" y="109" width="393" height="135"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ij-1M-504" userLabel="Divider">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Q6H-fv-4iK"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pMl-j7-O3H" userLabel="CalWheel">
-                                        <rect key="frame" x="0.0" y="1" width="375" height="134"/>
+                                        <rect key="frame" x="0.0" y="1" width="393" height="134"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HHo-ut-MYc" userLabel="wheelHeader">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="58"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="February 2024" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7q-kE-7ez" userLabel="MonthLabel">
                                                         <rect key="frame" x="22.000000000000007" y="19" width="107.66666666666669" height="20.333333333333329"/>
@@ -94,7 +94,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Oe0-SX-Q3o">
-                                                        <rect key="frame" x="216.33333333333337" y="15" width="136.66666666666663" height="28"/>
+                                                        <rect key="frame" x="234.33333333333337" y="15" width="136.66666666666663" height="28"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfH-1v-k0E">
                                                                 <rect key="frame" x="0.0" y="0.0" width="59.333333333333336" height="28"/>
@@ -137,7 +137,7 @@
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vgB-cu-j61" userLabel="Wheel">
-                                                <rect key="frame" x="0.0" y="58" width="375" height="76"/>
+                                                <rect key="frame" x="0.0" y="58" width="393" height="76"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="76" id="iV3-sj-46N"/>
                                                 </constraints>
@@ -212,26 +212,26 @@
                                 </subviews>
                             </stackView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xho-QK-fim">
-                                <rect key="frame" x="0.0" y="235" width="375" height="543"/>
+                                <rect key="frame" x="0.0" y="244" width="393" height="574"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DSp-9S-lGr" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="630"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="619.33333333333337"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="hero_ordinary_time" translatesAutoresizingMaskIntoConstraints="NO" id="GSM-pI-03s" userLabel="img">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="235.66666666666666"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="GSM-pI-03s" secondAttribute="height" multiplier="5:3" id="XBy-Vb-6CV"/>
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEc-XV-8DW" userLabel="popup">
-                                                <rect key="frame" x="37.666666666666657" y="185" width="300" height="100"/>
+                                                <rect key="frame" x="39.333333333333343" y="195.66666666666669" width="314.33333333333326" height="100"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="h2V-YY-nrz"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSX-My-ZGd" userLabel="gospelText">
-                                                <rect key="frame" x="22" y="285" width="331" height="345"/>
+                                                <rect key="frame" x="22" y="295.66666666666663" width="349" height="323.66666666666663"/>
                                                 <string key="text">The shepherds went in haste to Bethlehem and found Mary and Joseph, and the infant lying in the manger. When they saw this, they made known the message that had been told them about this child. All who heard it were amazed by what had been told them by the shepherds. And Mary kept all these things, reflecting on them in her heart. Then the shepherds returned, glorifying and praising God for all they had heard and seen, just as it had been told to them. When eight days were completed for his circumcision, he was named Jesus, the name given him by the angel before he was conceived in the womb.</string>
                                                 <fontDescription key="fontDescription" name="EuclidSquare-Regular" family="Euclid Square" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -303,17 +303,17 @@
             <objects>
                 <viewController id="XaO-xH-U0x" customClass="HolyDaysController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ahg-2K-96z">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="802"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Zn-FS-32M">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="802"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                                 <subviews>
                                     <view contentMode="right" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LOD-aN-mQF" userLabel="Header">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcQ-ZD-XNc">
-                                                <rect key="frame" x="283.66666666666669" y="8" width="83.333333333333314" height="34.333333333333336"/>
+                                                <rect key="frame" x="301.66666666666669" y="8" width="83.333333333333314" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Dismiss"/>
                                                 <connections>
@@ -330,17 +330,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSX-EG-kQ5" userLabel="Divider">
-                                        <rect key="frame" x="0.0" y="50" width="375" height="1"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="1"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="OH9-4Z-Jte"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAK-WS-R8F" userLabel="Title">
-                                        <rect key="frame" x="0.0" y="51" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="51" width="393" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Holy Days of Obligation [USA]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d92-MK-Y0u">
-                                                <rect key="frame" x="74.000000000000014" y="14.999999999999998" width="227.33333333333337" height="20.333333333333329"/>
+                                                <rect key="frame" x="83.000000000000014" y="14.999999999999998" width="227.33333333333337" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="EuclidSquare-Semibold" family="Euclid Square" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -352,20 +352,21 @@
                                             <constraint firstItem="d92-MK-Y0u" firstAttribute="centerX" secondItem="sAK-WS-R8F" secondAttribute="centerX" id="ghq-YD-kK5"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FRb-Ie-2Jj">
-                                        <rect key="frame" x="0.0" y="101" width="375" height="701"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FRb-Ie-2Jj">
+                                        <rect key="frame" x="0.0" y="101" width="393" height="741"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <inset key="separatorInset" minX="22" minY="0.0" maxX="22" maxY="0.0"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <color key="sectionIndexBackgroundColor" name="Liturgicolor_Chalice"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dayCell" id="Bbh-Vx-Ltf">
-                                                <rect key="frame" x="0.0" y="50" width="375" height="43.666667938232422"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="dayCell" id="Bbh-Vx-Ltf">
+                                                <rect key="frame" x="0.0" y="50" width="393" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bbh-Vx-Ltf" id="KGh-Vo-QaE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bbh-Vx-Ltf" id="KGh-Vo-QaE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0p-Ic-2sL">
-                                                            <rect key="frame" x="16" y="13" width="343" height="18"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0p-Ic-2sL" userLabel="lbl">
+                                                            <rect key="frame" x="0.0" y="13" width="393" height="18"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Dec 25 ">
                                                                     <attributes>
@@ -383,16 +384,20 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <color key="backgroundColor" name="Liturgicolor_FigTree"/>
                                                     <constraints>
                                                         <constraint firstItem="V0p-Ic-2sL" firstAttribute="centerY" secondItem="KGh-Vo-QaE" secondAttribute="centerY" id="HoV-UG-4Nc"/>
-                                                        <constraint firstAttribute="trailingMargin" secondItem="V0p-Ic-2sL" secondAttribute="trailing" id="Q25-vm-aLB"/>
-                                                        <constraint firstItem="V0p-Ic-2sL" firstAttribute="leading" secondItem="KGh-Vo-QaE" secondAttribute="leadingMargin" id="fno-8c-beG"/>
+                                                        <constraint firstItem="V0p-Ic-2sL" firstAttribute="height" secondItem="KGh-Vo-QaE" secondAttribute="height" multiplier="0.412214" id="MSq-QC-k4q"/>
+                                                        <constraint firstAttribute="trailing" secondItem="V0p-Ic-2sL" secondAttribute="trailing" id="Q25-vm-aLB"/>
+                                                        <constraint firstItem="V0p-Ic-2sL" firstAttribute="leading" secondItem="KGh-Vo-QaE" secondAttribute="leading" id="fno-8c-beG"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>
                                             <outlet property="dataSource" destination="XaO-xH-U0x" id="dHk-wv-qxn"/>
+                                            <outlet property="delegate" destination="XaO-xH-U0x" id="rck-DA-ic6"/>
                                         </connections>
                                     </tableView>
                                 </subviews>
@@ -413,7 +418,6 @@
                             <constraint firstItem="5Zn-FS-32M" firstAttribute="top" secondItem="WDx-gi-qKM" secondAttribute="top" id="kYL-rq-vis"/>
                             <constraint firstItem="5Zn-FS-32M" firstAttribute="height" secondItem="WDx-gi-qKM" secondAttribute="height" id="vjw-kp-XKD"/>
                         </constraints>
-                        <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="22" bottom="0.0" trailing="22"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K51-Yn-m3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -438,6 +442,9 @@
         </namedColor>
         <namedColor name="Color_StellaMaris">
             <color red="0.0030000000260770321" green="0.0" blue="0.1379999965429306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Liturgicolor_Chalice">
+            <color red="0.92500001192092896" green="0.74199998378753662" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Liturgicolor_FigTree">
             <color red="0.18400000035762787" green="0.6940000057220459" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
