@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import "HolyDaysController.h"
 #import "litdb.h"
 #import "litdbBridge/LitCelebrationBridge.h"
 #import "dates.h"
@@ -13,7 +14,7 @@
 
 static const NSTimeInterval kSecondsPerDay = 86400;
 
-@interface ViewController () <UIScrollViewDelegate>
+@interface ViewController () <UIScrollViewDelegate, HolyDaysControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collView;
 @property (weak, nonatomic) IBOutlet UILabel *gospelText;
@@ -68,7 +69,6 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 	NSIndexPath *newIP = [[self dataSource] indexPathForItemIdentifier:_selectedKey];
 	[self highlightCell:(UICollectionViewCell *)[[self collView] cellForItemAtIndexPath:newIP]];
 
-	// celebration details
 	[[self gospelText] setText:[[self selectedCelebration] gospelText]];
 }
 
@@ -91,6 +91,19 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 	// we give the rect a minimal arbitrary height to avoid UIKit ignoring our request
 	CGRect r = CGRectMake(x, 0, scrollViewWidth, 1);
 	[[self collView] scrollRectToVisible:r animated:YES];
+}
+
+-(void)holyDaySelected:(HolyDay*)hd {
+	NSNumber *key = [hd toEpochSeconds];
+	[self scrollTo:key];
+	[self setSelectedKey:key];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+	if ([segue.identifier isEqualToString:@"calendarTapSegue"]) {
+		HolyDaysController *c = (HolyDaysController *)segue.destinationViewController;
+		[c setDelegate:self];
+	}
 }
 
 - (IBAction)handleTitleTap:(id)sender {
@@ -261,7 +274,7 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 				}
 			}
 			
-			if ([epochSeconds isEqual:today]) {
+			if ([epochSeconds isEqual:[self selectedKey]]) {
 				[self highlightCell:cell];
 			} else {
 				[self unHighlightCell:cell];
@@ -281,4 +294,6 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 	// set initial scroll position
 	[self handleTodayTriggered];
 }
+
+
 @end

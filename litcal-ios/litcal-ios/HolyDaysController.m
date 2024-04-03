@@ -12,10 +12,6 @@
 // should match the margin in Interface Builder for consistency
 static const NSInteger leftMargin = 11;
 
-@interface HolyDay : NSObject
-@property (strong, nonatomic) NSDate *date;
-@property (strong, nonatomic) NSString *name;
-@end
 
 @implementation HolyDay
 - (instancetype)initWithName:(NSString *)name date:(NSDate*)date {
@@ -25,6 +21,10 @@ static const NSInteger leftMargin = 11;
 		_date = date;
 	}
 	return self;
+}
+
+- (NSNumber*)toEpochSeconds {
+	return [NSNumber numberWithDouble:[[self date] timeIntervalSince1970]];
 }
 @end
 
@@ -44,6 +44,9 @@ static const NSInteger leftMargin = 11;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
+	NSString *key = [self orderedKeys][[indexPath section]];
+	HolyDay *d = [[self holyDays] objectForKey:key][[indexPath row]];
+	[[self delegate] holyDaySelected:d];
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
