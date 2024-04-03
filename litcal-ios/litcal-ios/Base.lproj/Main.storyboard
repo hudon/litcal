@@ -306,7 +306,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="802"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Zn-FS-32M">
+                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Zn-FS-32M">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="802"/>
                                 <subviews>
                                     <view contentMode="right" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LOD-aN-mQF" userLabel="Header">
@@ -352,20 +352,20 @@
                                             <constraint firstItem="d92-MK-Y0u" firstAttribute="centerX" secondItem="sAK-WS-R8F" secondAttribute="centerX" id="ghq-YD-kK5"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FRb-Ie-2Jj">
-                                        <rect key="frame" x="0.0" y="101" width="375" height="701"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <inset key="separatorInset" minX="22" minY="0.0" maxX="22" maxY="0.0"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FRb-Ie-2Jj">
+                                        <rect key="frame" x="11" y="101" width="353" height="701"/>
+                                        <color key="backgroundColor" name="Color_Dove"/>
+                                        <color key="sectionIndexBackgroundColor" name="Color_Dove"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="dayCell" id="Bbh-Vx-Ltf">
-                                                <rect key="frame" x="0.0" y="50" width="375" height="40.333332061767578"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="dayCell" id="Bbh-Vx-Ltf">
+                                                <rect key="frame" x="0.0" y="50" width="353" height="48"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bbh-Vx-Ltf" id="KGh-Vo-QaE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="40.333332061767578"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bbh-Vx-Ltf" id="KGh-Vo-QaE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="48"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0p-Ic-2sL" userLabel="lbl">
-                                                            <rect key="frame" x="16" y="10.999999999999998" width="343" height="18.333333333333329"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0p-Ic-2sL" userLabel="lbl">
+                                                            <rect key="frame" x="16" y="15" width="321" height="18"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Dec 25 ">
                                                                     <attributes>
@@ -383,7 +383,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" name="Liturgicolor_FigTree"/>
+                                                    <color key="backgroundColor" name="Liturgicolor_Lily"/>
                                                     <constraints>
                                                         <constraint firstItem="V0p-Ic-2sL" firstAttribute="top" secondItem="KGh-Vo-QaE" secondAttribute="topMargin" id="Dge-nf-ohd"/>
                                                         <constraint firstItem="V0p-Ic-2sL" firstAttribute="centerY" secondItem="KGh-Vo-QaE" secondAttribute="centerY" id="HoV-UG-4Nc"/>
@@ -391,8 +391,9 @@
                                                         <constraint firstAttribute="bottomMargin" secondItem="V0p-Ic-2sL" secondAttribute="bottom" id="daI-UQ-8tE"/>
                                                         <constraint firstItem="V0p-Ic-2sL" firstAttribute="leading" secondItem="KGh-Vo-QaE" secondAttribute="leadingMargin" id="fno-8c-beG"/>
                                                     </constraints>
+                                                    <directionalEdgeInsets key="directionalLayoutMargins" top="15" leading="11" bottom="15" trailing="11"/>
                                                 </tableViewCellContentView>
-                                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>
@@ -401,10 +402,12 @@
                                         </connections>
                                     </tableView>
                                 </subviews>
+                                <color key="backgroundColor" name="Color_Dove"/>
                                 <constraints>
                                     <constraint firstItem="PSX-EG-kQ5" firstAttribute="width" secondItem="5Zn-FS-32M" secondAttribute="width" id="JKO-eL-up4"/>
-                                    <constraint firstItem="sAK-WS-R8F" firstAttribute="width" secondItem="5Zn-FS-32M" secondAttribute="width" id="Ops-E3-xya"/>
-                                    <constraint firstItem="FRb-Ie-2Jj" firstAttribute="width" secondItem="5Zn-FS-32M" secondAttribute="width" id="W4Y-2w-rhd"/>
+                                    <constraint firstAttribute="trailing" secondItem="FRb-Ie-2Jj" secondAttribute="trailing" constant="11" id="XqK-xt-flG"/>
+                                    <constraint firstItem="FRb-Ie-2Jj" firstAttribute="leading" secondItem="5Zn-FS-32M" secondAttribute="leading" constant="11" id="ccq-4f-tAp"/>
+                                    <constraint firstItem="sAK-WS-R8F" firstAttribute="width" secondItem="5Zn-FS-32M" secondAttribute="width" id="f85-et-Goj"/>
                                     <constraint firstItem="sAK-WS-R8F" firstAttribute="height" secondItem="LOD-aN-mQF" secondAttribute="height" id="k5o-yv-X6U"/>
                                     <constraint firstItem="LOD-aN-mQF" firstAttribute="width" secondItem="5Zn-FS-32M" secondAttribute="width" id="tIw-kn-cd1"/>
                                 </constraints>

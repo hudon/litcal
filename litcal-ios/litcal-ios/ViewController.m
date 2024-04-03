@@ -9,18 +9,9 @@
 #import "litdb.h"
 #import "litdbBridge/LitCelebrationBridge.h"
 #import "dates.h"
+#import "colors.h"
 
 static const NSTimeInterval kSecondsPerDay = 86400;
-static NSString *kColAllSouls = @"Color_AllSouls";
-static NSString *kColAshes = @"Color_Ashes";
-static NSString *kColStellaMaris = @"Color_StellaMaris";
-static NSString *kColChalice = @"Liturgicolor_Chalice";
-static NSString *kColFigTree = @"Liturgicolor_FigTree";
-static NSString *kColLily = @"Liturgicolor_Lily";
-static NSString *kColMatrimony = @"Liturgicolor_Matrimony";
-static NSString *kColPassion = @"Liturgicolor_Passion";
-static NSString *kColWine = @"Liturgicolor_Wine";
-
 
 @interface ViewController () <UIScrollViewDelegate>
 
@@ -44,39 +35,6 @@ static NSString *kColWine = @"Liturgicolor_Wine";
 
 
 @implementation ViewController
-
-- (UIColor*)uiColorFromLitColor:(enum lit_color)c {
-	NSString *chosen;
-	switch (c) {
-		case LIT_BLACK:
-			chosen = kColAllSouls;
-			break;
-		case LIT_GREEN:
-			chosen = kColFigTree;
-			break;
-		case LIT_RED:
-			chosen = kColPassion;
-			break;
-		case LIT_WHITE:
-			chosen = kColLily;
-			break;
-		case LIT_VIOLET:
-			chosen = kColWine;
-			break;
-		case LIT_ROSE:
-			chosen = kColMatrimony;
-			break;
-		case LIT_GOLD:
-			chosen = kColChalice;
-			break;
-		case LIT_SILVER:
-			chosen = kColAshes;
-			break;
-		default:
-			break;
-	}
-	return [UIColor colorNamed:chosen];
-}
 
 - (LitCelebrationBridge*)selectedCelebration {
 	return [[self celebrations] objectForKey:[self selectedKey]];
@@ -292,7 +250,7 @@ static NSString *kColWine = @"Liturgicolor_Wine";
 			[[dot layer] setBorderWidth:0.0];
 			[dot setBackgroundColor:nil];
 			if ([litCel rank] <= 11) {
-				[dot setBackgroundColor:[self uiColorFromLitColor:[litCel color]]];
+				[dot setBackgroundColor:uiColorFromLitColor([litCel color])];
 				if ([litCel color] == LIT_WHITE) {
 					[[dot layer] setBorderColor:[[UIColor colorNamed:kColAshes] CGColor]];
 					[[dot layer] setBorderWidth:1.0];
