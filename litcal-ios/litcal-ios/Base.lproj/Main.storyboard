@@ -246,7 +246,7 @@
                                                                     <constraint firstAttribute="width" constant="18" id="vCo-xE-8NB"/>
                                                                 </constraints>
                                                             </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3v-pk-QVR">
+                                                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3v-pk-QVR">
                                                                 <rect key="frame" x="123.33333333333333" y="70.333333333333314" width="53.333333333333329" height="25.666666666666671"/>
                                                                 <fontDescription key="fontDescription" name="TiemposHeadline-Medium" family="Tiempos Headline" pointSize="21"/>
                                                                 <color key="textColor" name="Color_StellaMaris"/>

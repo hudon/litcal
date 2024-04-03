@@ -71,21 +71,26 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 	[self highlightCell:(UICollectionViewCell *)[[self collView] cellForItemAtIndexPath:newIP]];
 
 	LitCelebrationBridge *cel = [self selectedCelebration];
-	UILabel *date = [[self popupStack] viewWithTag:1];
-	enum lit_color c = [cel color];
-	UIColor *uc = uiColorFromLitColor(c);
-	if (c == LIT_WHITE) {
-		uc = [UIColor colorNamed:kColAshes];
+	{
+		UILabel *date = [[self popupStack] viewWithTag:1];
+		enum lit_color c = [cel color];
+		UIColor *uc = uiColorFromLitColor(c);
+		if (c == LIT_WHITE) {
+			uc = [UIColor colorNamed:kColAshes];
+		}
+		[date setTextColor:uc];
+		NSDateFormatter *df = [self dateFormatter];
+		[df setDateFormat:@"MMM d, y"];
+		[date setText:[NSString
+			stringWithFormat:@"%@ · %@",
+			[df stringFromDate:[cel date]],
+			[cel season]
+		]];
 	}
-	[date setTextColor:uc];
-	NSDateFormatter *df = [self dateFormatter];
-	[df setDateFormat:@"MMM d, y"];
-	;
-	[NSString
-		stringWithFormat:@"%@ · %@",
-	 	[df stringFromDate:[cel date]],
-//	 	[cel sea]
-		]
+	UILabel *title = [[self popupStack] viewWithTag:2];
+	[title setText:[cel title]];
+	UILabel *subtitle = [[self popupStack] viewWithTag:3];
+	[subtitle setText:[cel subtitle]];
 	[[self gospelText] setText:[cel gospelText]];
 }
 

@@ -12,28 +12,31 @@
 @end
 
 NSString* fromCString(const char *str) {
-    return [[NSString alloc] initWithCString:str encoding:NSASCIIStringEncoding];
+	return [[NSString alloc]
+		initWithCString:str encoding:NSASCIIStringEncoding];
 }
 
 @implementation LitCelebrationBridge
 
 - (instancetype)initWithCLitCelebration:(struct lit_celebration)litCel {
-    if (self = [super init]) {
-        [self setRank:litCel.rank];
-        [self setTitle:fromCString(litCel.title)];
-        [self setSubtitle:fromCString(litCel.subtitle)];
-        [self setEventKey:fromCString(litCel.event_key)];
-        [self setGospelRef:fromCString(litCel.gospel_ref)];
-        [self setGospelText:fromCString(litCel.gospel_text)];
-        [self setReadingsURL:fromCString(litCel.readings_url)];
-        [self setEpochSeconds:litCel.epoch_seconds];
-        [self setColor:litCel.color];
-    }
-    return self;
+	if (self = [super init]) {
+		[self setRank:litCel.rank];
+		[self setTitle:fromCString(litCel.title)];
+		[self setSubtitle:fromCString(litCel.subtitle)];
+		[self setEventKey:fromCString(litCel.event_key)];
+		[self setGospelRef:fromCString(litCel.gospel_ref)];
+		[self setGospelText:fromCString(litCel.gospel_text)];
+		[self setReadingsURL:fromCString(litCel.readings_url)];
+		[self setEpochSeconds:litCel.epoch_seconds];
+		[self setColor:litCel.color];
+		[self setSeason:fromCString(litCel.season)];
+	}
+	return self;
 }
 
 - (NSDate*)date {
-	return makeDateFromEpochSeconds([NSNumber numberWithInteger:[self epochSeconds]]);
+	return makeDateFromEpochSeconds(
+		[NSNumber numberWithInteger:[self epochSeconds]]);
 }
 
 @end

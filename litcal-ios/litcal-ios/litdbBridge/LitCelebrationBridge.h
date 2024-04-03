@@ -20,6 +20,7 @@
 @property NSString *gospelRef;
 @property NSString *gospelText;
 @property NSString *readingsURL;
+@property NSString *season;
 @property NSInteger epochSeconds;
 @property enum lit_color color;
 
