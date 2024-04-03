@@ -63,7 +63,7 @@ bool lit_get_celebration(
 
 	char *query =
 		"SELECT lc.event_key, lc.rank, lc.title, lc.subtitle, lc.gospel, "
-		"lc.gospel_ref, lc.readings_url, lcol.name AS color "
+		"lc.gospel_ref, lc.readings_url, lcol.name AS color, ls.name "
 		"FROM lit_celebration lc "
 		"JOIN lit_day ld ON lc.lit_day_id = ld.id "
 		"JOIN lit_color lcol ON lc.lit_color_id = lcol.id "
@@ -104,11 +104,13 @@ bool lit_get_celebration(
 		const char *gospel_ref = (const char *)sqlite3_column_text(stmt, 5);
 		const char *readings_url = (const char *)sqlite3_column_text(stmt, 6);
 		const char *color = (const char *)sqlite3_column_text(stmt, 7);
+		const char *season_name = (const char *)sqlite3_column_text(stmt, 8);
 
 		out_cel->rank = rank;
 		out_cel->epoch_seconds = epoch_seconds;
 		strlcpy(out_cel->event_key, event_key, sizeof(out_cel->event_key));
 		strlcpy(out_cel->title, title, sizeof(out_cel->title));
+		strlcpy(out_cel->season, season_name, sizeof out_cel->season);
 		if (subtitle == NULL) {
 			out_cel->subtitle[0] = '\0'; // ensure subtitle is set to empty
 		} else {

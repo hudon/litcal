@@ -50,6 +50,8 @@ struct lit_celebration {
   char *gospel_text;
   char *readings_url;
 
+  char season[32];
+
   int64_t epoch_seconds; /// seconds from 19700101 to 00:00 (midnight the morning of) on the day of this celebration
 };
 

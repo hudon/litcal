@@ -6,6 +6,7 @@
 #include <stddef.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
 
 void test_get_celebration__nulldb() {
 	struct lit_error *err = NULL;
@@ -66,6 +67,7 @@ void test_get_celebration__valid() {
 
 	assert(res);
 	assert(cel.epoch_seconds == epoch);
+	assert(!strcmp(cel.season, "Ordinary Time"));
 
 	sqlite3_close(db);
 }
