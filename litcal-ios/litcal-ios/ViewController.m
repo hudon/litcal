@@ -225,7 +225,6 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 
 
 	// wire each cell to its corresponding celebration
-	NSNumber *today = makeTodaySeconds();
 	[self setDataSource:[
 		[UICollectionViewDiffableDataSource alloc]
 		initWithCollectionView:[self collView]
