@@ -64,6 +64,8 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 	NSIndexPath *oldIP = [[self dataSource] indexPathForItemIdentifier:_selectedKey];
 	UICollectionViewCell *oldCell = [[self collView] cellForItemAtIndexPath:oldIP];
 	[self unHighlightCell:oldCell];
+	UILabel *subtitle = [[self popupStack] viewWithTag:3];
+	[subtitle removeFromSuperview];
 
 	_selectedKey = selectedKey;
 
@@ -89,8 +91,14 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 	}
 	UILabel *title = [[self popupStack] viewWithTag:2];
 	[title setText:[cel title]];
-	UILabel *subtitle = [[self popupStack] viewWithTag:3];
-	[subtitle setText:[cel subtitle]];
+	if (![[cel subtitle] isEqual:@""]) {
+		UILabel *subtitle = [[UILabel alloc] init];
+		[subtitle setTag:3];
+		[subtitle setText:[cel subtitle]];
+		[subtitle setFont:[UIFont fontWithName:@"EuclidSquare-Regular" size:14.0]];
+		[subtitle setTextColor:[UIColor colorNamed:kColAshes]];
+		[[self popupStack] addArrangedSubview:subtitle];
+	}
 	[[self gospelText] setText:[cel gospelText]];
 }
 
