@@ -15,6 +15,7 @@ NSString *kColChalice = @"Liturgicolor_Chalice";
 NSString *kColFigTree = @"Liturgicolor_FigTree";
 NSString *kColLily = @"Liturgicolor_Lily";
 NSString *kColMatrimony = @"Liturgicolor_Matrimony";
+NSString *kColOurLady = @"Color_OurLady";
 NSString *kColPassion = @"Liturgicolor_Passion";
 NSString *kColWine = @"Liturgicolor_Wine";
 

@@ -19,6 +19,7 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 @property (weak, nonatomic) IBOutlet UICollectionView *collView;
 @property (weak, nonatomic) IBOutlet UILabel *gospelText;
 @property (weak, nonatomic) IBOutlet UILabel *monthLabel;
+@property (weak, nonatomic) IBOutlet UIButton *todayBtn;
 @property (weak, nonatomic) IBOutlet UIImageView *chevron;
 @property (weak, nonatomic) IBOutlet UIStackView *drawer;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollViewTopConstraint;
@@ -61,6 +62,15 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 		return;
 	}
 
+	NSNumber *today = makeTodaySeconds();
+	if ([today isEqual:selectedKey]) {
+		[[self todayBtn] setBackgroundColor:[UIColor colorNamed:kColDove]];
+		[[self todayBtn] setTintColor:[UIColor colorNamed:kColAshes]];
+	} else {
+		[[self todayBtn] setBackgroundColor:[UIColor colorNamed:kColOurLady]];
+		[[self todayBtn] setTintColor:[UIColor colorNamed:kColDove]];
+	}
+
 	NSIndexPath *oldIP = [[self dataSource] indexPathForItemIdentifier:_selectedKey];
 	UICollectionViewCell *oldCell = [[self collView] cellForItemAtIndexPath:oldIP];
 	[self unHighlightCell:oldCell];
@@ -71,7 +81,6 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 
 	NSIndexPath *newIP = [[self dataSource] indexPathForItemIdentifier:_selectedKey];
 	[self highlightCell:(UICollectionViewCell *)[[self collView] cellForItemAtIndexPath:newIP]];
-
 	LitCelebrationBridge *cel = [self selectedCelebration];
 	{
 		UILabel *date = [[self popupStack] viewWithTag:1];
@@ -89,8 +98,7 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 			[cel season]
 		]];
 	}
-	UILabel *title = [[self popupStack] viewWithTag:2];
-	[title setText:[cel title]];
+	[[[self popupStack] viewWithTag:2] setText:[cel title]];
 	if (![[cel subtitle] isEqual:@""]) {
 		UILabel *subtitle = [[UILabel alloc] init];
 		[subtitle setTag:3];
@@ -103,9 +111,9 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 }
 
 - (void)scrollTo:(NSNumber*)key {
-	// find today in the existing range of dates, as a percentage
+	// find date in the existing range of dates, as a percentage
 	NSUInteger min = [self minEpochSeconds], max = [self maxEpochSeconds];
-	CGFloat todayPosition =
+	CGFloat datePos =
 		(CGFloat)([key longLongValue] - min) / (max - min);
 
 	UICollectionViewFlowLayout *layout =
@@ -113,7 +121,7 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 	CGFloat scrollViewWidth = [[self collView] visibleSize].width;
 	// The first operand is the distance from cell_first.x to cell_last.x. So if todayPosition=100%,
 	// then x will be the X origin of the last cell
-	CGFloat x = ([[self collView] contentSize].width - [layout itemSize].width) * todayPosition;
+	CGFloat x = ([[self collView] contentSize].width - [layout itemSize].width) * datePos;
 	// center today cell by moving x away from the center of
 	// the scrollView width and away from the center of the cell
 	x = x - scrollViewWidth / 2 + [layout itemSize].width / 2;
@@ -213,12 +221,9 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 
 
 	[self setDateFormatter:makeDateFormatter()];
-
-
 	[self setShouldShowDrawer:YES];
-
-
 	[[[[self popupStack] superview] layer] setCornerRadius:6.0];
+	[[[self todayBtn] layer] setCornerRadius:5.0];
 
 
 	// Get all celebrations and insert them into the lookup table
@@ -255,7 +260,6 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 		}
 		[self setCelebrations:[[NSDictionary alloc] initWithObjects:celValues forKeys:celTimes]];
 	}
-
 
 	// wire each cell to its corresponding celebration
 	[self setDataSource:[

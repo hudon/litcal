@@ -19,6 +19,7 @@ extern NSString *kColChalice;
 extern NSString *kColFigTree;
 extern NSString *kColLily;
 extern NSString *kColMatrimony;
+extern NSString *kColOurLady;
 extern NSString *kColPassion;
 extern NSString *kColWine;
 

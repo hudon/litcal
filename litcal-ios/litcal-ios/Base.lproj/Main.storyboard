@@ -116,12 +116,10 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4c-wZ-6Yf">
                                                                 <rect key="frame" x="71.333333333333343" y="0.0" width="65.333333333333343" height="28"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" title="  Today" cornerStyle="medium" buttonSize="small">
+                                                                <buttonConfiguration key="configuration" style="plain" title="  Today" cornerStyle="medium" buttonSize="small">
                                                                     <imageReference key="image" image="bookmark" catalog="system" symbolScale="small"/>
                                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                                                     <fontDescription key="titleFontDescription" name="EuclidSquare-Regular" family="Euclid Square" pointSize="10"/>
-                                                                    <color key="baseForegroundColor" name="Color_Ashes"/>
-                                                                    <color key="baseBackgroundColor" name="Color_Dove"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="handleTodayTriggered" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="RvG-6X-9ea"/>
@@ -322,6 +320,7 @@
                         <outlet property="monthLabel" destination="j7q-kE-7ez" id="yZ1-t1-UTw"/>
                         <outlet property="popupStack" destination="5AG-v0-cAv" id="zgx-em-AHC"/>
                         <outlet property="scrollViewTopConstraint" destination="RE5-Qo-cCO" id="kuH-Ib-1qh"/>
+                        <outlet property="todayBtn" destination="N4c-wZ-6Yf" id="kDg-AD-c0v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
