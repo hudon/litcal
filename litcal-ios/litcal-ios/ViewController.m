@@ -14,6 +14,7 @@
 #import "GradientView.h"
 
 static const NSTimeInterval kSecondsPerDay = 86400;
+static NSString *kFontName = @"EuclidSquare-Regular";
 
 @interface ViewController () <UIScrollViewDelegate, HolyDaysControllerDelegate>
 
@@ -27,11 +28,13 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 @property (weak, nonatomic) IBOutlet GradientView *gradient;
 @property (weak, nonatomic) IBOutlet UIImageView *img;
 @property (weak, nonatomic) IBOutlet UIStackView *popupStack;
+@property (weak, nonatomic) IBOutlet UIButton *link;
 
 @property (strong, nonatomic) UICollectionViewDiffableDataSource *dataSource;
 @property (strong, nonatomic) NSDictionary *celebrations;
 @property (strong, nonatomic) NSNumber *selectedKey;
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
+@property (strong, nonatomic) NSURL *gospelURL;
 @property (nonatomic) sqlite3 *db;
 @property (nonatomic) NSUInteger minEpochSeconds;
 @property (nonatomic) NSUInteger maxEpochSeconds;
@@ -151,13 +154,17 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 			UILabel *subtitle = [[UILabel alloc] init];
 			[subtitle setTag:3];
 			[subtitle setText:[cel subtitle]];
-			[subtitle setFont:[UIFont fontWithName:@"EuclidSquare-Regular" size:14.0]];
+			[subtitle setFont:[UIFont fontWithName:kFontName size:14.0]];
 			[subtitle setTextColor:[UIColor colorNamed:kColAshes]];
 			[[self popupStack] addArrangedSubview:subtitle];
 		}
 	}
 	[[self gospelText] setText:[cel gospelText]];
 	[[self gradient] setColor:uiColorFromLitColor([cel color])];
+	[self setGospelURL:[NSURL URLWithString:[cel readingsURL]]];
+	[[self link]
+		setTitle:[NSString stringWithFormat:@"  %@", [cel gospelRef]]
+		forState:UIControlStateNormal];
 }
 
 - (void)scrollTo:(NSNumber*)key {
@@ -191,6 +198,13 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 	if ([segue.identifier isEqualToString:@"calendarTapSegue"]) {
 		HolyDaysController *c = (HolyDaysController *)segue.destinationViewController;
 		[c setDelegate:self];
+	}
+}
+
+- (IBAction)handleLinkTap:(id)sender {
+	NSURL *url = [self gospelURL];
+	if ([[UIApplication sharedApplication] canOpenURL:url]) {
+		[[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
 	}
 }
 
@@ -382,6 +396,13 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 	[pl setShadowOpacity:0.05];
 	[pl setShadowRadius:14];
 	[pl setShadowOffset:CGSizeMake(0, 4)];
+}
+
+- (void)viewDidLayoutSubviews {
+	[super viewDidLayoutSubviews];
+	// calling setTitle on the UIButton resets the font size,
+	// so we fix it after layout
+	[[[self link] titleLabel] setFont:[UIFont fontWithName:kFontName size:12.0]];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
