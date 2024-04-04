@@ -358,7 +358,7 @@
                         <outlet property="gospelText" destination="qSX-My-ZGd" id="UTC-yG-ylY"/>
                         <outlet property="gradient" destination="X33-x5-e3z" id="2jf-rE-MUf"/>
                         <outlet property="monthLabel" destination="j7q-kE-7ez" id="yZ1-t1-UTw"/>
-                        <outlet property="popupStack" destination="5AG-v0-cAv" id="zgx-em-AHC"/>
+                        <outlet property="popupStack" destination="5AG-v0-cAv" id="YtE-Cn-wOc"/>
                         <outlet property="scrollViewTopConstraint" destination="RE5-Qo-cCO" id="kuH-Ib-1qh"/>
                         <outlet property="todayBtn" destination="N4c-wZ-6Yf" id="kDg-AD-c0v"/>
                     </connections>

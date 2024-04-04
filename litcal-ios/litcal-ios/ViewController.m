@@ -331,6 +331,14 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 	[[self dataSource] applySnapshotUsingReloadData:snap];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+	CALayer *pl = [[[self popupStack] superview] layer];
+	[pl setShadowColor:[[UIColor colorWithRed:0.004 green:0.0 blue:0.133 alpha:1.0] CGColor]];
+	[pl setShadowOpacity:0.05];
+	[pl setShadowRadius:14];
+	[pl setShadowOffset:CGSizeMake(0, 4)];
+}
+
 - (void)viewDidAppear:(BOOL)animated {
 	// set initial scroll position
 	[self handleTodayTriggered];
