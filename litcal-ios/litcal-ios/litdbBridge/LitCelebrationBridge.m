@@ -16,6 +16,11 @@ NSString* fromCString(const char *str) {
 		initWithCString:str encoding:NSASCIIStringEncoding];
 }
 
+NSString* fromUTF8CString(const char *str) {
+	return [[NSString alloc]
+		initWithCString:str encoding:NSUTF8StringEncoding];
+}
+
 @implementation LitCelebrationBridge
 
 - (instancetype)initWithCLitCelebration:(struct lit_celebration)litCel {
@@ -25,7 +30,7 @@ NSString* fromCString(const char *str) {
 		[self setSubtitle:fromCString(litCel.subtitle)];
 		[self setEventKey:fromCString(litCel.event_key)];
 		[self setGospelRef:fromCString(litCel.gospel_ref)];
-		[self setGospelText:fromCString(litCel.gospel_text)];
+		[self setGospelText:fromUTF8CString(litCel.gospel_text)];
 		[self setReadingsURL:fromCString(litCel.readings_url)];
 		[self setEpochSeconds:litCel.epoch_seconds];
 		[self setColor:litCel.color];
