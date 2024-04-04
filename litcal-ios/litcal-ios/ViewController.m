@@ -11,6 +11,7 @@
 #import "litdbBridge/LitCelebrationBridge.h"
 #import "dates.h"
 #import "colors.h"
+#import "GradientView.h"
 
 static const NSTimeInterval kSecondsPerDay = 86400;
 
@@ -23,6 +24,7 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 @property (weak, nonatomic) IBOutlet UIImageView *chevron;
 @property (weak, nonatomic) IBOutlet UIStackView *drawer;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollViewTopConstraint;
+@property (weak, nonatomic) IBOutlet GradientView *gradient;
 @property (weak, nonatomic) IBOutlet UIStackView *popupStack;
 
 @property (strong, nonatomic) UICollectionViewDiffableDataSource *dataSource;
@@ -82,6 +84,7 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 	NSIndexPath *newIP = [[self dataSource] indexPathForItemIdentifier:_selectedKey];
 	[self highlightCell:(UICollectionViewCell *)[[self collView] cellForItemAtIndexPath:newIP]];
 	LitCelebrationBridge *cel = [self selectedCelebration];
+	// popup updates
 	{
 		UILabel *date = [[self popupStack] viewWithTag:1];
 		enum lit_color c = [cel color];
@@ -97,17 +100,19 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 			[df stringFromDate:[cel date]],
 			[cel season]
 		]];
-	}
-	[[[self popupStack] viewWithTag:2] setText:[cel title]];
-	if (![[cel subtitle] isEqual:@""]) {
-		UILabel *subtitle = [[UILabel alloc] init];
-		[subtitle setTag:3];
-		[subtitle setText:[cel subtitle]];
-		[subtitle setFont:[UIFont fontWithName:@"EuclidSquare-Regular" size:14.0]];
-		[subtitle setTextColor:[UIColor colorNamed:kColAshes]];
-		[[self popupStack] addArrangedSubview:subtitle];
+
+		[[[self popupStack] viewWithTag:2] setText:[cel title]];
+		if (![[cel subtitle] isEqual:@""]) {
+			UILabel *subtitle = [[UILabel alloc] init];
+			[subtitle setTag:3];
+			[subtitle setText:[cel subtitle]];
+			[subtitle setFont:[UIFont fontWithName:@"EuclidSquare-Regular" size:14.0]];
+			[subtitle setTextColor:[UIColor colorNamed:kColAshes]];
+			[[self popupStack] addArrangedSubview:subtitle];
+		}
 	}
 	[[self gospelText] setText:[cel gospelText]];
+	[[self gradient] setColor:uiColorFromLitColor([cel color])];
 }
 
 - (void)scrollTo:(NSNumber*)key {

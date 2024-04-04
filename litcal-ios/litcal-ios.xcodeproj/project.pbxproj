@@ -26,6 +26,7 @@
 		5EA3471B2BB374BC00E2DF5A /* LitCelebrationBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3471A2BB374BC00E2DF5A /* LitCelebrationBridge.m */; };
 		5EA3471E2BB3795300E2DF5A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA3471D2BB3794B00E2DF5A /* libsqlite3.tbd */; };
 		5EA347212BB37CE200E2DF5A /* litcal.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5EA347202BB37CE200E2DF5A /* litcal.sqlite */; };
+		5EB0F0AB2BBE4C5800D4D8E8 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0F0AA2BBE4C5800D4D8E8 /* GradientView.m */; };
 		5EBBED702BBC5C0E0059BBD6 /* HolyDaysController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBED6F2BBC5C0E0059BBD6 /* HolyDaysController.m */; };
 		5EBBED732BBC7E6D0059BBD6 /* dates.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBED722BBC7E6D0059BBD6 /* dates.m */; };
 		5EBBED762BBDC9990059BBD6 /* colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBED752BBDC9990059BBD6 /* colors.m */; };
@@ -98,6 +99,8 @@
 		5EA3471C2BB374CC00E2DF5A /* LitCelebrationBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LitCelebrationBridge.h; sourceTree = "<group>"; };
 		5EA3471D2BB3794B00E2DF5A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		5EA347202BB37CE200E2DF5A /* litcal.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = litcal.sqlite; path = ../litcal.sqlite; sourceTree = "<group>"; };
+		5EB0F0AA2BBE4C5800D4D8E8 /* GradientView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
+		5EB0F0AC2BBE4C6B00D4D8E8 /* GradientView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
 		5EBBED6E2BBC58530059BBD6 /* HolyDaysController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HolyDaysController.h; sourceTree = "<group>"; };
 		5EBBED6F2BBC5C0E0059BBD6 /* HolyDaysController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HolyDaysController.m; sourceTree = "<group>"; };
 		5EBBED712BBC7E4D0059BBD6 /* dates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dates.h; sourceTree = "<group>"; };
@@ -187,6 +190,8 @@
 				5EBBED722BBC7E6D0059BBD6 /* dates.m */,
 				5EBBED742BBDC88E0059BBD6 /* colors.h */,
 				5EBBED752BBDC9990059BBD6 /* colors.m */,
+				5EB0F0AC2BBE4C6B00D4D8E8 /* GradientView.h */,
+				5EB0F0AA2BBE4C5800D4D8E8 /* GradientView.m */,
 			);
 			path = "litcal-ios";
 			sourceTree = "<group>";
@@ -422,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EBBED702BBC5C0E0059BBD6 /* HolyDaysController.m in Sources */,
+				5EB0F0AB2BBE4C5800D4D8E8 /* GradientView.m in Sources */,
 				5EBBED732BBC7E6D0059BBD6 /* dates.m in Sources */,
 				5E71CCD02B6C47620010B9A7 /* ViewController.m in Sources */,
 				5E71CCCA2B6C47620010B9A7 /* AppDelegate.m in Sources */,
