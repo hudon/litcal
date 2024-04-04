@@ -162,9 +162,8 @@ static NSString *kFontName = @"EuclidSquare-Regular";
 	[[self gospelText] setText:[cel gospelText]];
 	[[self gradient] setColor:uiColorFromLitColor([cel color])];
 	[self setGospelURL:[NSURL URLWithString:[cel readingsURL]]];
-	[[self link]
-		setTitle:[NSString stringWithFormat:@"  %@", [cel gospelRef]]
-		forState:UIControlStateNormal];
+	[[[self link] configuration]
+		setTitle:[NSString stringWithFormat:@"  %@", [cel gospelRef]]];
 }
 
 - (void)scrollTo:(NSNumber*)key {
@@ -396,13 +395,6 @@ static NSString *kFontName = @"EuclidSquare-Regular";
 	[pl setShadowOpacity:0.05];
 	[pl setShadowRadius:14];
 	[pl setShadowOffset:CGSizeMake(0, 4)];
-}
-
-- (void)viewDidLayoutSubviews {
-	[super viewDidLayoutSubviews];
-	// calling setTitle on the UIButton resets the font size,
-	// so we fix it after layout
-	[[[self link] titleLabel] setFont:[UIFont fontWithName:kFontName size:12.0]];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
