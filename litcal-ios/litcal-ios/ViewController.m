@@ -162,8 +162,15 @@ static NSString *kFontName = @"EuclidSquare-Regular";
 	[[self gospelText] setText:[cel gospelText]];
 	[[self gradient] setColor:uiColorFromLitColor([cel color])];
 	[self setGospelURL:[NSURL URLWithString:[cel readingsURL]]];
-	[[[self link] configuration]
-		setTitle:[NSString stringWithFormat:@"  %@", [cel gospelRef]]];
+	[[self link]
+		setAttributedTitle:[
+			[NSAttributedString alloc]
+			initWithString:[NSString stringWithFormat:@"  %@", [cel gospelRef]]
+			attributes:@{
+				NSFontAttributeName: [UIFont fontWithName:kFontName size:12.0]
+			}
+		]
+		forState:UIControlStateNormal];
 }
 
 - (void)scrollTo:(NSNumber*)key {

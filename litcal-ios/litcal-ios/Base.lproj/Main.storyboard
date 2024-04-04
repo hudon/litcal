@@ -218,7 +218,7 @@
                                 <rect key="frame" x="0.0" y="235" width="375" height="543"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DSp-9S-lGr" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="658.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="675"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="hero_ordinary_time" translatesAutoresizingMaskIntoConstraints="NO" id="GSM-pI-03s" userLabel="img">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
@@ -227,7 +227,7 @@
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LuK-op-66t" userLabel="GospelContainer">
-                                                <rect key="frame" x="0.0" y="225.00000000000003" width="375" height="433.66666666666674"/>
+                                                <rect key="frame" x="0.0" y="225" width="375" height="450"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X33-x5-e3z" userLabel="Gradient" customClass="GradientView">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="79.666666666666671"/>
@@ -264,22 +264,28 @@
                                                             <constraint firstAttribute="trailingMargin" secondItem="Bjw-n7-4RZ" secondAttribute="trailing" id="str-ml-ffQ"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSX-My-ZGd" userLabel="gospelText">
-                                                        <rect key="frame" x="0.0" y="131.66666666666663" width="375" height="302"/>
-                                                        <string key="text">The shepherds went in haste to Bethlehem and found Mary and Joseph, and the infant lying in the manger. When they saw this, they made known the message that had been told them about this child. All who heard it were amazed by what had been told them by the shepherds. And Mary kept all these things, reflecting on them in her heart. Then the shepherds returned, glorifying and praising God for all they had heard and seen, just as it had been told to them. When eight days were completed for his circumcision, he was named Jesus, the name given him by the angel before he was conceived in the womb.</string>
-                                                        <fontDescription key="fontDescription" name="EuclidSquare-Regular" family="Euclid Square" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSX-My-ZGd" userLabel="gospelText">
+                                                        <rect key="frame" x="22" y="131.6666666666666" width="331" height="318.33333333333326"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment>
+                                                                <mutableString key="content">The shepherds went in haste to Bethlehem and found Mary and Joseph, and the infant lying in the manger. When they saw this, they made known the message that had been told them about this child. All who heard it were amazed by what had been told them by the shepherds. And Mary kept all these things, reflecting on them in her heart. Then the shepherds returned, glorifying and praising God for all they had heard and seen, just as it had been told to them. When eight days were completed for his circumcision, he was named Jesus, the name given him by the angel before he was conceived in the womb.</mutableString>
+                                                                <attributes>
+                                                                    <font key="NSFont" size="15" name="EuclidSquare-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="qSX-My-ZGd" firstAttribute="leading" secondItem="LuK-op-66t" secondAttribute="leading" id="00y-5j-atz"/>
+                                                    <constraint firstItem="qSX-My-ZGd" firstAttribute="leading" secondItem="LuK-op-66t" secondAttribute="leadingMargin" id="00y-5j-atz"/>
                                                     <constraint firstAttribute="bottom" secondItem="qSX-My-ZGd" secondAttribute="bottom" id="351-Ct-zam"/>
                                                     <constraint firstItem="s92-7T-cZ1" firstAttribute="leading" secondItem="LuK-op-66t" secondAttribute="leading" id="8ZT-oC-scd"/>
                                                     <constraint firstItem="X33-x5-e3z" firstAttribute="bottom" secondItem="s92-7T-cZ1" secondAttribute="top" id="Cms-SC-RB2"/>
                                                     <constraint firstItem="qSX-My-ZGd" firstAttribute="top" secondItem="s92-7T-cZ1" secondAttribute="bottom" id="JWQ-4y-1Ei"/>
-                                                    <constraint firstAttribute="trailing" secondItem="qSX-My-ZGd" secondAttribute="trailing" id="MmW-rK-S5O"/>
+                                                    <constraint firstAttribute="trailingMargin" secondItem="qSX-My-ZGd" secondAttribute="trailing" id="MmW-rK-S5O"/>
                                                     <constraint firstItem="X33-x5-e3z" firstAttribute="top" secondItem="LuK-op-66t" secondAttribute="top" id="NYk-g2-ADi"/>
                                                     <constraint firstItem="X33-x5-e3z" firstAttribute="centerX" secondItem="LuK-op-66t" secondAttribute="centerX" id="UTw-Me-Ozw"/>
                                                     <constraint firstItem="s92-7T-cZ1" firstAttribute="width" secondItem="LuK-op-66t" secondAttribute="width" id="a93-KW-u2V"/>
