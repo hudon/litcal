@@ -26,7 +26,7 @@ NSString* fromUTF8CString(const char *str) {
 - (instancetype)initWithCLitCelebration:(struct lit_celebration)litCel {
 	if (self = [super init]) {
 		[self setRank:litCel.rank];
-		[self setTitle:fromCString(litCel.title)];
+		[self setTitle:fromUTF8CString(litCel.title)];
 		[self setSubtitle:fromCString(litCel.subtitle)];
 		[self setEventKey:fromCString(litCel.event_key)];
 		[self setGospelRef:fromCString(litCel.gospel_ref)];

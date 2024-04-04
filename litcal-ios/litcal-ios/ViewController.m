@@ -74,7 +74,7 @@ static NSString *kFontName = @"EuclidSquare-Regular";
 		[[self todayBtn] setTintColor:[UIColor colorNamed:kColAshes]];
 	} else {
 		[[self todayBtn] setBackgroundColor:[UIColor colorNamed:kColOurLady]];
-		[[self todayBtn] setTintColor:[UIColor colorNamed:kColDove]];
+		[[self todayBtn] setTintColor:[UIColor colorNamed:kColLily]];
 	}
 
 	NSIndexPath *oldIP = [[self dataSource] indexPathForItemIdentifier:_selectedKey];

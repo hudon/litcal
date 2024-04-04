@@ -11,16 +11,24 @@ NSTimeZone* makeTimeZone(void) {
 	return [NSTimeZone timeZoneForSecondsFromGMT:0];
 }
 
-NSCalendar* makeCalendar(void) {
+NSCalendar* makeGMTCalendar(void) {
 	NSCalendar *cal = [NSCalendar currentCalendar];
 	[cal setTimeZone:makeTimeZone()];
 	return  cal;
 }
 
 NSNumber* makeTodaySeconds(void) {
-	NSCalendar *cal = makeCalendar();
-	long long epochSeconds =
-		[[cal startOfDayForDate:[NSDate date]] timeIntervalSince1970];
+	NSDate *d = [NSDate date];
+	NSTimeInterval offset = (NSTimeInterval)[
+		[NSTimeZone localTimeZone]
+		secondsFromGMTForDate:d
+	];
+	NSDate *utcDate = [d dateByAddingTimeInterval:offset];
+
+	long long epochSeconds = [
+		[makeGMTCalendar() startOfDayForDate:utcDate]
+		timeIntervalSince1970
+	];
 	return [[NSNumber alloc] initWithLongLong:epochSeconds];
 }
 
@@ -33,7 +41,7 @@ NSDate* makeDateFromComponents(int year, int month, int day) {
 	[comps setYear:year];
 	[comps setMonth:month];
 	[comps setDay:day];
-	return [makeCalendar() dateFromComponents:comps];
+	return [makeGMTCalendar() dateFromComponents:comps];
 }
 
 NSDateFormatter* makeDateFormatter(void) {
