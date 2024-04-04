@@ -25,6 +25,7 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 @property (weak, nonatomic) IBOutlet UIStackView *drawer;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollViewTopConstraint;
 @property (weak, nonatomic) IBOutlet GradientView *gradient;
+@property (weak, nonatomic) IBOutlet UIImageView *img;
 @property (weak, nonatomic) IBOutlet UIStackView *popupStack;
 
 @property (strong, nonatomic) UICollectionViewDiffableDataSource *dataSource;
@@ -84,6 +85,50 @@ static const NSTimeInterval kSecondsPerDay = 86400;
 	NSIndexPath *newIP = [[self dataSource] indexPathForItemIdentifier:_selectedKey];
 	[self highlightCell:(UICollectionViewCell *)[[self collView] cellForItemAtIndexPath:newIP]];
 	LitCelebrationBridge *cel = [self selectedCelebration];
+	// image updates
+	{
+		NSString *imgName = @"hero_ordinary_time";
+		NSString *s = [cel season];
+		if ([s isEqual:@"Advent"]) {
+			imgName = @"hero_advent";
+		} else if ([s isEqual:@"Christmas"]) {
+			imgName = @"hero_christmas";
+		} else if ([s isEqual:@"Lent"]) {
+			imgName = @"hero_lent";
+		} else if ([s isEqual:@"Easter"]) {
+			imgName = @"hero_easter";
+		}
+		switch ([cel rank]) {
+			case 7: case 8: case 10: case 11: case 12:
+				imgName = @"hero_saints";
+		}
+		if ([[cel title] isEqual:@"Saturday Memorial of the Blessed Virgin Mary"]) {
+			imgName = @"hero_bvm";
+		}
+		NSString *key = [cel eventKey];
+		NSArray *bvms = @[@"MaryMotherChurch", @"QueenshipMary", @"LadyLoreto",
+			@"LadyLourdes", @"LadyFatima", @"LadyMountCarmel", @"LadySorrows",
+			@"LadyRosary", @"LadyGuadalupe" ];
+		for (id e in bvms) {
+			if ([key isEqual:e]) {
+				imgName = @"hero_bvm";
+				break;
+			}
+		}
+		if ([key isEqual:@"StMaryMagdalene"]) {
+			imgName = @"hero_mary_magdalene";
+		} else if ([key isEqual:@"GoodFri"]) {
+			imgName = @"hero_good_friday";
+		} else if ([key isEqual:@"EasterVigil"] || [key isEqual:@"HolySaturday"]) {
+			imgName = @"hero_holy_saturday";
+		} else if ([key isEqual:@"Easter"]) {
+			imgName = @"hero_easter";
+		} else if ([key isEqual:@"Pentecost"]) {
+			imgName = @"hero_pentecost";
+		}
+
+		[[self img] setImage:[UIImage imageNamed:imgName]];
+	}
 	// popup updates
 	{
 		UILabel *date = [[self popupStack] viewWithTag:1];
