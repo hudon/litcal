@@ -10,28 +10,22 @@
 #import "litdb.h"
 #import <UIKit/UIKit.h>
 
-extern NSString *kColLabel;
-extern NSString *kColBtnDisabled;
-extern NSString *kColText;
-
-extern NSString *kColAllSouls;
-extern NSString *kColAshes;
-extern NSString *kColDove;
-extern NSString *kColStellaMaris;
-extern NSString *kColChalice;
-extern NSString *kColFigTree;
-extern NSString *kColLily;
-extern NSString *kColMatrimony;
-extern NSString *kColOurLady;
-extern NSString *kColPassion;
-extern NSString *kColWine;
-
 UIColor* uiColorFromLitColor(enum lit_color c);
 
 @interface UIColor (CustomColors)
-@property (class, nonatomic, readonly) UIColor *litSelectionColor;
-@property (class, nonatomic, readonly) UIColor *whiteBorder;
+@property (class, nonatomic, readonly) UIColor *allSoulsColor;
+@property (class, nonatomic, readonly) UIColor *ashesColor;
+@property (class, nonatomic, readonly) UIColor *chaliceColor;
+@property (class, nonatomic, readonly) UIColor *disabledBtnColor;
+@property (class, nonatomic, readonly) UIColor *figTreeColor;
 @property (class, nonatomic, readonly) UIColor *grayBg;
-@property (class, nonatomic, readonly) UIColor *textColor;
+@property (class, nonatomic, readonly) UIColor *lilyColor;
+@property (class, nonatomic, readonly) UIColor *litSelectionColor;
+@property (class, nonatomic, readonly) UIColor *matrimonyColor;
+@property (class, nonatomic, readonly) UIColor *ourLadyColor;
+@property (class, nonatomic, readonly) UIColor *passionColor;
 @property (class, nonatomic, readonly) UIColor *separatorColor;
+@property (class, nonatomic, readonly) UIColor *textColor;
+@property (class, nonatomic, readonly) UIColor *whiteBorder;
+@property (class, nonatomic, readonly) UIColor *wineColor;
 @end

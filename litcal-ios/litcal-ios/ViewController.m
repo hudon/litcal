@@ -54,13 +54,13 @@ static NSString *kFontName = @"EuclidSquare-Regular";
 
 - (void)highlightCell:(UICollectionViewCell*)cell {
 	[[cell viewWithTag:2] setBackgroundColor:[UIColor litSelectionColor]];
-	[[cell viewWithTag:2] setTextColor:[UIColor colorNamed:kColLily]];
+	[[cell viewWithTag:2] setTextColor:[UIColor lilyColor]];
 	[[cell viewWithTag:3] setHidden:YES];
 }
 
 - (void)unHighlightCell:(UICollectionViewCell*)cell {
 	[[cell viewWithTag:2] setBackgroundColor:nil];
-	[[cell viewWithTag:2] setTextColor:[UIColor colorNamed:kColText]];
+	[[cell viewWithTag:2] setTextColor:[UIColor textColor]];
 	[[cell viewWithTag:3] setHidden:NO];
 }
 
@@ -71,11 +71,11 @@ static NSString *kFontName = @"EuclidSquare-Regular";
 
 	NSNumber *today = makeTodaySeconds();
 	if ([today isEqual:selectedKey]) {
-		[[self todayBtn] setBackgroundColor:[UIColor colorNamed:kColBtnDisabled]];
-		[[self todayBtn] setTintColor:[UIColor colorNamed:kColAshes]];
+		[[self todayBtn] setBackgroundColor:[UIColor disabledBtnColor]];
+		[[self todayBtn] setTintColor:[UIColor ashesColor]];
 	} else {
-		[[self todayBtn] setBackgroundColor:[UIColor colorNamed:kColOurLady]];
-		[[self todayBtn] setTintColor:[UIColor colorNamed:kColLily]];
+		[[self todayBtn] setBackgroundColor:[UIColor ourLadyColor]];
+		[[self todayBtn] setTintColor:[UIColor lilyColor]];
 	}
 
 	NSIndexPath *oldIP = [[self dataSource] indexPathForItemIdentifier:_selectedKey];
@@ -139,7 +139,7 @@ static NSString *kFontName = @"EuclidSquare-Regular";
 		enum lit_color c = [cel color];
 		UIColor *uc = uiColorFromLitColor(c);
 		if (c == LIT_WHITE) {
-			uc = [UIColor colorNamed:kColAshes];
+			uc = [UIColor whiteBorder2];
 		}
 		[date setTextColor:uc];
 		NSDateFormatter *df = [self dateFormatter];
@@ -156,7 +156,7 @@ static NSString *kFontName = @"EuclidSquare-Regular";
 			[subtitle setTag:3];
 			[subtitle setText:[cel subtitle]];
 			[subtitle setFont:[UIFont fontWithName:kFontName size:14.0]];
-			[subtitle setTextColor:[UIColor colorNamed:kColAshes]];
+			[subtitle setTextColor:[UIColor ashesColor]];
 			[[self popupStack] addArrangedSubview:subtitle];
 		}
 	}

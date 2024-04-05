@@ -7,74 +7,89 @@
 
 #import "colors.h"
 
-NSString *kColLabel = @"Color_label";
-NSString *kColBtnDisabled = @"Color_btn_disabled_bg";
-NSString *kColText = @"Color_text";
-
-NSString *kColAllSouls = @"Color_AllSouls";
-NSString *kColAshes = @"Color_Ashes";
-NSString *kColDove = @"Color_Dove";
-NSString *kColStellaMaris = @"Color_StellaMaris";
-NSString *kColChalice = @"Liturgicolor_Chalice";
-NSString *kColFigTree = @"Liturgicolor_FigTree";
-NSString *kColLily = @"Liturgicolor_Lily";
-NSString *kColMatrimony = @"Liturgicolor_Matrimony";
-NSString *kColOurLady = @"Color_OurLady";
-NSString *kColPassion = @"Liturgicolor_Passion";
-NSString *kColWine = @"Liturgicolor_Wine";
-
 UIColor* uiColorFromLitColor(enum lit_color c) {
-	NSString *chosen;
 	switch (c) {
 		case LIT_BLACK:
-			chosen = kColAllSouls;
-			break;
+			return [UIColor allSoulsColor];
 		case LIT_GREEN:
-			chosen = kColFigTree;
-			break;
+			return [UIColor figTreeColor];
 		case LIT_RED:
-			chosen = kColPassion;
-			break;
+			return [UIColor passionColor];
 		case LIT_WHITE:
-			chosen = kColLily;
-			break;
+			return [UIColor lilyColor];
 		case LIT_VIOLET:
-			chosen = kColWine;
-			break;
+			return [UIColor wineColor];
 		case LIT_ROSE:
-			chosen = kColMatrimony;
-			break;
+			return [UIColor matrimonyColor];
 		case LIT_GOLD:
-			chosen = kColChalice;
-			break;
+			return [UIColor chaliceColor];
 		case LIT_SILVER:
-			chosen = kColAshes;
-			break;
+			return [UIColor ashesColor];
 		default:
 			break;
 	}
-	return [UIColor colorNamed:chosen];
+	return nil;
 }
 
 
 @implementation UIColor (CustomColors)
-+ (UIColor *)litSelectionColor {
-    return [UIColor colorNamed:@"Color_selection"];
++ (UIColor *)allSoulsColor {
+    return [UIColor colorNamed:@"Color_AllSouls"];
 }
 
-+ (UIColor*)whiteBorder {
-	return [UIColor colorNamed:@"Color_white_border"];
++ (UIColor *)ashesColor {
+    return [UIColor colorNamed:@"Color_Ashes"];
+}
+
++ (UIColor *)chaliceColor {
+    return [UIColor colorNamed:@"Liturgicolor_Chalice"];
+}
+
++ (UIColor *)disabledBtnColor {
+    return [UIColor colorNamed:@"Color_btn_disabled_bg"];
+}
+
++ (UIColor *)figTreeColor {
+    return [UIColor colorNamed:@"Liturgicolor_FigTree"];
 }
 
 + (UIColor*)grayBg {
 	return [UIColor colorNamed:@"Color_gray_bg"];
 }
 
-+ (UIColor*)textColor {
-	return [UIColor colorNamed:@"Color_text"];
++ (UIColor *)lilyColor {
+    return [UIColor colorNamed:@"Liturgicolor_Lily"];
+}
+
++ (UIColor *)litSelectionColor {
+    return [UIColor colorNamed:@"Color_selection"];
+}
+
++ (UIColor *)matrimonyColor {
+    return [UIColor colorNamed:@"Liturgicolor_Matrimony"];
+}
+
++ (UIColor *)ourLadyColor {
+    return [UIColor colorNamed:@"Color_OurLady"];
+}
+
++ (UIColor *)passionColor {
+    return [UIColor colorNamed:@"Liturgicolor_Passion"];
 }
 
 + (UIColor*)separatorColor {
 	return [UIColor colorNamed:@"Color_separator"];
+}
+
++ (UIColor*)textColor {
+	return [UIColor colorNamed:@"Color_text"];
+}
+
++ (UIColor*)whiteBorder {
+	return [UIColor colorNamed:@"Color_white_border"];
+}
+
++ (UIColor*)wineColor {
+	return [UIColor colorNamed:@"Liturgicolor_Wine"];
 }
 @end
