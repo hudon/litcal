@@ -66,7 +66,15 @@ UIColor* uiColorFromLitColor(enum lit_color c) {
 	return [UIColor colorNamed:@"Color_white_border"];
 }
 
++ (UIColor*)grayBg {
+	return [UIColor colorNamed:@"Color_gray_bg"];
+}
+
 + (UIColor*)textColor {
 	return [UIColor colorNamed:@"Color_text"];
+}
+
++ (UIColor*)separatorColor {
+	return [UIColor colorNamed:@"Color_separator"];
 }
 @end

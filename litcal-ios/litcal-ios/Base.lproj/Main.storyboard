@@ -269,7 +269,7 @@
                                                         <rect key="frame" x="32" y="136.6666666666666" width="311" height="341.33333333333326"/>
                                                         <attributedString key="attributedText">
                                                             <fragment>
-                                                                <mutableString key="content">The shepherds went in haste to Bethlehem and found Mary and Joseph, and the infant lying in the manger. When they saw this, they made known the message that had been told them about this child. All who heard it were amazed by what had been told them by the shepherds. And Mary kept all these things, reflecting on them in her heart. Then the shepherds returned, glorifying and praising God for all they had heard and seen, just as it had been told to them. When eight days were completed for his circumcision, he was named Jesus, the name given him by the angel before he was conceived in the womb.</mutableString>
+                                                                <string key="content">The shepherds went in haste to Bethlehem and found Mary and Joseph, and the infant lying in the manger. When they saw this, they made known the message that had been told them about this child. All who heard it were amazed by what had been told them by the shepherds. And Mary kept all these things, reflecting on them in her heart. Then the shepherds returned, glorifying and praising God for all they had heard and seen, just as it had been told to them. When eight days were completed for his circumcision, he was named Jesus, the name given him by the angel before he was conceived in the womb.</string>
                                                                 <attributes>
                                                                     <color key="NSColor" systemColor="labelColor"/>
                                                                     <font key="NSFont" size="15" name="EuclidSquare-Regular"/>
@@ -362,6 +362,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY" userLabel="Root Safe Area"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ehy-wW-ILM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Iu-uD-gEE"/>
                             <constraint firstItem="Ofs-bx-7oy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="COU-yv-GGz"/>
@@ -455,8 +456,8 @@
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FRb-Ie-2Jj">
                                         <rect key="frame" x="11" y="101" width="353" height="701"/>
-                                        <color key="backgroundColor" name="Color_Dove"/>
-                                        <color key="sectionIndexBackgroundColor" name="Color_Dove"/>
+                                        <color key="backgroundColor" name="Color_gray_bg"/>
+                                        <color key="sectionIndexBackgroundColor" name="Color_gray_bg"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="dayCell" id="Bbh-Vx-Ltf">
                                                 <rect key="frame" x="0.0" y="50" width="353" height="48"/>
@@ -484,7 +485,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" name="Liturgicolor_Lily"/>
+                                                    <color key="backgroundColor" name="Color_white_bg"/>
                                                     <constraints>
                                                         <constraint firstItem="V0p-Ic-2sL" firstAttribute="top" secondItem="KGh-Vo-QaE" secondAttribute="topMargin" id="Dge-nf-ohd"/>
                                                         <constraint firstItem="V0p-Ic-2sL" firstAttribute="centerY" secondItem="KGh-Vo-QaE" secondAttribute="centerY" id="HoV-UG-4Nc"/>
@@ -503,7 +504,7 @@
                                         </connections>
                                     </tableView>
                                 </subviews>
-                                <color key="backgroundColor" name="Color_Dove"/>
+                                <color key="backgroundColor" name="Color_gray_bg"/>
                                 <constraints>
                                     <constraint firstItem="PSX-EG-kQ5" firstAttribute="width" secondItem="5Zn-FS-32M" secondAttribute="width" id="JKO-eL-up4"/>
                                     <constraint firstAttribute="trailing" secondItem="FRb-Ie-2Jj" secondAttribute="trailing" constant="11" id="XqK-xt-flG"/>
@@ -539,14 +540,14 @@
         <namedColor name="Color_Ashes">
             <color red="0.70199999999999996" green="0.70200002193450928" blue="0.70200002193450928" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Color_Dove">
-            <color red="0.94199997186660767" green="0.94199997186660767" blue="0.94199997186660767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Color_OurLady">
             <color red="0.20000000298023224" green="0.60000002384185791" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Color_StellaMaris">
             <color red="0.0030000000260770321" green="0.0" blue="0.1379999965429306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color_gray_bg">
+            <color red="0.94199999999999995" green="0.94199999999999995" blue="0.94199999999999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Color_label">
             <color red="0.0030000000000000001" green="0.0" blue="0.13800000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

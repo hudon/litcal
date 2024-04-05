@@ -31,5 +31,7 @@ UIColor* uiColorFromLitColor(enum lit_color c);
 @interface UIColor (CustomColors)
 @property (class, nonatomic, readonly) UIColor *litSelectionColor;
 @property (class, nonatomic, readonly) UIColor *whiteBorder;
+@property (class, nonatomic, readonly) UIColor *grayBg;
 @property (class, nonatomic, readonly) UIColor *textColor;
+@property (class, nonatomic, readonly) UIColor *separatorColor;
 @end

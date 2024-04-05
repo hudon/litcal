@@ -54,10 +54,9 @@ static const NSInteger leftMargin = 11;
 viewForHeaderInSection:(NSInteger)section {
 	UILabel *lbl = [[UILabel alloc] init];
 	[lbl setFont:[self font]];
-	[lbl setTextColor:[UIColor colorNamed:kColAshes]];
-	[lbl setTextColor:[UIColor grayColor]];
+	[lbl setTextColor:[UIColor whiteBorder]];
 	[lbl setText:[self orderedKeys][section]];
-	[lbl setBackgroundColor:[UIColor colorNamed:kColDove]];
+	[lbl setBackgroundColor:[UIColor grayBg]];
 
 	UIView *header = [[UIView alloc] init];
 	[lbl setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -150,7 +149,7 @@ viewForHeaderInSection:(NSInteger)section {
 				CGRectGetWidth([tableView frame]) - leftMargin * 2, 1
 			)
 		];
-		customSeparator.backgroundColor = [UIColor colorNamed:kColDove];
+		customSeparator.backgroundColor = [UIColor separatorColor];
 		customSeparator.tag = 100;
 		[cell addSubview:customSeparator];
 	}
