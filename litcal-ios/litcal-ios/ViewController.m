@@ -229,7 +229,10 @@ static NSString *kFontName = @"EuclidSquare-Regular";
 	[UIView animateWithDuration:0.25 animations:^{
 		// force animated layout bc the constraints changed
 		[[[self drawer] superview] layoutIfNeeded];
-		[[self drawer] setAlpha:shouldShow ? 1.0 : 0.0];
+
+		// this line makes the animation ugly in dark mode, but fine in light:
+//		[[self drawer] setAlpha:shouldShow ? 1.0 : 0.0];
+
 		// Without the small offset, animations choose the shortest path,
 		// but the shortest path to 180 deg can be clockwise or counter-clockwise,
 		// and clockwise is always chosen in a tie. However, we do not want it to
@@ -295,6 +298,7 @@ static NSString *kFontName = @"EuclidSquare-Regular";
 	[self setShouldShowDrawer:YES];
 	[[[[self popupStack] superview] layer] setCornerRadius:6.0];
 	[[[self todayBtn] layer] setCornerRadius:5.0];
+	[[self gospelText] setTextColor:[UIColor textColor]];
 
 
 	// Get all celebrations and insert them into the lookup table

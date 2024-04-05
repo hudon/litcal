@@ -9,6 +9,7 @@
 
 @implementation GradientView
 
+
 - (void)setColor:(UIColor *)color {
 	_color = color;
 	[self layoutSubviews];
@@ -24,9 +25,16 @@
 
 	CAGradientLayer *gradientLayer = [CAGradientLayer layer];
 
+	CGFloat startOpacity = 0.3;
+	if (@available(iOS 12.0, *)) {
+		if ([[self traitCollection] userInterfaceStyle] == UIUserInterfaceStyleDark) {
+			startOpacity = 0.25;
+		}
+	}
+
 	[gradientLayer setFrame:[self bounds]];
 	gradientLayer.colors = @[
-		(id)[[col colorWithAlphaComponent:0.3] CGColor],
+		(id)[[col colorWithAlphaComponent:startOpacity] CGColor],
 		(id)[[col colorWithAlphaComponent:0.0] CGColor]
 	];
 

@@ -35,7 +35,7 @@
 	// because the border width will be 0
 	// This is set in layoutSubviews so it can run any time the
 	// user changes light/dark mode
-	[[self layer] setBorderColor:[[UIColor whiteBg] CGColor]];
+	[[self layer] setBorderColor:[[UIColor whiteBorder] CGColor]];
 }
 
 -(void)setCelebration:(LitCelebrationBridge*)cel {

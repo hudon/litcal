@@ -269,8 +269,9 @@
                                                         <rect key="frame" x="32" y="131.6666666666666" width="311" height="341.33333333333326"/>
                                                         <attributedString key="attributedText">
                                                             <fragment>
-                                                                <string key="content">The shepherds went in haste to Bethlehem and found Mary and Joseph, and the infant lying in the manger. When they saw this, they made known the message that had been told them about this child. All who heard it were amazed by what had been told them by the shepherds. And Mary kept all these things, reflecting on them in her heart. Then the shepherds returned, glorifying and praising God for all they had heard and seen, just as it had been told to them. When eight days were completed for his circumcision, he was named Jesus, the name given him by the angel before he was conceived in the womb.</string>
+                                                                <mutableString key="content">The shepherds went in haste to Bethlehem and found Mary and Joseph, and the infant lying in the manger. When they saw this, they made known the message that had been told them about this child. All who heard it were amazed by what had been told them by the shepherds. And Mary kept all these things, reflecting on them in her heart. Then the shepherds returned, glorifying and praising God for all they had heard and seen, just as it had been told to them. When eight days were completed for his circumcision, he was named Jesus, the name given him by the angel before he was conceived in the womb.</mutableString>
                                                                 <attributes>
+                                                                    <color key="NSColor" systemColor="labelColor"/>
                                                                     <font key="NSFont" size="15" name="EuclidSquare-Regular"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
@@ -316,14 +317,14 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3v-pk-QVR">
                                                                 <rect key="frame" x="113.99999999999999" y="57.999999999999993" width="53.333333333333329" height="25.666666666666664"/>
                                                                 <fontDescription key="fontDescription" name="TiemposHeadline-Medium" family="Tiempos Headline" pointSize="21"/>
-                                                                <color key="textColor" name="Color_StellaMaris"/>
+                                                                <color key="textColor" name="Color_label"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                         <directionalEdgeInsets key="directionalLayoutMargins" top="16" leading="24" bottom="16" trailing="24"/>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="Color_white_bg"/>
                                                 <constraints>
                                                     <constraint firstItem="5AG-v0-cAv" firstAttribute="top" secondItem="uEc-XV-8DW" secondAttribute="top" id="KNs-tj-f5p"/>
                                                     <constraint firstItem="5AG-v0-cAv" firstAttribute="leading" secondItem="uEc-XV-8DW" secondAttribute="leading" id="hXD-N1-6gS"/>
@@ -551,12 +552,18 @@
         <namedColor name="Color_label">
             <color red="0.0030000000000000001" green="0.0" blue="0.13800000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="Color_white_bg">
+            <color red="0.99999994039535522" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Liturgicolor_FigTree">
             <color red="0.18400000035762787" green="0.6940000057220459" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Liturgicolor_Lily">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

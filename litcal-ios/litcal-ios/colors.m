@@ -62,7 +62,11 @@ UIColor* uiColorFromLitColor(enum lit_color c) {
     return [UIColor colorNamed:@"Color_selection"];
 }
 
-+ (UIColor*)whiteBg {
-	return [UIColor colorNamed:@"Color_white_bg"];
++ (UIColor*)whiteBorder {
+	return [UIColor colorNamed:@"Color_white_border"];
+}
+
++ (UIColor*)textColor {
+	return [UIColor colorNamed:@"Color_text"];
 }
 @end
