@@ -524,6 +524,9 @@
                             <constraint firstItem="5Zn-FS-32M" firstAttribute="height" secondItem="WDx-gi-qKM" secondAttribute="height" id="vjw-kp-XKD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="FRb-Ie-2Jj" id="yze-ZJ-lk6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K51-Yn-m3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

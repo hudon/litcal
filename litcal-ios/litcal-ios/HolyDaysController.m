@@ -30,6 +30,7 @@ static const NSInteger leftMargin = 11;
 
 
 @interface HolyDaysController () <UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSDictionary *holyDays;
 @property (strong, nonatomic) NSArray *orderedKeys;
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
@@ -89,6 +90,16 @@ viewForHeaderInSection:(NSInteger)section {
 	[maskLayer setFrame:[cell bounds]];
 	[maskLayer setPath:[maskPath CGPath]];
 	[[cell layer] setMask:maskLayer];
+}
+
+// Reload all rows on orientation change
+- (void)viewWillTransitionToSize:(CGSize)size
+withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+	NSArray<NSIndexPath *> *visibleRows = [self.tableView indexPathsForVisibleRows];
+	[self.tableView reloadRowsAtIndexPaths:visibleRows withRowAnimation:UITableViewRowAnimationNone];
+    } completion:nil];
 }
 
 // We need to round corners here instead of the cellForRowAtIndexPath method
