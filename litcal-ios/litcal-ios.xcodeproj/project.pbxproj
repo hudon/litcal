@@ -20,6 +20,7 @@
 		5E852BEB2B6EB1BA0030F938 /* TiemposHeadline-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E852BE82B6EB1BA0030F938 /* TiemposHeadline-Medium.ttf */; };
 		5E852BEC2B6EB1BA0030F938 /* EuclidSquare-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E852BE92B6EB1BA0030F938 /* EuclidSquare-Regular.ttf */; };
 		5E852BED2B6EB1BA0030F938 /* EuclidSquare-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E852BEA2B6EB1BA0030F938 /* EuclidSquare-Semibold.ttf */; };
+		5E9E1D742BC0302D0054333C /* DotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9E1D732BC0302D0054333C /* DotView.m */; };
 		5EA347142BB373BF00E2DF5A /* errors.c in Sources */ = {isa = PBXBuildFile; fileRef = 5EA347102BB373BF00E2DF5A /* errors.c */; };
 		5EA347152BB373BF00E2DF5A /* litdb.c in Sources */ = {isa = PBXBuildFile; fileRef = 5EA347122BB373BF00E2DF5A /* litdb.c */; };
 		5EA347172BB373D900E2DF5A /* liblitdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA347052BB3735700E2DF5A /* liblitdb.a */; };
@@ -90,6 +91,8 @@
 		5E852BE82B6EB1BA0030F938 /* TiemposHeadline-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TiemposHeadline-Medium.ttf"; sourceTree = "<group>"; };
 		5E852BE92B6EB1BA0030F938 /* EuclidSquare-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-Regular.ttf"; sourceTree = "<group>"; };
 		5E852BEA2B6EB1BA0030F938 /* EuclidSquare-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-Semibold.ttf"; sourceTree = "<group>"; };
+		5E9E1D722BC0300B0054333C /* DotView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DotView.h; sourceTree = "<group>"; };
+		5E9E1D732BC0302D0054333C /* DotView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DotView.m; sourceTree = "<group>"; };
 		5EA347052BB3735700E2DF5A /* liblitdb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblitdb.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA347102BB373BF00E2DF5A /* errors.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = errors.c; path = ../litdb/errors.c; sourceTree = "<group>"; };
 		5EA347112BB373BF00E2DF5A /* litdb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = litdb.h; path = ../litdb/litdb.h; sourceTree = "<group>"; };
@@ -192,6 +195,8 @@
 				5EBBED752BBDC9990059BBD6 /* colors.m */,
 				5EB0F0AC2BBE4C6B00D4D8E8 /* GradientView.h */,
 				5EB0F0AA2BBE4C5800D4D8E8 /* GradientView.m */,
+				5E9E1D722BC0300B0054333C /* DotView.h */,
+				5E9E1D732BC0302D0054333C /* DotView.m */,
 			);
 			path = "litcal-ios";
 			sourceTree = "<group>";
@@ -428,6 +433,7 @@
 			files = (
 				5EBBED702BBC5C0E0059BBD6 /* HolyDaysController.m in Sources */,
 				5EB0F0AB2BBE4C5800D4D8E8 /* GradientView.m in Sources */,
+				5E9E1D742BC0302D0054333C /* DotView.m in Sources */,
 				5EBBED732BBC7E6D0059BBD6 /* dates.m in Sources */,
 				5E71CCD02B6C47620010B9A7 /* ViewController.m in Sources */,
 				5E71CCCA2B6C47620010B9A7 /* AppDelegate.m in Sources */,

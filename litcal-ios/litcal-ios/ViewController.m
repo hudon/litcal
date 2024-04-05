@@ -12,6 +12,7 @@
 #import "dates.h"
 #import "colors.h"
 #import "GradientView.h"
+#import "DotView.h"
 
 static const NSTimeInterval kSecondsPerDay = 86400;
 static NSString *kFontName = @"EuclidSquare-Regular";
@@ -366,19 +367,9 @@ static NSString *kFontName = @"EuclidSquare-Regular";
 			[[dateLbl layer] setCornerRadius:[dateLbl frame].size.width / 2];
 			[dateLbl setClipsToBounds:YES];
 
-			UIView *dot = [cell viewWithTag:3];
+			DotView *dot = [cell viewWithTag:3];
 			LitCelebrationBridge *litCel = [[self celebrations] objectForKey:epochSeconds];
-			[[dot layer] setCornerRadius:[dot frame].size.width / 2];
-			[dot setClipsToBounds:YES];
-			[[dot layer] setBorderWidth:0.0];
-			[dot setBackgroundColor:nil];
-			if ([litCel rank] <= 11) {
-				[dot setBackgroundColor:uiColorFromLitColor([litCel color])];
-				if ([litCel color] == LIT_WHITE) {
-					[[dot layer] setBorderColor:[[UIColor whiteBg] CGColor]];
-					[[dot layer] setBorderWidth:1.0];
-				}
-			}
+			[dot setCelebration:litCel];
 			
 			if ([epochSeconds isEqual:[self selectedKey]]) {
 				[self highlightCell:cell];

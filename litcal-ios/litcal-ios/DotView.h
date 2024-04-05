@@ -5,8 +5,9 @@
 //  Created by James Hudon on 4/5/24.
 //
 
-#ifndef DotView_h
-#define DotView_h
+#import "litdbBridge/LitCelebrationBridge.h"
+#import <UIKit/UIKit.h>
 
-
-#endif /* DotView_h */
+@interface DotView : UIView
+-(void)setCelebration:(LitCelebrationBridge*)cel;
+@end

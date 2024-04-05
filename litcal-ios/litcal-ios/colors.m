@@ -7,6 +7,10 @@
 
 #import "colors.h"
 
+NSString *kColLabel = @"Color_label";
+NSString *kColBtnDisabled = @"Color_btn_disabled_bg";
+NSString *kColText = @"Color_text";
+
 NSString *kColAllSouls = @"Color_AllSouls";
 NSString *kColAshes = @"Color_Ashes";
 NSString *kColDove = @"Color_Dove";
@@ -51,3 +55,14 @@ UIColor* uiColorFromLitColor(enum lit_color c) {
 	}
 	return [UIColor colorNamed:chosen];
 }
+
+
+@implementation UIColor (CustomColors)
++ (UIColor *)litSelectionColor {
+    return [UIColor colorNamed:@"Color_selection"];
+}
+
++ (UIColor*)whiteBg {
+	return [UIColor colorNamed:@"Color_white_bg"];
+}
+@end

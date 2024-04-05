@@ -5,11 +5,14 @@
 //  Created by James Hudon on 4/3/24.
 //
 
-#ifndef colors_h
-#define colors_h
+
 
 #import "litdb.h"
 #import <UIKit/UIKit.h>
+
+extern NSString *kColLabel;
+extern NSString *kColBtnDisabled;
+extern NSString *kColText;
 
 extern NSString *kColAllSouls;
 extern NSString *kColAshes;
@@ -25,4 +28,7 @@ extern NSString *kColWine;
 
 UIColor* uiColorFromLitColor(enum lit_color c);
 
-#endif /* colors_h */
+@interface UIColor (CustomColors)
+@property (class, nonatomic, readonly) UIColor *litSelectionColor;
+@property (class, nonatomic, readonly) UIColor *whiteBg;
+@end

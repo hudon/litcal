@@ -174,7 +174,7 @@
                                                                     <color key="textColor" name="Color_StellaMaris"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <view clipsSubviews="YES" tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSa-hm-dH0" userLabel="dot">
+                                                                <view clipsSubviews="YES" tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSa-hm-dH0" userLabel="dot" customClass="DotView">
                                                                     <rect key="frame" x="17.666666666666668" y="50.333333333333336" width="10" height="10"/>
                                                                     <color key="backgroundColor" name="Liturgicolor_FigTree"/>
                                                                     <constraints>
@@ -537,7 +537,7 @@
         <image name="hero_ordinary_time" width="400" height="240"/>
         <image name="link" catalog="system" width="128" height="124"/>
         <namedColor name="Color_Ashes">
-            <color red="0.70200002193450928" green="0.70200002193450928" blue="0.70200002193450928" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.70199999999999996" green="0.70200002193450928" blue="0.70200002193450928" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Color_Dove">
             <color red="0.94199997186660767" green="0.94199997186660767" blue="0.94199997186660767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
