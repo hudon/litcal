@@ -93,7 +93,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="February 2024" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7q-kE-7ez" userLabel="MonthLabel">
                                                         <rect key="frame" x="22.000000000000007" y="19" width="107.66666666666669" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="EuclidSquare-Regular" family="Euclid Square" pointSize="16"/>
-                                                        <color key="textColor" name="Color_StellaMaris"/>
+                                                        <color key="textColor" name="Color_label"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Oe0-SX-Q3o">
@@ -547,6 +547,9 @@
         </namedColor>
         <namedColor name="Color_StellaMaris">
             <color red="0.0030000000260770321" green="0.0" blue="0.1379999965429306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color_label">
+            <color red="0.0030000000000000001" green="0.0" blue="0.13800000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Liturgicolor_FigTree">
             <color red="0.18400000035762787" green="0.6940000057220459" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

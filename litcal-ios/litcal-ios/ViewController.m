@@ -52,14 +52,14 @@ static NSString *kFontName = @"EuclidSquare-Regular";
 }
 
 - (void)highlightCell:(UICollectionViewCell*)cell {
-	[[cell viewWithTag:2] setBackgroundColor:[UIColor colorNamed:kColStellaMaris]];
+	[[cell viewWithTag:2] setBackgroundColor:[UIColor litSelectionColor]];
 	[[cell viewWithTag:2] setTextColor:[UIColor colorNamed:kColLily]];
 	[[cell viewWithTag:3] setHidden:YES];
 }
 
 - (void)unHighlightCell:(UICollectionViewCell*)cell {
 	[[cell viewWithTag:2] setBackgroundColor:nil];
-	[[cell viewWithTag:2] setTextColor:[UIColor colorNamed:kColStellaMaris]];
+	[[cell viewWithTag:2] setTextColor:[UIColor colorNamed:kColText]];
 	[[cell viewWithTag:3] setHidden:NO];
 }
 
@@ -70,7 +70,7 @@ static NSString *kFontName = @"EuclidSquare-Regular";
 
 	NSNumber *today = makeTodaySeconds();
 	if ([today isEqual:selectedKey]) {
-		[[self todayBtn] setBackgroundColor:[UIColor colorNamed:kColDove]];
+		[[self todayBtn] setBackgroundColor:[UIColor colorNamed:kColBtnDisabled]];
 		[[self todayBtn] setTintColor:[UIColor colorNamed:kColAshes]];
 	} else {
 		[[self todayBtn] setBackgroundColor:[UIColor colorNamed:kColOurLady]];
@@ -375,7 +375,7 @@ static NSString *kFontName = @"EuclidSquare-Regular";
 			if ([litCel rank] <= 11) {
 				[dot setBackgroundColor:uiColorFromLitColor([litCel color])];
 				if ([litCel color] == LIT_WHITE) {
-					[[dot layer] setBorderColor:[[UIColor colorNamed:kColAshes] CGColor]];
+					[[dot layer] setBorderColor:[[UIColor whiteBg] CGColor]];
 					[[dot layer] setBorderWidth:1.0];
 				}
 			}
