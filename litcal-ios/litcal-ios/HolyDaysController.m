@@ -183,6 +183,11 @@ viewForHeaderInSection:(NSInteger)section {
 			[HolyDay alloc]
 			initWithName:@"All Saints"
 			date:makeDateFromComponents(2024, 11, 1)
+		],
+		[
+			[HolyDay alloc]
+			initWithName:@"The Nativity of Our Lord"
+			date:makeDateFromComponents(2024, 12, 25)
 		]
 	];
 	[self setHolyDays:[
