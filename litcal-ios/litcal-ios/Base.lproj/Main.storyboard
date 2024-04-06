@@ -44,7 +44,7 @@
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="chevron.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZsC-z8-yMB" userLabel="Chevron">
-                                                <rect key="frame" x="82" y="6.666666666666667" width="18.666666666666671" height="10.333333333333336"/>
+                                                <rect key="frame" x="82" y="6.666666666666667" width="18.666666666666671" height="10.333333333333332"/>
                                                 <color key="tintColor" name="Color_Ashes"/>
                                                 <gestureRecognizers/>
                                                 <constraints>

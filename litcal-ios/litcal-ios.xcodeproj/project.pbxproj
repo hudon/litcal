@@ -31,6 +31,17 @@
 		5EBBED702BBC5C0E0059BBD6 /* HolyDaysController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBED6F2BBC5C0E0059BBD6 /* HolyDaysController.m */; };
 		5EBBED732BBC7E6D0059BBD6 /* dates.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBED722BBC7E6D0059BBD6 /* dates.m */; };
 		5EBBED762BBDC9990059BBD6 /* colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBED752BBDC9990059BBD6 /* colors.m */; };
+		5EDBEF0B2BC0D7E8005FBAF2 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDBEF0A2BC0D7E8005FBAF2 /* WidgetKit.framework */; };
+		5EDBEF0D2BC0D7E8005FBAF2 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDBEF0C2BC0D7E8005FBAF2 /* SwiftUI.framework */; };
+		5EDBEF102BC0D7E8005FBAF2 /* todaywidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF0F2BC0D7E8005FBAF2 /* todaywidgetBundle.swift */; };
+		5EDBEF122BC0D7E8005FBAF2 /* todaywidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF112BC0D7E8005FBAF2 /* todaywidget.swift */; };
+		5EDBEF142BC0D7EA005FBAF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EDBEF132BC0D7EA005FBAF2 /* Assets.xcassets */; };
+		5EDBEF192BC0D7EA005FBAF2 /* todaywidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5EDBEF092BC0D7E8005FBAF2 /* todaywidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5EDBEF202BC1F96E005FBAF2 /* dates.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBED722BBC7E6D0059BBD6 /* dates.m */; };
+		5EDBEF212BC1F971005FBAF2 /* LitCelebrationBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3471A2BB374BC00E2DF5A /* LitCelebrationBridge.m */; };
+		5EDBEF222BC1F9A0005FBAF2 /* colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBED752BBDC9990059BBD6 /* colors.m */; };
+		5EDBEF262BC1FD77005FBAF2 /* db.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF252BC1FD77005FBAF2 /* db.m */; };
+		5EDBEF272BC1FD77005FBAF2 /* db.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF252BC1FD77005FBAF2 /* db.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +66,13 @@
 			remoteGlobalIDString = 5EA347042BB3735700E2DF5A;
 			remoteInfo = litdb;
 		};
+		5EDBEF162BC0D7EA005FBAF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E71CCBD2B6C47620010B9A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EDBEF082BC0D7E8005FBAF2;
+			remoteInfo = todaywidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,6 +83,17 @@
 			dstSubfolderSpec = 16;
 			files = (
 			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EDBEF182BC0D7EA005FBAF2 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5EDBEF192BC0D7EA005FBAF2 /* todaywidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -110,6 +139,16 @@
 		5EBBED722BBC7E6D0059BBD6 /* dates.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dates.m; sourceTree = "<group>"; };
 		5EBBED742BBDC88E0059BBD6 /* colors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = colors.h; sourceTree = "<group>"; };
 		5EBBED752BBDC9990059BBD6 /* colors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = colors.m; sourceTree = "<group>"; };
+		5EDBEF092BC0D7E8005FBAF2 /* todaywidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = todaywidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EDBEF0A2BC0D7E8005FBAF2 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		5EDBEF0C2BC0D7E8005FBAF2 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		5EDBEF0F2BC0D7E8005FBAF2 /* todaywidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todaywidgetBundle.swift; sourceTree = "<group>"; };
+		5EDBEF112BC0D7E8005FBAF2 /* todaywidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todaywidget.swift; sourceTree = "<group>"; };
+		5EDBEF132BC0D7EA005FBAF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5EDBEF152BC0D7EA005FBAF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EDBEF232BC1FA2B005FBAF2 /* litcal-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "litcal-ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		5EDBEF242BC1FCCC005FBAF2 /* db.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = db.h; sourceTree = "<group>"; };
+		5EDBEF252BC1FD77005FBAF2 /* db.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = db.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +182,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5EDBEF062BC0D7E8005FBAF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EDBEF0D2BC0D7E8005FBAF2 /* SwiftUI.framework in Frameworks */,
+				5EDBEF0B2BC0D7E8005FBAF2 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -156,6 +204,7 @@
 				5E71CCC72B6C47620010B9A7 /* litcal-ios */,
 				5E71CCE32B6C47640010B9A7 /* litcal-iosTests */,
 				5E71CCED2B6C47640010B9A7 /* litcal-iosUITests */,
+				5EDBEF0E2BC0D7E8005FBAF2 /* todaywidget */,
 				5E71CCC62B6C47620010B9A7 /* Products */,
 				5EA347162BB373D900E2DF5A /* Frameworks */,
 			);
@@ -168,6 +217,7 @@
 				5E71CCE02B6C47640010B9A7 /* litcal-iosTests.xctest */,
 				5E71CCEA2B6C47640010B9A7 /* litcal-iosUITests.xctest */,
 				5EA347052BB3735700E2DF5A /* liblitdb.a */,
+				5EDBEF092BC0D7E8005FBAF2 /* todaywidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,7 +225,6 @@
 		5E71CCC72B6C47620010B9A7 /* litcal-ios */ = {
 			isa = PBXGroup;
 			children = (
-				5EA347222BB3880000E2DF5A /* litdbBridge */,
 				5E71CCC82B6C47620010B9A7 /* AppDelegate.h */,
 				5E71CCC92B6C47620010B9A7 /* AppDelegate.m */,
 				5E71CCCB2B6C47620010B9A7 /* SceneDelegate.h */,
@@ -189,10 +238,6 @@
 				5E71CCD62B6C47640010B9A7 /* LaunchScreen.storyboard */,
 				5E71CCD92B6C47640010B9A7 /* Info.plist */,
 				5E71CCDA2B6C47640010B9A7 /* main.m */,
-				5EBBED712BBC7E4D0059BBD6 /* dates.h */,
-				5EBBED722BBC7E6D0059BBD6 /* dates.m */,
-				5EBBED742BBDC88E0059BBD6 /* colors.h */,
-				5EBBED752BBDC9990059BBD6 /* colors.m */,
 				5EB0F0AC2BBE4C6B00D4D8E8 /* GradientView.h */,
 				5EB0F0AA2BBE4C5800D4D8E8 /* GradientView.m */,
 				5E9E1D722BC0300B0054333C /* DotView.h */,
@@ -221,7 +266,14 @@
 		5E852BE62B6EB18F0030F938 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				5EA347222BB3880000E2DF5A /* litdbBridge */,
 				5E852BE72B6EB1960030F938 /* Fonts */,
+				5EBBED712BBC7E4D0059BBD6 /* dates.h */,
+				5EBBED722BBC7E6D0059BBD6 /* dates.m */,
+				5EBBED742BBDC88E0059BBD6 /* colors.h */,
+				5EBBED752BBDC9990059BBD6 /* colors.m */,
+				5EDBEF242BC1FCCC005FBAF2 /* db.h */,
+				5EDBEF252BC1FD77005FBAF2 /* db.m */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -251,6 +303,8 @@
 			isa = PBXGroup;
 			children = (
 				5EA3471D2BB3794B00E2DF5A /* libsqlite3.tbd */,
+				5EDBEF0A2BC0D7E8005FBAF2 /* WidgetKit.framework */,
+				5EDBEF0C2BC0D7E8005FBAF2 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -272,6 +326,18 @@
 			path = litdbBridge;
 			sourceTree = "<group>";
 		};
+		5EDBEF0E2BC0D7E8005FBAF2 /* todaywidget */ = {
+			isa = PBXGroup;
+			children = (
+				5EDBEF232BC1FA2B005FBAF2 /* litcal-ios-Bridging-Header.h */,
+				5EDBEF0F2BC0D7E8005FBAF2 /* todaywidgetBundle.swift */,
+				5EDBEF112BC0D7E8005FBAF2 /* todaywidget.swift */,
+				5EDBEF132BC0D7EA005FBAF2 /* Assets.xcassets */,
+				5EDBEF152BC0D7EA005FBAF2 /* Info.plist */,
+			);
+			path = todaywidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -282,11 +348,13 @@
 				5E71CCC12B6C47620010B9A7 /* Sources */,
 				5E71CCC22B6C47620010B9A7 /* Frameworks */,
 				5E71CCC32B6C47620010B9A7 /* Resources */,
+				5EDBEF182BC0D7EA005FBAF2 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				5EA347192BB373D900E2DF5A /* PBXTargetDependency */,
+				5EDBEF172BC0D7EA005FBAF2 /* PBXTargetDependency */,
 			);
 			name = "litcal-ios";
 			productName = "litcal-ios";
@@ -346,6 +414,23 @@
 			productReference = 5EA347052BB3735700E2DF5A /* liblitdb.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		5EDBEF082BC0D7E8005FBAF2 /* todaywidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EDBEF1C2BC0D7EA005FBAF2 /* Build configuration list for PBXNativeTarget "todaywidgetExtension" */;
+			buildPhases = (
+				5EDBEF052BC0D7E8005FBAF2 /* Sources */,
+				5EDBEF062BC0D7E8005FBAF2 /* Frameworks */,
+				5EDBEF072BC0D7E8005FBAF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = todaywidgetExtension;
+			productName = todaywidgetExtension;
+			productReference = 5EDBEF092BC0D7E8005FBAF2 /* todaywidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -356,6 +441,7 @@
 				KnownAssetTags = (
 					1,
 				);
+				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					5E71CCC42B6C47620010B9A7 = {
@@ -370,6 +456,9 @@
 						TestTargetID = 5E71CCC42B6C47620010B9A7;
 					};
 					5EA347042BB3735700E2DF5A = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					5EDBEF082BC0D7E8005FBAF2 = {
 						CreatedOnToolsVersion = 15.3;
 					};
 				};
@@ -391,6 +480,7 @@
 				5E71CCDF2B6C47640010B9A7 /* litcal-iosTests */,
 				5E71CCE92B6C47640010B9A7 /* litcal-iosUITests */,
 				5EA347042BB3735700E2DF5A /* litdb */,
+				5EDBEF082BC0D7E8005FBAF2 /* todaywidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -424,6 +514,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5EDBEF072BC0D7E8005FBAF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EDBEF142BC0D7EA005FBAF2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -440,6 +538,7 @@
 				5EA3471B2BB374BC00E2DF5A /* LitCelebrationBridge.m in Sources */,
 				5EBBED762BBDC9990059BBD6 /* colors.m in Sources */,
 				5E71CCDB2B6C47640010B9A7 /* main.m in Sources */,
+				5EDBEF262BC1FD77005FBAF2 /* db.m in Sources */,
 				5E71CCCD2B6C47620010B9A7 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +569,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5EDBEF052BC0D7E8005FBAF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EDBEF202BC1F96E005FBAF2 /* dates.m in Sources */,
+				5EDBEF102BC0D7E8005FBAF2 /* todaywidgetBundle.swift in Sources */,
+				5EDBEF122BC0D7E8005FBAF2 /* todaywidget.swift in Sources */,
+				5EDBEF212BC1F971005FBAF2 /* LitCelebrationBridge.m in Sources */,
+				5EDBEF222BC1F9A0005FBAF2 /* colors.m in Sources */,
+				5EDBEF272BC1FD77005FBAF2 /* db.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -487,6 +599,11 @@
 			isa = PBXTargetDependency;
 			target = 5EA347042BB3735700E2DF5A /* litdb */;
 			targetProxy = 5EA347182BB373D900E2DF5A /* PBXContainerItemProxy */;
+		};
+		5EDBEF172BC0D7EA005FBAF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5EDBEF082BC0D7E8005FBAF2 /* todaywidgetExtension */;
+			targetProxy = 5EDBEF162BC0D7EA005FBAF2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -629,6 +746,7 @@
 		5E71CCF52B6C47640010B9A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -639,8 +757,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -656,6 +775,7 @@
 		5E71CCF62B6C47640010B9A7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -666,8 +786,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -774,6 +895,67 @@
 			};
 			name = Release;
 		};
+		5EDBEF1A2BC0D7EA005FBAF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JCRQGL8873;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = todaywidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = todaywidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.litcompany.litcal.darwin.todaywidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "todaywidget/litcal-ios-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5EDBEF1B2BC0D7EA005FBAF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JCRQGL8873;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = todaywidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = todaywidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.litcompany.litcal.darwin.todaywidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "todaywidget/litcal-ios-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -818,6 +1000,15 @@
 			buildConfigurations = (
 				5EA3470C2BB3735700E2DF5A /* Debug */,
 				5EA3470D2BB3735700E2DF5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EDBEF1C2BC0D7EA005FBAF2 /* Build configuration list for PBXNativeTarget "todaywidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EDBEF1A2BC0D7EA005FBAF2 /* Debug */,
+				5EDBEF1B2BC0D7EA005FBAF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -50,3 +50,9 @@ NSDateFormatter* makeDateFormatter(void) {
 	[df setTimeZone:makeTimeZone()];
 	return df;
 }
+
+NSDateFormatter* makeDateFormatterWithFormat(NSString*f) {
+	NSDateFormatter *df = makeDateFormatter();
+	[df setDateFormat:f];
+	return df;
+}

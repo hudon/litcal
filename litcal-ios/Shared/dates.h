@@ -12,3 +12,4 @@ NSNumber* makeTodaySeconds(void);
 NSDate* makeDateFromEpochSeconds(NSNumber* e);
 NSDate* makeDateFromComponents(int year, int month, int day);
 NSDateFormatter* makeDateFormatter(void);
+NSDateFormatter* makeDateFormatterWithFormat(NSString*f);

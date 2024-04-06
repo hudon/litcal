@@ -8,11 +8,12 @@
 #import "ViewController.h"
 #import "HolyDaysController.h"
 #import "litdb.h"
-#import "litdbBridge/LitCelebrationBridge.h"
+#import "LitCelebrationBridge.h"
 #import "dates.h"
 #import "colors.h"
 #import "GradientView.h"
 #import "DotView.h"
+#import "db.h"
 
 static const NSTimeInterval kSecondsPerDay = 86400;
 static NSString *kFontName = @"EuclidSquare-Regular";
@@ -139,7 +140,7 @@ static NSString *kFontName = @"EuclidSquare-Regular";
 		enum lit_color c = [cel color];
 		UIColor *uc = uiColorFromLitColor(c);
 		if (c == LIT_WHITE) {
-			uc = [UIColor whiteBorder2];
+			uc = [UIColor whiteBorder];
 		}
 		[date setTextColor:uc];
 		NSDateFormatter *df = [self dateFormatter];
@@ -305,17 +306,16 @@ static NSString *kFontName = @"EuclidSquare-Regular";
 	NSMutableArray *celTimes = [[NSMutableArray alloc] init];
 	NSMutableArray *celValues = [[NSMutableArray alloc] init];
 	{
-		NSString *pathToDB = [[NSBundle mainBundle] pathForResource:@"litcal" ofType:@"sqlite"];
+		// TODO: free/close the db on vc cleanup
 		struct lit_error *err;
-		if (!open_db([pathToDB cStringUsingEncoding:NSASCIIStringEncoding], &_db, &err)) {
+		if (!openDBAtBundleRoot(&_db, &err)) {
 			NSLog(@"Failed to open the litcal database: %s", err->message);
 			// TODO: is returning the best thing to do here?
 			return;
 		}
 
 		int64_t min, max;
-		uint64_t calID = 1;
-		if (!lit_get_min_and_max(_db, calID, &min, &max, &err)) {
+		if (!lit_get_min_and_max(_db, kCalID, &min, &max, &err)) {
 			NSLog(@"Failed to get min/max: %s", err->message);
 			// TODO: is returning the best thing to do here?
 			return;
@@ -325,7 +325,7 @@ static NSString *kFontName = @"EuclidSquare-Regular";
 
 		for (int64_t curr = min; curr <= max; curr += kSecondsPerDay) {
 			struct lit_celebration cel;
-			if (!lit_get_celebration(_db, calID, curr, &cel, &err)) {
+			if (!lit_get_celebration(_db, kCalID, curr, &cel, &err)) {
 				NSLog(@"Failed to get celebration at time %lld: %s", curr, err->message);
 				// TODO: is return the best thing here?
 				return;
