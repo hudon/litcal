@@ -27,7 +27,7 @@ void test_get_celebration__negative_epoch() {
 // in the database
 void test_get_celebration__missing() {
 	sqlite3 *db;
-	assert(open_db("data/litcal.test.sqlite", &db, NULL));
+	assert(lit_open_db("data/litcal.test.sqlite", &db, NULL));
 
 	struct lit_celebration cel = {};
 	struct lit_error *err = NULL;
@@ -42,7 +42,7 @@ void test_get_celebration__missing() {
 // test that the function returns an error when the table is missing
 void test_get_celebration__error_no_table() {
 	sqlite3 *db;
-	assert(open_db("data/empty.test.sqlite", &db, NULL));
+	assert(lit_open_db("data/empty.test.sqlite", &db, NULL));
 
 	struct lit_celebration cel = {};
 	struct lit_error *err = NULL;
@@ -58,7 +58,7 @@ void test_get_celebration__error_no_table() {
 // in the database
 void test_get_celebration__valid() {
 	sqlite3 *db;
-	assert(open_db("./data/litcal.test.sqlite", &db, NULL));
+	assert(lit_open_db("./data/litcal.test.sqlite", &db, NULL));
 
 	struct lit_celebration cel = {};
 	int64_t epoch = 1704931200;
@@ -74,7 +74,7 @@ void test_get_celebration__valid() {
 
 void test_get_min_and_max__nullargs() {
 	sqlite3 *db;
-	assert(open_db(NULL, &db, NULL));
+	assert(lit_open_db(NULL, &db, NULL));
 	int64_t min, max;
 	struct lit_error *err = NULL;
 	bool res = lit_get_min_and_max(NULL, 1, &min, &max, &err);
@@ -92,7 +92,7 @@ void test_get_min_and_max__nullargs() {
 
 void test_get_min_and_max__valid() {
 	sqlite3 *db;
-	assert(open_db("./data/litcal.test.sqlite", &db, NULL));
+	assert(lit_open_db("./data/litcal.test.sqlite", &db, NULL));
 
 	int64_t min, max;
 	bool res = lit_get_min_and_max(db, 1, &min, &max, NULL);
@@ -121,6 +121,7 @@ int main() {
 	puts("test_get_min_and_max__valid passed");
 
 	run_errors_test();
+	run_dates_test();
 
 	puts("All tests passed");
 	return 0;

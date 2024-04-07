@@ -5,20 +5,8 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-enum lit_status {
-  LIT_OK = 0,
-  LIT_ERROR = 1,
-  LIT_INVALID_ARGUMENT = 2,
-  LIT_NOT_FOUND = 3,
-};
-
-struct lit_error {
-  enum lit_status status;
-  char message[256];
-};
-
-void lit_error_free(struct lit_error *err);
-
+#include "dates.h"
+#include "errors.h"
 
 enum lit_color {
   LIT_WHITE,
@@ -55,7 +43,7 @@ struct lit_celebration {
   int64_t epoch_seconds; /// seconds from 19700101 to 00:00 (midnight the morning of) on the day of this celebration
 };
 
-bool open_db(const char *filename, sqlite3 **out_db, struct lit_error **out_err);
+bool lit_open_db(const char *filename, sqlite3 **out_db, struct lit_error **out_err);
 
 bool lit_get_celebration(
     sqlite3 *db, uint64_t cal_id,

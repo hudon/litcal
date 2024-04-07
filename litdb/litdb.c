@@ -8,7 +8,7 @@ static const char *lit_color_names[LIT_COLOR_COUNT] = {
 	[LIT_SILVER] = "silver", [LIT_ROSE] = "rose"};
 
 
-bool open_db(const char *filename, sqlite3 **out_db, struct lit_error **out_err) {
+bool lit_open_db(const char *filename, sqlite3 **out_db, struct lit_error **out_err) {
 	sqlite3 *db;
 	if (filename == NULL) {
 		filename = ":memory:";
