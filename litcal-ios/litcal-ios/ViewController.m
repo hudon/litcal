@@ -9,7 +9,7 @@
 #import "HolyDaysController.h"
 #import "litdb.h"
 #import "LitCelebrationBridge.h"
-#import "dates.h"
+#import "dates_bridge.h"
 #import "colors.h"
 #import "GradientView.h"
 #import "DotView.h"

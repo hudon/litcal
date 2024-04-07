@@ -9,7 +9,7 @@
 #define litcal_darwin_Bridging_Header_h
 
 #import "../Shared/litdbBridge/LitCelebrationBridge.h"
-#import "../Shared/dates.h"
+#import "../Shared/dates_bridge.h"
 #import "../Shared/db.h"
 #import "../Shared/colors.h"
 

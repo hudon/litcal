@@ -6,7 +6,7 @@
 //
 
 #import "HolyDaysController.h"
-#import "dates.h"
+#import "dates_bridge.h"
 #import "colors.h"
 
 // should match the margin in Interface Builder for consistency

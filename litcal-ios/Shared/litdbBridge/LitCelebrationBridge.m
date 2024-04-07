@@ -6,7 +6,7 @@
 //
 
 #import "LitCelebrationBridge.h"
-#import "../dates.h"
+#import "../dates_bridge.h"
 
 @interface LitCelebrationBridge ()
 @end

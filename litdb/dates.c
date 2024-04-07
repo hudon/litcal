@@ -7,7 +7,7 @@
 
 time_t lit_start_of_today_seconds(void) {
 	time_t local_time = time(NULL);
-	if(local_time != (time_t)(-1))
+	if(local_time == (time_t)(-1))
 		return local_time;
 
 	struct tm * time_details  = localtime(&local_time);

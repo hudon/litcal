@@ -29,7 +29,7 @@
 		5EA347212BB37CE200E2DF5A /* litcal.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5EA347202BB37CE200E2DF5A /* litcal.sqlite */; };
 		5EB0F0AB2BBE4C5800D4D8E8 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0F0AA2BBE4C5800D4D8E8 /* GradientView.m */; };
 		5EBBED702BBC5C0E0059BBD6 /* HolyDaysController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBED6F2BBC5C0E0059BBD6 /* HolyDaysController.m */; };
-		5EBBED732BBC7E6D0059BBD6 /* dates.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBED722BBC7E6D0059BBD6 /* dates.m */; };
+		5EBBED732BBC7E6D0059BBD6 /* dates_bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBED722BBC7E6D0059BBD6 /* dates_bridge.m */; };
 		5EBBED762BBDC9990059BBD6 /* colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBED752BBDC9990059BBD6 /* colors.m */; };
 		5EDBEF0B2BC0D7E8005FBAF2 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDBEF0A2BC0D7E8005FBAF2 /* WidgetKit.framework */; };
 		5EDBEF0D2BC0D7E8005FBAF2 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDBEF0C2BC0D7E8005FBAF2 /* SwiftUI.framework */; };
@@ -37,12 +37,13 @@
 		5EDBEF122BC0D7E8005FBAF2 /* todaywidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF112BC0D7E8005FBAF2 /* todaywidget.swift */; };
 		5EDBEF142BC0D7EA005FBAF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EDBEF132BC0D7EA005FBAF2 /* Assets.xcassets */; };
 		5EDBEF192BC0D7EA005FBAF2 /* todaywidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5EDBEF092BC0D7E8005FBAF2 /* todaywidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		5EDBEF202BC1F96E005FBAF2 /* dates.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBED722BBC7E6D0059BBD6 /* dates.m */; };
+		5EDBEF202BC1F96E005FBAF2 /* dates_bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBED722BBC7E6D0059BBD6 /* dates_bridge.m */; };
 		5EDBEF212BC1F971005FBAF2 /* LitCelebrationBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3471A2BB374BC00E2DF5A /* LitCelebrationBridge.m */; };
 		5EDBEF222BC1F9A0005FBAF2 /* colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBED752BBDC9990059BBD6 /* colors.m */; };
 		5EDBEF262BC1FD77005FBAF2 /* db.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF252BC1FD77005FBAF2 /* db.m */; };
 		5EDBEF272BC1FD77005FBAF2 /* db.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF252BC1FD77005FBAF2 /* db.m */; };
 		5EDBEF2B2BC2DF42005FBAF2 /* liblitdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA347052BB3735700E2DF5A /* liblitdb.a */; };
+		5EDBEF452BC35313005FBAF2 /* dates.c in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF422BC3530C005FBAF2 /* dates.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,7 +142,6 @@
 		5EA347102BB373BF00E2DF5A /* errors.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = errors.c; path = ../litdb/errors.c; sourceTree = "<group>"; };
 		5EA347112BB373BF00E2DF5A /* litdb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = litdb.h; path = ../litdb/litdb.h; sourceTree = "<group>"; };
 		5EA347122BB373BF00E2DF5A /* litdb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = litdb.c; path = ../litdb/litdb.c; sourceTree = "<group>"; };
-		5EA347132BB373BF00E2DF5A /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = private.h; path = ../litdb/private.h; sourceTree = "<group>"; };
 		5EA3471A2BB374BC00E2DF5A /* LitCelebrationBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LitCelebrationBridge.m; sourceTree = "<group>"; };
 		5EA3471C2BB374CC00E2DF5A /* LitCelebrationBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LitCelebrationBridge.h; sourceTree = "<group>"; };
 		5EA3471D2BB3794B00E2DF5A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -150,8 +150,8 @@
 		5EB0F0AC2BBE4C6B00D4D8E8 /* GradientView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
 		5EBBED6E2BBC58530059BBD6 /* HolyDaysController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HolyDaysController.h; sourceTree = "<group>"; };
 		5EBBED6F2BBC5C0E0059BBD6 /* HolyDaysController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HolyDaysController.m; sourceTree = "<group>"; };
-		5EBBED712BBC7E4D0059BBD6 /* dates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dates.h; sourceTree = "<group>"; };
-		5EBBED722BBC7E6D0059BBD6 /* dates.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dates.m; sourceTree = "<group>"; };
+		5EBBED712BBC7E4D0059BBD6 /* dates_bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dates_bridge.h; sourceTree = "<group>"; };
+		5EBBED722BBC7E6D0059BBD6 /* dates_bridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dates_bridge.m; sourceTree = "<group>"; };
 		5EBBED742BBDC88E0059BBD6 /* colors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = colors.h; sourceTree = "<group>"; };
 		5EBBED752BBDC9990059BBD6 /* colors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = colors.m; sourceTree = "<group>"; };
 		5EDBEF092BC0D7E8005FBAF2 /* todaywidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = todaywidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +164,9 @@
 		5EDBEF232BC1FA2B005FBAF2 /* litcal-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "litcal-ios-Bridging-Header.h"; sourceTree = "<group>"; };
 		5EDBEF242BC1FCCC005FBAF2 /* db.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = db.h; sourceTree = "<group>"; };
 		5EDBEF252BC1FD77005FBAF2 /* db.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = db.m; sourceTree = "<group>"; };
+		5EDBEF422BC3530C005FBAF2 /* dates.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = dates.c; path = ../litdb/dates.c; sourceTree = "<group>"; };
+		5EDBEF432BC3530D005FBAF2 /* errors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = errors.h; path = ../litdb/errors.h; sourceTree = "<group>"; };
+		5EDBEF442BC3530D005FBAF2 /* dates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = dates.h; path = ../litdb/dates.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,8 +287,8 @@
 			children = (
 				5EA347222BB3880000E2DF5A /* litdbBridge */,
 				5E852BE72B6EB1960030F938 /* Fonts */,
-				5EBBED712BBC7E4D0059BBD6 /* dates.h */,
-				5EBBED722BBC7E6D0059BBD6 /* dates.m */,
+				5EBBED712BBC7E4D0059BBD6 /* dates_bridge.h */,
+				5EBBED722BBC7E6D0059BBD6 /* dates_bridge.m */,
 				5EBBED742BBDC88E0059BBD6 /* colors.h */,
 				5EBBED752BBDC9990059BBD6 /* colors.m */,
 				5EDBEF242BC1FCCC005FBAF2 /* db.h */,
@@ -307,10 +310,12 @@
 		5EA3470F2BB3737F00E2DF5A /* litdb */ = {
 			isa = PBXGroup;
 			children = (
+				5EDBEF422BC3530C005FBAF2 /* dates.c */,
+				5EDBEF442BC3530D005FBAF2 /* dates.h */,
+				5EDBEF432BC3530D005FBAF2 /* errors.h */,
 				5EA347102BB373BF00E2DF5A /* errors.c */,
 				5EA347122BB373BF00E2DF5A /* litdb.c */,
 				5EA347112BB373BF00E2DF5A /* litdb.h */,
-				5EA347132BB373BF00E2DF5A /* private.h */,
 			);
 			name = litdb;
 			sourceTree = "<group>";
@@ -550,7 +555,7 @@
 				5EBBED702BBC5C0E0059BBD6 /* HolyDaysController.m in Sources */,
 				5EB0F0AB2BBE4C5800D4D8E8 /* GradientView.m in Sources */,
 				5E9E1D742BC0302D0054333C /* DotView.m in Sources */,
-				5EBBED732BBC7E6D0059BBD6 /* dates.m in Sources */,
+				5EBBED732BBC7E6D0059BBD6 /* dates_bridge.m in Sources */,
 				5E71CCD02B6C47620010B9A7 /* ViewController.m in Sources */,
 				5E71CCCA2B6C47620010B9A7 /* AppDelegate.m in Sources */,
 				5EA3471B2BB374BC00E2DF5A /* LitCelebrationBridge.m in Sources */,
@@ -582,6 +587,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EDBEF452BC35313005FBAF2 /* dates.c in Sources */,
 				5EA347142BB373BF00E2DF5A /* errors.c in Sources */,
 				5EA347152BB373BF00E2DF5A /* litdb.c in Sources */,
 			);
@@ -591,7 +597,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EDBEF202BC1F96E005FBAF2 /* dates.m in Sources */,
+				5EDBEF202BC1F96E005FBAF2 /* dates_bridge.m in Sources */,
 				5EDBEF102BC0D7E8005FBAF2 /* todaywidgetBundle.swift in Sources */,
 				5EDBEF122BC0D7E8005FBAF2 /* todaywidget.swift in Sources */,
 				5EDBEF212BC1F971005FBAF2 /* LitCelebrationBridge.m in Sources */,

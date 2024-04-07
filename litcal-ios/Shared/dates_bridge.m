@@ -5,7 +5,8 @@
 //  Created by James Hudon on 4/2/24.
 //
 
-#import "dates.h"
+#import "dates_bridge.h"
+#import "litdb.h"
 
 NSTimeZone* makeTimeZone(void) {
 	return [NSTimeZone timeZoneForSecondsFromGMT:0];
@@ -18,18 +19,10 @@ NSCalendar* makeGMTCalendar(void) {
 }
 
 NSNumber* makeTodaySeconds(void) {
-	NSDate *d = [NSDate date];
-	NSTimeInterval offset = (NSTimeInterval)[
-		[NSTimeZone localTimeZone]
-		secondsFromGMTForDate:d
+	return [
+		[NSNumber alloc]
+		initWithLongLong:lit_start_of_today_seconds()
 	];
-	NSDate *utcDate = [d dateByAddingTimeInterval:offset];
-
-	long long epochSeconds = [
-		[makeGMTCalendar() startOfDayForDate:utcDate]
-		timeIntervalSince1970
-	];
-	return [[NSNumber alloc] initWithLongLong:epochSeconds];
 }
 
 NSDate* makeDateFromEpochSeconds(NSNumber* e) {
