@@ -55,30 +55,31 @@ struct todaywidgetEntryView : View {
 			epochSeconds: makeTodaySeconds()!)
 	}
 
-    var litColor: Color {
-	uiColorFromLColor(lColor: litCel.color, colorScheme: colorScheme)
-    }
+//    var litColor: Color {
+//	    uiColorFromLitColor(litCel.color)!
+////	uiColorFromLColor(lColor: litCel.color, colorScheme: colorScheme)
+//    }
 
-    var imgFileName: String {
-	switch (litColor) {
-
-	case .figTree:
-	    return "gradient_figtree"
-	case .wine:
-	    return "gradient_wine"
-	case .passion:
-	    return "gradient_passion"
-	case .chalice:
-	    return "gradient_chalice"
-	case .matrimony:
-	    return "gradient_matrimony"
-	case .lily:
-	    return "gradient_lily"
-	default:
-	    return "gradient_lily"
-	}
-
-    }
+//    var imgFileName: String {
+//	    switch (litCel.color) {
+//
+//	case FIG_TREE:
+//	    return "gradient_figtree"
+//	case .wine:
+//	    return "gradient_wine"
+//	case .passion:
+//	    return "gradient_passion"
+//	case .chalice:
+//	    return "gradient_chalice"
+//	case .matrimony:
+//	    return "gradient_matrimony"
+//	case .lily:
+//	    return "gradient_lily"
+//	default:
+//	    return "gradient_lily"
+//	}
+//
+//    }
 
     var body: some View {
 
@@ -102,32 +103,32 @@ struct todaywidgetEntryView : View {
 		    Rectangle()
 			.frame(width: 2, height: widgetFamily == .systemMedium
 			       ? 28 : 22)
-			.foregroundColor(litColor)
+//			.foregroundColor(litColor)
 
 
-		    VStack(alignment: .leading) {
-			Text(litDay.season.name)
-			    .litFont(size: widgetFamily == .systemMedium
-				     ? 10 : 8)
-			    .foregroundColor(.ashes)
-
-			Text(cardDateTitleFormatter.string(from: litViewModel.todayDate))
-			    .litFont(size: widgetFamily == .systemMedium
-				     ? 14 : 12)
-			    .foregroundColor(.lily)
-		    }
-		    .padding(.leading, -2)
+//		    VStack(alignment: .leading) {
+//			Text(litDay.season.name)
+//			    .litFont(size: widgetFamily == .systemMedium
+//				     ? 10 : 8)
+//			    .foregroundColor(.ashes)
+//
+//			Text(cardDateTitleFormatter.string(from: litViewModel.todayDate))
+//			    .litFont(size: widgetFamily == .systemMedium
+//				     ? 14 : 12)
+//			    .foregroundColor(.lily)
+//		    }
+//		    .padding(.leading, -2)
 		}
 
 		Text(litCel.title)
-		    .litFont(size: widgetFamily == .systemMedium
-			     ? 16 : 14, weight: .title)
-		    .foregroundColor(.lily)
+//		    .litFont(size: widgetFamily == .systemMedium
+//			     ? 16 : 14, weight: .title)
+//		    .foregroundColor(.lily)
 
 		if widgetFamily == .systemMedium && litCel.subtitle.count > 0 {
 		    Text(litCel.subtitle)
-			.litFont(size: 10)
-			.foregroundColor(.ashes)
+//			.litFont(size: 10)
+//			.foregroundColor(.ashes)
 		}
 	    }
 	}
@@ -137,16 +138,16 @@ struct todaywidgetEntryView : View {
 	)
 	.background(
 	    ZStack{
-		Color.stellaMaris
+//		Color.stellaMaris
 //                    .ignoresSafeArea()
 
-		Image(imgFileName)
-		    .offset(
-			x: widgetFamily == .systemMedium
-			? 145
-			: 100,
-			y: -85
-		    )
+//		Image(imgFileName)
+//		    .offset(
+//			x: widgetFamily == .systemMedium
+//			? 145
+//			: 100,
+//			y: -85
+//		    )
 	    }
 
 	)
@@ -163,6 +164,7 @@ enum LitError: Error {
 			return String(cString: ptr)
 		}
 		lit_error_free(litErr)
+		self = .error(message: msg)
 	}
 }
 
@@ -181,7 +183,7 @@ class WidgetViewModel: ObservableObject {
 	}
 
 	func celebrationFor(epochSeconds: NSNumber) throws -> LitCelebrationBridge  {
-		var cel: lit_celebration;
+		var cel = lit_celebration();
 		var errPtr: UnsafeMutablePointer<lit_error>?
 		if (!lit_get_celebration(self.db, UInt64(kCalID), Int64(truncating: epochSeconds), &cel, &errPtr)) {
 			throw LitError(errPtr!)

@@ -5,7 +5,7 @@
 //  Created by James Hudon on 4/5/24.
 //
 
-#import "litdbBridge/LitCelebrationBridge.h"
+#import "LitCelebrationBridge.h"
 #import <UIKit/UIKit.h>
 
 @interface DotView : UIView

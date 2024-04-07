@@ -11,6 +11,7 @@
 #import "../Shared/litdbBridge/LitCelebrationBridge.h"
 #import "../Shared/dates.h"
 #import "../Shared/db.h"
+#import "../Shared/colors.h"
 
 
 #endif /* litcal_darwin_Bridging_Header_h */
