@@ -1,0 +1,1101 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5E1179D52BC494A10073F7E2 /* CalWheelCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1179D42BC494A00073F7E2 /* CalWheelCellView.swift */; };
+		5E13A5A428D2D7CD008F9429 /* TiemposHeadline-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E13A5A128D2D7CD008F9429 /* TiemposHeadline-Medium.ttf */; };
+		5E13A5A528D2D7CD008F9429 /* EuclidSquare-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E13A5A228D2D7CD008F9429 /* EuclidSquare-Semibold.ttf */; };
+		5E13A5A628D2D7CD008F9429 /* EuclidSquare-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E13A5A328D2D7CD008F9429 /* EuclidSquare-Regular.ttf */; };
+		5E2AF3C728C7B79600DD9A59 /* LitCalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2AF3C628C7B79600DD9A59 /* LitCalendarViewModel.swift */; };
+		5E2AF3C928C7F13700DD9A59 /* LitCalendarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2AF3C828C7F13700DD9A59 /* LitCalendarViewModelTests.swift */; };
+		5E2AF3CA28C7F15500DD9A59 /* LitCalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2AF3C628C7B79600DD9A59 /* LitCalendarViewModel.swift */; };
+		5E42770128AE80E800C65EE4 /* LCalendarBridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E42770028AE80E800C65EE4 /* LCalendarBridgeTests.swift */; };
+		5E4957032892F15100AC9B04 /* CalWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4957022892F15100AC9B04 /* CalWheelView.swift */; };
+		5E6F1DA628DBD51200021942 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6F1DA528DBD51200021942 /* WidgetKit.framework */; };
+		5E6F1DA828DBD51200021942 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6F1DA728DBD51200021942 /* SwiftUI.framework */; };
+		5E6F1DAB28DBD51200021942 /* widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6F1DAA28DBD51200021942 /* widget.swift */; };
+		5E6F1DAD28DBD51300021942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E6F1DAC28DBD51300021942 /* Assets.xcassets */; };
+		5E6F1DB828DBD65900021942 /* LitCalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2AF3C628C7B79600DD9A59 /* LitCalendarViewModel.swift */; };
+		5E71CCB72B6695B00010B9A7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E71CCB62B6695A10010B9A7 /* libsqlite3.tbd */; };
+		5E7D31DB28DCC60C0084BEAC /* dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC3BDD4289C688E0044D774 /* dates.swift */; };
+		5E7D31DC28DCC60C0084BEAC /* dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC3BDD4289C688E0044D774 /* dates.swift */; };
+		5E8E558228DE628900484482 /* LitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E558128DE628900484482 /* LitButton.swift */; };
+		5E9E6867290B2D2D005D7E2C /* LitCalendarHolyDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9E6866290B2D2D005D7E2C /* LitCalendarHolyDays.swift */; };
+		5EA1039528FDB97000FCFC3D /* widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5E6F1DA428DBD51200021942 /* widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5EA1039928FDBD5000FCFC3D /* EuclidSquare-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E13A5A328D2D7CD008F9429 /* EuclidSquare-Regular.ttf */; };
+		5EA1039A28FDBD5000FCFC3D /* EuclidSquare-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E13A5A228D2D7CD008F9429 /* EuclidSquare-Semibold.ttf */; };
+		5EA1039B28FDBD5000FCFC3D /* TiemposHeadline-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E13A5A128D2D7CD008F9429 /* TiemposHeadline-Medium.ttf */; };
+		5EC3BDD5289C688E0044D774 /* dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC3BDD4289C688E0044D774 /* dates.swift */; };
+		5ED6D7DD288B54CC0052F74B /* DayImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED6D7DC288B54CC0052F74B /* DayImageView.swift */; };
+		5ED6D7DF288F07CF0052F74B /* LitCalendarPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED6D7DE288F07CF0052F74B /* LitCalendarPicker.swift */; };
+		5EDBEF402BC2E021005FBAF2 /* litdb.c in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF3C2BC2E021005FBAF2 /* litdb.c */; };
+		5EDBEF412BC2E021005FBAF2 /* errors.c in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF3F2BC2E021005FBAF2 /* errors.c */; };
+		5EDBEF492BC355A7005FBAF2 /* dates.c in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF472BC355A3005FBAF2 /* dates.c */; };
+		5EDBEF4A2BC355F1005FBAF2 /* liblitdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDBEF322BC2DFF5005FBAF2 /* liblitdb.a */; };
+		5EDBEF4F2BC41504005FBAF2 /* litdb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF4E2BC41504005FBAF2 /* litdb.swift */; };
+		5EDBEF502BC41504005FBAF2 /* litdb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF4E2BC41504005FBAF2 /* litdb.swift */; };
+		5EDBEF522BC41A81005FBAF2 /* litcal.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5EDBEF512BC41A81005FBAF2 /* litcal.sqlite */; };
+		5EDBEF532BC41A81005FBAF2 /* litcal.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5EDBEF512BC41A81005FBAF2 /* litcal.sqlite */; };
+		5EDBEF542BC4269C005FBAF2 /* liblitdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDBEF322BC2DFF5005FBAF2 /* liblitdb.a */; };
+		5EDBEF582BC48328005FBAF2 /* fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF572BC48328005FBAF2 /* fonts.swift */; };
+		5EDBEF592BC48328005FBAF2 /* fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF572BC48328005FBAF2 /* fonts.swift */; };
+		5EDBEF5B2BC48355005FBAF2 /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF5A2BC48355005FBAF2 /* colors.swift */; };
+		5EDBEF5C2BC48355005FBAF2 /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF5A2BC48355005FBAF2 /* colors.swift */; };
+		5EEF9389286A622E0086B9DC /* litcal_darwinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF9388286A622E0086B9DC /* litcal_darwinApp.swift */; };
+		5EEF938B286A622E0086B9DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF938A286A622E0086B9DC /* ContentView.swift */; };
+		5EEF938D286A62300086B9DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EEF938C286A62300086B9DC /* Assets.xcassets */; };
+		5EEF9391286A62300086B9DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EEF9390286A62300086B9DC /* Preview Assets.xcassets */; };
+		5EEF939B286A62300086B9DC /* litcal_darwinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF939A286A62300086B9DC /* litcal_darwinTests.swift */; };
+		5EEF93A5286A62300086B9DC /* litcal_darwinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF93A4286A62300086B9DC /* litcal_darwinUITests.swift */; };
+		5EEF93A7286A62300086B9DC /* litcal_darwinUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF93A6286A62300086B9DC /* litcal_darwinUITestsLaunchTests.swift */; };
+		5EEF93BC286A70F50086B9DC /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF93BB286A70F50086B9DC /* DayView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5EA1039628FDB97000FCFC3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EEF937D286A622E0086B9DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E6F1DA328DBD51200021942;
+			remoteInfo = widgetExtension;
+		};
+		5EDBEF4B2BC355F1005FBAF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EEF937D286A622E0086B9DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EDBEF312BC2DFF5005FBAF2;
+			remoteInfo = litdb;
+		};
+		5EDBEF552BC4269C005FBAF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EEF937D286A622E0086B9DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EDBEF312BC2DFF5005FBAF2;
+			remoteInfo = litdb;
+		};
+		5EEF9397286A62300086B9DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EEF937D286A622E0086B9DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EEF9384286A622E0086B9DC;
+			remoteInfo = "litcal-darwin";
+		};
+		5EEF93A1286A62300086B9DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EEF937D286A622E0086B9DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EEF9384286A622E0086B9DC;
+			remoteInfo = "litcal-darwin";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5EA1039828FDB97000FCFC3D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5EA1039528FDB97000FCFC3D /* widgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EDBEF302BC2DFF5005FBAF2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5E1179D42BC494A00073F7E2 /* CalWheelCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalWheelCellView.swift; sourceTree = "<group>"; };
+		5E13A5A128D2D7CD008F9429 /* TiemposHeadline-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TiemposHeadline-Medium.ttf"; sourceTree = "<group>"; };
+		5E13A5A228D2D7CD008F9429 /* EuclidSquare-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-Semibold.ttf"; sourceTree = "<group>"; };
+		5E13A5A328D2D7CD008F9429 /* EuclidSquare-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-Regular.ttf"; sourceTree = "<group>"; };
+		5E2AF3C628C7B79600DD9A59 /* LitCalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitCalendarViewModel.swift; sourceTree = "<group>"; };
+		5E2AF3C828C7F13700DD9A59 /* LitCalendarViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitCalendarViewModelTests.swift; sourceTree = "<group>"; };
+		5E42770028AE80E800C65EE4 /* LCalendarBridgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCalendarBridgeTests.swift; sourceTree = "<group>"; };
+		5E4957022892F15100AC9B04 /* CalWheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalWheelView.swift; sourceTree = "<group>"; };
+		5E6F1DA428DBD51200021942 /* widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E6F1DA528DBD51200021942 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		5E6F1DA728DBD51200021942 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		5E6F1DAA28DBD51200021942 /* widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = widget.swift; sourceTree = "<group>"; };
+		5E6F1DAC28DBD51300021942 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5E6F1DAE28DBD51300021942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E71CCB62B6695A10010B9A7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
+		5E8E558128DE628900484482 /* LitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitButton.swift; sourceTree = "<group>"; };
+		5E9E6866290B2D2D005D7E2C /* LitCalendarHolyDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitCalendarHolyDays.swift; sourceTree = "<group>"; };
+		5EC3BDD4289C688E0044D774 /* dates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dates.swift; sourceTree = "<group>"; };
+		5ED6D7DC288B54CC0052F74B /* DayImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayImageView.swift; sourceTree = "<group>"; };
+		5ED6D7DE288F07CF0052F74B /* LitCalendarPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitCalendarPicker.swift; sourceTree = "<group>"; };
+		5ED8D84B28D2DAC500C52180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5EDBEF322BC2DFF5005FBAF2 /* liblitdb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblitdb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EDBEF3C2BC2E021005FBAF2 /* litdb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = litdb.c; path = ../litdb/litdb.c; sourceTree = "<group>"; };
+		5EDBEF3E2BC2E021005FBAF2 /* litdb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = litdb.h; path = ../litdb/litdb.h; sourceTree = "<group>"; };
+		5EDBEF3F2BC2E021005FBAF2 /* errors.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = errors.c; path = ../litdb/errors.c; sourceTree = "<group>"; };
+		5EDBEF462BC355A3005FBAF2 /* errors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = errors.h; path = ../litdb/errors.h; sourceTree = "<group>"; };
+		5EDBEF472BC355A3005FBAF2 /* dates.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = dates.c; path = ../litdb/dates.c; sourceTree = "<group>"; };
+		5EDBEF482BC355A3005FBAF2 /* dates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = dates.h; path = ../litdb/dates.h; sourceTree = "<group>"; };
+		5EDBEF4E2BC41504005FBAF2 /* litdb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = litdb.swift; sourceTree = "<group>"; };
+		5EDBEF512BC41A81005FBAF2 /* litcal.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = litcal.sqlite; path = ../../litcal.sqlite; sourceTree = "<group>"; };
+		5EDBEF572BC48328005FBAF2 /* fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fonts.swift; sourceTree = "<group>"; };
+		5EDBEF5A2BC48355005FBAF2 /* colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
+		5EEF9385286A622E0086B9DC /* litcal-darwin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "litcal-darwin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EEF9388286A622E0086B9DC /* litcal_darwinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = litcal_darwinApp.swift; sourceTree = "<group>"; };
+		5EEF938A286A622E0086B9DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5EEF938C286A62300086B9DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5EEF938E286A62300086B9DC /* litcal_darwin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = litcal_darwin.entitlements; sourceTree = "<group>"; };
+		5EEF9390286A62300086B9DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5EEF9396286A62300086B9DC /* litcal-darwinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "litcal-darwinTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EEF939A286A62300086B9DC /* litcal_darwinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = litcal_darwinTests.swift; sourceTree = "<group>"; };
+		5EEF93A0286A62300086B9DC /* litcal-darwinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "litcal-darwinUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EEF93A4286A62300086B9DC /* litcal_darwinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = litcal_darwinUITests.swift; sourceTree = "<group>"; };
+		5EEF93A6286A62300086B9DC /* litcal_darwinUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = litcal_darwinUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5EEF93B8286A70740086B9DC /* litcal-darwin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "litcal-darwin-Bridging-Header.h"; sourceTree = "<group>"; };
+		5EEF93BB286A70F50086B9DC /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5E6F1DA128DBD51200021942 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E6F1DA828DBD51200021942 /* SwiftUI.framework in Frameworks */,
+				5E6F1DA628DBD51200021942 /* WidgetKit.framework in Frameworks */,
+				5EDBEF542BC4269C005FBAF2 /* liblitdb.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EDBEF2F2BC2DFF5005FBAF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EEF9382286A622E0086B9DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EDBEF4A2BC355F1005FBAF2 /* liblitdb.a in Frameworks */,
+				5E71CCB72B6695B00010B9A7 /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EEF9393286A62300086B9DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EEF939D286A62300086B9DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5E13A5A728D2D9C5008F9429 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5E13A5A328D2D7CD008F9429 /* EuclidSquare-Regular.ttf */,
+				5E13A5A228D2D7CD008F9429 /* EuclidSquare-Semibold.ttf */,
+				5E13A5A128D2D7CD008F9429 /* TiemposHeadline-Medium.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		5E4276FF28AE80A400C65EE4 /* liblitcal_swiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				5E42770028AE80E800C65EE4 /* LCalendarBridgeTests.swift */,
+			);
+			path = liblitcal_swiftTests;
+			sourceTree = "<group>";
+		};
+		5E6F1DA928DBD51200021942 /* widget */ = {
+			isa = PBXGroup;
+			children = (
+				5E6F1DAA28DBD51200021942 /* widget.swift */,
+				5E6F1DAC28DBD51300021942 /* Assets.xcassets */,
+				5E6F1DAE28DBD51300021942 /* Info.plist */,
+			);
+			path = widget;
+			sourceTree = "<group>";
+		};
+		5E6F1DB628DBD63800021942 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				5EEF93B8286A70740086B9DC /* litcal-darwin-Bridging-Header.h */,
+				5E13A5A728D2D9C5008F9429 /* fonts */,
+				5E2AF3C628C7B79600DD9A59 /* LitCalendarViewModel.swift */,
+				5EC3BDD4289C688E0044D774 /* dates.swift */,
+				5EDBEF4E2BC41504005FBAF2 /* litdb.swift */,
+				5EDBEF572BC48328005FBAF2 /* fonts.swift */,
+				5EDBEF5A2BC48355005FBAF2 /* colors.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		5EDBEF3B2BC2E00A005FBAF2 /* litdb */ = {
+			isa = PBXGroup;
+			children = (
+				5EDBEF472BC355A3005FBAF2 /* dates.c */,
+				5EDBEF482BC355A3005FBAF2 /* dates.h */,
+				5EDBEF462BC355A3005FBAF2 /* errors.h */,
+				5EDBEF3F2BC2E021005FBAF2 /* errors.c */,
+				5EDBEF3C2BC2E021005FBAF2 /* litdb.c */,
+				5EDBEF3E2BC2E021005FBAF2 /* litdb.h */,
+			);
+			name = litdb;
+			sourceTree = "<group>";
+		};
+		5EEF937C286A622E0086B9DC = {
+			isa = PBXGroup;
+			children = (
+				5EDBEF3B2BC2E00A005FBAF2 /* litdb */,
+				5E6F1DB628DBD63800021942 /* Shared */,
+				5EEF9387286A622E0086B9DC /* litcal-darwin */,
+				5E6F1DA928DBD51200021942 /* widget */,
+				5EEF9399286A62300086B9DC /* litcal-darwinTests */,
+				5EEF93A3286A62300086B9DC /* litcal-darwinUITests */,
+				5EFE4658289B1D38003500B1 /* Resources */,
+				5EEF9386286A622E0086B9DC /* Products */,
+				5EEF93B3286A632B0086B9DC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5EEF9386286A622E0086B9DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EEF9385286A622E0086B9DC /* litcal-darwin.app */,
+				5EEF9396286A62300086B9DC /* litcal-darwinTests.xctest */,
+				5EEF93A0286A62300086B9DC /* litcal-darwinUITests.xctest */,
+				5E6F1DA428DBD51200021942 /* widgetExtension.appex */,
+				5EDBEF322BC2DFF5005FBAF2 /* liblitdb.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5EEF9387286A622E0086B9DC /* litcal-darwin */ = {
+			isa = PBXGroup;
+			children = (
+				5EEF938F286A62300086B9DC /* Preview Content */,
+				5ED8D84B28D2DAC500C52180 /* Info.plist */,
+				5EEF938C286A62300086B9DC /* Assets.xcassets */,
+				5EEF938E286A62300086B9DC /* litcal_darwin.entitlements */,
+				5EEF9388286A622E0086B9DC /* litcal_darwinApp.swift */,
+				5E4957022892F15100AC9B04 /* CalWheelView.swift */,
+				5E1179D42BC494A00073F7E2 /* CalWheelCellView.swift */,
+				5EEF938A286A622E0086B9DC /* ContentView.swift */,
+				5ED6D7DC288B54CC0052F74B /* DayImageView.swift */,
+				5EEF93BB286A70F50086B9DC /* DayView.swift */,
+				5E8E558128DE628900484482 /* LitButton.swift */,
+				5E9E6866290B2D2D005D7E2C /* LitCalendarHolyDays.swift */,
+				5ED6D7DE288F07CF0052F74B /* LitCalendarPicker.swift */,
+			);
+			path = "litcal-darwin";
+			sourceTree = "<group>";
+		};
+		5EEF938F286A62300086B9DC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5EEF9390286A62300086B9DC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5EEF9399286A62300086B9DC /* litcal-darwinTests */ = {
+			isa = PBXGroup;
+			children = (
+				5E4276FF28AE80A400C65EE4 /* liblitcal_swiftTests */,
+				5EEF939A286A62300086B9DC /* litcal_darwinTests.swift */,
+				5E2AF3C828C7F13700DD9A59 /* LitCalendarViewModelTests.swift */,
+			);
+			path = "litcal-darwinTests";
+			sourceTree = "<group>";
+		};
+		5EEF93A3286A62300086B9DC /* litcal-darwinUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5EEF93A4286A62300086B9DC /* litcal_darwinUITests.swift */,
+				5EEF93A6286A62300086B9DC /* litcal_darwinUITestsLaunchTests.swift */,
+			);
+			path = "litcal-darwinUITests";
+			sourceTree = "<group>";
+		};
+		5EEF93B3286A632B0086B9DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E71CCB62B6695A10010B9A7 /* libsqlite3.tbd */,
+				5E6F1DA528DBD51200021942 /* WidgetKit.framework */,
+				5E6F1DA728DBD51200021942 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5EFE4658289B1D38003500B1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5EDBEF512BC41A81005FBAF2 /* litcal.sqlite */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5E6F1DA328DBD51200021942 /* widgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E6F1DB228DBD51400021942 /* Build configuration list for PBXNativeTarget "widgetExtension" */;
+			buildPhases = (
+				5E6F1DA028DBD51200021942 /* Sources */,
+				5E6F1DA128DBD51200021942 /* Frameworks */,
+				5E6F1DA228DBD51200021942 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5EDBEF562BC4269C005FBAF2 /* PBXTargetDependency */,
+			);
+			name = widgetExtension;
+			productName = widgetExtension;
+			productReference = 5E6F1DA428DBD51200021942 /* widgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		5EDBEF312BC2DFF5005FBAF2 /* litdb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EDBEF382BC2DFF5005FBAF2 /* Build configuration list for PBXNativeTarget "litdb" */;
+			buildPhases = (
+				5EDBEF2E2BC2DFF5005FBAF2 /* Sources */,
+				5EDBEF2F2BC2DFF5005FBAF2 /* Frameworks */,
+				5EDBEF302BC2DFF5005FBAF2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = litdb;
+			productName = litdb;
+			productReference = 5EDBEF322BC2DFF5005FBAF2 /* liblitdb.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5EEF9384286A622E0086B9DC /* litcal-darwin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EEF93AA286A62300086B9DC /* Build configuration list for PBXNativeTarget "litcal-darwin" */;
+			buildPhases = (
+				5EEF9381286A622E0086B9DC /* Sources */,
+				5EEF9382286A622E0086B9DC /* Frameworks */,
+				5EEF9383286A622E0086B9DC /* Resources */,
+				5EA1039828FDB97000FCFC3D /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5EA1039728FDB97000FCFC3D /* PBXTargetDependency */,
+				5EDBEF4C2BC355F1005FBAF2 /* PBXTargetDependency */,
+			);
+			name = "litcal-darwin";
+			productName = "litcal-darwin";
+			productReference = 5EEF9385286A622E0086B9DC /* litcal-darwin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5EEF9395286A62300086B9DC /* litcal-darwinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EEF93AD286A62300086B9DC /* Build configuration list for PBXNativeTarget "litcal-darwinTests" */;
+			buildPhases = (
+				5EEF9392286A62300086B9DC /* Sources */,
+				5EEF9393286A62300086B9DC /* Frameworks */,
+				5EEF9394286A62300086B9DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5EEF9398286A62300086B9DC /* PBXTargetDependency */,
+			);
+			name = "litcal-darwinTests";
+			productName = "litcal-darwinTests";
+			productReference = 5EEF9396286A62300086B9DC /* litcal-darwinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5EEF939F286A62300086B9DC /* litcal-darwinUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EEF93B0286A62300086B9DC /* Build configuration list for PBXNativeTarget "litcal-darwinUITests" */;
+			buildPhases = (
+				5EEF939C286A62300086B9DC /* Sources */,
+				5EEF939D286A62300086B9DC /* Frameworks */,
+				5EEF939E286A62300086B9DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5EEF93A2286A62300086B9DC /* PBXTargetDependency */,
+			);
+			name = "litcal-darwinUITests";
+			productName = "litcal-darwinUITests";
+			productReference = 5EEF93A0286A62300086B9DC /* litcal-darwinUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5EEF937D286A622E0086B9DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					5E6F1DA328DBD51200021942 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					5EDBEF312BC2DFF5005FBAF2 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					5EEF9384286A622E0086B9DC = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					5EEF9395286A62300086B9DC = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					5EEF939F286A62300086B9DC = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 5EEF9384286A622E0086B9DC;
+					};
+				};
+			};
+			buildConfigurationList = 5EEF9380286A622E0086B9DC /* Build configuration list for PBXProject "litcal-darwin" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5EEF937C286A622E0086B9DC;
+			productRefGroup = 5EEF9386286A622E0086B9DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5EEF9384286A622E0086B9DC /* litcal-darwin */,
+				5EEF9395286A62300086B9DC /* litcal-darwinTests */,
+				5EEF939F286A62300086B9DC /* litcal-darwinUITests */,
+				5E6F1DA328DBD51200021942 /* widgetExtension */,
+				5EDBEF312BC2DFF5005FBAF2 /* litdb */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5E6F1DA228DBD51200021942 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EA1039B28FDBD5000FCFC3D /* TiemposHeadline-Medium.ttf in Resources */,
+				5EA1039A28FDBD5000FCFC3D /* EuclidSquare-Semibold.ttf in Resources */,
+				5E6F1DAD28DBD51300021942 /* Assets.xcassets in Resources */,
+				5EA1039928FDBD5000FCFC3D /* EuclidSquare-Regular.ttf in Resources */,
+				5EDBEF532BC41A81005FBAF2 /* litcal.sqlite in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EEF9383286A622E0086B9DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E13A5A428D2D7CD008F9429 /* TiemposHeadline-Medium.ttf in Resources */,
+				5E13A5A628D2D7CD008F9429 /* EuclidSquare-Regular.ttf in Resources */,
+				5E13A5A528D2D7CD008F9429 /* EuclidSquare-Semibold.ttf in Resources */,
+				5EEF9391286A62300086B9DC /* Preview Assets.xcassets in Resources */,
+				5EDBEF522BC41A81005FBAF2 /* litcal.sqlite in Resources */,
+				5EEF938D286A62300086B9DC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EEF9394286A62300086B9DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EEF939E286A62300086B9DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5E6F1DA028DBD51200021942 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E6F1DAB28DBD51200021942 /* widget.swift in Sources */,
+				5EDBEF5C2BC48355005FBAF2 /* colors.swift in Sources */,
+				5E6F1DB828DBD65900021942 /* LitCalendarViewModel.swift in Sources */,
+				5EDBEF592BC48328005FBAF2 /* fonts.swift in Sources */,
+				5E7D31DC28DCC60C0084BEAC /* dates.swift in Sources */,
+				5EDBEF502BC41504005FBAF2 /* litdb.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EDBEF2E2BC2DFF5005FBAF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EDBEF492BC355A7005FBAF2 /* dates.c in Sources */,
+				5EDBEF412BC2E021005FBAF2 /* errors.c in Sources */,
+				5EDBEF402BC2E021005FBAF2 /* litdb.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EEF9381286A622E0086B9DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E8E558228DE628900484482 /* LitButton.swift in Sources */,
+				5E1179D52BC494A10073F7E2 /* CalWheelCellView.swift in Sources */,
+				5EDBEF5B2BC48355005FBAF2 /* colors.swift in Sources */,
+				5EEF938B286A622E0086B9DC /* ContentView.swift in Sources */,
+				5ED6D7DF288F07CF0052F74B /* LitCalendarPicker.swift in Sources */,
+				5EEF93BC286A70F50086B9DC /* DayView.swift in Sources */,
+				5EC3BDD5289C688E0044D774 /* dates.swift in Sources */,
+				5E4957032892F15100AC9B04 /* CalWheelView.swift in Sources */,
+				5E9E6867290B2D2D005D7E2C /* LitCalendarHolyDays.swift in Sources */,
+				5EDBEF4F2BC41504005FBAF2 /* litdb.swift in Sources */,
+				5EEF9389286A622E0086B9DC /* litcal_darwinApp.swift in Sources */,
+				5EDBEF582BC48328005FBAF2 /* fonts.swift in Sources */,
+				5E2AF3C728C7B79600DD9A59 /* LitCalendarViewModel.swift in Sources */,
+				5ED6D7DD288B54CC0052F74B /* DayImageView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EEF9392286A62300086B9DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E42770128AE80E800C65EE4 /* LCalendarBridgeTests.swift in Sources */,
+				5E2AF3CA28C7F15500DD9A59 /* LitCalendarViewModel.swift in Sources */,
+				5E7D31DB28DCC60C0084BEAC /* dates.swift in Sources */,
+				5E2AF3C928C7F13700DD9A59 /* LitCalendarViewModelTests.swift in Sources */,
+				5EEF939B286A62300086B9DC /* litcal_darwinTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EEF939C286A62300086B9DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EEF93A7286A62300086B9DC /* litcal_darwinUITestsLaunchTests.swift in Sources */,
+				5EEF93A5286A62300086B9DC /* litcal_darwinUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5EA1039728FDB97000FCFC3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E6F1DA328DBD51200021942 /* widgetExtension */;
+			targetProxy = 5EA1039628FDB97000FCFC3D /* PBXContainerItemProxy */;
+		};
+		5EDBEF4C2BC355F1005FBAF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5EDBEF312BC2DFF5005FBAF2 /* litdb */;
+			targetProxy = 5EDBEF4B2BC355F1005FBAF2 /* PBXContainerItemProxy */;
+		};
+		5EDBEF562BC4269C005FBAF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5EDBEF312BC2DFF5005FBAF2 /* litdb */;
+			targetProxy = 5EDBEF552BC4269C005FBAF2 /* PBXContainerItemProxy */;
+		};
+		5EEF9398286A62300086B9DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5EEF9384286A622E0086B9DC /* litcal-darwin */;
+			targetProxy = 5EEF9397286A62300086B9DC /* PBXContainerItemProxy */;
+		};
+		5EEF93A2286A62300086B9DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5EEF9384286A622E0086B9DC /* litcal-darwin */;
+			targetProxy = 5EEF93A1286A62300086B9DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5E6F1DB328DBD51400021942 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 26;
+				DEVELOPMENT_TEAM = JCRQGL8873;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.litcompany.litcal.darwin.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/litcal-darwin-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5E6F1DB428DBD51400021942 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 26;
+				DEVELOPMENT_TEAM = JCRQGL8873;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.litcompany.litcal.darwin.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/litcal-darwin-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5EDBEF392BC2DFF5005FBAF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JCRQGL8873;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5EDBEF3A2BC2DFF5005FBAF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JCRQGL8873;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5EEF93A8286A62300086B9DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Debug;
+		};
+		5EEF93A9286A62300086B9DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Release;
+		};
+		5EEF93AB286A62300086B9DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "litcal-darwin/litcal_darwin.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 33;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"litcal-darwin/Preview Content\"";
+				DEVELOPMENT_TEAM = JCRQGL8873;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "include/**";
+				INFOPLIST_FILE = "litcal-darwin/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Litcal;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				MARKETING_VERSION = 1.9;
+				OTHER_LDFLAGS = "-lc++";
+				PRODUCT_BUNDLE_IDENTIFIER = com.litcompany.litcal.darwin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/litcal-darwin-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5EEF93AC286A62300086B9DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "litcal-darwin/litcal_darwin.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 33;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"litcal-darwin/Preview Content\"";
+				DEVELOPMENT_TEAM = JCRQGL8873;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "include/**";
+				INFOPLIST_FILE = "litcal-darwin/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Litcal;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				MARKETING_VERSION = 1.9;
+				OTHER_LDFLAGS = "-lc++";
+				PRODUCT_BUNDLE_IDENTIFIER = com.litcompany.litcal.darwin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/litcal-darwin-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		5EEF93AE286A62300086B9DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = JCRQGL8873;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "";
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-lc++";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.litcompany.litcal-darwinTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/litcal-darwin-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5EEF93AF286A62300086B9DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = JCRQGL8873;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "";
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-lc++";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.litcompany.litcal-darwinTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/litcal-darwin-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		5EEF93B1286A62300086B9DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = JCRQGL8873;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.litcompany.litcal-darwinUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/litcal-darwin-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "litcal-darwin";
+			};
+			name = Debug;
+		};
+		5EEF93B2286A62300086B9DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = JCRQGL8873;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.litcompany.litcal-darwinUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/litcal-darwin-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "litcal-darwin";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5E6F1DB228DBD51400021942 /* Build configuration list for PBXNativeTarget "widgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E6F1DB328DBD51400021942 /* Debug */,
+				5E6F1DB428DBD51400021942 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EDBEF382BC2DFF5005FBAF2 /* Build configuration list for PBXNativeTarget "litdb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EDBEF392BC2DFF5005FBAF2 /* Debug */,
+				5EDBEF3A2BC2DFF5005FBAF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EEF9380286A622E0086B9DC /* Build configuration list for PBXProject "litcal-darwin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EEF93A8286A62300086B9DC /* Debug */,
+				5EEF93A9286A62300086B9DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EEF93AA286A62300086B9DC /* Build configuration list for PBXNativeTarget "litcal-darwin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EEF93AB286A62300086B9DC /* Debug */,
+				5EEF93AC286A62300086B9DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EEF93AD286A62300086B9DC /* Build configuration list for PBXNativeTarget "litcal-darwinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EEF93AE286A62300086B9DC /* Debug */,
+				5EEF93AF286A62300086B9DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EEF93B0286A62300086B9DC /* Build configuration list for PBXNativeTarget "litcal-darwinUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EEF93B1286A62300086B9DC /* Debug */,
+				5EEF93B2286A62300086B9DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5EEF937D286A622E0086B9DC /* Project object */;
+}
