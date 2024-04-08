@@ -12,7 +12,7 @@ import Combine
 private let monthFormatter = makeGMTFormatter("MMMM y")
 
 private struct DatesView: View {
-	@Binding var selection: Int
+	@Binding var selection: Int64
 	@EnvironmentObject var litViewModel: LitCalendarViewModel
 	let scrollProxy: ScrollViewProxy
 
@@ -51,7 +51,7 @@ private struct DatesView: View {
 
 struct CalWheelView: View {
 	@EnvironmentObject var litViewModel: LitCalendarViewModel
-	@Binding var selection: Int
+	@Binding var selection: Int64
 	@StateObject private var viewModel = CalWheelViewModel()
 	@Environment(\.colorScheme) private var colorScheme
 
@@ -138,10 +138,10 @@ class CalWheelViewModel: ObservableObject {
 		// By adding N to the cellAtScroll, we make the month transition happen when
 		// the cell crosses the imaginary line that is N cells to the right of the leading side of the screen.
 		// Without adding N, the month transition would always happen when day 1 cross the leading side of the screen.
-		var cellAtScroll: Int = Int(floor(scrollPercentage * Double(cels.count - 1))) + 3
-		cellAtScroll = max(0, min(cellAtScroll, cels.count - 1)) // prevent out-of-bounds
+		var cellAtScroll: Int64 = Int64(floor(scrollPercentage * Double(cels.count - 1))) + 3
+		cellAtScroll = max(0, min(cellAtScroll, Int64(cels.count - 1))) // prevent out-of-bounds
 		// TODO: pull this up
-		let kSecondsPerDay = 60*60*24
+		let kSecondsPerDay: Int64 = 60*60*24
 		let epochAtIndex = litViewModel!.minDateSeconds + cellAtScroll * kSecondsPerDay;
 		let celAtScroll = cels[epochAtIndex]!
 
@@ -160,7 +160,7 @@ private struct ScrollViewFramePrefKey: PreferenceKey {
 
 struct CalWheelView_Previews: PreviewProvider {
 	static let litViewModel = try! LitCalendarViewModel()
-	@State static var now = Int(Date.now.timeIntervalSince1970)
+	@State static var now = Int64(Date.now.timeIntervalSince1970)
 	static var previews: some View {
 		CalWheelView(selection: $now)
 			.environmentObject(litViewModel)

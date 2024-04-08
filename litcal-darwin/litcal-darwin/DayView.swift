@@ -21,7 +21,7 @@ struct DayView: View {
 
 	@Environment(\.colorScheme) private var colorScheme
 	@EnvironmentObject var litViewModel: LitCalendarViewModel
-	let dateSeconds: Int
+	let dateSeconds: Int64
 
 	var litCel: LitCelebrationBridge {
 		litViewModel.celebrations[dateSeconds]!
@@ -175,7 +175,7 @@ struct DayView_Previews: PreviewProvider {
 	)!.timeIntervalSince1970
 
 	static var previews: some View {
-		DayView(dateSeconds: Int(saintLuke))
+		DayView(dateSeconds: Int64(saintLuke))
 			.environmentObject(litCal)
 	}
 }

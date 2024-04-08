@@ -13,8 +13,8 @@ private struct HolyDay: Identifiable {
 	let date: Date
 	let name: String
 	let id = UUID()
-	var dateAsInt: Int {
-		Int(date.timeIntervalSince1970)
+	var dateAsInt: Int64 {
+		Int64(date.timeIntervalSince1970)
 	}
 }
 
@@ -30,7 +30,7 @@ struct ScrollContentBackgroundHidden: ViewModifier {
 
 struct LitCalendarHolyDays: View {
 	let shortName: String
-	var dateAction: ((Int) -> Void)? = nil
+	var dateAction: ((Int64) -> Void)? = nil
 
 	private let holyDaysByYear: [String: [HolyDay]] = [
 		"2023": [

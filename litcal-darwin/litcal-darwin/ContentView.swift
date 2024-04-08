@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct ContentView: View {
-	@State var selectedDateSeconds: Int
+	@State var selectedDateSeconds: Int64
 	@State var isWheelShown = true
 	@Environment(\.colorScheme) private var colorScheme
 

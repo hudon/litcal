@@ -8,7 +8,7 @@
 import Foundation
 
 struct LitDB {
-	static let calID = 1
+	static let calID: Int32 = 1
 }
 
 enum LitError: Error {
@@ -57,7 +57,7 @@ struct LitCelebrationBridge {
 	let readingsUrl: String
 	let gospelText: String
 	let rank: Int
-	let epochSeconds: Int
+	let epochSeconds: Int64
 	let season: String
 
 	init(cel: lit_celebration) {
@@ -70,7 +70,7 @@ struct LitCelebrationBridge {
 		self.readingsUrl = String(cString: cel.readings_url)
 		self.gospelText = String(cString: cel.gospel_text)
 		self.rank = Int(cel.rank)
-		self.epochSeconds = Int(cel.epoch_seconds)
+		self.epochSeconds = cel.epoch_seconds
 		self.season = fixedCStrToString(cel, \.season)
 	}
 }

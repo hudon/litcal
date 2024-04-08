@@ -46,13 +46,13 @@ struct lit_celebration {
 bool lit_open_db(const char *filename, sqlite3 **out_db, struct lit_error **out_err);
 
 bool lit_get_celebration(
-    sqlite3 *db, uint64_t cal_id,
+    sqlite3 *db, int cal_id,
     int64_t epoch_econds,
     struct lit_celebration *out_cel,
     struct lit_error **out_err);
 
 bool lit_get_min_and_max(
-    sqlite3 *db, uint64_t cal_id,
+    sqlite3 *db, int cal_id,
     int64_t *out_min, int64_t *out_max,
     struct lit_error **out_err);
 

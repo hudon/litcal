@@ -15,14 +15,14 @@ enum LitcalModelError: Error {
 
 class LitCalendarViewModel: ObservableObject {
 	private var db: OpaquePointer?
-	var celebrations: [Int: LitCelebrationBridge] = [:]
-	var datesInSeconds: [Int] = []
+	var celebrations: [Int64: LitCelebrationBridge] = [:]
+	var datesInSeconds: [Int64] = []
 	// Fires to make sure "today" tracks the new day if it goes over the midnight boundary
 	// TODO: however, if a view grabs the value at todaySeconds, nothing is in place to trigger a
 	// re-render of the view when todaySeconds updates. Does it need a @Published?
 	var todayTimer: Timer?
-	var todaySeconds: Int
-	let minDateSeconds: Int
+	var todaySeconds: Int64
+	var minDateSeconds: Int64 = 0
 
 	var todayDate: Date {
 		Date(timeIntervalSince1970: TimeInterval(todaySeconds))
@@ -42,33 +42,30 @@ class LitCalendarViewModel: ObservableObject {
 			throw LitError(errPtr)
 		}
 
-		// TODO: think about my int types more, both in litdb and here
-		var min: Int64 = 0
 		var max: Int64 = 0
 		if (!lit_get_min_and_max(
-			self.db, UInt64(LitDB.calID), &min, &max, &errPtr
+			self.db, LitDB.calID, &minDateSeconds, &max, &errPtr
 		)) {
 			throw LitError(errPtr)
 		}
-		// TODO: assess this truncation...
-		minDateSeconds = Int(min)
+
 		// TODO: handle days for which we don't have celebrations?
-		var curr = min
+		var curr = minDateSeconds
 		while curr <= max {
 			var cel = lit_celebration()
 			if (!lit_get_celebration(
-				self.db, UInt64(LitDB.calID), curr, &cel, &errPtr
+				self.db, LitDB.calID, curr, &cel, &errPtr
 			)) {
 				throw LitError(errPtr)
 			}
-			self.celebrations[Int(curr)] = LitCelebrationBridge(cel: cel)
-			self.datesInSeconds.append(Int(curr))
+			self.celebrations[curr] = LitCelebrationBridge(cel: cel)
+			self.datesInSeconds.append(curr)
 			curr += 86400 // seconds per day
 		}
 
-		self.todaySeconds = lit_start_of_today_seconds()
+		self.todaySeconds = Int64(lit_start_of_today_seconds())
 		self.todayTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-			self.todaySeconds = lit_start_of_today_seconds()
+			self.todaySeconds = Int64(lit_start_of_today_seconds())
 		}
 	}
 

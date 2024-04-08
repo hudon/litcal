@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LitCalendarPicker: View {
-	var dateAction: ((Int) -> Void)? = nil
+	var dateAction: ((Int64) -> Void)? = nil
 	@Environment(\.colorScheme) private var colorScheme
 	@State private var isShowingSheet = false
 	let shortName = "USA"

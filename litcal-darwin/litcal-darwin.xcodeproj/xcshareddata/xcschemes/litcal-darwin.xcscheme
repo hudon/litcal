@@ -50,17 +50,6 @@
                ReferencedContainer = "container:litcal-darwin.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5E34BD5228B196BC00D85F24"
-               BuildableName = "coreTests.xctest"
-               BlueprintName = "coreTests"
-               ReferencedContainer = "container:litcal-darwin.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
