@@ -1,4 +1,0 @@
-#  litcal-ios
-
-## Notes
-
