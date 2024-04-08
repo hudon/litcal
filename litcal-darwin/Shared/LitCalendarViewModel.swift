@@ -60,7 +60,7 @@ class LitCalendarViewModel: ObservableObject {
 			}
 			self.celebrations[curr] = LitCelebrationBridge(cel: cel)
 			self.datesInSeconds.append(curr)
-			curr += 86400 // seconds per day
+			curr += kSecondsPerDay
 		}
 
 		self.todaySeconds = Int64(lit_start_of_today_seconds())

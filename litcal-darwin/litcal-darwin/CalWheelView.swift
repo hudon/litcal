@@ -122,7 +122,7 @@ class CalWheelViewModel: ObservableObject {
 		unthrottledScrollFrame.send(scrollFrame)
 	}
 
-	// TODO: rework this to be like the objc one
+	// TODO: rework this to be like the objc one which worked in various screen sizes
 	private func computeCurrentMonth(scrollFrame: CGRect) {
 		// `origin.x` gets us the distance of the frame's x origin from the leading side of the screen
 		var scrollPercentage = Double(-scrollFrame.origin.x / scrollFrame.width)
@@ -140,8 +140,6 @@ class CalWheelViewModel: ObservableObject {
 		// Without adding N, the month transition would always happen when day 1 cross the leading side of the screen.
 		var cellAtScroll: Int64 = Int64(floor(scrollPercentage * Double(cels.count - 1))) + 3
 		cellAtScroll = max(0, min(cellAtScroll, Int64(cels.count - 1))) // prevent out-of-bounds
-		// TODO: pull this up
-		let kSecondsPerDay: Int64 = 60*60*24
 		let epochAtIndex = litViewModel!.minDateSeconds + cellAtScroll * kSecondsPerDay;
 		let celAtScroll = cels[epochAtIndex]!
 

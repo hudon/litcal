@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+let kSecondsPerDay: Int64 = 60 * 60 * 24
+
 /// Create a date from specified parameters
 ///
 /// - Parameters:
