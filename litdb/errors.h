@@ -10,6 +10,7 @@ enum lit_status {
     LIT_ERROR = 1,
     LIT_INVALID_ARGUMENT = 2,
     LIT_NOT_FOUND = 3,
+    LIT_NO_MEM = 4
 };
 
 struct lit_error {

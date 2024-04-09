@@ -11,7 +11,8 @@ bool lit_error_new(enum lit_status status, const char *msg, struct lit_error **o
 	}
 	struct lit_error *err = malloc(sizeof *err);
 	if (!err) {
-		printf("Failed to malloc when creating an error. Exiting.\n");
+		// TODO: return a static no_mem error just for this purpose
+		fprintf(stderr, "Failed to malloc when creating an error. Exiting.\n");
 		exit(-1);
 	}
 	err->status = status;

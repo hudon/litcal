@@ -70,6 +70,7 @@ void test_get_celebration__valid(void) {
 	assert(cel.epoch_seconds == epoch);
 	assert(!strcmp(cel.season, "Ordinary Time"));
 
+	lit_celebration_members_free(cel);
 	sqlite3_close(db);
 }
 

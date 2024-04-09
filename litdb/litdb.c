@@ -2,6 +2,7 @@
 
 #include <string.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 static const char *lit_color_names[LIT_COLOR_COUNT] = {
 	[LIT_WHITE] = "white",   [LIT_BLACK] = "black",   [LIT_RED] = "red",
@@ -11,10 +12,14 @@ static const char *lit_color_names[LIT_COLOR_COUNT] = {
 void lit_celebrations_free(struct lit_celebration *cels, int count) {
 	if (count < 1) return;
 	while (count--) {
-		free(cels[count].gospel_text);
-		free(cels[count].readings_url);
+		lit_celebration_members_free(cels[count]);
 	}
 	free(cels);
+}
+
+void lit_celebration_members_free(struct lit_celebration cel) {
+	free(cel.gospel_text);
+	free(cel.readings_url);
 }
 
 bool lit_open_db(const char *filename, sqlite3 **out_db, struct lit_error **out_err) {
@@ -84,8 +89,7 @@ bool lit_get_celebration(
 //
 //	lit_celebrations_free(cels, c);
 //
-//	return true;
-	bool ret = false;
+//	return true
 
 	char *argmsg = NULL;
 	if (db == NULL) {
@@ -99,6 +103,9 @@ bool lit_get_celebration(
 		lit_error_new(LIT_INVALID_ARGUMENT, argmsg, out_err);
 		return false;
 	}
+
+	bool ret = false;
+	out_cel->gospel_text = out_cel->readings_url = NULL;
 
 	char *query =
 		"SELECT lc.event_key, lc.rank, lc.title, lc.subtitle, lc.gospel, "
@@ -180,6 +187,7 @@ bool lit_get_celebration(
 	goto out;
 error_out:
 	ret = false;
+	lit_celebration_members_free(*out_cel);
 out:
 	sqlite3_finalize(stmt);
 	return ret;
@@ -273,8 +281,13 @@ bool lit_celebrations_in_range(
 			cels = (struct lit_celebration*)malloc(
 				count * sizeof(struct lit_celebration)
 			);
+			if (cels == NULL) {
+				fprintf(stderr, "Failed to allocate memory for lit_celebration array.\n");
+				goto error_out;
+			}
 		}
 		struct lit_celebration *cel = &cels[(*out_count)++];
+		cel->gospel_text = cel->readings_url = NULL;
 		cel->rank = rank;
 		cel->epoch_seconds = date_seconds;
 		strlcpy(cel->event_key, event_key, sizeof(cel->event_key));
@@ -312,6 +325,7 @@ bool lit_celebrations_in_range(
 	ret = true;
 	goto out;
 error_out:
+	lit_celebrations_free(cels, *out_count);
 	ret = false;
 out:
 	sqlite3_finalize(stmt);
