@@ -65,8 +65,12 @@ struct CalWheelView: View {
 					Spacer()
 					LitCalendarPicker() { date in
 						if litViewModel.celebrations[date] != nil {
-							selection = date
-							scrollProxy.scrollTo(selection, anchor: .center)
+							DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+								withAnimation {
+									scrollProxy.scrollTo(date, anchor: .center)
+								}
+								selection = date
+							}
 						}
 					}
 					LitButton(
