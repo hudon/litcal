@@ -1,4 +1,4 @@
-#include "private.h"
+#include "src/private.h"
 
 #include <assert.h>
 #include <stddef.h>

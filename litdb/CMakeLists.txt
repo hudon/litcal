@@ -3,7 +3,9 @@ project(litdb C)
 
 set(CMAKE_C_STANDARD 23)
 
-add_library(litdb STATIC
-        litdb.c
-        dates.c
-        errors.c)
+#include_directories(src)
+add_subdirectory(src)
+
+#enable_testing()
+#
+#add_test()

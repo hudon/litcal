@@ -1,6 +1,6 @@
-#include "litdb.h"
+#include "../src/litdb.h"
 #include "private_test.h"
-#include "private.h"
+#include "../src/private.h"
 
 #include <assert.h>
 #include <sqlite3.h>
