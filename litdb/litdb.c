@@ -10,7 +10,7 @@ static const char *lit_color_names[LIT_COLOR_COUNT] = {
 	[LIT_SILVER] = "silver", [LIT_ROSE] = "rose"};
 
 void lit_celebrations_free(struct lit_celebration *cels, int count) {
-	if (count < 1) return;
+	if (count < 1 || cels == NULL) return;
 	while (count--) {
 		lit_celebration_members_free(cels[count]);
 	}
@@ -201,6 +201,7 @@ bool lit_celebrations_in_range(
 	struct lit_error **out_err
 ) {
 	bool ret = false;
+	struct lit_celebration *cels = NULL;
 
 	char *argmsg = NULL;
 	if (db == NULL) {
@@ -262,7 +263,6 @@ bool lit_celebrations_in_range(
 		goto error_out;
 	}
 
-	struct lit_celebration *cels = NULL;
 	*out_count = 0;
 	rc = sqlite3_step(stmt);
 	while (rc == SQLITE_ROW) {
