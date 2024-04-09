@@ -47,9 +47,6 @@ struct WheelColumnView: View {
 			Text(dayOfMonthFormatter.string(from: date))
 				.litFont(size: 16)
 				.foregroundColor(
-					//                    celebration == nil
-					//                    ? Color.ashes
-					//                    :
 					isSelection
 					? .lily
 					: colorScheme == .light
@@ -58,7 +55,7 @@ struct WheelColumnView: View {
 				.frame(width: 30, height: 30)
 				.background(
 					isSelection
-					? (colorScheme == .dark ? Color(white: 0.192) : Color.black)
+					? (colorScheme == .dark ? Color.night : Color.black)
 					: Color.clear
 				)
 				.clipShape(Circle())
@@ -76,7 +73,6 @@ struct WheelColumnView: View {
 
 	}
 
-	// Set whiteToGray when we cannot use White because the background would cause white foreground to be hidden
 	private func feastDotColor(_ date: Date) -> Color {
 		if celebration.color == LIT_WHITE {
 			return colorScheme == .light ? Color.clear : .lily
@@ -90,7 +86,6 @@ struct WheelColumnView: View {
 		if celebration.color == LIT_WHITE {
 			return colorScheme == .light ? .ashes : .lily
 		}
-		return try! uiColorFromLitColor(
-			celebration.color)
+		return try! uiColorFromLitColor(celebration.color)
 	}
 }

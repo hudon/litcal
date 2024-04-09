@@ -11,10 +11,11 @@ struct FgTextColorModifier: ViewModifier {
 	@Environment(\.colorScheme) private var colorScheme
 	
 	func body(content: Content) -> some View {
-		content
-			.foregroundColor(colorScheme == .light
-					 ? .stellaMaris
-					 : .ashes)
+		content.foregroundColor(
+			colorScheme == .light
+			? .stellaMaris
+			: .ashes
+		)
 	}
 }
 

@@ -64,7 +64,7 @@ struct CalWheelView: View {
 						.foregroundColor(colorScheme == .light ? .stellaMaris : .lily)
 					Spacer()
 					LitCalendarPicker() { date in
-						if let cel = litViewModel.celebrations[date] {
+						if litViewModel.celebrations[date] != nil {
 							selection = date
 							scrollProxy.scrollTo(selection, anchor: .center)
 						}

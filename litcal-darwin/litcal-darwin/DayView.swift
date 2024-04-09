@@ -62,7 +62,6 @@ struct DayView: View {
 
 				// Title Card
 				VStack {
-					// TODO: fixme
 					Text(cardDateTitleFormatter.string(from: date) + " · " + litCel.season)
 						.foregroundColor(colorScheme == .light ? .ashes : litColor)
 						.litFont(size: 10, weight: .semibold)
