@@ -75,19 +75,13 @@ struct LitCalendarHolyDays: View {
 							})
 							.buttonStyle(.plain)
 							.litFont(size: 14)
-
 							.padding(.trailing)
 							.padding(.vertical, 5)
-							//                            .modifier(FgTextColorModifier())
 						}
 					}
-					//                    .background(Color.dove)
 
 				}
 			}
-			//            .background(Color.dove)
-			//            .modifier(ScrollContentBackgroundHidden())
-			//            .scrollContentBackground(.hidden)
 		}
 	}
 }

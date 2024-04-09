@@ -64,8 +64,10 @@ struct CalWheelView: View {
 						.foregroundColor(colorScheme == .light ? .stellaMaris : .lily)
 					Spacer()
 					LitCalendarPicker() { date in
-						selection = date
-						scrollProxy.scrollTo(selection, anchor: .center)
+						if let cel = litViewModel.celebrations[date] {
+							selection = date
+							scrollProxy.scrollTo(selection, anchor: .center)
+						}
 					}
 					LitButton(
 						title: "Today",

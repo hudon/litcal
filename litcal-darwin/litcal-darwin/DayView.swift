@@ -39,7 +39,6 @@ struct DayView: View {
 	}
 
 	var body: some View {
-
 		ScrollView(showsIndicators: false) {
 			// ZStack to put the title card above
 			ZStack(alignment: .bottom) {
