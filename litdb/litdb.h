@@ -51,6 +51,15 @@ bool lit_get_celebration(
     struct lit_celebration *out_cel,
     struct lit_error **out_err);
 
+/// boundaries are inclusive
+bool lit_celebrations_in_range(
+	sqlite3 *db, int cal_id,
+	int64_t lo, int64_t hi,
+	struct lit_celebration *out_cels[],
+	int *out_count,
+	struct lit_error **out_err
+);
+
 bool lit_get_min_and_max(
     sqlite3 *db, int cal_id,
     int64_t *out_min, int64_t *out_max,

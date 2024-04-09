@@ -9,4 +9,6 @@ bool lit_error_new(enum lit_status status, const char *msg, struct lit_error **o
 bool lit_error_new_fmt(enum lit_status status,
     const char *fmt, const char *msg, struct lit_error **out_err);
 
+void lit_celebrations_free(struct lit_celebration *cel, int count);
+
 #endif /* private_h */
