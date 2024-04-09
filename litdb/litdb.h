@@ -52,6 +52,7 @@ bool lit_get_celebration(
     struct lit_error **out_err);
 
 /// boundaries are inclusive
+/// returns in chronological order
 bool lit_celebrations_in_range(
 	sqlite3 *db, int cal_id,
 	int64_t lo, int64_t hi,
@@ -59,6 +60,8 @@ bool lit_celebrations_in_range(
 	int *out_count,
 	struct lit_error **out_err
 );
+
+void lit_celebrations_free(struct lit_celebration *cel, int count);
 
 bool lit_get_min_and_max(
     sqlite3 *db, int cal_id,

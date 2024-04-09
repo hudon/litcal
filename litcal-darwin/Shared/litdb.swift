@@ -46,9 +46,8 @@ func fixedCStrToString<T, K>(_ root: T, _ keyPath: KeyPath<T, K>) -> String {
 	return fixedCStrToString(&cstr)
 }
 
+// TODO: technically not a bridge because it copies everything...not "pass through"
 struct LitCelebrationBridge {
-	let cel: lit_celebration
-
 	let color: lit_color
 	let eventKey: String
 	let title: String
@@ -60,8 +59,7 @@ struct LitCelebrationBridge {
 	let epochSeconds: Int64
 	let season: String
 
-	init(cel: lit_celebration) {
-		self.cel = cel
+	init(_ cel: lit_celebration) {
 		self.color = cel.color
 		self.eventKey = fixedCStrToString(cel, \.event_key)
 		self.title = fixedCStrToString(cel, \.title)
