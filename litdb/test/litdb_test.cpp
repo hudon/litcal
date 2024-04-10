@@ -81,9 +81,24 @@ TEST_CASE( "get_celebration with a valid timestamp", "[litdb]" ) {
 	REQUIRE(res);
 	REQUIRE(cel.epoch_seconds == epoch);
 	REQUIRE(!strcmp(cel.season, "Ordinary Time"));
+	REQUIRE(!strcmp(cel.title, "Thursday of the 1st Week of Ordinary Time"));
+	REQUIRE(!strcmp(cel.subtitle, ""));
+	REQUIRE(!strncmp(cel.gospel_text, "A leper", 7));
+	REQUIRE(!strncmp(cel.readings_url, "http://", 7));
 
-	lit_celebration_members_free(cel);
+	lit_celebration_members_free(&cel);
 	sqlite3_close(db);
+}
+
+TEST_CASE( "lit_celebration_members_free checks to NULL and sets to NULL", "[litdb]" ) {
+	struct lit_celebration cel = {};
+	cel.gospel_text = cel.readings_url = NULL;
+	lit_celebration_members_free(&cel);
+	cel.gospel_text = (char*)malloc(sizeof(char));
+	cel.readings_url = (char*)malloc(sizeof(char));
+	lit_celebration_members_free(&cel);
+	REQUIRE( cel.gospel_text == NULL );
+	REQUIRE( cel.readings_url == NULL );
 }
 
 TEST_CASE( "celebrations_in_range with a valid timestamps", "[litdb]" ) {

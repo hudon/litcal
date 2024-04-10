@@ -64,7 +64,7 @@ bool lit_celebrations_in_range(
 );
 
 void lit_celebrations_free(struct lit_celebration *cels, int count);
-void lit_celebration_members_free(struct lit_celebration cel);
+void lit_celebration_members_free(struct lit_celebration *cel);
 
 bool lit_get_min_and_max(
     sqlite3 *db, int cal_id,

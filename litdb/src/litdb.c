@@ -12,14 +12,15 @@ static const char *lit_color_names[LIT_COLOR_COUNT] = {
 void lit_celebrations_free(struct lit_celebration *cels, int count) {
 	if (count < 1 || cels == NULL) return;
 	while (count--) {
-		lit_celebration_members_free(cels[count]);
+		lit_celebration_members_free(&cels[count]);
 	}
 	free(cels);
 }
 
-void lit_celebration_members_free(struct lit_celebration cel) {
-	free(cel.gospel_text);
-	free(cel.readings_url);
+void lit_celebration_members_free(struct lit_celebration *cel) {
+	if (cel->gospel_text != NULL) free(cel->gospel_text);
+	if (cel->readings_url != NULL) free(cel->readings_url);
+	cel->gospel_text = cel->readings_url = NULL;
 }
 
 bool lit_open_db(const char *filename, sqlite3 **out_db, struct lit_error **out_err) {
@@ -187,7 +188,7 @@ bool lit_get_celebration(
 	goto out;
 error_out:
 	ret = false;
-	lit_celebration_members_free(*out_cel);
+	lit_celebration_members_free(out_cel);
 out:
 	sqlite3_finalize(stmt);
 	return ret;
