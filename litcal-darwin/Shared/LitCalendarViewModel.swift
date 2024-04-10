@@ -33,7 +33,7 @@ class LitCalendarViewModel: ObservableObject {
 	}
 
 	init(bundle: Bundle = .main, includeMoreYears: Bool = true) throws {
-		guard let fileURL = Bundle.main.url(forResource: "litcal", withExtension: "sqlite") else {
+		guard let fileURL = bundle.url(forResource: "litcal", withExtension: "sqlite") else {
 			throw LitcalModelError.databaseError("Database file not found in bundle.")
 		}
 

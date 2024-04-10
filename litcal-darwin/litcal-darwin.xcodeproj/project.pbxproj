@@ -14,6 +14,11 @@
 		5E2AF3C728C7B79600DD9A59 /* LitCalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2AF3C628C7B79600DD9A59 /* LitCalendarViewModel.swift */; };
 		5E2AF3C928C7F13700DD9A59 /* LitCalendarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2AF3C828C7F13700DD9A59 /* LitCalendarViewModelTests.swift */; };
 		5E2AF3CA28C7F15500DD9A59 /* LitCalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2AF3C628C7B79600DD9A59 /* LitCalendarViewModel.swift */; };
+		5E425DAB2BC6CDDC00C764D6 /* litdb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF4E2BC41504005FBAF2 /* litdb.swift */; };
+		5E425DAC2BC6CDE100C764D6 /* fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF572BC48328005FBAF2 /* fonts.swift */; };
+		5E425DAD2BC6CDE500C764D6 /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF5A2BC48355005FBAF2 /* colors.swift */; };
+		5E425DAE2BC6CF0C00C764D6 /* liblitdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDBEF322BC2DFF5005FBAF2 /* liblitdb.a */; };
+		5E425DB12BC6E4F100C764D6 /* litcal.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5EDBEF512BC41A81005FBAF2 /* litcal.sqlite */; };
 		5E42770128AE80E800C65EE4 /* LCalendarBridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E42770028AE80E800C65EE4 /* LCalendarBridgeTests.swift */; };
 		5E4957032892F15100AC9B04 /* CalWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4957022892F15100AC9B04 /* CalWheelView.swift */; };
 		5E6F1DA628DBD51200021942 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6F1DA528DBD51200021942 /* WidgetKit.framework */; };
@@ -57,6 +62,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5E425DAF2BC6CF0C00C764D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EEF937D286A622E0086B9DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EDBEF312BC2DFF5005FBAF2;
+			remoteInfo = litdb;
+		};
 		5EA1039628FDB97000FCFC3D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5EEF937D286A622E0086B9DC /* Project object */;
@@ -196,6 +208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E425DAE2BC6CF0C00C764D6 /* liblitdb.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +439,7 @@
 			);
 			dependencies = (
 				5EEF9398286A62300086B9DC /* PBXTargetDependency */,
+				5E425DB02BC6CF0C00C764D6 /* PBXTargetDependency */,
 			);
 			name = "litcal-darwinTests";
 			productName = "litcal-darwinTests";
@@ -530,6 +544,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E425DB12BC6E4F100C764D6 /* litcal.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,10 +607,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E42770128AE80E800C65EE4 /* LCalendarBridgeTests.swift in Sources */,
+				5E425DAD2BC6CDE500C764D6 /* colors.swift in Sources */,
 				5E2AF3CA28C7F15500DD9A59 /* LitCalendarViewModel.swift in Sources */,
 				5E7D31DB28DCC60C0084BEAC /* dates.swift in Sources */,
+				5E425DAC2BC6CDE100C764D6 /* fonts.swift in Sources */,
 				5E2AF3C928C7F13700DD9A59 /* LitCalendarViewModelTests.swift in Sources */,
 				5EEF939B286A62300086B9DC /* litcal_darwinTests.swift in Sources */,
+				5E425DAB2BC6CDDC00C764D6 /* litdb.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +629,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5E425DB02BC6CF0C00C764D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5EDBEF312BC2DFF5005FBAF2 /* litdb */;
+			targetProxy = 5E425DAF2BC6CF0C00C764D6 /* PBXContainerItemProxy */;
+		};
 		5EA1039728FDB97000FCFC3D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5E6F1DA328DBD51200021942 /* widgetExtension */;
