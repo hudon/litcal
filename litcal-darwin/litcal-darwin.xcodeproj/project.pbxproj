@@ -140,12 +140,12 @@
 		5ED6D7DE288F07CF0052F74B /* LitCalendarPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitCalendarPicker.swift; sourceTree = "<group>"; };
 		5ED8D84B28D2DAC500C52180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5EDBEF322BC2DFF5005FBAF2 /* liblitdb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblitdb.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EDBEF3C2BC2E021005FBAF2 /* litdb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = litdb.c; path = ../litdb/litdb.c; sourceTree = "<group>"; };
-		5EDBEF3E2BC2E021005FBAF2 /* litdb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = litdb.h; path = ../litdb/litdb.h; sourceTree = "<group>"; };
-		5EDBEF3F2BC2E021005FBAF2 /* errors.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = errors.c; path = ../litdb/errors.c; sourceTree = "<group>"; };
-		5EDBEF462BC355A3005FBAF2 /* errors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = errors.h; path = ../litdb/errors.h; sourceTree = "<group>"; };
-		5EDBEF472BC355A3005FBAF2 /* dates.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = dates.c; path = ../litdb/dates.c; sourceTree = "<group>"; };
-		5EDBEF482BC355A3005FBAF2 /* dates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = dates.h; path = ../litdb/dates.h; sourceTree = "<group>"; };
+		5EDBEF3C2BC2E021005FBAF2 /* litdb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = litdb.c; path = ../litdb/src/litdb.c; sourceTree = "<group>"; };
+		5EDBEF3E2BC2E021005FBAF2 /* litdb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = litdb.h; path = ../litdb/src/litdb.h; sourceTree = "<group>"; };
+		5EDBEF3F2BC2E021005FBAF2 /* errors.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = errors.c; path = ../litdb/src/errors.c; sourceTree = "<group>"; };
+		5EDBEF462BC355A3005FBAF2 /* errors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = errors.h; path = ../litdb/src/errors.h; sourceTree = "<group>"; };
+		5EDBEF472BC355A3005FBAF2 /* dates.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = dates.c; path = ../litdb/src/dates.c; sourceTree = "<group>"; };
+		5EDBEF482BC355A3005FBAF2 /* dates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = dates.h; path = ../litdb/src/dates.h; sourceTree = "<group>"; };
 		5EDBEF4E2BC41504005FBAF2 /* litdb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = litdb.swift; sourceTree = "<group>"; };
 		5EDBEF512BC41A81005FBAF2 /* litcal.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = litcal.sqlite; path = ../../litcal.sqlite; sourceTree = "<group>"; };
 		5EDBEF572BC48328005FBAF2 /* fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fonts.swift; sourceTree = "<group>"; };
