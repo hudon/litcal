@@ -4,6 +4,22 @@ extern "C" {
 
 #include <catch2/catch_test_macros.hpp>
 
+static int db_path(char *path, size_t size) {
+	return snprintf(
+		path,
+		size,
+		"%s/litcal.test.sqlite",
+		DATA_DIR);
+}
+
+static int empty_db_path(char *path, size_t size) {
+	return snprintf(
+		path,
+		size,
+		"%s/empty.test.sqlite",
+		DATA_DIR);
+}
+
 TEST_CASE( "get_celebration with null db", "[litdb]" ) {
 	struct lit_error *err = NULL;
 	bool res = lit_get_celebration(NULL, 1, 0, NULL, &err);
@@ -21,7 +37,9 @@ TEST_CASE( "get_celebration with negative epoch", "[litdb]" ) {
 
 TEST_CASE( "get_celebration missing event", "[litdb]" ) {
 	sqlite3 *db;
-	REQUIRE(lit_open_db("data/litcal.test.sqlite", &db, NULL));
+	char path[BUFSIZ];
+	db_path(path, sizeof (path));
+	REQUIRE(lit_open_db(path, &db, NULL));
 
 	struct lit_celebration cel = {};
 	struct lit_error *err = NULL;
@@ -35,7 +53,9 @@ TEST_CASE( "get_celebration missing event", "[litdb]" ) {
 
 TEST_CASE( "get_celebration returns error when table is missing", "[litdb]" ) {
 	sqlite3 *db;
-	REQUIRE(lit_open_db("data/empty.test.sqlite", &db, NULL));
+	char path[BUFSIZ];
+	empty_db_path(path, sizeof (path));
+	REQUIRE(lit_open_db(path, &db, NULL));
 
 	struct lit_celebration cel = {};
 	struct lit_error *err = NULL;
@@ -49,7 +69,9 @@ TEST_CASE( "get_celebration returns error when table is missing", "[litdb]" ) {
 
 TEST_CASE( "get_celebration with a valid timestamp", "[litdb]" ) {
 	sqlite3 *db;
-	REQUIRE(lit_open_db("./data/litcal.test.sqlite", &db, NULL));
+	char path[BUFSIZ];
+	db_path(path, sizeof (path));
+	REQUIRE(lit_open_db(path, &db, NULL));
 
 	struct lit_celebration cel = {};
 	int64_t epoch = 1704931200;
@@ -66,7 +88,9 @@ TEST_CASE( "get_celebration with a valid timestamp", "[litdb]" ) {
 
 TEST_CASE( "celebrations_in_range with a valid timestamps", "[litdb]" ) {
 	sqlite3 *db;
-	REQUIRE(lit_open_db("./data/litcal.test.sqlite", &db, NULL));
+	char path[BUFSIZ];
+	db_path(path, sizeof (path));
+	REQUIRE(lit_open_db(path, &db, NULL));
 
 	int lo = 1704931200;
 	int secs_per_day = 60 * 60 * 24;
@@ -113,7 +137,9 @@ TEST_CASE( "get_min_and_max with a null args", "[litdb]" ) {
 
 TEST_CASE( "get_min_and_max with a valid args", "[litdb]" ) {
 	sqlite3 *db;
-	REQUIRE(lit_open_db("./data/litcal.test.sqlite", &db, NULL));
+	char path[BUFSIZ];
+	db_path(path, sizeof (path));
+	REQUIRE(lit_open_db(path, &db, NULL));
 
 	int64_t min, max;
 	bool res = lit_get_min_and_max(db, 1, &min, &max, NULL);
