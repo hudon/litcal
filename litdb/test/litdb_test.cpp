@@ -20,6 +20,18 @@ static int empty_db_path(char *path, size_t size) {
 		DATA_DIR);
 }
 
+static bool open_empty_db(sqlite3 **db) {
+	char path[BUFSIZ];
+	empty_db_path(path, sizeof (path));
+	return lit_open_db(path, db, NULL);
+}
+
+static int open_db(sqlite3 **db) {
+	char path[BUFSIZ];
+	db_path(path, sizeof (path));
+	return lit_open_db(path, db, NULL);
+}
+
 TEST_CASE( "get_celebration with null db", "[litdb]" ) {
 	struct lit_error *err = NULL;
 	bool res = lit_get_celebration(NULL, 1, 0, NULL, &err);
@@ -33,13 +45,12 @@ TEST_CASE( "get_celebration with negative epoch", "[litdb]" ) {
 	bool res = lit_get_celebration(db, 1, -1, NULL, &err);
 	REQUIRE(!res);
 	REQUIRE(err->status == LIT_INVALID_ARGUMENT);
+	lit_error_free(err);
 }
 
 TEST_CASE( "get_celebration missing event", "[litdb]" ) {
 	sqlite3 *db;
-	char path[BUFSIZ];
-	db_path(path, sizeof (path));
-	REQUIRE(lit_open_db(path, &db, NULL));
+	REQUIRE(open_db(&db));
 
 	struct lit_celebration cel = {};
 	struct lit_error *err = NULL;
@@ -48,14 +59,14 @@ TEST_CASE( "get_celebration missing event", "[litdb]" ) {
 	REQUIRE(!res);
 	REQUIRE(err->status == LIT_NOT_FOUND);
 
+	lit_error_free(err);
+	lit_celebration_members_free(&cel);
 	sqlite3_close(db);
 }
 
 TEST_CASE( "get_celebration returns error when table is missing", "[litdb]" ) {
 	sqlite3 *db;
-	char path[BUFSIZ];
-	empty_db_path(path, sizeof (path));
-	REQUIRE(lit_open_db(path, &db, NULL));
+	REQUIRE(open_empty_db(&db));
 
 	struct lit_celebration cel = {};
 	struct lit_error *err = NULL;
@@ -64,14 +75,14 @@ TEST_CASE( "get_celebration returns error when table is missing", "[litdb]" ) {
 	REQUIRE(!res);
 	REQUIRE(err->status == LIT_ERROR);
 
+	lit_error_free(err);
+	lit_celebration_members_free(&cel);
 	sqlite3_close(db);
 }
 
 TEST_CASE( "get_celebration with a valid timestamp", "[litdb]" ) {
 	sqlite3 *db;
-	char path[BUFSIZ];
-	db_path(path, sizeof (path));
-	REQUIRE(lit_open_db(path, &db, NULL));
+	REQUIRE(open_db(&db));
 
 	struct lit_celebration cel = {};
 	int64_t epoch = 1704931200;
@@ -103,9 +114,7 @@ TEST_CASE( "lit_celebration_members_free checks to NULL and sets to NULL", "[lit
 
 TEST_CASE( "celebrations_in_range with a valid timestamps", "[litdb]" ) {
 	sqlite3 *db;
-	char path[BUFSIZ];
-	db_path(path, sizeof (path));
-	REQUIRE(lit_open_db(path, &db, NULL));
+	REQUIRE(open_db(&db));
 
 	int lo = 1704931200;
 	int secs_per_day = 60 * 60 * 24;
@@ -132,6 +141,38 @@ TEST_CASE( "celebrations_in_range with a valid timestamps", "[litdb]" ) {
 	sqlite3_close(db);
 }
 
+TEST_CASE( "celebrations_in_range with invalid args", "[litdb]" ) {
+	sqlite3 *db;
+	REQUIRE(open_db(&db));
+
+	int lo = 1704931200;
+	struct lit_celebration *cels = NULL;
+	int count;
+	struct lit_error *err = NULL;
+	bool res = lit_celebrations_in_range(
+		db, 1, lo,
+		lo-1, // inv
+		&cels, &count, &err);
+
+	REQUIRE(!res);
+	REQUIRE(err->status == LIT_NOT_FOUND);
+	REQUIRE(cels == NULL);
+	lit_error_free(err);
+	lit_celebrations_free(cels, count);
+
+	res = lit_celebrations_in_range(
+		db, 1, lo, lo+1, &cels,
+		NULL, // inv
+		&err);
+	REQUIRE(!res);
+	REQUIRE(err->status == LIT_INVALID_ARGUMENT);
+	REQUIRE(cels == NULL);
+	lit_error_free(err);
+	lit_celebrations_free(cels, count);
+
+	sqlite3_close(db);
+}
+
 TEST_CASE( "get_min_and_max with a null args", "[litdb]" ) {
 	sqlite3 *db;
 	REQUIRE(lit_open_db(NULL, &db, NULL));
@@ -140,21 +181,22 @@ TEST_CASE( "get_min_and_max with a null args", "[litdb]" ) {
 	bool res = lit_get_min_and_max(NULL, 1, &min, &max, &err);
 	REQUIRE(!res);
 	REQUIRE(err->status == LIT_INVALID_ARGUMENT);
+	lit_error_free(err);
 
 	res = lit_get_min_and_max(db, 1, NULL, &max, &err);
 	REQUIRE(!res);
 	REQUIRE(err->status == LIT_INVALID_ARGUMENT);
+	lit_error_free(err);
 
 	res = lit_get_min_and_max(NULL, 1, &min, NULL, &err);
 	REQUIRE(!res);
 	REQUIRE(err->status == LIT_INVALID_ARGUMENT);
+	lit_error_free(err);
 }
 
 TEST_CASE( "get_min_and_max with a valid args", "[litdb]" ) {
 	sqlite3 *db;
-	char path[BUFSIZ];
-	db_path(path, sizeof (path));
-	REQUIRE(lit_open_db(path, &db, NULL));
+	REQUIRE(open_db(&db));
 
 	int64_t min, max;
 	bool res = lit_get_min_and_max(db, 1, &min, &max, NULL);
