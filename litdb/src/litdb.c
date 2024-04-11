@@ -283,7 +283,9 @@ bool lit_celebrations_in_range(
 				count * sizeof(struct lit_celebration)
 			);
 			if (cels == NULL) {
-				fprintf(stderr, "Failed to allocate memory for lit_celebration array.\n");
+				lit_error_new(LIT_NO_MEM,
+					      "Failed to allocate memory for lit_celebration array.",
+					      out_err);
 				goto error_out;
 			}
 		}

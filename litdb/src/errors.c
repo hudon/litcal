@@ -5,15 +5,17 @@
 #include <stdio.h>
 #include <string.h>
 
+static struct lit_error nomem = { LIT_NO_MEM, "Failed to allocate memory when creating an error." };
+
 bool lit_error_new(enum lit_status status, const char *msg, struct lit_error **out_err) {
 	if (out_err == NULL) {
 		return true;
 	}
 	struct lit_error *err = malloc(sizeof *err);
 	if (!err) {
-		// TODO: return a static no_mem error just for this purpose
-		fprintf(stderr, "Failed to malloc when creating an error. Exiting.\n");
-		exit(-1);
+		fprintf(stderr, "Failed to allocate memory when creating an error .\n");
+		*out_err = &nomem;
+		return false;
 	}
 	err->status = status;
 	(void)strlcpy(err->message, msg, sizeof(err->message));
@@ -31,5 +33,6 @@ bool lit_error_new_fmt(enum lit_status status,
 
 
 void lit_error_free(struct lit_error *err) {
+	if (err == &nomem) return;
 	if (err != NULL) free(err);	
 }

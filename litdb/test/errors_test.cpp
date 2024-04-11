@@ -18,3 +18,13 @@ TEST_CASE( "new error", "[errors]" ) {
 TEST_CASE("freeing null error doesn't fail", "[errors]") {
 	lit_error_free(NULL);
 }
+
+TEST_CASE("valid error is returned even when OOM", "[errors]") {
+	SKIP("malloc must be shadowed/mocked for this test to work");
+	struct lit_error *err = nullptr;
+	REQUIRE(!lit_error_new(LIT_ERROR, "foo", &err));
+	REQUIRE(err->status == LIT_NO_MEM);
+	REQUIRE(!strcmp("Failed to allocate memory when creating an error.", err->message));
+	lit_error_free(err);
+}
+
