@@ -29,6 +29,7 @@
 		5E7D31DB28DCC60C0084BEAC /* dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC3BDD4289C688E0044D774 /* dates.swift */; };
 		5E7D31DC28DCC60C0084BEAC /* dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC3BDD4289C688E0044D774 /* dates.swift */; };
 		5E8108AB2BC78C040038A4AF /* test.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5E8108AA2BC78C040038A4AF /* test.sqlite */; };
+		5E8108AD2BC803620038A4AF /* DatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8108AC2BC803620038A4AF /* DatesTests.swift */; };
 		5E8E558228DE628900484482 /* LitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E558128DE628900484482 /* LitButton.swift */; };
 		5E9E6867290B2D2D005D7E2C /* LitCalendarHolyDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9E6866290B2D2D005D7E2C /* LitCalendarHolyDays.swift */; };
 		5EA1039528FDB97000FCFC3D /* widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5E6F1DA428DBD51200021942 /* widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -146,6 +147,7 @@
 		5E6F1DAE28DBD51300021942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E71CCB62B6695A10010B9A7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
 		5E8108AA2BC78C040038A4AF /* test.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.sqlite; sourceTree = "<group>"; };
+		5E8108AC2BC803620038A4AF /* DatesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatesTests.swift; sourceTree = "<group>"; };
 		5E8E558128DE628900484482 /* LitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitButton.swift; sourceTree = "<group>"; };
 		5E9E6866290B2D2D005D7E2C /* LitCalendarHolyDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitCalendarHolyDays.swift; sourceTree = "<group>"; };
 		5EC3BDD4289C688E0044D774 /* dates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dates.swift; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 				5E4276FF28AE80A400C65EE4 /* liblitcal_swiftTests */,
 				5EEF939A286A62300086B9DC /* litcal_darwinTests.swift */,
 				5E2AF3C828C7F13700DD9A59 /* LitCalendarViewModelTests.swift */,
+				5E8108AC2BC803620038A4AF /* DatesTests.swift */,
 			);
 			path = "litcal-darwinTests";
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				5E2AF3C928C7F13700DD9A59 /* LitCalendarViewModelTests.swift in Sources */,
 				5EEF939B286A62300086B9DC /* litcal_darwinTests.swift in Sources */,
 				5E425DAB2BC6CDDC00C764D6 /* litdb.swift in Sources */,
+				5E8108AD2BC803620038A4AF /* DatesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

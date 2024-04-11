@@ -15,13 +15,34 @@ final class LitCalendarViewModelTests: XCTestCase {
 		litViewModel = try LitCalendarViewModel(bundle: bundle, dbName: "test")
 	}
 
+	func testWrongDB() throws {
+		XCTAssertThrowsError(
+			try LitCalendarViewModel(bundle: .main, dbName: "foo bar")
+		) { err in
+			XCTAssert(err is LitcalModelError)
+		}
+	}
+
 	func testDatesAreAtMidnightBoundary() throws {
 		let secondsInDay = 60 * 60 * 24
 		for dateSeconds in litViewModel.celebrations.keys {
 			XCTAssertEqual(Int(dateSeconds) % secondsInDay,0)
 		}
 	}
-	
+
+	func testDatesAndCelebrations() throws {
+		// TODO: test the validity of these properties
+		XCTAssertEqual(
+			litViewModel.datesInSeconds.count,
+			litViewModel.celebrations.count
+		)
+		for dateSec in litViewModel.datesInSeconds {
+			XCTAssertNotNil(
+				litViewModel.celebrations[dateSec]
+			)
+		}
+	}
+
 	func testTodayIsToday() throws {
 		let dateFormatter = DateFormatter()
 		dateFormatter.dateStyle = .full
@@ -34,7 +55,10 @@ final class LitCalendarViewModelTests: XCTestCase {
 	}
 	
 	func testTodaySecondsAreZero() throws {
-		let dateComponents = Calendar.current.dateComponents(in: TimeZone(secondsFromGMT: 0)!, from: litViewModel.todayDate)
+		let dateComponents = Calendar.current.dateComponents(
+			in: TimeZone(secondsFromGMT: 0)!,
+			from: litViewModel.todayDate
+		)
 		XCTAssertEqual(dateComponents.hour, 0)
 		XCTAssertEqual(dateComponents.minute, 0)
 		XCTAssertEqual(dateComponents.second, 0)

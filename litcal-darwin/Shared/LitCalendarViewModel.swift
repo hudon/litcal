@@ -73,7 +73,7 @@ class LitCalendarViewModel: ObservableObject {
 	}
 
 	deinit {
-		// TODO: cleanup DB?
+		sqlite3_close(db)
 		self.todayTimer?.invalidate()
 	}
 }

@@ -17,6 +17,9 @@ let kSecondsPerDay: Int64 = 60 * 60 * 24
 ///   - day: The desired day
 /// - Returns: A `Date` object
 func dateFromComponents(year: Int, month: Int, day: Int) -> Date? {
+	if year < 0 || month < 0 || day < 0 {
+		return nil
+	}
 	let calendar = Calendar(identifier: .gregorian)
 	var dateComponents = DateComponents()
 	dateComponents.year = year
