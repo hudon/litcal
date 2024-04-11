@@ -18,10 +18,8 @@ class LitCalendarViewModel: ObservableObject {
 	private(set) var celebrations: [Int64: LitCelebration] = [:]
 	private(set) var datesInSeconds: [Int64] = []
 	// Fires to make sure "today" tracks the new day if it goes over the midnight boundary
-	// TODO: however, if a view grabs the value at todaySeconds, nothing is in place to trigger a
-	// re-render of the view when todaySeconds updates. Does it need a @Published?
 	private var todayTimer: Timer?
-	var todaySeconds: Int64
+	@Published var todaySeconds: Int64
 	var minDateSeconds: Int64 = 0
 
 	var todayDate: Date {

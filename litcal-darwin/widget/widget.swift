@@ -8,7 +8,6 @@
 import WidgetKit
 import SwiftUI
 
-// TODO: do I need to use this? Like if the user checks their Home Screen at 23:59 and then it ticks to midnight, will the widget update?
 struct Provider: TimelineProvider {
 	func placeholder(in context: Context) -> SimpleEntry {
 		SimpleEntry(date: Date())
@@ -51,8 +50,6 @@ extension View {
 
 private let cardDateTitleFormatter = makeGMTFormatter("MMM d, y")
 
-
-// TODO: check out the widget families: https://developer.apple.com/documentation/widgetkit/creating-a-widget-extension
 struct widgetEntryView : View {
 	var entry: Provider.Entry
 	@EnvironmentObject var litViewModel: LitCalendarViewModel
@@ -69,7 +66,6 @@ struct widgetEntryView : View {
 
 	var imgFileName: String {
 		switch (litColor) {
-
 		case .figTree:
 			return "gradient_figtree"
 		case .wine:
@@ -93,28 +89,22 @@ struct widgetEntryView : View {
 		ZStack(alignment: .topLeading) {
 			HStack {
 				Spacer()
-
 				Image("corner_logo")
 					.resizable()
 					.frame(width: 21, height: 21)
 			}
-
 			VStack(alignment:.leading) {
-
 				Spacer()
-
 				HStack {
 					Rectangle()
 						.frame(width: 2, height: widgetFamily == .systemMedium
 						       ? 28 : 22)
 						.foregroundColor(litColor)
-
 					VStack(alignment: .leading) {
 						Text(litCel.season)
 							.litFont(size: widgetFamily == .systemMedium
 								 ? 10 : 8)
 							.foregroundColor(.ashes)
-
 						Text(cardDateTitleFormatter.string(from: litViewModel.todayDate))
 							.litFont(size: widgetFamily == .systemMedium
 								 ? 14 : 12)
@@ -170,8 +160,6 @@ struct widget: Widget {
 		.configurationDisplayName("Feast of the day")
 		.description("View today's liturgical feast.")
 		.supportedFamilies([.systemSmall, .systemMedium])
-		// TODO: make sure this looks good everywhere, or disabled environments I
-		// don't want to support (Watch, macOS, etc.)
 		.contentMarginsDisabled()
 	}
 }
@@ -180,7 +168,8 @@ struct widget_Previews: PreviewProvider {
 	static let litVM = try! LitCalendarViewModel()
 	static var previews: some View {
 		widgetEntryView(entry: SimpleEntry(date: Date()))
-			.previewContext(WidgetPreviewContext(family: .systemMedium))
+//			.previewContext(WidgetPreviewContext(family: .systemMedium))
+			.previewContext(WidgetPreviewContext(family: .systemSmall))
 			.environmentObject(litVM)
 	}
 }

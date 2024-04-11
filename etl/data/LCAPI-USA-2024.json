@@ -544,7 +544,7 @@
       },
       "ChristKing" : {
          "color" : [
-            "red"
+            "white"
          ],
          "common" : [],
          "date" : 1732406400,
@@ -780,7 +780,7 @@
          "date" : 1731110400,
          "displayGrade" : "",
          "eventIdx" : 103,
-         "grade" : 4,
+         "grade" : 5,
          "name" : "The Dedication of the Lateran Basilica",
          "type" : "fixed"
       },

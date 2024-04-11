@@ -7119,7 +7119,7 @@
       "hasVigilMass" : true,
       "date" : 1732406400,
       "gospelRef" : "JN 18:33b-37",
-      "color" : [ "red" ],
+      "color" : [ "white" ],
       "litDate" : "2024-11-24",
       "litName" : "Christ the King",
       "name" : "Christ the King",
@@ -7801,7 +7801,7 @@
       "litTitle" : "Wednesday of the 5th Week of Ordinary Time"
     },
     "DedicationLateran" : {
-      "litRank" : 7,
+      "litRank" : 5,
       "date" : 1731110400,
       "gospelRef" : "JN 2:13-22",
       "color" : [ "white" ],
