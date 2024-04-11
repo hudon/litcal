@@ -177,7 +177,7 @@ struct widget: Widget {
 }
 
 struct widget_Previews: PreviewProvider {
-	static let litVM = try! LitCalendarViewModel(includeMoreYears: false)
+	static let litVM = try! LitCalendarViewModel()
 	static var previews: some View {
 		widgetEntryView(entry: SimpleEntry(date: Date()))
 			.previewContext(WidgetPreviewContext(family: .systemMedium))

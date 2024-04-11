@@ -15,12 +15,12 @@ enum LitcalModelError: Error {
 
 class LitCalendarViewModel: ObservableObject {
 	private var db: OpaquePointer?
-	var celebrations: [Int64: LitCelebrationBridge] = [:]
-	var datesInSeconds: [Int64] = []
+	private(set) var celebrations: [Int64: LitCelebrationBridge] = [:]
+	private(set) var datesInSeconds: [Int64] = []
 	// Fires to make sure "today" tracks the new day if it goes over the midnight boundary
 	// TODO: however, if a view grabs the value at todaySeconds, nothing is in place to trigger a
 	// re-render of the view when todaySeconds updates. Does it need a @Published?
-	var todayTimer: Timer?
+	private var todayTimer: Timer?
 	var todaySeconds: Int64
 	var minDateSeconds: Int64 = 0
 
@@ -32,8 +32,8 @@ class LitCalendarViewModel: ObservableObject {
 		celebrations[todaySeconds]!
 	}
 
-	init(bundle: Bundle = .main, includeMoreYears: Bool = true) throws {
-		guard let fileURL = bundle.url(forResource: "litcal", withExtension: "sqlite") else {
+	init(bundle: Bundle = .main, dbName: String = "litcal") throws {
+		guard let fileURL = bundle.url(forResource: dbName, withExtension: "sqlite") else {
 			throw LitcalModelError.databaseError("Database file not found in bundle.")
 		}
 

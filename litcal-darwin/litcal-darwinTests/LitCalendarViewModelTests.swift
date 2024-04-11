@@ -12,7 +12,7 @@ final class LitCalendarViewModelTests: XCTestCase {
 
 	override func setUpWithError() throws {
 		let bundle = Bundle(for: type(of: self ))
-		litViewModel = try LitCalendarViewModel(bundle: bundle)
+		litViewModel = try LitCalendarViewModel(bundle: bundle, dbName: "test")
 	}
 
 	func testDatesAreAtMidnightBoundary() throws {
@@ -39,5 +39,9 @@ final class LitCalendarViewModelTests: XCTestCase {
 		XCTAssertEqual(dateComponents.minute, 0)
 		XCTAssertEqual(dateComponents.second, 0)
 		XCTAssertEqual(dateComponents.nanosecond, 0)
+	}
+
+	func testMin() throws {
+		XCTAssertEqual(litViewModel.minDateSeconds, 1704067200)
 	}
 }

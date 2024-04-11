@@ -54,7 +54,7 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
-	static let litVM = try! LitCalendarViewModel(includeMoreYears: false)
+	static let litVM = try! LitCalendarViewModel()
 	static var previews: some View {
 		ContentView(selectedDateSeconds: litVM.todaySeconds)
 			.environmentObject(litVM)

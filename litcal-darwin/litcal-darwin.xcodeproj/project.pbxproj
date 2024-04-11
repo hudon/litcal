@@ -18,7 +18,6 @@
 		5E425DAC2BC6CDE100C764D6 /* fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF572BC48328005FBAF2 /* fonts.swift */; };
 		5E425DAD2BC6CDE500C764D6 /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF5A2BC48355005FBAF2 /* colors.swift */; };
 		5E425DAE2BC6CF0C00C764D6 /* liblitdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDBEF322BC2DFF5005FBAF2 /* liblitdb.a */; };
-		5E425DB12BC6E4F100C764D6 /* litcal.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5EDBEF512BC41A81005FBAF2 /* litcal.sqlite */; };
 		5E42770128AE80E800C65EE4 /* LCalendarBridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E42770028AE80E800C65EE4 /* LCalendarBridgeTests.swift */; };
 		5E4957032892F15100AC9B04 /* CalWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4957022892F15100AC9B04 /* CalWheelView.swift */; };
 		5E6F1DA628DBD51200021942 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6F1DA528DBD51200021942 /* WidgetKit.framework */; };
@@ -29,6 +28,7 @@
 		5E71CCB72B6695B00010B9A7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E71CCB62B6695A10010B9A7 /* libsqlite3.tbd */; };
 		5E7D31DB28DCC60C0084BEAC /* dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC3BDD4289C688E0044D774 /* dates.swift */; };
 		5E7D31DC28DCC60C0084BEAC /* dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC3BDD4289C688E0044D774 /* dates.swift */; };
+		5E8108AB2BC78C040038A4AF /* test.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5E8108AA2BC78C040038A4AF /* test.sqlite */; };
 		5E8E558228DE628900484482 /* LitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E558128DE628900484482 /* LitButton.swift */; };
 		5E9E6867290B2D2D005D7E2C /* LitCalendarHolyDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9E6866290B2D2D005D7E2C /* LitCalendarHolyDays.swift */; };
 		5EA1039528FDB97000FCFC3D /* widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5E6F1DA428DBD51200021942 /* widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -145,6 +145,7 @@
 		5E6F1DAC28DBD51300021942 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E6F1DAE28DBD51300021942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E71CCB62B6695A10010B9A7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
+		5E8108AA2BC78C040038A4AF /* test.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.sqlite; sourceTree = "<group>"; };
 		5E8E558128DE628900484482 /* LitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitButton.swift; sourceTree = "<group>"; };
 		5E9E6866290B2D2D005D7E2C /* LitCalendarHolyDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitCalendarHolyDays.swift; sourceTree = "<group>"; };
 		5EC3BDD4289C688E0044D774 /* dates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dates.swift; sourceTree = "<group>"; };
@@ -364,6 +365,7 @@
 		5EFE4658289B1D38003500B1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5E8108AA2BC78C040038A4AF /* test.sqlite */,
 				5EDBEF512BC41A81005FBAF2 /* litcal.sqlite */,
 			);
 			path = Resources;
@@ -544,7 +546,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E425DB12BC6E4F100C764D6 /* litcal.sqlite in Resources */,
+				5E8108AB2BC78C040038A4AF /* test.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
