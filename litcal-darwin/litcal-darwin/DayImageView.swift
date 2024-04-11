@@ -9,8 +9,6 @@ import SwiftUI
 
 struct DayImageView: View {
 	let cel: LitCelebrationBridge
-	let frameHeight: CGFloat = 239
-	let frameWidth: CGFloat = 400
 
 	var imgName: String {
 		var result = "hero_ordinary_time"
@@ -55,14 +53,11 @@ struct DayImageView: View {
 			result = "hero_pentecost"
 		case "MaryMotherChurch", "QueenshipMary", "LadyLoreto",
 			"LadyLourdes", "LadyFatima", "LadyMountCarmel",
-			"LadySorrows", "LadyRosary", "LadyGuadalupe":
+			"LadySorrows", "LadyRosary", "LadyGuadalupe", "Assumption":
 			result = "hero_bvm"
 		default:
 			break
 		}
-
-
-
 		return result
 	}
 
