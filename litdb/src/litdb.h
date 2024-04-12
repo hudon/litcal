@@ -1,12 +1,13 @@
 #ifndef LITDB_H
 #define LITDB_H
 
-#include <sqlite3.h>
 #include <stdbool.h>
 #include <stdint.h>
 
 #include "dates.h"
 #include "errors.h"
+
+typedef struct sqlite3 sqlite3;
 
 enum lit_color {
   LIT_WHITE,

@@ -2,7 +2,7 @@
 
 #include <string.h>
 #include <stdlib.h>
-#include <stdio.h>
+#include <sqlite3.h>
 
 static const char *lit_color_names[LIT_COLOR_COUNT] = {
 	[LIT_WHITE] = "white",   [LIT_BLACK] = "black",   [LIT_RED] = "red",

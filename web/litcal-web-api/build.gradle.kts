@@ -8,7 +8,7 @@ group = "com.litcal.web"
 version = "0.0.1-SNAPSHOT"
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_21
+    sourceCompatibility = JavaVersion.VERSION_22
 }
 
 repositories {
@@ -22,4 +22,8 @@ dependencies {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+tasks.withType<JavaCompile> {
+    options.compilerArgs.add("--enable-preview")
 }

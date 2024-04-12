@@ -1,5 +1,4 @@
-
-add_library(litdb STATIC
+add_library(litdb SHARED
         litdb.c
         dates.c
         errors.c)
