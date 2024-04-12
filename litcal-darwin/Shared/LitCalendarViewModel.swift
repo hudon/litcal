@@ -15,7 +15,7 @@ enum LitcalModelError: Error {
 
 class LitCalendarViewModel: ObservableObject {
 	private var db: OpaquePointer?
-	private(set) var celebrations: [Int64: LitCelebrationBridge] = [:]
+	private(set) var celebrations: [Int64: LitCelebration] = [:]
 	private(set) var datesInSeconds: [Int64] = []
 	// Fires to make sure "today" tracks the new day if it goes over the midnight boundary
 	// TODO: however, if a view grabs the value at todaySeconds, nothing is in place to trigger a
@@ -28,7 +28,7 @@ class LitCalendarViewModel: ObservableObject {
 		Date(timeIntervalSince1970: TimeInterval(todaySeconds))
 	}
 
-	var todayCelebration: LitCelebrationBridge {
+	var todayCelebration: LitCelebration {
 		celebrations[todaySeconds]!
 	}
 
@@ -60,7 +60,7 @@ class LitCalendarViewModel: ObservableObject {
 		}
 		let array = UnsafeBufferPointer(start: cels, count: Int(count))
 		for i in 0..<Int(count) {
-			let cel = LitCelebrationBridge(array[i])
+			let cel = LitCelebration(array[i])
 			celebrations[cel.epochSeconds] = cel
 			datesInSeconds.append(cel.epochSeconds)
 		}

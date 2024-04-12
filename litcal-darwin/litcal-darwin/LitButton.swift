@@ -13,8 +13,6 @@ struct LitButton: View {
 	let systemImageName: String
 	var isEmphasized = false
 
-	// TODO: wrap this in a Button when making this available outside of iOS
-	//https://stackoverflow.com/a/66021051/1116674
 	var body: some View {
 		Label(title, systemImage: systemImageName)
 			.litFont(size: 10)

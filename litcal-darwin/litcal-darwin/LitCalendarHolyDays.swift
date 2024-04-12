@@ -51,8 +51,6 @@ struct LitCalendarHolyDays: View {
 				name: "All Saints"),
 			HolyDay(date: dateFromComponents(year: 2024, month: 12, day: 25)!,
 				name: "The Nativity of Our Lord"),
-			// if you add Christmas you should make sure we have the events for it... or Add Christmas but break the link.
-			// TODO: also, looks like the All Saints link isn't working?
 		]
 	]
 

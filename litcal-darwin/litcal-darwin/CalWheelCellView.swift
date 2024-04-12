@@ -13,9 +13,7 @@ private let dayOfMonthFormatter = makeGMTFormatter("d")
 struct WheelColumnView: View {
 	@EnvironmentObject var litViewModel: LitCalendarViewModel
 	@Environment(\.colorScheme) private var colorScheme
-	// TODO: handle days for which we don't have celebrations?
-	let celebration: LitCelebrationBridge
-	// TODO: If we don't have the litDay, we'll disable that cell's interaction but still show it
+	let celebration: LitCelebration
 	var date: Date {
 		Date(timeIntervalSince1970: TimeInterval(celebration.epochSeconds))
 	}

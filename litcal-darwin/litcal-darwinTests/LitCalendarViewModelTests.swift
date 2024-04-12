@@ -31,7 +31,6 @@ final class LitCalendarViewModelTests: XCTestCase {
 	}
 
 	func testDatesAndCelebrations() throws {
-		// TODO: test the validity of these properties
 		XCTAssertEqual(
 			litViewModel.datesInSeconds.count,
 			litViewModel.celebrations.count

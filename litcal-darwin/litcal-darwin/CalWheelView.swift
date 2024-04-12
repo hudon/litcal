@@ -21,7 +21,6 @@ private struct DatesView: View {
 			HStack(alignment: .top) {
 				ForEach(litViewModel.datesInSeconds, id: \.self) { dateSeconds in
 					WheelColumnView(
-						// TODO: what if it's missing?
 						celebration: litViewModel.celebrations[dateSeconds]!,
 						isSelection: selection == dateSeconds
 					)
@@ -128,7 +127,6 @@ class CalWheelViewModel: ObservableObject {
 		unthrottledScrollFrame.send(scrollFrame)
 	}
 
-	// TODO: rework this to be like the objc one which worked in various screen sizes
 	private func computeCurrentMonth(scrollFrame: CGRect) {
 		// `origin.x` gets us the distance of the frame's x origin from the leading side of the screen
 		var scrollPercentage = Double(-scrollFrame.origin.x / scrollFrame.width)

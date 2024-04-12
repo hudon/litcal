@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DayImageView: View {
-	let cel: LitCelebrationBridge
+	let cel: LitCelebration
 
 	var imgName: String {
 		var result = "hero_ordinary_time"

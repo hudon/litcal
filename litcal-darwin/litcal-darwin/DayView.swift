@@ -16,7 +16,7 @@ enum DayViewError: Error {
 private struct TitleCard: View {
 	@Environment(\.colorScheme) private var colorScheme
 	let dateSeconds: Int64
-	let litCel: LitCelebrationBridge
+	let litCel: LitCelebration
 	let parentWidth: CGFloat
 
 	var litColor: Color {
@@ -71,7 +71,7 @@ private struct TitleCard: View {
 }
 
 private struct Gospel: View {
-	let litCel: LitCelebrationBridge
+	let litCel: LitCelebration
 	var body: some View {
 		VStack {
 			// Header
@@ -125,7 +125,7 @@ struct DayView: View {
 	@EnvironmentObject var litViewModel: LitCalendarViewModel
 	let dateSeconds: Int64
 
-	var litCel: LitCelebrationBridge {
+	var litCel: LitCelebration {
 		litViewModel.celebrations[dateSeconds]!
 	}
 

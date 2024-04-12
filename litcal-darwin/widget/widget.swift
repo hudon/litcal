@@ -59,7 +59,7 @@ struct widgetEntryView : View {
 	@Environment(\.colorScheme) var colorScheme
 	@Environment(\.widgetFamily) var widgetFamily
 
-	var litCel: LitCelebrationBridge {
+	var litCel: LitCelebration {
 		litViewModel.todayCelebration
 	}
 
