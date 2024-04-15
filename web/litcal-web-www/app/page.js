@@ -1,113 +1,114 @@
 import Image from "next/image";
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+import { Fragment } from 'react'
+import { Dialog, Transition } from '@headlessui/react'
+import {
+	Bars3Icon,
+	CalendarIcon,
+	ChartPieIcon,
+	DocumentDuplicateIcon,
+	FolderIcon,
+	HomeIcon,
+	UsersIcon,
+	XMarkIcon,
+} from '@heroicons/react/24/outline'
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+const navigation = [
+	{ name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
+	{ name: 'Team', href: '#', icon: UsersIcon, current: false },
+	{ name: 'Projects', href: '#', icon: FolderIcon, current: false },
+	{ name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
+	{ name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false },
+	{ name: 'Reports', href: '#', icon: ChartPieIcon, current: false },
+]
+const teams = [
+	{ id: 1, name: 'Heroicons', href: '#', initial: 'H', current: false },
+	{ id: 2, name: 'Tailwind Labs', href: '#', initial: 'T', current: false },
+	{ id: 3, name: 'Workcation', href: '#', initial: 'W', current: false },
+]
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+function classNames(...classes) {
+	return classes.filter(Boolean).join(' ')
+}
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+function DatePicker() {
+	return <p>Date Picker</p>
+}
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+function NavHolyDays() {
+	const team = teams[0];
+	return <a
+		href={team.href}
+		className={classNames(
+			team.current
+				? 'bg-indigo-700 text-white'
+				: 'text-indigo-200 hover:text-white hover:bg-indigo-700',
+			'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
+		)}
+	>
+		<span
+			className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-indigo-400 bg-indigo-500 text-[0.625rem] font-medium text-white"
+		>
+			{team.initial}
+		</span>
+		<span className="truncate">Holy Days of obligation</span>
+	</a>
+}
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+function NavFooter() {
+	return <a
+		href="#"
+		className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-white hover:bg-indigo-700"
+	>
+		<img
+			className="h-8 w-8 rounded-full bg-indigo-700"
+			src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+			alt=""
+		/>
+		<span className="sr-only">Your profile</span>
+		<span aria-hidden="true">Tom Cook</span>
+	</a>
+}
+
+export default function Page() {
+	return (
+		<>
+			<div>
+				{/* Static sidebar for desktop */}
+				<div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
+					{/* Sidebar component, swap this element with another sidebar if you like */}
+					<div className="flex grow flex-col gap-y-5 overflow-y-auto bg-indigo-600 px-6">
+						<div className="flex h-16 shrink-0 items-center">
+							<img
+								className="h-8 w-auto"
+								src="https://tailwindui.com/img/logos/mark.svg?color=white"
+								alt="Your Company"
+							/>
+						</div>
+						<nav className="flex flex-1 flex-col">
+							<ul role="list" className="flex flex-1 flex-col gap-y-7">
+								<li>
+									<DatePicker></DatePicker>
+								</li>
+								<li>
+									<ul role="list" className="-mx-2 mt-2 space-y-1">
+										<li>
+											<NavHolyDays></NavHolyDays>
+										</li>
+									</ul>
+								</li>
+								<li className="-mx-6 mt-auto">
+									<NavFooter></NavFooter>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+
+				<main className="py-10 lg:pl-72">
+					<div className="px-4 sm:px-6 lg:px-8">{/* Your content */}</div>
+				</main>
+			</div>
+		</>
+	)
 }
