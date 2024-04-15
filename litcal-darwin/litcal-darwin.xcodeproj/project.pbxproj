@@ -131,6 +131,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5E06E0292BCCA448009F76E1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		5E1179D42BC494A00073F7E2 /* CalWheelCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalWheelCellView.swift; sourceTree = "<group>"; };
 		5E13A5A128D2D7CD008F9429 /* TiemposHeadline-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TiemposHeadline-Medium.ttf"; sourceTree = "<group>"; };
 		5E13A5A228D2D7CD008F9429 /* EuclidSquare-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-Semibold.ttf"; sourceTree = "<group>"; };
@@ -283,6 +284,7 @@
 		5EEF937C286A622E0086B9DC = {
 			isa = PBXGroup;
 			children = (
+				5E06E0292BCCA448009F76E1 /* .gitignore */,
 				5EDBEF3B2BC2E00A005FBAF2 /* litdb */,
 				5E6F1DB628DBD63800021942 /* Shared */,
 				5EEF9387286A622E0086B9DC /* litcal-darwin */,
