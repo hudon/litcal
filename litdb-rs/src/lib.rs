@@ -1,3 +1,5 @@
+pub mod capi;
+
 use rusqlite::{params, Connection, Result};
 use std::error::Error;
 use rusqlite::types::{FromSqlResult, ValueRef, FromSql, FromSqlError};

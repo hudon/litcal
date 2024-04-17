@@ -1,6 +1,8 @@
 use rusqlite::Connection;
 use litdb::lit_celebrations_in_range;
 
+// TODO: test from the C api...
+
 #[test]
 fn test_lit_celebrations_in_range() {
 	let db_path = "tests/data/litcal.test.sqlite";
