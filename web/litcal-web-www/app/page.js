@@ -1,6 +1,7 @@
 import {Fragment} from 'react'
 import {CalendarIcon,} from '@heroicons/react/24/outline'
 import {Database} from 'sqlite3'
+import Image from "next/image"
 
 const teams = [
 	{ id: 1, name: 'Heroicons', href: '#', initial: 'H', current: false },
@@ -13,7 +14,9 @@ function classNames(...classes) {
 }
 
 function DatePicker() {
-	return <p>Date Picker</p>
+	return <div className="h-100 w-full shadow-y">
+		<p>Date Picker</p>
+	</div>
 }
 
 function NavHolyDays() {
@@ -70,18 +73,22 @@ function fetchCelebrations() {
 
 export default function Page() {
 	fetchCelebrations()
+	// originally based off of this template
+	// https://tailwindui.com/components/application-ui/application-shells/sidebar#component-a69d85b6237ea2ad506c00ef1cd39a38
 	return (
 		<>
-			<div>
+			<div className="">
 				{/* Static sidebar for desktop */}
-				<div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
-					{/* Sidebar component, swap this element with another sidebar if you like */}
-					<div className="flex grow flex-col gap-y-5 overflow-y-auto bg-indigo-600 px-6">
-						<div className="flex h-16 shrink-0 items-center">
-							<img
-								className="h-8 w-auto"
-								src="https://tailwindui.com/img/logos/mark.svg?color=white"
-								alt="Your Company"
+				<div className="bg-lily fixed inset-y-0 z-50 w-96 ">
+					<div>
+						<div className=" h-28 pl-10 pt-12">
+							<Image
+								src="/litcal.svg"
+								alt="Litcal Logo"
+								className="dark:invert"
+								width={94}
+								height={30}
+								priority
 							/>
 						</div>
 						<nav className="flex flex-1 flex-col">
@@ -104,8 +111,8 @@ export default function Page() {
 					</div>
 				</div>
 
-				<main className="py-10 lg:pl-72">
-					<div className="px-4 sm:px-6 lg:px-8">{/* Your content */}</div>
+				<main className="py-10 pl-72">
+					<div className="px-8">{/* Your content */}</div>
 				</main>
 			</div>
 		</>
