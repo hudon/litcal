@@ -1,5 +1,6 @@
 import {Fragment} from 'react'
 import {CalendarIcon,} from '@heroicons/react/24/outline'
+import {Database} from 'sqlite3'
 
 const teams = [
 	{ id: 1, name: 'Heroicons', href: '#', initial: 'H', current: false },
@@ -44,7 +45,31 @@ function NavFooter() {
 	</a>
 }
 
+// TODO document me
+function fetchCelebrations() {
+	// this is pulled from litdb... use litdb if logic needs to be shared
+	const db = new Database('../../litcal.sqlite')
+	const queryStr = "SELECT lc.event_key, lc.rank, lc.title, lc.subtitle, lc.gospel, " +
+		"lc.gospel_ref, lc.readings_url, lcol.name AS color, ls.name, " +
+		"ld.secular_date_s, COUNT(*) OVER () " +
+		"FROM lit_celebration lc " +
+		"JOIN lit_day ld ON lc.lit_day_id = ld.id " +
+		"JOIN lit_color lcol ON lc.lit_color_id = lcol.id " +
+		"JOIN lit_season ls ON ld.lit_season_id = ls.id " +
+		"JOIN lit_year ly ON ls.lit_year_id = ly.id " +
+		"WHERE ld.secular_date_s >= ? AND ld.secular_date_s <= ? AND ly.lit_calendar_id = ? " +
+		"ORDER BY ld.secular_date_s;"
+	db.each(
+		queryStr,
+		1704931200, 1704931200 + 3 * 24 * 60 * 60, 1,
+		(err, row) => {
+			console.log(row.secular_date_s + ": " + row.title)
+		});
+	db.close()
+}
+
 export default function Page() {
+	fetchCelebrations()
 	return (
 		<>
 			<div>
