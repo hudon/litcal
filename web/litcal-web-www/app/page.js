@@ -14,28 +14,103 @@ function classNames(...classes) {
 }
 
 function DatePicker() {
-	return <div className="h-100 w-full shadow-y">
+	return <div className="h-100 w-full shadow-y px-10 py-8">
 		<p>Date Picker</p>
+		<div className="flex flex-col">
+			<div className="flex flex-row justify-between">
+				<div className="flex flex-row gap-x-4">
+					<span>June 2020</span>
+					<span>{"<"}</span>
+					<span>{">"}</span>
+				</div>
+				<div className="flex flex-row">
+					<span>c</span>
+					<span>Today</span>
+				</div>
+			</div>
+			<table>
+				<thead>
+				<tr>
+					<th>SUN</th>
+					<th>MON</th>
+					<th>TUE</th>
+					<th>WED</th>
+					<th>THU</th>
+					<th>FRI</th>
+					<th>SAT</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>&nbsp;</td>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 }
 
 function NavHolyDays() {
 	const team = teams[0];
-	return <a
-		href={team.href}
-		className={classNames(
-			team.current
-				? 'bg-indigo-700 text-white'
-				: 'text-indigo-200 hover:text-white hover:bg-indigo-700',
-			'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
-		)}
-	>
-		<CalendarIcon
-			className='text-white h-6 w-6 shrink-0'
-			aria-hidden="true"
-		/>
-		<span className="truncate">Holy Days of obligation</span>
-	</a>
+	return <div>
+		<a
+			href={team.href}
+			className={classNames(
+				team.current
+					? 'bg-indigo-700 text-white'
+					: 'text-indigo-200 hover:text-white hover:bg-indigo-700',
+				'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
+			)}
+		>
+			<CalendarIcon
+				className='text-white h-6 w-6 shrink-0'
+				aria-hidden="true"
+			/>
+			<span className="truncate">Holy Days of obligation</span>
+		</a>
+	</div>
 }
 
 function NavFooter() {
@@ -91,23 +166,9 @@ export default function Page() {
 								priority
 							/>
 						</div>
-						<nav className="flex flex-1 flex-col">
-							<ul role="list" className="flex flex-1 flex-col gap-y-7">
-								<li>
-									<DatePicker></DatePicker>
-								</li>
-								<li>
-									<ul role="list" className="-mx-2 mt-2 space-y-1">
-										<li>
-											<NavHolyDays></NavHolyDays>
-										</li>
-									</ul>
-								</li>
-								<li className="-mx-6 mt-auto">
-									<NavFooter></NavFooter>
-								</li>
-							</ul>
-						</nav>
+						<DatePicker></DatePicker>
+						<NavHolyDays></NavHolyDays>
+						<NavFooter></NavFooter>
 					</div>
 				</div>
 
