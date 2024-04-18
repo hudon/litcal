@@ -1,5 +1,5 @@
 import {Fragment} from 'react'
-import {CalendarIcon,} from '@heroicons/react/24/outline'
+import {CalendarDaysIcon,} from '@heroicons/react/24/outline'
 import {Database} from 'sqlite3'
 import Image from "next/image"
 
@@ -94,23 +94,23 @@ function DatePicker() {
 
 function NavHolyDays() {
 	const team = teams[0];
-	return <div>
-		<a
-			href={team.href}
-			className={classNames(
-				team.current
-					? 'bg-indigo-700 text-white'
-					: 'text-indigo-200 hover:text-white hover:bg-indigo-700',
-				'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
-			)}
-		>
-			<CalendarIcon
-				className='text-white h-6 w-6 shrink-0'
+	return <a
+		href={team.href}
+		className={classNames(
+			team.current
+				? 'bg-indigo-700 text-white'
+				: 'text-stellaMarris bg-lily shadow-y hover:text-white hover:bg-indigo-700',
+			'group flex flex-col justify-center  p-2 leading-6 font-semibold h-20 px-12 mt-5'
+		)}
+	>
+		<p className="flex  gap-x-4">
+			<CalendarDaysIcon
+				className='text-ashes h-6 w-6 shrink-0'
 				aria-hidden="true"
 			/>
-			<span className="truncate">Holy Days of obligation</span>
-		</a>
-	</div>
+			<span className="truncate ">Holy Days of obligation</span>
+		</p>
+	</a>
 }
 
 function NavFooter() {
@@ -154,13 +154,12 @@ export default function Page() {
 		<>
 			<div className="">
 				{/* Static sidebar for desktop */}
-				<div className="bg-lily fixed inset-y-0 z-50 w-96 ">
+				<div className="bg-lily fixed inset-y-0 z-50 overflow-y-auto w-96 ">
 					<div>
 						<div className=" h-28 pl-10 pt-12">
 							<Image
 								src="/litcal.svg"
 								alt="Litcal Logo"
-								className="dark:invert"
 								width={94}
 								height={30}
 								priority

@@ -14,8 +14,10 @@ module.exports = {
         '100': '25rem',
       },
       colors: {
+        ashes: '#B3B3B3',
         dove: '#F0F0F0',
         lily: '#FFFFFF',
+        stellaMarris: '#010023',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
