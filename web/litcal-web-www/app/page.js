@@ -141,8 +141,7 @@ export default function Page() {
 	// originally based off of this template
 	// https://tailwindui.com/components/application-ui/application-shells/sidebar#component-a69d85b6237ea2ad506c00ef1cd39a38
 	return (
-		<>
-			<div className="">
+			<div className="h-full">
 				{/* Static sidebar for desktop */}
 				<div className="bg-lily fixed inset-y-0 z-50 overflow-y-auto w-96 ">
 					<div>
@@ -172,10 +171,9 @@ export default function Page() {
 					</div>
 				</div>
 
-				<main className="py-10 pl-72">
-					<div className="px-8">{/* Your content */}</div>
+				<main className="py-10 ml-96 bg-dove h-full">
+					<div className="px-8"><p>beep</p></div>
 				</main>
 			</div>
-		</>
 	)
 }
