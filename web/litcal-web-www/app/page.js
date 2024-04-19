@@ -1,4 +1,3 @@
-import {Fragment} from 'react'
 import {CalendarDaysIcon,} from '@heroicons/react/24/outline'
 import {Database} from 'sqlite3'
 import Image from "next/image"
@@ -14,7 +13,7 @@ function classNames(...classes) {
 }
 
 function DatePicker() {
-	return <div className="h-100 w-full shadow-y px-10 py-8">
+	return <div className="px-10 py-8">
 		<p>Date Picker</p>
 		<div className="flex flex-col">
 			<div className="flex flex-row justify-between">
@@ -99,8 +98,8 @@ function NavHolyDays() {
 		className={classNames(
 			team.current
 				? 'bg-indigo-700 text-white'
-				: 'text-stellaMarris bg-lily shadow-y hover:text-white hover:bg-indigo-700',
-			'group flex flex-col justify-center  p-2 leading-6 font-semibold h-20 px-12 mt-5'
+				: 'text-stellaMarris hover:text-white hover:bg-indigo-700',
+			'group flex flex-col justify-center leading-6 font-semibold px-12 h-full'
 		)}
 	>
 		<p className="flex  gap-x-4">
@@ -141,10 +140,10 @@ export default function Page() {
 	// originally based off of this template
 	// https://tailwindui.com/components/application-ui/application-shells/sidebar#component-a69d85b6237ea2ad506c00ef1cd39a38
 	return (
-			<div className="h-full flex">
+			<div className="h-full flex overflow-x-auto">
 				{/* Static sidebar for desktop */}
-				<div className="bg-lily overflow-y-auto flex flex-col w-96 ">
-					<div className=" h-28 pl-10 pt-12">
+				<div className="bg-lily overflow-y-auto flex-shrink-0 flex flex-col w-96 ">
+					<div className="mt-5 h-28 flex-shrink-0 pl-10 pt-12">
 						<Image
 							src="/litcal.svg"
 							alt="Litcal Logo"
@@ -153,10 +152,13 @@ export default function Page() {
 							priority
 						/>
 					</div>
-					<DatePicker className="flex-shrink-0"></DatePicker>
-					<NavHolyDays></NavHolyDays>
-					{/*<div className="h-28"></div>*/}
-					<div className="mb-4 pl-10 pt-12 flex-grow flex flex-col-reverse">
+					<div className="flex-shrink-0 h-100 w-full shadow-y">
+						<DatePicker></DatePicker>
+					</div>
+					<div className="bg-lily shadow-y flex-shrink-0 h-20 mt-5">
+						<NavHolyDays></NavHolyDays>
+					</div>
+					<div className="mb-16 pl-10 pt-12 flex-grow flex flex-col-reverse">
 						<a href="https://apps.apple.com/us/app/litcal-liturgical-calendar/id1641330305">
 							<Image
 								src="/appstore.svg"
@@ -170,7 +172,7 @@ export default function Page() {
 					</div>
 				</div>
 
-				<main className="py-10 bg-dove w-max h-full">
+				<main className="py-10 bg-dove flex-grow h-full">
 					<div className="px-8"><p>beep</p></div>
 				</main>
 			</div>
