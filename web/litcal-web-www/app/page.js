@@ -141,37 +141,36 @@ export default function Page() {
 	// originally based off of this template
 	// https://tailwindui.com/components/application-ui/application-shells/sidebar#component-a69d85b6237ea2ad506c00ef1cd39a38
 	return (
-			<div className="h-full">
+			<div className="h-full flex">
 				{/* Static sidebar for desktop */}
-				<div className="bg-lily fixed inset-y-0 z-50 overflow-y-auto w-96 ">
-					<div>
-						<div className=" h-28 pl-10 pt-12">
+				<div className="bg-lily overflow-y-auto flex flex-col w-96 ">
+					<div className=" h-28 pl-10 pt-12">
+						<Image
+							src="/litcal.svg"
+							alt="Litcal Logo"
+							width={94}
+							height={30}
+							priority
+						/>
+					</div>
+					<DatePicker className="flex-shrink-0"></DatePicker>
+					<NavHolyDays></NavHolyDays>
+					{/*<div className="h-28"></div>*/}
+					<div className="mb-4 pl-10 pt-12 flex-grow flex flex-col-reverse">
+						<a href="https://apps.apple.com/us/app/litcal-liturgical-calendar/id1641330305">
 							<Image
-								src="/litcal.svg"
-								alt="Litcal Logo"
-								width={94}
-								height={30}
+								src="/appstore.svg"
+								alt="Download on the App Store"
+								className="hover:cursor-pointer"
+								width={174}
+								height={58}
 								priority
 							/>
-						</div>
-						<DatePicker></DatePicker>
-						<NavHolyDays></NavHolyDays>
-						<div className="h-28 pl-10 pt-12">
-							<a href="https://apps.apple.com/us/app/litcal-liturgical-calendar/id1641330305">
-								<Image
-									src="/appstore.svg"
-									alt="Download on the App Store"
-									className="hover:cursor-pointer"
-									width={174}
-									height={58}
-									priority
-								/>
-							</a>
-						</div>
+						</a>
 					</div>
 				</div>
 
-				<main className="py-10 ml-96 bg-dove h-full">
+				<main className="py-10 bg-dove w-max h-full">
 					<div className="px-8"><p>beep</p></div>
 				</main>
 			</div>
