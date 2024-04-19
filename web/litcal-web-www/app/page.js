@@ -113,17 +113,7 @@ function NavHolyDays() {
 	</a>
 }
 
-function NavFooter() {
-	return <a
-		href="#"
-		className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-white hover:bg-indigo-700"
-	>
-		<span className="sr-only">Download on the App Store</span>
-		<span aria-hidden="true">Download on the App Store</span>
-	</a>
-}
-
-// TODO document me
+// TODO move me to ktor
 function fetchCelebrations() {
 	// this is pulled from litdb... use litdb if logic needs to be shared
 	const db = new Database('../../litcal.sqlite')
@@ -167,7 +157,18 @@ export default function Page() {
 						</div>
 						<DatePicker></DatePicker>
 						<NavHolyDays></NavHolyDays>
-						<NavFooter></NavFooter>
+						<div className="h-28 pl-10 pt-12">
+							<a href="https://apps.apple.com/us/app/litcal-liturgical-calendar/id1641330305">
+								<Image
+									src="/appstore.svg"
+									alt="Download on the App Store"
+									className="hover:cursor-pointer"
+									width={174}
+									height={58}
+									priority
+								/>
+							</a>
+						</div>
 					</div>
 				</div>
 
