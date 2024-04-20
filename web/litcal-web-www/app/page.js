@@ -173,7 +173,6 @@ export default function Page() {
 
 				<main className="py-10 px-8 flex-grow min-h-full bg-dove flex flex-col">
 					<div className="w-[951px] h-[469px] relative">
-
 						<Image
 							src="/hero_ordinary_time.png"
 							alt="Image of the day"
@@ -182,9 +181,9 @@ export default function Page() {
 							objectFit="cover"
 							objectPosition="center top"
 						/>
-						<div className="w-full flex z-50 bg-green-950 absolute bottom-0">
-							<p>beep</p>
-							<p>bap</p>
+						<div className="w-full px-12 flex justify-between absolute bottom-11 text-white">
+							<div>Jul 11, 2022 • Ordinary Time</div>
+							<div className="bg-blue-400">MT 14:13-21</div>
 						</div>
 					</div>
 				</main>
