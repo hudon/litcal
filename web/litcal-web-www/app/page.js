@@ -112,7 +112,6 @@ function NavHolyDays() {
 	</a>
 }
 
-// TODO move me to ktor
 function fetchCelebrations() {
 	// this is pulled from litdb... use litdb if logic needs to be shared
 	const db = new Database('../../litcal.sqlite')
@@ -140,7 +139,7 @@ export default function Page() {
 	// originally based off of this template
 	// https://tailwindui.com/components/application-ui/application-shells/sidebar#component-a69d85b6237ea2ad506c00ef1cd39a38
 	return (
-			<div className="h-full bg-dove flex overflow-x-auto">
+			<div className="h-full bg-dove flex ">
 				{/* Static sidebar for desktop */}
 				<div className="bg-lily overflow-y-auto flex-shrink-0 flex flex-col w-96 ">
 					<div className="mt-5 h-28 flex-shrink-0 pl-10 pt-12">
@@ -173,7 +172,16 @@ export default function Page() {
 				</div>
 
 				<main className="py-10 flex-grow min-h-full flex flex-col">
-					<div className="px-8"><p>beep</p></div>
+					<div className="px-8">
+
+						<Image
+							src="/hero_ordinary_time.png"
+							alt="Image of the day"
+							width={951}
+							height={469}
+							className="rounded-lg"
+						/>
+					</div>
 				</main>
 			</div>
 	)
