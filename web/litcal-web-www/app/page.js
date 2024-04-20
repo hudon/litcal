@@ -171,16 +171,21 @@ export default function Page() {
 					</div>
 				</div>
 
-				<main className="py-10 flex-grow min-h-full flex flex-col">
-					<div className="px-8">
+				<main className="py-10 px-8 flex-grow min-h-full bg-dove flex flex-col">
+					<div className="w-[951px] h-[469px] relative">
 
 						<Image
 							src="/hero_ordinary_time.png"
 							alt="Image of the day"
-							width={951}
-							height={469}
+							fill
 							className="rounded-lg"
+							objectFit="cover"
+							objectPosition="center top"
 						/>
+						<div className="w-full flex z-50 bg-green-950 absolute bottom-0">
+							<p>beep</p>
+							<p>bap</p>
+						</div>
 					</div>
 				</main>
 			</div>
