@@ -43,8 +43,7 @@ function getMonthDays() {
 
 function DatePicker() {
 	return <div className="px-10 py-8">
-		<p>Date Picker</p>
-		<div className="flex flex-col">
+		<div className="flex flex-col gap-y-2">
 			<div className="flex flex-row justify-between">
 				<div className="flex flex-row gap-x-4">
 					<span>June 2020</span>
