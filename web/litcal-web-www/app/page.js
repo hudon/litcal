@@ -1,4 +1,8 @@
-import { CalendarDaysIcon } from "@heroicons/react/24/outline"
+import {
+	CalendarDaysIcon,
+	ChevronLeftIcon,
+	ChevronRightIcon,
+} from "@heroicons/react/24/outline"
 import { Database } from "sqlite3"
 import Image from "next/image"
 
@@ -50,8 +54,16 @@ function DatePicker() {
 				<div className="flex flex-row justify-between">
 					<div className="flex flex-row gap-x-4">
 						<span>June 2020</span>
-						<span>{"<"}</span>
-						<span>{">"}</span>
+						<ChevronLeftIcon
+							className="h-6 w-4 text-ashes"
+							aria-hidden="true"
+							strokeWidth="2"
+						/>
+						<ChevronRightIcon
+							className="h-6 w-4 text-ashes"
+							aria-hidden="true"
+							strokeWidth="2"
+						/>
 					</div>
 					<div className="flex flex-row">
 						<span>c</span>
