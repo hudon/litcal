@@ -14,7 +14,9 @@ function classNames(...classes) {
 
 /**
  * Retrieves the days of the month
- * @return {Array<Array<Date>>} -  There will be 'null' for the initial days from Sunday to the first day of the month
+ * @return {Array<Array<Date|null>>} -  There will be 'null' for the initial days from
+ * Sunday to the first day of the month. Then the elements are the dates from the first
+ * to the last day of the month. Each sub-array is a Sunday-to-Saturday week.
  */
 function getMonthDays() {
 	const currDate = new Date()
