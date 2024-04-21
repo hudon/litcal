@@ -197,7 +197,7 @@ export default function Page() {
 						And the whole crowd was beside the sea on land.
 						And he taught them at length in parables,
 						and in the course of his instruction he said to them,
-						"Hear this!  A sower went out to sow.
+						&quot;Hear this!  A sower went out to sow.
 						And as he sowed, some seed fell on the path,
 						and the birds came and ate it up.
 						Other seed fell on rocky ground where it had little soil.
@@ -206,13 +206,13 @@ export default function Page() {
 						Some seed fell among thorns, and the thorns grew up and choked it
 						and it produced no grain.
 						And some seed fell on rich soil and produced fruit.
-						It came up and grew and yielded thirty, sixty, and a hundredfold."
-						He added, "Whoever has ears to hear ought to hear."
+						It came up and grew and yielded thirty, sixty, and a hundredfold.&quot;
+						He added, &quot;Whoever has ears to hear ought to hear.&quot;
 
 						And when he was alone,
 						those present along with the Twelve
 						questioned him about the parables.
-						Jesus said to them, "Do you not understand this parable?
+						Jesus said to them, &quot;Do you not understand this parable?
 						Then how will you understand any of the parables?
 						The sower sows the word.
 						These are the ones on the path where the word is sown.
@@ -229,7 +229,7 @@ export default function Page() {
 						and the craving for other things intrude and choke the word,
 						and it bears no fruit.
 						But those sown on rich soil are the ones who hear the word and accept it
-						and bear fruit thirty and sixty and a hundredfold."</p>
+						and bear fruit thirty and sixty and a hundredfold.&quot;</p>
 				</main>
 			</div>
 	)
