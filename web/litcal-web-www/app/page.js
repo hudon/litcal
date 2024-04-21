@@ -12,6 +12,35 @@ function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
 
+/**
+ * Retrieves the days of the month
+ * @return {Array<Array<Date>>} -  There will be 'null' for the initial days from Sunday to the first day of the month
+ */
+function getMonthDays() {
+	const currDate = new Date()
+	const currMonth = currDate.getMonth()
+	const currYear = currDate.getFullYear()
+	const startOfMonth = new Date(currYear, currMonth, 1)
+	const endOfMonth = new Date(currYear, currMonth + 1, 0)
+	const lastDayOfMonth = endOfMonth.getDate()
+	let monthDays = [[]]
+	for (let i = 0; i < startOfMonth.getDay(); i++) {
+		monthDays[0].push(null);
+	}
+	monthDays[0].push(startOfMonth)
+	for (let i = 2; i <= lastDayOfMonth; i++) {
+		const currRow = monthDays[monthDays.length - 1]
+		const prevDay = currRow[currRow.length - 1]
+		const newDay = new Date(currYear, currMonth, i)
+		if (prevDay.getDay() === 6) {
+			monthDays.push([newDay])
+		} else {
+			currRow.push(newDay)
+		}
+	}
+	return monthDays
+}
+
 function DatePicker() {
 	return <div className="px-10 py-8">
 		<p>Date Picker</p>
@@ -40,51 +69,13 @@ function DatePicker() {
 				</tr>
 				</thead>
 				<tbody>
-				<tr>
-					<td>&nbsp;</td>
-					<td>1</td>
-					<td>2</td>
-					<td>3</td>
-					<td>4</td>
-					<td>5</td>
-					<td>6</td>
-				</tr>
-				<tr>
-					<td>&nbsp;</td>
-					<td>1</td>
-					<td>2</td>
-					<td>3</td>
-					<td>4</td>
-					<td>5</td>
-					<td>6</td>
-				</tr>
-				<tr>
-					<td>&nbsp;</td>
-					<td>1</td>
-					<td>2</td>
-					<td>3</td>
-					<td>4</td>
-					<td>5</td>
-					<td>6</td>
-				</tr>
-				<tr>
-					<td>&nbsp;</td>
-					<td>1</td>
-					<td>2</td>
-					<td>3</td>
-					<td>4</td>
-					<td>5</td>
-					<td>6</td>
-				</tr>
-				<tr>
-					<td>&nbsp;</td>
-					<td>1</td>
-					<td>2</td>
-					<td>3</td>
-					<td>4</td>
-					<td>5</td>
-					<td>6</td>
-				</tr>
+				{getMonthDays().map((week, weekIdx) => (
+					<tr key={weekIdx}>
+					{week.map((day, dayIdx) => (
+                        <td key={dayIdx}>{day?.getDate()}</td>
+                    ))}
+					</tr>
+				))}
 				</tbody>
 			</table>
 		</div>
