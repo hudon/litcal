@@ -171,8 +171,10 @@ export default function Page() {
 					</div>
 				</div>
 
-				<main className="py-10 px-8 flex-grow min-h-full bg-dove flex flex-col">
-					<div className="w-[951px] h-[469px] relative">
+				<main className="px-8 flex-grow flex-shrink-0 min-h-full overflow-y-auto
+				 bg-dove flex flex-col justify-center items-center">
+					<div className="h-10 flex-shrink-0">&nbsp;</div>
+					<div className="w-[951px] h-[469px] relative flex-shrink-0 mb-10">
 						<Image
 							src="/hero_ordinary_time.png"
 							alt="Image of the day"
@@ -186,6 +188,48 @@ export default function Page() {
 							<div className="bg-blue-400">MT 14:13-21</div>
 						</div>
 					</div>
+					<h1 className="min-h-10 text-center">Saint Lawrence of Brindisi</h1>
+					<h2 className="min-h-10">Priest and Doctor of the Church</h2>
+					<h3 className="min-h-10">Gospel</h3>
+					<p className="w-[600px]">On another occasion, Jesus began to teach by the sea.
+						A very large crowd gathered around him
+						so that he got into a boat on the sea and sat down.
+						And the whole crowd was beside the sea on land.
+						And he taught them at length in parables,
+						and in the course of his instruction he said to them,
+						"Hear this!  A sower went out to sow.
+						And as he sowed, some seed fell on the path,
+						and the birds came and ate it up.
+						Other seed fell on rocky ground where it had little soil.
+						It sprang up at once because the soil was not deep.
+						And when the sun rose, it was scorched and it withered for lack of roots.
+						Some seed fell among thorns, and the thorns grew up and choked it
+						and it produced no grain.
+						And some seed fell on rich soil and produced fruit.
+						It came up and grew and yielded thirty, sixty, and a hundredfold."
+						He added, "Whoever has ears to hear ought to hear."
+
+						And when he was alone,
+						those present along with the Twelve
+						questioned him about the parables.
+						Jesus said to them, "Do you not understand this parable?
+						Then how will you understand any of the parables?
+						The sower sows the word.
+						These are the ones on the path where the word is sown.
+						As soon as they hear, Satan comes at once
+						and takes away the word sown in them.
+						And these are the ones sown on rocky ground who,
+						when they hear the word, receive it at once with joy.
+						But they have no roots; they last only for a time.
+						Then when tribulation or persecution comes because of the word,
+						they quickly fall away.
+						Those sown among thorns are another sort.
+						They are the people who hear the word,
+						but worldly anxiety, the lure of riches,
+						and the craving for other things intrude and choke the word,
+						and it bears no fruit.
+						But those sown on rich soil are the ones who hear the word and accept it
+						and bear fruit thirty and sixty and a hundredfold."</p>
 				</main>
 			</div>
 	)
