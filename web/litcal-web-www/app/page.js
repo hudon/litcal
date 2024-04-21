@@ -91,13 +91,13 @@ function NavHolyDays() {
 			className={classNames(
 				team.current
 					? "bg-indigo-700 text-white"
-					: "text-stellaMarris hover:text-white hover:bg-indigo-700",
-				"group flex flex-col justify-center leading-6 font-semibold px-12 h-full",
+					: "text-stellaMarris hover:bg-indigo-700 hover:text-white",
+				"group flex h-full flex-col justify-center px-12 font-semibold leading-6",
 			)}
 		>
 			<p className="flex  gap-x-4">
 				<CalendarDaysIcon
-					className="text-ashes h-6 w-6 shrink-0"
+					className="h-6 w-6 shrink-0 text-ashes"
 					aria-hidden="true"
 				/>
 				<span className="truncate ">Holy Days of obligation</span>
@@ -137,10 +137,10 @@ export default function Page() {
 	// originally based off of this template
 	// https://tailwindui.com/components/application-ui/application-shells/sidebar#component-a69d85b6237ea2ad506c00ef1cd39a38
 	return (
-		<div className="h-full bg-dove flex ">
+		<div className="flex h-full bg-dove ">
 			{/* Static sidebar for desktop */}
-			<div className="bg-lily overflow-y-auto flex-shrink-0 flex flex-col w-96 ">
-				<div className="mt-5 h-28 flex-shrink-0 pl-10 pt-12">
+			<div className="flex w-96 flex-shrink-0 flex-col overflow-y-auto bg-lily ">
+				<div className=" mt-5 h-28 flex-shrink-0 pl-10 pt-12">
 					<Image
 						src="/litcal.svg"
 						alt="Litcal Logo"
@@ -149,13 +149,13 @@ export default function Page() {
 						priority
 					/>
 				</div>
-				<div className="flex-shrink-0 h-100 w-full shadow-y">
+				<div className="h-100 w-full flex-shrink-0 shadow-y">
 					<DatePicker></DatePicker>
 				</div>
-				<div className="bg-lily shadow-y flex-shrink-0 h-20 mt-5">
+				<div className="mt-5 h-20 flex-shrink-0 bg-lily shadow-y">
 					<NavHolyDays></NavHolyDays>
 				</div>
-				<div className="mb-16 pl-10 pt-12 flex-grow flex flex-col-reverse">
+				<div className="mb-16 flex flex-grow flex-col-reverse pl-10 pt-12">
 					<a href="https://apps.apple.com/us/app/litcal-liturgical-calendar/id1641330305">
 						<Image
 							src="/appstore.svg"
@@ -170,11 +170,11 @@ export default function Page() {
 			</div>
 
 			<main
-				className="px-8 flex-grow flex-shrink-0 min-h-full overflow-y-auto
-				 bg-dove flex flex-col justify-center items-center"
+				className="flex min-h-full flex-shrink-0 flex-grow flex-col
+				 items-center justify-center overflow-y-auto bg-dove px-8"
 			>
 				<div className="h-10 flex-shrink-0">&nbsp;</div>
-				<div className="w-[951px] h-[469px] relative flex-shrink-0 mb-10">
+				<div className="relative mb-10 h-[469px] w-[951px] flex-shrink-0">
 					<Image
 						src="/hero_ordinary_time.png"
 						alt="Image of the day"
@@ -183,7 +183,7 @@ export default function Page() {
 						objectFit="cover"
 						objectPosition="center top"
 					/>
-					<div className="w-full px-12 flex justify-between absolute bottom-11 text-white">
+					<div className="absolute bottom-11 flex w-full justify-between px-12 text-white">
 						<div>Jul 11, 2022 • Ordinary Time</div>
 						<div className="bg-blue-400">MT 14:13-21</div>
 					</div>
