@@ -37,6 +37,7 @@ function getMonthDays() {
 	}
 	monthDays[0].push(startOfMonth)
 	for (let i = 2; i <= lastDayOfMonth; i++) {
+		/** @type {Array<Date>} */
 		const currRow = monthDays[monthDays.length - 1]
 		const prevDay = currRow[currRow.length - 1]
 		const newDay = new Date(currYear, currMonth, i)
@@ -54,10 +55,10 @@ function getMonthDays() {
  *
  * @param {Object} props
  * @param {string} props.label
- * @param {React.ReactSVGElement} props.Icon
+ * @param {JSX.ElementType} props.Icon
  * @param {string} [props.bgColorClass]
  * @param {string} [props.textColorClass]
- * @returns {React.Element}
+ * @returns {JSX.Element}
  */
 function Button({
 	label,
@@ -148,31 +149,31 @@ function NavHolyDays() {
 	)
 }
 
-function fetchCelebrations() {
-	// this is pulled from litdb... use litdb if logic needs to be shared
-	const db = new Database("../../litcal.sqlite")
-	const queryStr =
-		"SELECT lc.event_key, lc.rank, lc.title, lc.subtitle, lc.gospel, " +
-		"lc.gospel_ref, lc.readings_url, lcol.name AS color, ls.name, " +
-		"ld.secular_date_s, COUNT(*) OVER () " +
-		"FROM lit_celebration lc " +
-		"JOIN lit_day ld ON lc.lit_day_id = ld.id " +
-		"JOIN lit_color lcol ON lc.lit_color_id = lcol.id " +
-		"JOIN lit_season ls ON ld.lit_season_id = ls.id " +
-		"JOIN lit_year ly ON ls.lit_year_id = ly.id " +
-		"WHERE ld.secular_date_s >= ? AND ld.secular_date_s <= ? AND ly.lit_calendar_id = ? " +
-		"ORDER BY ld.secular_date_s;"
-	db.each(
-		queryStr,
-		1704931200,
-		1704931200 + 3 * 24 * 60 * 60,
-		1,
-		(err, row) => {
-			console.log(row.secular_date_s + ": " + row.title)
-		},
-	)
-	db.close()
-}
+// function fetchCelebrations() {
+// 	// this is pulled from litdb... use litdb if logic needs to be shared
+// 	const db = new Database("../../litcal.sqlite")
+// 	const queryStr =
+// 		"SELECT lc.event_key, lc.rank, lc.title, lc.subtitle, lc.gospel, " +
+// 		"lc.gospel_ref, lc.readings_url, lcol.name AS color, ls.name, " +
+// 		"ld.secular_date_s, COUNT(*) OVER () " +
+// 		"FROM lit_celebration lc " +
+// 		"JOIN lit_day ld ON lc.lit_day_id = ld.id " +
+// 		"JOIN lit_color lcol ON lc.lit_color_id = lcol.id " +
+// 		"JOIN lit_season ls ON ld.lit_season_id = ls.id " +
+// 		"JOIN lit_year ly ON ls.lit_year_id = ly.id " +
+// 		"WHERE ld.secular_date_s >= ? AND ld.secular_date_s <= ? AND ly.lit_calendar_id = ? " +
+// 		"ORDER BY ld.secular_date_s;"
+// 	db.each(
+// 		queryStr,
+// 		1704931200,
+// 		1704931200 + 3 * 24 * 60 * 60,
+// 		1,
+// 		(err, row) => {
+// 			console.log(row.secular_date_s + ": " + row.title)
+// 		},
+// 	)
+// 	db.close()
+// }
 
 /**
  * A liturgical celebration
@@ -204,6 +205,7 @@ function fetchTodayCelebration() {
 		"JOIN lit_season ls ON ld.lit_season_id = ls.id " +
 		"JOIN lit_year ly ON ls.lit_year_id = ly.id " +
 		"WHERE ld.secular_date_s = ? AND ly.lit_calendar_id = ? "
+	/** @type {any} */
 	const row = db.prepare(queryStr).get(todayInEpochSeconds, 1)
 	row.dateSeconds = row.secular_date_s
 	return row
