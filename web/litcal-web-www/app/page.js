@@ -3,6 +3,7 @@ import {
 	ChevronLeftIcon,
 	ChevronRightIcon,
 	BookmarkIcon,
+	LinkIcon,
 } from "@heroicons/react/24/outline"
 import { Database } from "sqlite3"
 import Image from "next/image"
@@ -48,6 +49,33 @@ function getMonthDays() {
 	return monthDays
 }
 
+/**
+ * A button component
+ *
+ * @param {Object} props
+ * @param {string} props.label
+ * @param {React.ReactSVGElement} props.Icon
+ * @param {string} [props.bgColorClass]
+ * @param {string} [props.textColorClass]
+ * @returns {React.Element}
+ */
+function Button({
+	label,
+	Icon,
+	bgColorClass = "bg-dove",
+	textColorClass = "text-ashes",
+}) {
+	return (
+		<div
+			className={`flex flex-row rounded-md px-3 py-1.5 
+			${bgColorClass} ${textColorClass} hover:cursor-pointer`}
+		>
+			<Icon className="h- w-4" aria-hidden="true" strokeWidth="2" />
+			<span className="pl-2 text-xs">{label}</span>
+		</div>
+	)
+}
+
 function DatePicker() {
 	return (
 		<div className="px-10 py-8">
@@ -66,17 +94,7 @@ function DatePicker() {
 							strokeWidth="2"
 						/>
 					</div>
-					<div
-						className="flex flex-row rounded-md bg-dove px-3 py-1.5 text-ashes
-					 hover:cursor-pointer "
-					>
-						<BookmarkIcon
-							className="h- w-4"
-							aria-hidden="true"
-							strokeWidth="2"
-						/>
-						<span className="pl-2 text-xs">TODAY</span>
-					</div>
+					<Button label="TODAY" Icon={BookmarkIcon} />
 				</div>
 				<table>
 					<thead>
@@ -209,7 +227,12 @@ export default function Page() {
 					/>
 					<div className="absolute bottom-11 flex w-full justify-between px-12 text-white">
 						<div>Jul 11, 2022 • Ordinary Time</div>
-						<div className="bg-blue-400">MT 14:13-21</div>
+						<Button
+							label="MT 14:13-21"
+							Icon={LinkIcon}
+							bgColorClass="bg-ourLady"
+							textColorClass="text-lily"
+						/>
 					</div>
 				</div>
 				<h1 className="min-h-10 text-center">Saint Lawrence of Brindisi</h1>

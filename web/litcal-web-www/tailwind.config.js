@@ -21,6 +21,7 @@ module.exports = {
 				ashes: "#B3B3B3",
 				dove: "#F0F0F0",
 				lily: "#FFFFFF",
+				ourLady: "#3399FF",
 				stellaMarris: "#010023",
 			},
 			backgroundImage: {
