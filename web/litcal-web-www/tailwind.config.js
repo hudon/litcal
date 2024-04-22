@@ -1,3 +1,4 @@
+const defaultTheme = require("tailwindcss/defaultTheme")
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: [
@@ -7,6 +8,9 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			fontFamily: {
+				sans: ["var(--font-euclid-square)", ...defaultTheme.fontFamily.sans],
+			},
 			boxShadow: {
 				y: "0 4px 40px rgba(218, 218, 218, 0.60)",
 			},

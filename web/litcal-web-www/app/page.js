@@ -2,6 +2,7 @@ import {
 	CalendarDaysIcon,
 	ChevronLeftIcon,
 	ChevronRightIcon,
+	BookmarkIcon,
 } from "@heroicons/react/24/outline"
 import { Database } from "sqlite3"
 import Image from "next/image"
@@ -50,8 +51,8 @@ function getMonthDays() {
 function DatePicker() {
 	return (
 		<div className="px-10 py-8">
-			<div className="flex flex-col gap-y-2">
-				<div className="flex flex-row justify-between">
+			<div className="flex flex-col gap-y-2 text-stellaMarris">
+				<div className="flex flex-row justify-between pb-2">
 					<div className="flex flex-row gap-x-4">
 						<span>June 2020</span>
 						<ChevronLeftIcon
@@ -65,28 +66,37 @@ function DatePicker() {
 							strokeWidth="2"
 						/>
 					</div>
-					<div className="flex flex-row">
-						<span>c</span>
-						<span>Today</span>
+					<div
+						className="flex flex-row rounded-md bg-dove px-3 py-1.5 text-ashes
+					 hover:cursor-pointer "
+					>
+						<BookmarkIcon
+							className="h- w-4"
+							aria-hidden="true"
+							strokeWidth="2"
+						/>
+						<span className="pl-2 text-xs">TODAY</span>
 					</div>
 				</div>
 				<table>
 					<thead>
-						<tr>
-							<th>SUN</th>
-							<th>MON</th>
-							<th>TUE</th>
-							<th>WED</th>
-							<th>THU</th>
-							<th>FRI</th>
-							<th>SAT</th>
+						<tr className="text-sm font-light text-ashes">
+							{["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"].map(
+								(val, i) => (
+									<th key={i} className="py-2 font-light">
+										{val}
+									</th>
+								),
+							)}
 						</tr>
 					</thead>
 					<tbody>
 						{getMonthDays().map((week, weekIdx) => (
 							<tr key={weekIdx}>
 								{week.map((day, dayIdx) => (
-									<td key={dayIdx}>{day?.getDate()}</td>
+									<td key={dayIdx} className="py-3 text-center">
+										{day?.getDate()}
+									</td>
 								))}
 							</tr>
 						))}
