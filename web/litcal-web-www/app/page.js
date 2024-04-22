@@ -134,7 +134,7 @@ function NavHolyDays() {
 				team.current
 					? "bg-indigo-700 text-white"
 					: "text-stellaMarris hover:bg-indigo-700 hover:text-white",
-				"group flex h-full flex-col justify-center px-12 font-semibold leading-6",
+				"group flex h-full flex-col justify-center px-12 leading-6",
 			)}
 		>
 			<p className="flex  gap-x-4">
@@ -142,7 +142,7 @@ function NavHolyDays() {
 					className="h-6 w-6 shrink-0 text-ashes"
 					aria-hidden="true"
 				/>
-				<span className="truncate ">Holy Days of obligation</span>
+				<span className="truncate ">Holy Days of Obligation</span>
 			</p>
 		</a>
 	)
@@ -236,12 +236,14 @@ export default function Page() {
 						/>
 					</div>
 				</div>
-				<h1 className="min-h-10 flex-shrink-0 text-center font-serif text-5xl">
+				<h1 className="mb-3 min-h-10 flex-shrink-0  text-center font-serif text-3xl">
 					Saint Lawrence of Brindisi
 				</h1>
-				<h2 className="min-h-10 text-ashes">Priest and Doctor of the Church</h2>
-				<h3 className="min-h-10">Gospel</h3>
-				<p className="w-[600px]">
+				<h2 className="mb-3.5 min-h-10 flex-shrink-0 text-ashes">
+					Priest and Doctor of the Church
+				</h2>
+				<h3 className="mb-1 min-h-10 flex-shrink-0">Gospel</h3>
+				<p className="w-[537px] leading-7">
 					On another occasion, Jesus began to teach by the sea. A very large
 					crowd gathered around him so that he got into a boat on the sea and
 					sat down. And the whole crowd was beside the sea on land. And he
