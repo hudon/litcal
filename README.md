@@ -1,4 +1,4 @@
 # Litcal
 
 * [Litcal iOS](https://apps.apple.com/us/app/litcal-liturgical-calendar/id1641330305)
-* [Litcal web](https://litcal.com) WIP
+* [Litcal web](https://litcal.com) _under construction..._
