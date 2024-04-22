@@ -1,12 +1,8 @@
-import {
-	CalendarDaysIcon,
-	ChevronLeftIcon,
-	ChevronRightIcon,
-	BookmarkIcon,
-	LinkIcon,
-} from "@heroicons/react/24/outline"
+import { CalendarDaysIcon, LinkIcon } from "@heroicons/react/24/outline"
 import Database from "better-sqlite3"
 import Image from "next/image"
+import DatePicker from "@/app/DatePicker"
+import Button from "@/app/Button"
 
 const teams = [
 	{ id: 1, name: "Heroicons", href: "#", initial: "H", current: false },
@@ -16,114 +12,6 @@ const teams = [
 
 function classNames(...classes) {
 	return classes.filter(Boolean).join(" ")
-}
-
-/**
- * Retrieves the days of the month
- * @return {Array<Array<Date|null>>} -  There will be 'null' for the initial days from
- * Sunday to the first day of the month. Then the elements are the dates from the first
- * to the last day of the month. Each sub-array is a Sunday-to-Saturday week.
- */
-function getMonthDays() {
-	const currDate = new Date()
-	const currMonth = currDate.getMonth()
-	const currYear = currDate.getFullYear()
-	const startOfMonth = new Date(currYear, currMonth, 1)
-	const endOfMonth = new Date(currYear, currMonth + 1, 0)
-	const lastDayOfMonth = endOfMonth.getDate()
-	let monthDays = [[]]
-	for (let i = 0; i < startOfMonth.getDay(); i++) {
-		monthDays[0].push(null)
-	}
-	monthDays[0].push(startOfMonth)
-	for (let i = 2; i <= lastDayOfMonth; i++) {
-		/** @type {Array<Date>} */
-		const currRow = monthDays[monthDays.length - 1]
-		const prevDay = currRow[currRow.length - 1]
-		const newDay = new Date(currYear, currMonth, i)
-		if (prevDay.getDay() === 6) {
-			monthDays.push([newDay])
-		} else {
-			currRow.push(newDay)
-		}
-	}
-	return monthDays
-}
-
-/**
- * A button component
- *
- * @param {Object} props
- * @param {string} props.label
- * @param {JSX.ElementType} props.Icon
- * @param {string} [props.bgColorClass]
- * @param {string} [props.textColorClass]
- * @returns {JSX.Element}
- */
-function Button({
-	label,
-	Icon,
-	bgColorClass = "bg-dove",
-	textColorClass = "text-ashes",
-}) {
-	return (
-		<div
-			className={`flex flex-row rounded-md px-3 py-1.5 
-			${bgColorClass} ${textColorClass} hover:cursor-pointer`}
-		>
-			<Icon className="h- w-4" aria-hidden="true" strokeWidth="2" />
-			<span className="pl-2 text-xs">{label}</span>
-		</div>
-	)
-}
-
-function DatePicker() {
-	return (
-		<div className="px-10 py-8">
-			<div className="flex flex-col gap-y-2 text-stellaMarris">
-				<div className="flex flex-row justify-between pb-2">
-					<div className="flex flex-row gap-x-4">
-						<span>June 2020</span>
-						<ChevronLeftIcon
-							className="h-6 w-4 text-ashes"
-							aria-hidden="true"
-							strokeWidth="2"
-						/>
-						<ChevronRightIcon
-							className="h-6 w-4 text-ashes"
-							aria-hidden="true"
-							strokeWidth="2"
-						/>
-					</div>
-					<Button label="TODAY" Icon={BookmarkIcon} />
-				</div>
-				<table>
-					<thead>
-						<tr className="text-sm font-light text-ashes">
-							{["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"].map(
-								(val, i) => (
-									<th key={i} className="py-2 font-light">
-										{val}
-									</th>
-								),
-							)}
-						</tr>
-					</thead>
-					<tbody>
-						{getMonthDays().map((week, weekIdx) => (
-							<tr key={weekIdx}>
-								{week.map((day, dayIdx) => (
-									<td key={dayIdx} className="py-3 text-center">
-										{day?.getDate()}
-									</td>
-								))}
-							</tr>
-						))}
-					</tbody>
-				</table>
-			</div>
-		</div>
-	)
 }
 
 function NavHolyDays() {
@@ -213,8 +101,6 @@ function fetchTodayCelebration() {
 
 export default function Page() {
 	const cel = fetchTodayCelebration()
-	// originally based off of this template
-	// https://tailwindui.com/components/application-ui/application-shells/sidebar#component-a69d85b6237ea2ad506c00ef1cd39a38
 	return (
 		<div className="flex h-full bg-dove ">
 			{/* Static sidebar for desktop */}
