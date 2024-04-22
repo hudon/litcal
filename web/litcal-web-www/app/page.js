@@ -5,7 +5,7 @@ import {
 	BookmarkIcon,
 	LinkIcon,
 } from "@heroicons/react/24/outline"
-import { Database } from "sqlite3"
+import Database from "better-sqlite3"
 import Image from "next/image"
 
 const teams = [
@@ -174,8 +174,43 @@ function fetchCelebrations() {
 	db.close()
 }
 
+/**
+ * A liturgical celebration
+ * @typedef {Object} LitCelebration
+ * @property {string} title
+ * @property {string} subtitle
+ * @property {string} gospel
+ * @property {number} rank
+ * @property {number} dateSeconds
+ */
+
+/**
+ * Get the Liturgical celebration for today
+ *
+ * @return {LitCelebration}
+ */
+function fetchTodayCelebration() {
+	const today = new Date()
+	const todayInEpochSeconds =
+		Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()) / 1000
+	const db = new Database("../../litcal.sqlite")
+	const queryStr =
+		"SELECT lc.event_key, lc.rank, lc.title, lc.subtitle, lc.gospel, " +
+		"lc.gospel_ref, lc.readings_url, lcol.name AS color, ls.name, " +
+		"ld.secular_date_s " +
+		"FROM lit_celebration lc " +
+		"JOIN lit_day ld ON lc.lit_day_id = ld.id " +
+		"JOIN lit_color lcol ON lc.lit_color_id = lcol.id " +
+		"JOIN lit_season ls ON ld.lit_season_id = ls.id " +
+		"JOIN lit_year ly ON ls.lit_year_id = ly.id " +
+		"WHERE ld.secular_date_s = ? AND ly.lit_calendar_id = ? "
+	const row = db.prepare(queryStr).get(todayInEpochSeconds, 1)
+	row.dateSeconds = row.secular_date_s
+	return row
+}
+
 export default function Page() {
-	fetchCelebrations()
+	const cel = fetchTodayCelebration()
 	// originally based off of this template
 	// https://tailwindui.com/components/application-ui/application-shells/sidebar#component-a69d85b6237ea2ad506c00ef1cd39a38
 	return (
@@ -237,41 +272,15 @@ export default function Page() {
 					</div>
 				</div>
 				<h1 className="mb-3 min-h-10 flex-shrink-0  text-center font-serif text-3xl">
-					Saint Lawrence of Brindisi
+					{cel.title}
 				</h1>
-				<h2 className="mb-3.5 min-h-10 flex-shrink-0 text-ashes">
-					Priest and Doctor of the Church
-				</h2>
+				{cel.subtitle && (
+					<h2 className="mb-3.5 min-h-10 flex-shrink-0 text-ashes">
+						{cel.subtitle}
+					</h2>
+				)}
 				<h3 className="mb-1 min-h-10 flex-shrink-0">Gospel</h3>
-				<p className="w-[537px] leading-7">
-					On another occasion, Jesus began to teach by the sea. A very large
-					crowd gathered around him so that he got into a boat on the sea and
-					sat down. And the whole crowd was beside the sea on land. And he
-					taught them at length in parables, and in the course of his
-					instruction he said to them, &quot;Hear this! A sower went out to sow.
-					And as he sowed, some seed fell on the path, and the birds came and
-					ate it up. Other seed fell on rocky ground where it had little soil.
-					It sprang up at once because the soil was not deep. And when the sun
-					rose, it was scorched and it withered for lack of roots. Some seed
-					fell among thorns, and the thorns grew up and choked it and it
-					produced no grain. And some seed fell on rich soil and produced fruit.
-					It came up and grew and yielded thirty, sixty, and a
-					hundredfold.&quot; He added, &quot;Whoever has ears to hear ought to
-					hear.&quot; And when he was alone, those present along with the Twelve
-					questioned him about the parables. Jesus said to them, &quot;Do you
-					not understand this parable? Then how will you understand any of the
-					parables? The sower sows the word. These are the ones on the path
-					where the word is sown. As soon as they hear, Satan comes at once and
-					takes away the word sown in them. And these are the ones sown on rocky
-					ground who, when they hear the word, receive it at once with joy. But
-					they have no roots; they last only for a time. Then when tribulation
-					or persecution comes because of the word, they quickly fall away.
-					Those sown among thorns are another sort. They are the people who hear
-					the word, but worldly anxiety, the lure of riches, and the craving for
-					other things intrude and choke the word, and it bears no fruit. But
-					those sown on rich soil are the ones who hear the word and accept it
-					and bear fruit thirty and sixty and a hundredfold.&quot;
-				</p>
+				<p className="w-[537px] leading-7">{cel.gospel}</p>
 			</main>
 		</div>
 	)
