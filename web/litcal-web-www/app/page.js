@@ -213,7 +213,8 @@ export default function Page() {
 
 			<main
 				className="flex min-h-full flex-shrink-0 flex-grow flex-col
-				 items-center justify-center overflow-y-auto bg-dove px-8"
+				items-center
+				 justify-center overflow-y-auto bg-dove px-8 text-stellaMarris"
 			>
 				<div className="h-10 flex-shrink-0">&nbsp;</div>
 				<div className="relative mb-10 h-[469px] w-[951px] flex-shrink-0">
@@ -235,8 +236,10 @@ export default function Page() {
 						/>
 					</div>
 				</div>
-				<h1 className="min-h-10 text-center">Saint Lawrence of Brindisi</h1>
-				<h2 className="min-h-10">Priest and Doctor of the Church</h2>
+				<h1 className="min-h-10 flex-shrink-0 text-center font-serif text-5xl">
+					Saint Lawrence of Brindisi
+				</h1>
+				<h2 className="min-h-10 text-ashes">Priest and Doctor of the Church</h2>
 				<h3 className="min-h-10">Gospel</h3>
 				<p className="w-[600px]">
 					On another occasion, Jesus began to teach by the sea. A very large

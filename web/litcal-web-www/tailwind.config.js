@@ -10,6 +10,7 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				sans: ["var(--font-euclid-square)", ...defaultTheme.fontFamily.sans],
+				serif: ["var(--font-tiempos)", ...defaultTheme.fontFamily.serif],
 			},
 			boxShadow: {
 				y: "0 4px 40px rgba(218, 218, 218, 0.60)",
