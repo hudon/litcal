@@ -1,15 +1,12 @@
 import { LinkIcon } from "@heroicons/react/24/outline"
 import Database from "better-sqlite3"
 import Image from "next/image"
-import { stat } from "fs"
+import path from "path"
 
 import Button from "@/app/Button"
 import { parseDatePath } from "@/app/dates"
 
-const databasePath = "../../litcal.sqlite"
-stat("../../litcal.sqlite", (err) => {
-	if (err) return console.error(err)
-})
+const databasePath = path.resolve("../../litcal.sqlite")
 
 // function fetchCelebrations() {
 // 	// this is pulled from litdb... use litdb if logic needs to be shared
