@@ -1,4 +1,5 @@
 "use client"
+
 import { useState } from "react"
 import {
 	BookmarkIcon,
@@ -54,6 +55,7 @@ export default function DatePicker() {
 							{currMonth.toLocaleString("default", {
 								month: "long",
 								year: "numeric",
+								timeZone: "UTC",
 							})}
 						</span>
 						<button type="button">
@@ -103,6 +105,7 @@ export default function DatePicker() {
 													"rounded-full bg-stellaMarris  text-lily")
 											}
 										>
+											{/*TODO change these to anchors. click goes to /20240422*/}
 											<span className=" hover:cursor-pointer">
 												{day?.getDate()}
 											</span>
