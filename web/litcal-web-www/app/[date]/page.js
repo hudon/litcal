@@ -7,9 +7,6 @@ import Button from "@/app/Button"
 import { parseDatePath } from "@/app/dates"
 
 const databasePath = path.resolve("../../litcal.sqlite")
-// stat(databasePath, (err) => {
-// 	if (err) return console.error(err)
-// })
 
 // function fetchCelebrations() {
 // 	// this is pulled from litdb... use litdb if logic needs to be shared
