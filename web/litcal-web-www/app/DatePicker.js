@@ -7,6 +7,7 @@ import {
 	ChevronRightIcon,
 } from "@heroicons/react/24/outline"
 import Button from "@/app/Button"
+import { makeDatePath } from "@/app/dates"
 
 /**
  * Retrieves the days of the month
@@ -40,12 +41,16 @@ function getMonthDays(month) {
 	return monthDays
 }
 
-export default function DatePicker() {
-	let today = new Date()
-	today = new Date(today.getFullYear(), today.getMonth(), today.getDate())
-	const [currDate, setCurrDate] = useState(today)
-	const [month, setMonth] = useState(today.getMonth())
+/**
+ *
+ * @param currDate
+ * @return {JSX.Element}
+ * @constructor
+ */
+export default function DatePicker({ currDate }) {
+	const [month, setMonth] = useState(currDate.getMonth())
 	const currMonth = new Date(currDate.getFullYear(), month, 1)
+
 	return (
 		<div className="px-10 py-8">
 			<div className="flex flex-col gap-y-2 text-stellaMarris">
@@ -93,11 +98,7 @@ export default function DatePicker() {
 						{getMonthDays(month).map((week, weekIdx) => (
 							<tr key={weekIdx}>
 								{week.map((day, dayIdx) => (
-									<td
-										key={dayIdx}
-										className=" py-2 text-center "
-										onClick={() => setCurrDate(day)}
-									>
+									<td key={dayIdx} className=" py-2 text-center ">
 										<div
 											className={
 												"m-auto h-8 w-8 pt-1 " +
@@ -105,10 +106,12 @@ export default function DatePicker() {
 													"rounded-full bg-stellaMarris  text-lily")
 											}
 										>
-											{/*TODO change these to anchors. click goes to /20240422*/}
-											<span className=" hover:cursor-pointer">
+											<a
+												href={makeDatePath(day)}
+												className=" hover:cursor-pointer"
+											>
 												{day?.getDate()}
-											</span>
+											</a>
 										</div>
 									</td>
 								))}

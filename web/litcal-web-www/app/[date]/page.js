@@ -3,6 +3,7 @@ import Database from "better-sqlite3"
 import Image from "next/image"
 
 import Button from "@/app/Button"
+import { parseDatePath } from "@/app/dates"
 
 // function fetchCelebrations() {
 // 	// this is pulled from litdb... use litdb if logic needs to be shared
@@ -66,15 +67,8 @@ function fetchTodayCelebration(date) {
 }
 
 export default function Page({ params: { date } }) {
-	let y = parseInt(date.substring(0, 4))
-	let m = parseInt(date.substring(4, 6)) - 1
-	let d = parseInt(date.substring(6, 8))
-	if (!y || isNaN(m) || !d) {
-		// TODO: present error well
-		throw new Error("Invalid date format")
-	}
 	// TODO cache celebration for that date
-	const parsedDate = new Date(y, m, d)
+	const parsedDate = parseDatePath(date)
 	const cel = fetchTodayCelebration(parsedDate)
 	const dateTx = parsedDate.toLocaleString("default", {
 		month: "short",
