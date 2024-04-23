@@ -50,16 +50,17 @@ function makeMonthDays(year, month) {
  */
 export default function DatePicker({ utcDateMillis }) {
 	const utcDate = new Date(utcDateMillis)
+	// we need the UTC variants, otherwise a Jan 1 2024 date will return 2023 in
+	// PDT because of the -7 timezone offset
 	const year = utcDate.getUTCFullYear()
 	const [month, setMonth] = useState(utcDate.getUTCMonth())
-	const currMonth = new Date(year, month, 1)
 	return (
 		<div className="px-10 py-8">
 			<div className="flex flex-col gap-y-2 text-stellaMarris">
 				<div className="flex flex-row justify-between pb-2">
 					<div className="flex flex-row gap-x-4">
 						<span>
-							{currMonth.toLocaleString("default", {
+							{new Date(year, month, 1).toLocaleString("default", {
 								month: "long",
 								year: "numeric",
 								timeZone: "UTC",

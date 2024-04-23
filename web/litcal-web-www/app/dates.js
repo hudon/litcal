@@ -9,7 +9,7 @@ export function makeDatePath(date) {
 }
 
 /**
- * Returns true if local date and utc date represent the same date.
+ * Returns true if local date and UTC date represent the same date.
  * Let's say you have a date like 2024-04-17T00:00:00 -7
  * and 2024-04-17T00:00:00 UTC. They both represent the same date, even though
  * the second date is the 16th in the -7 timezone offset
@@ -29,7 +29,7 @@ export function isSameUTCDate(date, utcDate) {
 
 /**
  * Parses a date string of format 20240422 and returns milliseconds since epoch
- * up to midnight at that date
+ * up to midnight UTC at that date
  *
  * @param {string} dateStr - The date string to be parsed.
  * @return {number} - The Date in milliseconds since epoch
