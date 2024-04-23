@@ -1,4 +1,5 @@
 "use client"
+
 import { useState } from "react"
 import {
 	BookmarkIcon,
@@ -6,6 +7,7 @@ import {
 	ChevronRightIcon,
 } from "@heroicons/react/24/outline"
 import Button from "@/app/Button"
+import { makeDatePath } from "@/app/dates"
 
 /**
  * Retrieves the days of the month
@@ -28,22 +30,27 @@ function getMonthDays(month) {
 	for (let i = 2; i <= lastDayOfMonth; i++) {
 		/** @type {Array<Date>} */
 		const currRow = monthDays[monthDays.length - 1]
-		const prevDay = currRow[currRow.length - 1]
-		const newDay = new Date(year, month, i)
-		if (prevDay.getDay() === 6) {
-			monthDays.push([newDay])
+		const prev = currRow[currRow.length - 1]
+		const next = new Date(year, month, i)
+		if (prev.getDay() === 6) {
+			monthDays.push([next])
 		} else {
-			currRow.push(newDay)
+			currRow.push(next)
 		}
 	}
 	return monthDays
 }
 
-export default function DatePicker() {
-	const today = new Date()
-	const [currDate, setCurrDate] = useState(today)
-	const [month, setMonth] = useState(today.getMonth())
+/**
+ *
+ * @param currDate
+ * @return {JSX.Element}
+ * @constructor
+ */
+export default function DatePicker({ currDate }) {
+	const [month, setMonth] = useState(currDate.getMonth())
 	const currMonth = new Date(currDate.getFullYear(), month, 1)
+
 	return (
 		<div className="px-10 py-8">
 			<div className="flex flex-col gap-y-2 text-stellaMarris">
@@ -53,6 +60,7 @@ export default function DatePicker() {
 							{currMonth.toLocaleString("default", {
 								month: "long",
 								year: "numeric",
+								timeZone: "UTC",
 							})}
 						</span>
 						<button type="button">
@@ -90,12 +98,21 @@ export default function DatePicker() {
 						{getMonthDays(month).map((week, weekIdx) => (
 							<tr key={weekIdx}>
 								{week.map((day, dayIdx) => (
-									<td
-										key={dayIdx}
-										className="py-3 text-center"
-										onClick={() => setCurrDate(day)}
-									>
-										{day?.getDate()}
+									<td key={dayIdx} className=" py-2 text-center ">
+										<div
+											className={
+												"m-auto h-8 w-8 pt-1 " +
+												(day?.getTime() === currDate.getTime() &&
+													"rounded-full bg-stellaMarris  text-lily")
+											}
+										>
+											<a
+												href={makeDatePath(day)}
+												className=" hover:cursor-pointer"
+											>
+												{day?.getDate()}
+											</a>
+										</div>
 									</td>
 								))}
 							</tr>
