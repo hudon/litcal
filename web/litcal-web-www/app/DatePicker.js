@@ -98,7 +98,7 @@ export default function DatePicker({ currDate }) {
 						{getMonthDays(month).map((week, weekIdx) => (
 							<tr key={"" + month + weekIdx}>
 								{week.map((day, dayIdx) => (
-									<td key={dayIdx} className=" py-2 text-center ">
+									<td key={"" + month + dayIdx} className=" py-2 text-center ">
 										<div
 											className={
 												"m-auto h-8 w-8 pt-1 " +
