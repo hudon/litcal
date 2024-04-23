@@ -28,19 +28,20 @@ function getMonthDays(month) {
 	for (let i = 2; i <= lastDayOfMonth; i++) {
 		/** @type {Array<Date>} */
 		const currRow = monthDays[monthDays.length - 1]
-		const prevDay = currRow[currRow.length - 1]
-		const newDay = new Date(year, month, i)
-		if (prevDay.getDay() === 6) {
-			monthDays.push([newDay])
+		const prev = currRow[currRow.length - 1]
+		const next = new Date(year, month, i)
+		if (prev.getDay() === 6) {
+			monthDays.push([next])
 		} else {
-			currRow.push(newDay)
+			currRow.push(next)
 		}
 	}
 	return monthDays
 }
 
 export default function DatePicker() {
-	const today = new Date()
+	let today = new Date()
+	today = new Date(today.getFullYear(), today.getMonth(), today.getDate())
 	const [currDate, setCurrDate] = useState(today)
 	const [month, setMonth] = useState(today.getMonth())
 	const currMonth = new Date(currDate.getFullYear(), month, 1)
@@ -92,10 +93,20 @@ export default function DatePicker() {
 								{week.map((day, dayIdx) => (
 									<td
 										key={dayIdx}
-										className="py-3 text-center"
+										className=" py-2 text-center "
 										onClick={() => setCurrDate(day)}
 									>
-										{day?.getDate()}
+										<div
+											className={
+												"m-auto h-8 w-8 pt-1 " +
+												(day?.getTime() === currDate.getTime() &&
+													"rounded-full bg-stellaMarris  text-lily")
+											}
+										>
+											<span className=" hover:cursor-pointer">
+												{day?.getDate()}
+											</span>
+										</div>
 									</td>
 								))}
 							</tr>

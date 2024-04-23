@@ -1,5 +1,8 @@
 import "./globals.css"
 import localFont from "next/font/local"
+import Image from "next/image"
+import DatePicker from "@/app/DatePicker"
+import { CalendarDaysIcon } from "@heroicons/react/24/outline"
 
 const euclid = localFont({
 	src: "./EuclidSquare-Regular.ttf",
@@ -22,9 +25,54 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en" className="h-full bg-white">
 			<body
-				className={`h-full ${euclid.variable} ${tiempos.variable} font-sans`}
+				className={`flex h-full ${euclid.variable} ${tiempos.variable} font-sans`}
 			>
-				{children}
+				<nav className="flex w-96 flex-shrink-0 flex-col overflow-y-auto bg-lily ">
+					<div className=" mt-5 h-28 flex-shrink-0 pl-10 pt-12">
+						<Image
+							src="/litcal.svg"
+							alt="Litcal Logo"
+							width={94}
+							height={30}
+							priority
+						/>
+					</div>
+					<div className="h-100 w-full flex-shrink-0 shadow-y">
+						<DatePicker></DatePicker>
+					</div>
+					<div className="mt-5 h-20 flex-shrink-0 bg-lily shadow-y">
+						<a
+							href="#"
+							className={
+								"text-stellaMarris hover:bg-indigo-700 hover:text-white " +
+								"group flex h-full flex-col justify-center px-12 leading-6"
+							}
+						>
+							<p className="flex  gap-x-4">
+								<CalendarDaysIcon
+									className="h-6 w-6 shrink-0 text-ashes"
+									aria-hidden="true"
+								/>
+								<span className="truncate ">Holy Days of Obligation</span>
+							</p>
+						</a>
+					</div>
+					<div className="mb-16 flex flex-grow flex-col-reverse pl-10 pt-12">
+						<a href="https://apps.apple.com/us/app/litcal-liturgical-calendar/id1641330305">
+							<Image
+								src="/appstore.svg"
+								alt="Download on the App Store"
+								className="hover:cursor-pointer"
+								width={174}
+								height={58}
+								priority
+							/>
+						</a>
+					</div>
+				</nav>
+				<main className="h-full flex-shrink-0 flex-grow overflow-y-auto bg-dove">
+					{children}
+				</main>
 			</body>
 		</html>
 	)
