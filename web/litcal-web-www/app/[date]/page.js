@@ -1,9 +1,15 @@
 import { LinkIcon } from "@heroicons/react/24/outline"
 import Database from "better-sqlite3"
 import Image from "next/image"
+import { stat } from "fs"
 
 import Button from "@/app/Button"
 import { parseDatePath } from "@/app/dates"
+
+const databasePath = "../../litcal.sqlite"
+stat("../../litcal.sqlite", (err) => {
+	if (err) return console.error(err)
+})
 
 // function fetchCelebrations() {
 // 	// this is pulled from litdb... use litdb if logic needs to be shared
@@ -52,7 +58,7 @@ import { parseDatePath } from "@/app/dates"
 function fetchTodayCelebration(date) {
 	const todayInEpochSeconds =
 		Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) / 1000
-	const db = new Database("../../litcal.sqlite")
+	const db = new Database(databasePath)
 	const queryStr =
 		"SELECT lc.event_key, lc.rank, lc.title, lc.subtitle, lc.gospel, " +
 		"lc.gospel_ref as gospelRef, lc.readings_url, lcol.name AS color, ls.name as season, " +
