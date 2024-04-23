@@ -5,6 +5,7 @@ import { parseDatePath } from "@/app/dates"
 
 export default function Layout({ params, children }) {
 	const currDate = parseDatePath(params.date)
+	console.log("whoops", currDate.getTimezoneOffset())
 	return (
 		<>
 			<nav className="flex w-96 flex-shrink-0 flex-col overflow-y-auto bg-lily ">

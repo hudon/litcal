@@ -12,13 +12,14 @@ import { makeDatePath } from "@/app/dates"
 /**
  * Retrieves the days of the month
  *
+ * @param {number} year
  * @param {number} month - month to get dates for
  * @return {Array<Array<Date|null>>} -  There will be 'null' for the initial days from
  * Sunday to the first day of the month. Then the elements are the dates from the first
  * to the last day of the month. Each sub-array is a Sunday-to-Saturday week.
  */
-function getMonthDays(month) {
-	const year = new Date().getFullYear()
+function makeMonthDays(year, month) {
+	// const year = new Date().getFullYear()
 	const startOfMonth = new Date(year, month, 1)
 	const endOfMonth = new Date(year, month + 1, 0)
 	const lastDayOfMonth = endOfMonth.getDate()
@@ -49,6 +50,7 @@ function getMonthDays(month) {
  * @constructor
  */
 export default function DatePicker({ currDate }) {
+	const year = currDate.getFullYear()
 	const [month, setMonth] = useState(currDate.getMonth())
 	const currMonth = new Date(currDate.getFullYear(), month, 1)
 	console.log("hello world", month, currMonth, currDate)
@@ -96,7 +98,7 @@ export default function DatePicker({ currDate }) {
 						</tr>
 					</thead>
 					<tbody>
-						{getMonthDays(month).map((week, weekIdx) => (
+						{makeMonthDays(year, month).map((week, weekIdx) => (
 							<tr key={"" + month + weekIdx}>
 								{week.map((day, dayIdx) => (
 									<td key={dayIdx} className=" py-2 text-center ">

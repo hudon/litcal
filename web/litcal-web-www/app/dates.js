@@ -9,6 +9,18 @@ export function makeDatePath(date) {
 }
 
 /**
+ * Creates a new Date object at UTC midnight of the given date
+ *
+ * @param {number} y - The year.
+ * @param {number} m - The month (0-11).
+ * @param {number} d - The day of the month (1-31).
+ * @return {Date}
+ */
+export function newUTCDate(y, m, d) {
+	return new Date(Date.UTC(y, m, d))
+}
+
+/**
  * Parses a date string of format 20240422 and returns a Date object.
  *
  * @param {string} dateStr - The date string to be parsed.
