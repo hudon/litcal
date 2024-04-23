@@ -32,6 +32,7 @@ function getMonthDays(month) {
 		const currRow = monthDays[monthDays.length - 1]
 		const prev = currRow[currRow.length - 1]
 		const next = new Date(year, month, i)
+		console.log("made day", next)
 		if (prev.getDay() === 6) {
 			monthDays.push([next])
 		} else {
@@ -50,7 +51,7 @@ function getMonthDays(month) {
 export default function DatePicker({ currDate }) {
 	const [month, setMonth] = useState(currDate.getMonth())
 	const currMonth = new Date(currDate.getFullYear(), month, 1)
-
+	console.log("hello world", month, currMonth, currDate)
 	return (
 		<div className="px-10 py-8">
 			<div className="flex flex-col gap-y-2 text-stellaMarris">
@@ -98,7 +99,7 @@ export default function DatePicker({ currDate }) {
 						{getMonthDays(month).map((week, weekIdx) => (
 							<tr key={"" + month + weekIdx}>
 								{week.map((day, dayIdx) => (
-									<td key={"" + month + dayIdx} className=" py-2 text-center ">
+									<td key={dayIdx} className=" py-2 text-center ">
 										<div
 											className={
 												"m-auto h-8 w-8 pt-1 " +
