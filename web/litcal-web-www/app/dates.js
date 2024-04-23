@@ -9,22 +9,30 @@ export function makeDatePath(date) {
 }
 
 /**
- * Creates a new Date object at UTC midnight of the given date
+ * Returns true if local date and utc date represent the same date.
+ * Let's say you have a date like 2024-04-17T00:00:00 -7
+ * and 2024-04-17T00:00:00 UTC. They both represent the same date, even though
+ * the second date is the 16th in the -7 timezone offset
  *
- * @param {number} y - The year.
- * @param {number} m - The month (0-11).
- * @param {number} d - The day of the month (1-31).
- * @return {Date}
+ * @param {Date} date - a date interpreted in local timezone
+ * @param {Date} utcDate - a date interpreted in UTC
+ * @return {boolean}
  */
-export function newUTCDate(y, m, d) {
-	return new Date(Date.UTC(y, m, d))
+export function isSameUTCDate(date, utcDate) {
+	if (!date || !utcDate) return false
+	return (
+		date.getFullYear() === utcDate.getUTCFullYear() &&
+		date.getMonth() === utcDate.getUTCMonth() &&
+		date.getDate() === utcDate.getUTCDate()
+	)
 }
 
 /**
- * Parses a date string of format 20240422 and returns a Date object.
+ * Parses a date string of format 20240422 and returns milliseconds since epoch
+ * up to midnight at that date
  *
  * @param {string} dateStr - The date string to be parsed.
- * @return {Date} - The Date object representing the parsed date.
+ * @return {number} - The Date in milliseconds since epoch
  * @throws {Error} - If the string does not represent a valid date
  */
 export function parseDatePath(dateStr) {
@@ -35,5 +43,5 @@ export function parseDatePath(dateStr) {
 		// TODO: present error well
 		throw new Error("Invalid date format")
 	}
-	return new Date(y, m, d)
+	return Date.UTC(y, m, d)
 }

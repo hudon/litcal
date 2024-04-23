@@ -7,7 +7,7 @@ import {
 	ChevronRightIcon,
 } from "@heroicons/react/24/outline"
 import Button from "@/app/Button"
-import { makeDatePath } from "@/app/dates"
+import { isSameUTCDate, makeDatePath } from "@/app/dates"
 
 /**
  * Retrieves the days of the month
@@ -33,7 +33,6 @@ function makeMonthDays(year, month) {
 		const currRow = monthDays[monthDays.length - 1]
 		const prev = currRow[currRow.length - 1]
 		const next = new Date(year, month, i)
-		console.log("made day", next)
 		if (prev.getDay() === 6) {
 			monthDays.push([next])
 		} else {
@@ -49,11 +48,11 @@ function makeMonthDays(year, month) {
  * @return {JSX.Element}
  * @constructor
  */
-export default function DatePicker({ currDate }) {
-	const year = currDate.getFullYear()
-	const [month, setMonth] = useState(currDate.getMonth())
-	const currMonth = new Date(currDate.getFullYear(), month, 1)
-	console.log("hello world", month, currMonth, currDate)
+export default function DatePicker({ utcDateMillis }) {
+	const utcDate = new Date(utcDateMillis)
+	const year = utcDate.getUTCFullYear()
+	const [month, setMonth] = useState(utcDate.getUTCMonth())
+	const currMonth = new Date(year, month, 1)
 	return (
 		<div className="px-10 py-8">
 			<div className="flex flex-col gap-y-2 text-stellaMarris">
@@ -105,7 +104,7 @@ export default function DatePicker({ currDate }) {
 										<div
 											className={
 												"m-auto h-8 w-8 pt-1 " +
-												(day?.getTime() === currDate.getTime() &&
+												(isSameUTCDate(day, utcDate) &&
 													"rounded-full bg-stellaMarris  text-lily")
 											}
 										>

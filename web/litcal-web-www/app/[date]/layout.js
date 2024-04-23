@@ -4,8 +4,7 @@ import { CalendarDaysIcon } from "@heroicons/react/24/outline"
 import { parseDatePath } from "@/app/dates"
 
 export default function Layout({ params, children }) {
-	const currDate = parseDatePath(params.date)
-	console.log("whoops", currDate.getTimezoneOffset())
+	const utcDateMillis = parseDatePath(params.date)
 	return (
 		<>
 			<nav className="flex w-96 flex-shrink-0 flex-col overflow-y-auto bg-lily ">
@@ -19,7 +18,7 @@ export default function Layout({ params, children }) {
 					/>
 				</div>
 				<div className="h-100 w-full flex-shrink-0 shadow-y">
-					<DatePicker currDate={currDate}></DatePicker>
+					<DatePicker utcDateMillis={utcDateMillis}></DatePicker>
 				</div>
 				<div className="mt-5 h-20 flex-shrink-0 bg-lily shadow-y">
 					<a

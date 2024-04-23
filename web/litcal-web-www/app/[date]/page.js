@@ -49,12 +49,11 @@ const databasePath = path.resolve("../../litcal.sqlite")
 /**
  * Get the Liturgical celebration for today
  *
- * @param {Date} date - the date to get the celebration for
+ * @param {number} utcDateMillis - the date to get the celebration for
  * @return {LitCelebration}
  */
-function fetchTodayCelebration(date) {
-	const todayInEpochSeconds =
-		Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) / 1000
+function fetchTodayCelebration(utcDateMillis) {
+	const todayInEpochSeconds = utcDateMillis / 1000
 	const db = new Database(databasePath)
 	const queryStr =
 		"SELECT lc.event_key, lc.rank, lc.title, lc.subtitle, lc.gospel, " +
@@ -71,9 +70,9 @@ function fetchTodayCelebration(date) {
 
 export default function Page({ params: { date } }) {
 	// TODO cache celebration for that date
-	const parsedDate = parseDatePath(date)
-	const cel = fetchTodayCelebration(parsedDate)
-	const dateTx = parsedDate.toLocaleString("default", {
+	const utcDateMillis = parseDatePath(date)
+	const cel = fetchTodayCelebration(utcDateMillis)
+	const dateTxt = new Date(utcDateMillis).toLocaleString("default", {
 		month: "short",
 		year: "numeric",
 		day: "numeric",
@@ -93,7 +92,7 @@ export default function Page({ params: { date } }) {
 				/>
 				<div className="absolute bottom-11 flex w-full justify-between px-12 text-white">
 					<div>
-						{dateTx} • {cel.season}
+						{dateTxt} • {cel.season}
 					</div>
 					<Button
 						label={cel.gospelRef}
