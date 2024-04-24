@@ -13,7 +13,7 @@ function leftPad(s) {
  * @param {Date} [date]
  * @return {string}
  */
-export function makeDatePath(date) {
+export function makeDateSegment(date) {
 	if (!date) return ""
 	const y = date.getFullYear().toString()
 	const m = (date.getMonth() + 1).toString()

@@ -7,7 +7,7 @@ import {
 	ChevronRightIcon,
 } from "@heroicons/react/24/outline"
 import { Button } from "@/components/Button"
-import { isSameUTCDate, makeDatePath } from "@/app/dates"
+import { isSameUTCDate, makeDateSegment } from "@/app/dates"
 
 /**
  * Retrieves the days of the month
@@ -81,7 +81,7 @@ export default function DatePicker({ utcDateMillis }) {
 								onClick={() => setMonth(month + 1)}
 							/>
 						</button>
-						<Button href={makeDatePath(new Date())} color="dove">
+						<Button href={"/" + makeDateSegment(new Date())} color="dove">
 							<BookmarkIcon />
 							TODAY
 						</Button>
@@ -112,7 +112,7 @@ export default function DatePicker({ utcDateMillis }) {
 											}
 										>
 											<a
-												href={makeDatePath(day)}
+												href={"/" + makeDateSegment(day)}
 												className=" hover:cursor-pointer"
 											>
 												{day?.getDate()}

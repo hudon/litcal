@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation"
-import { makeDatePath } from "@/app/dates"
+import { makeDateSegment } from "@/app/dates"
 
 export async function GET() {
-	redirect("/" + makeDatePath(new Date()))
+	redirect("/" + makeDateSegment(new Date()))
 }
