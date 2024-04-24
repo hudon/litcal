@@ -31,10 +31,7 @@ export default function Page({ params: { date } }) {
 					<div>
 						{dateTxt} • {cel.season}
 					</div>
-					<Button
-					// bgColorClass="bg-ourLady"
-					// textColorClass="text-lily"
-					>
+					<Button color="ourLady" href={cel.readingsURL}>
 						<LinkIcon />
 						{cel.gospelRef}
 					</Button>

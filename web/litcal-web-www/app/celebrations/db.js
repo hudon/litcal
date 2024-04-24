@@ -6,7 +6,7 @@ const calID = 1
 
 const celebrationQuerySELECT =
 	"SELECT lc.event_key as eventKey, lc.rank, lc.title, lc.subtitle, lc.gospel, " +
-	"lc.gospel_ref as gospelRef, lc.readings_url, lcol.name AS color, ls.name as season, " +
+	"lc.gospel_ref as gospelRef, lc.readings_url as readingsURL, lcol.name AS color, ls.name as season, " +
 	"ld.secular_date_s as dateSeconds "
 const celebrationQueryFROM =
 	"FROM lit_celebration lc " +

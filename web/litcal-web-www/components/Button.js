@@ -9,8 +9,7 @@ const styles = {
 		"relative isolate inline-flex items-center justify-center gap-x-2 rounded-md border text-xs/6 font-light",
 
 		// Sizing
-		"px-[calc(theme(spacing.3)-1px)] py-[calc(theme(spacing.1)-1px)]",
-		"sm:px-[calc(theme(spacing.3)-1px)] sm:py-[calc(theme(spacing[1.5])-1px)] sm:text-xs/6",
+		"px-[calc(theme(spacing.3)-1px)] py-[calc(theme(spacing[0.5])-1px)]",
 
 		// Focus
 		"focus:outline-none data-[focus]:outline data-[focus]:outline-2 data-[focus]:outline-offset-2 data-[focus]:outline-blue-500",
@@ -61,6 +60,12 @@ const styles = {
 			// Dark mode not implemented yet
 			// "dark:text-white dark:[--btn-bg:theme(colors.zinc.600)] dark:[--btn-hover-overlay:theme(colors.white/5%)]",
 			"[--btn-icon:theme(colors.ashes)] data-[active]:[--btn-icon:theme(colors.ashes)] data-[hover]:[--btn-icon:theme(colors.ashes)]",
+		],
+		ourLady: [
+			"text-lily [--btn-bg:theme(colors.ourLady)] [--btn-border:theme(colors.ourLady/90%)] [--btn-hover-overlay:theme(colors.white/40%)]",
+			// Dark mode not implemented yet
+			// "dark:text-white dark:[--btn-bg:theme(colors.zinc.600)] dark:[--btn-hover-overlay:theme(colors.white/5%)]",
+			"[--btn-icon:theme(colors.lily)] data-[active]:[--btn-icon:theme(colors.lily)] data-[hover]:[--btn-icon:theme(colors.lily)]",
 		],
 		"dark/zinc": [
 			"text-white [--btn-bg:theme(colors.zinc.900)] [--btn-border:theme(colors.zinc.950/90%)] [--btn-hover-overlay:theme(colors.white/10%)]",
