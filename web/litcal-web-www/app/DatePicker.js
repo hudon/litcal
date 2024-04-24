@@ -6,8 +6,8 @@ import {
 	ChevronLeftIcon,
 	ChevronRightIcon,
 } from "@heroicons/react/24/outline"
-import Button from "@/app/Button"
-import { isSameUTCDate, makeDatePath } from "@/app/dates"
+import { Button } from "@/components/Button"
+import { isSameUTCDate, makeDateSegment } from "@/app/dates"
 
 /**
  * Retrieves the days of the month
@@ -18,8 +18,7 @@ import { isSameUTCDate, makeDatePath } from "@/app/dates"
  * Sunday to the first day of the month. Then the elements are the dates from the first
  * to the last day of the month. Each sub-array is a Sunday-to-Saturday week.
  */
-function makeMonthDays(year, month) {
-	// const year = new Date().getFullYear()
+function makeMonthDates(year, month) {
 	const startOfMonth = new Date(year, month, 1)
 	const endOfMonth = new Date(year, month + 1, 0)
 	const lastDayOfMonth = endOfMonth.getDate()
@@ -57,15 +56,15 @@ export default function DatePicker({ utcDateMillis }) {
 	return (
 		<div className="px-10 py-8">
 			<div className="flex flex-col gap-y-2 text-stellaMarris">
-				<div className="flex flex-row justify-between pb-2">
+				<div className="flex flex-row items-center justify-between pb-2">
+					<span>
+						{new Date(year, month, 1).toLocaleString("default", {
+							month: "long",
+							year: "numeric",
+							timeZone: "UTC",
+						})}
+					</span>
 					<div className="flex flex-row gap-x-4">
-						<span>
-							{new Date(year, month, 1).toLocaleString("default", {
-								month: "long",
-								year: "numeric",
-								timeZone: "UTC",
-							})}
-						</span>
 						<button type="button">
 							<ChevronLeftIcon
 								className="no-s h-6 w-4 text-ashes"
@@ -82,8 +81,11 @@ export default function DatePicker({ utcDateMillis }) {
 								onClick={() => setMonth(month + 1)}
 							/>
 						</button>
+						<Button href={"/" + makeDateSegment(new Date())} color="dove">
+							<BookmarkIcon />
+							TODAY
+						</Button>
 					</div>
-					<Button label="TODAY" Icon={BookmarkIcon} />
 				</div>
 				<table>
 					<thead>
@@ -98,7 +100,7 @@ export default function DatePicker({ utcDateMillis }) {
 						</tr>
 					</thead>
 					<tbody>
-						{makeMonthDays(year, month).map((week, weekIdx) => (
+						{makeMonthDates(year, month).map((week, weekIdx) => (
 							<tr key={"" + month + weekIdx}>
 								{week.map((day, dayIdx) => (
 									<td key={dayIdx} className=" py-2 text-center ">
@@ -110,7 +112,7 @@ export default function DatePicker({ utcDateMillis }) {
 											}
 										>
 											<a
-												href={makeDatePath(day)}
+												href={"/" + makeDateSegment(day)}
 												className=" hover:cursor-pointer"
 											>
 												{day?.getDate()}

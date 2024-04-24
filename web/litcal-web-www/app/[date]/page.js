@@ -3,7 +3,7 @@ import Database from "better-sqlite3"
 import Image from "next/image"
 import path from "path"
 
-import Button from "@/app/Button"
+import { Button } from "@/components/Button"
 import { parseDatePath } from "@/app/dates"
 
 const databasePath = path.resolve("../../litcal.sqlite")
@@ -95,11 +95,12 @@ export default function Page({ params: { date } }) {
 						{dateTxt} • {cel.season}
 					</div>
 					<Button
-						label={cel.gospelRef}
-						Icon={LinkIcon}
-						bgColorClass="bg-ourLady"
-						textColorClass="text-lily"
-					/>
+					// bgColorClass="bg-ourLady"
+					// textColorClass="text-lily"
+					>
+						<LinkIcon />
+						{cel.gospelRef}
+					</Button>
 				</div>
 			</div>
 			<h1 className="mb-3 min-h-10 flex-shrink-0  text-center font-serif text-3xl">
