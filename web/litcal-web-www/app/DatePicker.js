@@ -6,7 +6,7 @@ import {
 	ChevronLeftIcon,
 	ChevronRightIcon,
 } from "@heroicons/react/24/outline"
-import { Button } from "@/components/button"
+import { Button } from "@/components/Button"
 import { isSameUTCDate, makeDatePath } from "@/app/dates"
 
 /**
