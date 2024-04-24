@@ -56,7 +56,7 @@ export default function DatePicker({ utcDateMillis }) {
 	return (
 		<div className="px-10 py-8">
 			<div className="flex flex-col gap-y-2 text-stellaMarris">
-				<div className="flex flex-row justify-between pb-2">
+				<div className="flex flex-row items-center justify-between pb-2">
 					<span>
 						{new Date(year, month, 1).toLocaleString("default", {
 							month: "long",
@@ -81,10 +81,7 @@ export default function DatePicker({ utcDateMillis }) {
 								onClick={() => setMonth(month + 1)}
 							/>
 						</button>
-						<Button
-							href={makeDatePath(new Date())}
-							className="h-8 text-xs font-light"
-						>
+						<Button href={makeDatePath(new Date())} color="dove">
 							<BookmarkIcon />
 							TODAY
 						</Button>
