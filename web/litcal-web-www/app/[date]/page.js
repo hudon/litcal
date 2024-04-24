@@ -27,6 +27,51 @@ function colorClassForCelebration(c) {
 	return ""
 }
 
+/**
+ * Returns the asset name for the image to show for the given celebration
+ * @param {LitCelebration} c
+ * @return {string}
+ */
+function imgAssetForCelebration(c) {
+	let result =
+		{
+			Advent: "hero_advent",
+			Christmas: "hero_christmas",
+			Lent: "hero_lent",
+			Easter: "hero_easter",
+		}[c.season] ?? "hero_ordinary_time"
+
+	// Pick a specific image for certain ranks
+	if ([7, 8, 10, 11, 12].includes(c.rank)) {
+		result = "hero_saints"
+	}
+
+	if (c.title === "Saturday Memorial of the Blessed Virgin Mary") {
+		result = "hero_bvm"
+	}
+
+	// Pick a specific image for a specific key (highest priority
+	return (
+		({
+			StMaryMagdalene: "hero_mary_magdalene",
+			GoodFri: "hero_good_friday",
+			EasterVigil: "hero_holy_saturday",
+			Easter: "hero_easter",
+			Pentecost: "hero_pentecost",
+			MaryMotherChurch: "hero_bvm",
+			QueenshipMary: "hero_bvm",
+			LadyLoreto: "hero_bvm",
+			LadyLourdes: "hero_bvm",
+			LadyFatima: "hero_bvm",
+			LadyMountCarmel: "hero_bvm",
+			LadySorrows: "hero_bvm",
+			LadyRosary: "hero_bvm",
+			LadyGuadalupe: "hero_bvm",
+			Assumption: "hero_bvm",
+		}[c.eventKey] ?? result) + ".png"
+	)
+}
+
 export default function Page({ params: { date } }) {
 	// TODO cache celebration for that date
 	const utcDateMillis = parseDateSegment(date)
@@ -42,7 +87,7 @@ export default function Page({ params: { date } }) {
 			<div className="h-10 flex-shrink-0">&nbsp;</div>
 			<div className="relative mb-10 h-[469px] w-[951px] flex-shrink-0">
 				<Image
-					src="/hero_ordinary_time.png"
+					src={"/" + imgAssetForCelebration(cel)}
 					alt="Image of the day"
 					fill
 					className="rounded-lg"
