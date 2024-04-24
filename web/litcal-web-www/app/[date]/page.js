@@ -5,6 +5,28 @@ import { Button } from "@/components/Button"
 import { parseDateSegment } from "@/app/dates"
 import { fetchTodayCelebration } from "@/app/celebrations/db"
 
+/**
+ * Returns the color class to be used for text given a celebration
+ * @param {string} [c]
+ * @return {string}
+ */
+function colorClassForCelebration(c) {
+	switch (c) {
+		case "red":
+			return "text-passion"
+		case "green":
+			return "text-figTree"
+		case "violet":
+			return "text-wine"
+		case "rose":
+			return "text-matrimony"
+		case "white":
+			return "text-lily"
+	}
+
+	return ""
+}
+
 export default function Page({ params: { date } }) {
 	// TODO cache celebration for that date
 	const utcDateMillis = parseDateSegment(date)
@@ -27,9 +49,16 @@ export default function Page({ params: { date } }) {
 					objectFit="cover"
 					objectPosition="center top"
 				/>
-				<div className="absolute bottom-11 flex w-full justify-between px-12 text-white">
+				<div
+					className={
+						"absolute bottom-11 flex w-full justify-between px-12 text-white"
+					}
+				>
 					<div>
-						{dateTxt} • {cel.season}
+						{dateTxt} •{" "}
+						<span className={colorClassForCelebration(cel.seasonColor)}>
+							{cel.season}
+						</span>
 					</div>
 					<Button color="ourLady" href={cel.readingsURL}>
 						<LinkIcon />

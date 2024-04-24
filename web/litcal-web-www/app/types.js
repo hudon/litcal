@@ -8,6 +8,7 @@
  * @property {string} gospelRef
  * @property {string} readingsURL
  * @property {string} season
+ * @property {string} seasonColor
  * @property {string} color
  * @property {number} rank
  * @property {number} dateSeconds

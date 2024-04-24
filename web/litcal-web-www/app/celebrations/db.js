@@ -7,13 +7,14 @@ const calID = 1
 const celebrationQuerySELECT =
 	"SELECT lc.event_key as eventKey, lc.rank, lc.title, lc.subtitle, lc.gospel, " +
 	"lc.gospel_ref as gospelRef, lc.readings_url as readingsURL, lcol.name AS color, ls.name as season, " +
-	"ld.secular_date_s as dateSeconds "
+	"ld.secular_date_s as dateSeconds, lscol.name AS seasonColor "
 const celebrationQueryFROM =
 	"FROM lit_celebration lc " +
 	"JOIN lit_day ld ON lc.lit_day_id = ld.id " +
 	"JOIN lit_color lcol ON lc.lit_color_id = lcol.id " +
 	"JOIN lit_season ls ON ld.lit_season_id = ls.id " +
-	"JOIN lit_year ly ON ls.lit_year_id = ly.id "
+	"JOIN lit_year ly ON ls.lit_year_id = ly.id " +
+	"JOIN lit_color lscol ON ls.lit_color_id = lscol.id "
 
 /**
  * Get the Liturgical celebration for today
