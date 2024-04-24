@@ -1,11 +1,24 @@
 /**
+ * prepend 0s to fit 2 chars
+ * @param {string} s
+ * @return {string}
+ */
+function leftPad(s) {
+	return s.padStart(2, "0")
+}
+
+/**
  * Make a URL segment out of date with the format 20240422
  *
  * @param {Date} [date]
  * @return {string}
  */
 export function makeDatePath(date) {
-	return date ? date.toISOString().split("T")[0].replace(/-/g, "") : ""
+	if (!date) return ""
+	const y = date.getFullYear().toString()
+	const m = (date.getMonth() + 1).toString()
+	const d = date.getDate().toString()
+	return `${y}${leftPad(m)}${leftPad(d)}`
 }
 
 /**

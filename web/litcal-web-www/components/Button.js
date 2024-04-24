@@ -1,7 +1,7 @@
+import React from "react"
+import { Link } from "@/components/catalyst/link"
 import { Button as HeadlessButton } from "@headlessui/react"
 import { clsx } from "clsx"
-import React from "react"
-import { Link } from "./link"
 
 const styles = {
 	base: [
@@ -53,26 +53,6 @@ const styles = {
 
 		// Disabled
 		"before:data-[disabled]:shadow-none after:data-[disabled]:shadow-none",
-	],
-	outline: [
-		// Base
-		"border-zinc-950/10 text-zinc-950 data-[active]:bg-zinc-950/[2.5%] data-[hover]:bg-zinc-950/[2.5%]",
-
-		// Dark mode
-		"dark:border-white/15 dark:text-white dark:[--btn-bg:transparent] dark:data-[active]:bg-white/5 dark:data-[hover]:bg-white/5",
-
-		// Icon
-		"[--btn-icon:theme(colors.zinc.500)] data-[active]:[--btn-icon:theme(colors.zinc.700)] data-[hover]:[--btn-icon:theme(colors.zinc.700)] dark:data-[active]:[--btn-icon:theme(colors.zinc.400)] dark:data-[hover]:[--btn-icon:theme(colors.zinc.400)]",
-	],
-	plain: [
-		// Base
-		"border-transparent text-zinc-950 data-[active]:bg-zinc-950/5 data-[hover]:bg-zinc-950/5",
-
-		// Dark mode
-		"dark:text-white dark:data-[active]:bg-white/10 dark:data-[hover]:bg-white/10",
-
-		// Icon
-		"[--btn-icon:theme(colors.zinc.500)] data-[active]:[--btn-icon:theme(colors.zinc.700)] data-[hover]:[--btn-icon:theme(colors.zinc.700)] dark:[--btn-icon:theme(colors.zinc.500)] dark:data-[active]:[--btn-icon:theme(colors.zinc.400)] dark:data-[hover]:[--btn-icon:theme(colors.zinc.400)]",
 	],
 	colors: {
 		"dark/zinc": [
@@ -176,18 +156,39 @@ const styles = {
 	},
 }
 
+/**
+ * A button component
+ *
+ * @param {string} color
+ * @param {string} className
+ * @param {Array<JSX.Element>} children
+ * @param {Object} props
+ * @returns {JSX.Element}
+ */
 export const Button = React.forwardRef(function Button(
-	{ color, outline, plain, className, children, ...props },
+	{
+		color,
+		className,
+		children,
+		...props
+		// bgColorClass = "bg-dove",
+		// textColorClass = "text-ashes",
+	},
 	ref,
 ) {
+	// return (
+	// 	<div
+	// 		className={`flex flex-row rounded-md px-3 py-1.5
+	// 		${bgColorClass} ${textColorClass} hover:cursor-pointer`}
+	// 	>
+	// 		<Icon className="h- w-4" aria-hidden="true" strokeWidth="2" />
+	// 		<span className="pl-2 text-xs">{label}</span>
+	// 	</div>
+	// )
 	let classes = clsx(
 		className,
 		styles.base,
-		outline
-			? styles.outline
-			: plain
-				? styles.plain
-				: clsx(styles.solid, styles.colors[color ?? "dark/zinc"]),
+		clsx(styles.solid, styles.colors[color ?? "dark/zinc"]),
 	)
 	return "href" in props ? (
 		<Link {...props} className={classes} ref={ref}>
