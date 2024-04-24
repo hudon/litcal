@@ -2,6 +2,7 @@ import Image from "next/image"
 import DatePicker from "@/app/DatePicker"
 import { CalendarDaysIcon } from "@heroicons/react/24/outline"
 import { parseDateSegment } from "@/app/dates"
+import { clsx } from "clsx"
 
 export default function Layout({ params, children }) {
 	const utcDateMillis = parseDateSegment(params.date)
@@ -22,11 +23,11 @@ export default function Layout({ params, children }) {
 				</div>
 				<div className="mt-5 h-20 flex-shrink-0 bg-lily shadow-y">
 					<a
-						href="#"
-						className={
-							"text-stellaMarris hover:bg-indigo-700 hover:text-white " +
-							"group flex h-full flex-col justify-center px-12 leading-6"
-						}
+						href="/holydays"
+						className={clsx(
+							"text-stellaMarris hover:bg-ourLady hover:text-lily ",
+							"group flex h-full flex-col justify-center px-12 leading-6",
+						)}
 					>
 						<p className="flex  gap-x-4">
 							<CalendarDaysIcon
