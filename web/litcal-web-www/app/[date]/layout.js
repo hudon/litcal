@@ -1,14 +1,14 @@
 import Image from "next/image"
 import DatePicker from "@/app/DatePicker"
 import { CalendarDaysIcon } from "@heroicons/react/24/outline"
-import { parseDatePath } from "@/app/dates"
+import { parseDateSegment } from "@/app/dates"
 
 export default function Layout({ params, children }) {
-	const utcDateMillis = parseDatePath(params.date)
+	const utcDateMillis = parseDateSegment(params.date)
 	return (
 		<>
 			<nav className="flex w-96 flex-shrink-0 flex-col overflow-y-auto bg-lily ">
-				<div className=" mt-5 h-28 flex-shrink-0 pl-10 pt-12">
+				<div className="h-28 flex-shrink-0 pl-10 pt-12">
 					<Image
 						src="/litcal.svg"
 						alt="Litcal Logo"

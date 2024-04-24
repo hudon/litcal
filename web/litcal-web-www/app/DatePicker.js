@@ -1,13 +1,18 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import {
 	BookmarkIcon,
 	ChevronLeftIcon,
 	ChevronRightIcon,
 } from "@heroicons/react/24/outline"
 import { Button } from "@/components/Button"
-import { isSameUTCDate, makeDateSegment } from "@/app/dates"
+import {
+	isSameUTCDate,
+	localDateToEpochDate,
+	makeDateSegment,
+} from "@/app/dates"
+import { clsx } from "clsx"
 
 /**
  * Retrieves the days of the month
@@ -42,6 +47,30 @@ function makeMonthDates(year, month) {
 }
 
 /**
+ * Returns the class to be used on the calendar date for the given celebration
+ * @param {LitCelebration} [cel]
+ * @return {string}
+ */
+function colorClassForCelebration(cel) {
+	if (!cel || cel.rank > 11) return ""
+
+	switch (cel.color) {
+		case "red":
+			return "bg-passion"
+		case "green":
+			return "bg-figTree"
+		case "violet":
+			return "bg-wine"
+		case "rose":
+			return "bg-matrimony"
+		case "white":
+			return "border"
+	}
+
+	return ""
+}
+
+/**
  *
  * @param currDate
  * @return {JSX.Element}
@@ -51,8 +80,38 @@ export default function DatePicker({ utcDateMillis }) {
 	const utcDate = new Date(utcDateMillis)
 	// we need the UTC variants, otherwise a Jan 1 2024 date will return 2023 in
 	// PDT because of the -7 timezone offset
-	const year = utcDate.getUTCFullYear()
-	const [month, setMonth] = useState(utcDate.getUTCMonth())
+	const year = utcDate.getUTCFullYear(),
+		[month, setMonth] = useState(utcDate.getUTCMonth()),
+		monthDates = makeMonthDates(year, month),
+		firstDate = monthDates[0].find(Boolean),
+		lastDate = monthDates[monthDates.length - 1].findLast(Boolean),
+		// These are stable and prevent a re-render loop caused by firstDate re-computing
+		// to a different Date object that represents the same date
+		firstDateAsSegment = makeDateSegment(firstDate),
+		lastDateAsSegment = makeDateSegment(lastDate),
+		[celebrations, setCelebrations] = useState({})
+
+	useEffect(() => {
+		let ignore = false
+		// TODO: handle error
+		fetch(`/celebrations?from=${firstDateAsSegment}&to=${lastDateAsSegment}`)
+			.then((res) => {
+				if (ignore) return
+				res.json().then((data) => {
+					if (ignore) return
+					const celebrations = {}
+					for (const cel of data.celebrations) {
+						celebrations[cel.dateSeconds] = cel
+					}
+					setCelebrations(celebrations)
+				})
+			})
+			.catch((err) => {})
+		return () => {
+			ignore = true
+		}
+	}, [firstDateAsSegment, lastDateAsSegment])
+
 	return (
 		<div className="px-10 py-8">
 			<div className="flex flex-col gap-y-2 text-stellaMarris">
@@ -100,16 +159,19 @@ export default function DatePicker({ utcDateMillis }) {
 						</tr>
 					</thead>
 					<tbody>
-						{makeMonthDates(year, month).map((week, weekIdx) => (
+						{monthDates.map((week, weekIdx) => (
 							<tr key={"" + month + weekIdx}>
 								{week.map((day, dayIdx) => (
-									<td key={dayIdx} className=" py-2 text-center ">
+									<td
+										key={dayIdx}
+										className=" relative pb-2 pt-1.5 text-center"
+									>
 										<div
-											className={
-												"m-auto h-8 w-8 pt-1 " +
-												(isSameUTCDate(day, utcDate) &&
-													"rounded-full bg-stellaMarris  text-lily")
-											}
+											className={clsx(
+												"m-auto h-8 w-8 pt-1",
+												isSameUTCDate(day, utcDate) &&
+													"rounded-full bg-stellaMarris text-lily",
+											)}
 										>
 											<a
 												href={"/" + makeDateSegment(day)}
@@ -118,6 +180,18 @@ export default function DatePicker({ utcDateMillis }) {
 												{day?.getDate()}
 											</a>
 										</div>
+										<p
+											className={clsx(
+												"absolute bottom-0.5 left-[42%] mx-auto h-1.5 w-1.5 rounded-full ",
+												day &&
+													!isSameUTCDate(day, utcDate) &&
+													colorClassForCelebration(
+														celebrations[localDateToEpochDate(day) / 1000],
+													),
+											)}
+										>
+											&nbsp;
+										</p>
 									</td>
 								))}
 							</tr>

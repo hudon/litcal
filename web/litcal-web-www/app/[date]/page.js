@@ -1,76 +1,13 @@
 import { LinkIcon } from "@heroicons/react/24/outline"
-import Database from "better-sqlite3"
 import Image from "next/image"
-import path from "path"
 
 import { Button } from "@/components/Button"
-import { parseDatePath } from "@/app/dates"
-
-const databasePath = path.resolve("../../litcal.sqlite")
-
-// function fetchCelebrations() {
-// 	// this is pulled from litdb... use litdb if logic needs to be shared
-// 	const db = new Database("../../litcal.sqlite")
-// 	const queryStr =
-// 		"SELECT lc.event_key, lc.rank, lc.title, lc.subtitle, lc.gospel, " +
-// 		"lc.gospel_ref, lc.readings_url, lcol.name AS color, ls.name, " +
-// 		"ld.secular_date_s, COUNT(*) OVER () " +
-// 		"FROM lit_celebration lc " +
-// 		"JOIN lit_day ld ON lc.lit_day_id = ld.id " +
-// 		"JOIN lit_color lcol ON lc.lit_color_id = lcol.id " +
-// 		"JOIN lit_season ls ON ld.lit_season_id = ls.id " +
-// 		"JOIN lit_year ly ON ls.lit_year_id = ly.id " +
-// 		"WHERE ld.secular_date_s >= ? AND ld.secular_date_s <= ? AND ly.lit_calendar_id = ? " +
-// 		"ORDER BY ld.secular_date_s;"
-// 	db.each(
-// 		queryStr,
-// 		1704931200,
-// 		1704931200 + 3 * 24 * 60 * 60,
-// 		1,
-// 		(err, row) => {
-// 			console.log(row.secular_date_s + ": " + row.title)
-// 		},
-// 	)
-// 	db.close()
-// }
-
-/**
- * A liturgical celebration
- * @typedef {Object} LitCelebration
- * @property {string} title
- * @property {string} subtitle
- * @property {string} gospel
- * @property {string} gospelRef
- * @property {string} season
- * @property {number} rank
- * @property {number} dateSeconds
- */
-
-/**
- * Get the Liturgical celebration for today
- *
- * @param {number} utcDateMillis - the date to get the celebration for
- * @return {LitCelebration}
- */
-function fetchTodayCelebration(utcDateMillis) {
-	const todayInEpochSeconds = utcDateMillis / 1000
-	const db = new Database(databasePath)
-	const queryStr =
-		"SELECT lc.event_key, lc.rank, lc.title, lc.subtitle, lc.gospel, " +
-		"lc.gospel_ref as gospelRef, lc.readings_url, lcol.name AS color, ls.name as season, " +
-		"ld.secular_date_s as dateSeconds " +
-		"FROM lit_celebration lc " +
-		"JOIN lit_day ld ON lc.lit_day_id = ld.id " +
-		"JOIN lit_color lcol ON lc.lit_color_id = lcol.id " +
-		"JOIN lit_season ls ON ld.lit_season_id = ls.id " +
-		"JOIN lit_year ly ON ls.lit_year_id = ly.id " +
-		"WHERE ld.secular_date_s = ? AND ly.lit_calendar_id = ? "
-	return db.prepare(queryStr).get(todayInEpochSeconds, 1)
-}
+import { parseDateSegment } from "@/app/dates"
+import { fetchTodayCelebration } from "@/app/celebrations/db"
 
 export default function Page({ params: { date } }) {
 	// TODO cache celebration for that date
-	const utcDateMillis = parseDatePath(date)
+	const utcDateMillis = parseDateSegment(date)
 	const cel = fetchTodayCelebration(utcDateMillis)
 	const dateTxt = new Date(utcDateMillis).toLocaleString("default", {
 		month: "short",
