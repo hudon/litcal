@@ -140,7 +140,11 @@ export default function DatePicker({ utcDateMillis }) {
 								onClick={() => setMonth(month + 1)}
 							/>
 						</button>
-						<Button href={"/" + makeDateSegment(new Date())} color="dove">
+						<Button
+							href={"/" + makeDateSegment(new Date())}
+							color="dove"
+							onClick={() => setMonth(utcDate.getUTCMonth())}
+						>
 							<BookmarkIcon />
 							TODAY
 						</Button>
