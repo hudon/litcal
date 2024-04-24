@@ -32,7 +32,7 @@ const styles = {
 		"before:absolute before:inset-0 before:-z-10 before:rounded-[calc(theme(borderRadius.lg)-1px)] before:bg-[--btn-bg]",
 
 		// Drop shadow, applied to the inset `before` layer so it blends with the border
-		"before:shadow",
+		// "before:shadow",
 
 		// Background color is moved to control and shadow is removed in dark mode so hide `before` pseudo
 		"dark:before:hidden",
