@@ -96,7 +96,7 @@ const styles = {
 }
 
 /**
- * A button component
+ * Button component
  *
  * @param {string} color
  * @param {string} className
