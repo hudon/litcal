@@ -8,13 +8,11 @@ import {
 } from "@heroicons/react/24/outline"
 import { Button } from "@/components/Button"
 import {
-	isSameUTCDate,
 	localDateToEpochMillis,
-	localDateToEpochDate,
 	makeDateSegment,
-	newUTCDate,
 	parseDateSegment,
-	todayEpochDate,
+	todayAsEpochMillis,
+	isDateEqualToEpochMillis,
 } from "@/app/dates"
 import { clsx } from "clsx"
 import { usePathname } from "next/navigation"
@@ -84,36 +82,32 @@ export default function DatePicker() {
 	// "selection" means the selected date, "active" means the date representing the
 	// month that is currently shown. You can select March 25 but the user navigated to January,
 	// for example
-	// Both these dates are "epoch dates", meaning they are milliseconds from epoch to 00:00, wrapped
-	// in a Date. If you do epochDate.getDate(), you can get the wrong result as it gets interpreted in the
-	// local timezone. epochDate.getUTCDate() will work as expected.
-	const [selection, setSelection] = useState(null),
-		[activeMonthDate, setActiveMonthDate] = useState(todayEpochDate()),
+	// Both these dates are in milliseconds from epoch to 00:00 UTC
+	const [selectionMS, setSelectionMS] = useState(null),
+		[activeMonthMS, setActiveMonthMS] = useState(todayAsEpochMillis()),
+		activeMonthDate = new Date(activeMonthMS),
 		[celebrations, setCelebrations] = useState({})
 
 	const currPathname = usePathname()
 	try {
 		// TODO: investigate why month is changed when navigating to holydays... also are rerenders still an issue?
-		const pathnameDate = new Date(parseDateSegment(currPathname.split("/")[1]))
-		if (pathnameDate && pathnameDate.getTime() !== selection?.getTime()) {
+		const pathEpochMS = parseDateSegment(currPathname.split("/")[1])
+		if (pathEpochMS !== selectionMS) {
 			// If the selection no longer matches the path (bc the user navigated to a different path),
 			// the selection is updated, and the month is made active (ie. it is shown)
-			setSelection(pathnameDate)
-			setActiveMonthDate(pathnameDate)
+			setSelectionMS(pathEpochMS)
+			setActiveMonthMS(pathEpochMS)
 		}
 	} catch (e) {}
 
 	const addToMonth = useCallback(
 		(n) => {
-			setActiveMonthDate(
-				newUTCDate(
-					activeMonthDate.getUTCFullYear(),
-					activeMonthDate.getUTCMonth() + n,
-					activeMonthDate.getUTCDate(),
-				),
+			const a = new Date(activeMonthMS)
+			setActiveMonthMS(
+				Date.UTC(a.getUTCFullYear(), a.getUTCMonth() + n, a.getUTCDate()),
 			)
 		},
-		[activeMonthDate],
+		[activeMonthMS],
 	)
 
 	const today = new Date(),
@@ -154,7 +148,7 @@ export default function DatePicker() {
 			<div className="flex flex-col gap-y-2 text-stellaMarris">
 				<div className="flex flex-row items-center justify-between pb-2">
 					<span>
-						{new Date(year, month, 1).toLocaleString("default", {
+						{activeMonthDate.toLocaleString("default", {
 							month: "long",
 							year: "numeric",
 							timeZone: "UTC",
@@ -180,7 +174,7 @@ export default function DatePicker() {
 						<Button
 							href={"/" + makeDateSegment(new Date())}
 							color="dove"
-							onClick={() => setActiveMonthDate(localDateToEpochDate(today))}
+							onClick={() => setActiveMonthMS(localDateToEpochMillis(today))}
 						>
 							<BookmarkIcon />
 							TODAY
@@ -210,7 +204,7 @@ export default function DatePicker() {
 										<div
 											className={clsx(
 												"m-auto h-8 w-8 pt-1",
-												isSameUTCDate(day, selection) &&
+												isDateEqualToEpochMillis(day, selectionMS) &&
 													"rounded-full bg-stellaMarris text-lily",
 											)}
 										>
@@ -225,7 +219,7 @@ export default function DatePicker() {
 											className={clsx(
 												"absolute bottom-0.5 left-[42%] mx-auto h-1.5 w-1.5 rounded-full ",
 												day &&
-													!isSameUTCDate(day, selection) &&
+													!isDateEqualToEpochMillis(day, selectionMS) &&
 													colorClassForCelebration(
 														celebrations[localDateToEpochMillis(day) / 1000],
 													),

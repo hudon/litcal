@@ -1,33 +1,21 @@
 /**
- * prepend 0s to fit 2 chars
- * @param {string} s
- * @return {string}
- */
-function leftPad(s) {
-	return s.padStart(2, "0")
-}
-
-/**
  * Returns true if local date and UTC date represent the same date.
  * Let's say you have a date like 2024-04-17T00:00:00 -7
  * and 2024-04-17T00:00:00 UTC. They both represent the same date, even though
  * the second date is the 16th in the -7 timezone offset
  *
  * @param {Date} date - a date interpreted in local timezone
- * @param {Date} utcDate - a date interpreted in UTC
+ * @param {number} ms - a date interpreted in UTC
  * @return {boolean}
  */
-export function isSameUTCDate(date, utcDate) {
-	if (!date || !utcDate) return false
+export function isDateEqualToEpochMillis(date, ms) {
+	if (!date || !ms) return false
+	const e = new Date(ms)
 	return (
-		date.getFullYear() === utcDate.getUTCFullYear() &&
-		date.getMonth() === utcDate.getUTCMonth() &&
-		date.getDate() === utcDate.getUTCDate()
+		date.getFullYear() === e.getUTCFullYear() &&
+		date.getMonth() === e.getUTCMonth() &&
+		date.getDate() === e.getUTCDate()
 	)
-}
-
-export function newUTCDate(y, m, d) {
-	return new Date(Date.UTC(y, m, d))
 }
 
 /**
@@ -36,24 +24,24 @@ export function newUTCDate(y, m, d) {
  * @return {number}
  */
 export function localDateToEpochMillis(d) {
-	return localDateToEpochDate(d).getTime()
+	return Date.UTC(d.getFullYear(), d.getMonth(), d.getDate())
 }
 
 /**
- * Same as {@link localDateToEpochMillis} but the result is wrapped in a Date object
- * @param d
- * @return {Date}
+ * Returns today as the number of milliseconds from epoch to 00:00 UTC of this calendar day
+ * @return {number}
  */
-export function localDateToEpochDate(d) {
-	return newUTCDate(d.getFullYear(), d.getMonth(), d.getDate())
+export function todayAsEpochMillis() {
+	return localDateToEpochMillis(new Date())
 }
 
 /**
- * Returns today as the number of milliseconds from epoch to 00:00 UTC of this calendar day, as a Date
- * @return {Date}
+ * prepend 0s to fit 2 chars
+ * @param {string} s
+ * @return {string}
  */
-export function todayEpochDate() {
-	return localDateToEpochDate(new Date())
+function leftPad(s) {
+	return s.padStart(2, "0")
 }
 
 /**
