@@ -86,7 +86,11 @@ export default function Page({ params: { date } }) {
 	return (
 		<div className="flex flex-col items-center justify-center px-8 text-stellaMarris">
 			<div className="h-10 flex-shrink-0">&nbsp;</div>
-			<div className="from- relative mb-10 h-[469px] w-[951px]  flex-shrink-0 after:absolute after:bottom-0 after:left-0 after:right-0 after:top-[156px] after:bg-gradient-to-t after:from-[#010023]/70 after:to-[#010023]/0">
+			<div
+				className="from- relative mb-10 h-[469px] w-[951px]  flex-shrink-0
+			 after:absolute after:bottom-0 after:left-0 after:right-0 after:top-[156px] after:rounded-b-lg
+			  after:bg-gradient-to-t after:from-[#010023]/80 after:to-[#010023]/0"
+			>
 				<Image
 					src={"/" + imgAssetForCelebration(cel)}
 					alt="Image of the day"
