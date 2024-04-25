@@ -79,41 +79,41 @@ function colorClassForCelebration(cel) {
  * @constructor
  */
 export default function DatePicker() {
-	// "selection" means the selected date, "active" means the date representing the
-	// month that is currently shown. You can select March 25 but the user navigated to January,
-	// for example
-	// Both these dates are in milliseconds from epoch to 00:00 UTC
+	// "MS" dates are milliseconds from epoch to 00:00 UTC
 	const [selectionMS, setSelectionMS] = useState(null),
-		[activeMonthMS, setActiveMonthMS] = useState(todayAsEpochMillis()),
-		activeMonthDate = new Date(activeMonthMS),
+		[visibleMonthMS, setVisibleMonthMS] = useState(todayAsEpochMillis()),
+		visibleMonthDate = new Date(visibleMonthMS),
 		[celebrations, setCelebrations] = useState({})
+	console.log("dp: rendering 0", visibleMonthDate.getUTCMonth())
 
-	const currPathname = usePathname()
+	const pathname = usePathname()
+	let pathEpochMS = null
 	try {
-		// TODO: investigate why month is changed when navigating to holydays... also are rerenders still an issue?
-		const pathEpochMS = parseDateSegment(currPathname.split("/")[1])
-		if (pathEpochMS !== selectionMS) {
-			// If the selection no longer matches the path (bc the user navigated to a different path),
-			// the selection is updated, and the month is made active (ie. it is shown)
-			setSelectionMS(pathEpochMS)
-			setActiveMonthMS(pathEpochMS)
-		}
+		pathEpochMS = parseDateSegment(pathname.split("/")[1])
 	} catch (e) {}
+	if (!pathEpochMS) {
+		// the path is no longer a valid date, so we clear any existing selection
+		if (selectionMS) setSelectionMS(null)
+	} else if (pathEpochMS !== selectionMS) {
+		// Upon user navigation, the path will change and thus the selection needs to follow
+		// the selection's month is made active
+		console.log("dp: setting 0", pathEpochMS)
+		setSelectionMS(pathEpochMS)
+		setVisibleMonthMS(pathEpochMS)
+	}
 
 	const addToMonth = useCallback(
 		(n) => {
-			const a = new Date(activeMonthMS)
-			setActiveMonthMS(
-				Date.UTC(a.getUTCFullYear(), a.getUTCMonth() + n, a.getUTCDate()),
-			)
+			const a = new Date(visibleMonthMS)
+			setVisibleMonthMS(Date.UTC(a.getUTCFullYear(), a.getUTCMonth() + n, 1))
 		},
-		[activeMonthMS],
+		[visibleMonthMS],
 	)
 
 	const today = new Date(),
 		// UTC variants are used because these are "epoch dates"
-		year = activeMonthDate.getUTCFullYear(),
-		month = activeMonthDate.getUTCMonth(),
+		year = visibleMonthDate.getUTCFullYear(),
+		month = visibleMonthDate.getUTCMonth(),
 		monthDates = makeMonthDates(year, month),
 		firstDate = monthDates[0].find(Boolean),
 		lastDate = monthDates[monthDates.length - 1].findLast(Boolean),
@@ -134,6 +134,8 @@ export default function DatePicker() {
 					for (const cel of data.celebrations) {
 						celebrations[cel.dateSeconds] = cel
 					}
+					console.log("dp: setting 1")
+
 					setCelebrations(celebrations)
 				})
 			})
@@ -148,7 +150,7 @@ export default function DatePicker() {
 			<div className="flex flex-col gap-y-2 text-stellaMarris">
 				<div className="flex flex-row items-center justify-between pb-2">
 					<span>
-						{activeMonthDate.toLocaleString("default", {
+						{visibleMonthDate.toLocaleString("default", {
 							month: "long",
 							year: "numeric",
 							timeZone: "UTC",
@@ -174,7 +176,7 @@ export default function DatePicker() {
 						<Button
 							href={"/" + makeDateSegment(new Date())}
 							color="dove"
-							onClick={() => setActiveMonthMS(localDateToEpochMillis(today))}
+							onClick={() => setVisibleMonthMS(localDateToEpochMillis(today))}
 						>
 							<BookmarkIcon />
 							TODAY

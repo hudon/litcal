@@ -4,6 +4,7 @@ import Image from "next/image"
 import DatePicker from "@/app/DatePicker"
 import { clsx } from "clsx"
 import { CalendarDaysIcon } from "@heroicons/react/24/outline"
+import { Link } from "@/components/catalyst/link"
 
 const euclid = localFont({
 	src: "./EuclidSquare-Regular.ttf",
@@ -42,7 +43,7 @@ export default function RootLayout({ children }) {
 						<DatePicker></DatePicker>
 					</div>
 					<div className="mt-5 h-20 flex-shrink-0 bg-lily shadow-y">
-						<a
+						<Link
 							href="/holydays"
 							className={clsx(
 								"text-stellaMarris hover:bg-ourLady hover:text-lily ",
@@ -56,10 +57,10 @@ export default function RootLayout({ children }) {
 								/>
 								<span className="truncate ">Holy Days of Obligation</span>
 							</p>
-						</a>
+						</Link>
 					</div>
 					<div className="mb-16 flex flex-grow flex-col-reverse pl-10 pt-12">
-						<a href="https://apps.apple.com/us/app/litcal-liturgical-calendar/id1641330305">
+						<Link href="https://apps.apple.com/us/app/litcal-liturgical-calendar/id1641330305">
 							<Image
 								src="/appstore.svg"
 								alt="Download on the App Store"
@@ -68,7 +69,7 @@ export default function RootLayout({ children }) {
 								height={58}
 								priority
 							/>
-						</a>
+						</Link>
 					</div>
 				</nav>
 				<main className="h-full flex-shrink-0 flex-grow overflow-y-auto bg-dove">
