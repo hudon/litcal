@@ -11,8 +11,10 @@ import {
 	isSameUTCDate,
 	localDateToEpochDate,
 	makeDateSegment,
+	parseDateSegment,
 } from "@/app/dates"
 import { clsx } from "clsx"
+import { usePathname } from "next/navigation"
 
 /**
  * Retrieves the days of the month
@@ -72,16 +74,25 @@ function colorClassForCelebration(cel) {
 
 /**
  *
- * @param currDate
  * @return {JSX.Element}
  * @constructor
  */
-export default function DatePicker({ utcDateMillis }) {
-	const utcDate = new Date(utcDateMillis)
+export default function DatePicker() {
+	let selectionEpochDate = null
+	const pathname = usePathname()
+	// TODO: when the path changes, the month needs to change too...
+	try {
+		selectionEpochDate = new Date(parseDateSegment(pathname.split("/")[1]))
+	} catch (e) {}
+	const today = new Date()
+
 	// we need the UTC variants, otherwise a Jan 1 2024 date will return 2023 in
 	// PDT because of the -7 timezone offset
-	const year = utcDate.getUTCFullYear(),
-		[month, setMonth] = useState(utcDate.getUTCMonth()),
+	// If there is no selected date, then we start the year/month on today
+	const year = selectionEpochDate?.getUTCFullYear() ?? today.getFullYear(),
+		[month, setMonth] = useState(
+			selectionEpochDate?.getUTCMonth() ?? today.getMonth(),
+		),
 		monthDates = makeMonthDates(year, month),
 		firstDate = monthDates[0].find(Boolean),
 		lastDate = monthDates[monthDates.length - 1].findLast(Boolean),
@@ -143,7 +154,7 @@ export default function DatePicker({ utcDateMillis }) {
 						<Button
 							href={"/" + makeDateSegment(new Date())}
 							color="dove"
-							onClick={() => setMonth(utcDate.getUTCMonth())}
+							onClick={() => setMonth(today.getMonth())}
 						>
 							<BookmarkIcon />
 							TODAY
@@ -173,7 +184,7 @@ export default function DatePicker({ utcDateMillis }) {
 										<div
 											className={clsx(
 												"m-auto h-8 w-8 pt-1",
-												isSameUTCDate(day, utcDate) &&
+												isSameUTCDate(day, selectionEpochDate) &&
 													"rounded-full bg-stellaMarris text-lily",
 											)}
 										>
@@ -188,7 +199,7 @@ export default function DatePicker({ utcDateMillis }) {
 											className={clsx(
 												"absolute bottom-0.5 left-[42%] mx-auto h-1.5 w-1.5 rounded-full ",
 												day &&
-													!isSameUTCDate(day, utcDate) &&
+													!isSameUTCDate(day, selectionEpochDate) &&
 													colorClassForCelebration(
 														celebrations[localDateToEpochDate(day) / 1000],
 													),
