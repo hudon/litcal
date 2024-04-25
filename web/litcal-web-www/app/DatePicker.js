@@ -16,6 +16,7 @@ import {
 } from "@/app/dates"
 import { clsx } from "clsx"
 import { usePathname } from "next/navigation"
+import { Link } from "@/components/catalyst/link"
 
 /**
  * Retrieves the days of the month
@@ -84,7 +85,6 @@ export default function DatePicker() {
 		[visibleMonthMS, setVisibleMonthMS] = useState(todayAsEpochMillis()),
 		visibleMonthDate = new Date(visibleMonthMS),
 		[celebrations, setCelebrations] = useState({})
-	console.log("dp: rendering 0", visibleMonthDate.getUTCMonth())
 
 	const pathname = usePathname()
 	let pathEpochMS = null
@@ -96,9 +96,8 @@ export default function DatePicker() {
 		if (selectionMS) setSelectionMS(null)
 	} else if (pathEpochMS !== selectionMS) {
 		// Upon user navigation, the path will change and thus the selection needs to follow
-		// the selection's month is made active
-		console.log("dp: setting 0", pathEpochMS)
 		setSelectionMS(pathEpochMS)
+		// the selection's month is made visible
 		setVisibleMonthMS(pathEpochMS)
 	}
 
@@ -134,8 +133,6 @@ export default function DatePicker() {
 					for (const cel of data.celebrations) {
 						celebrations[cel.dateSeconds] = cel
 					}
-					console.log("dp: setting 1")
-
 					setCelebrations(celebrations)
 				})
 			})
@@ -210,12 +207,12 @@ export default function DatePicker() {
 													"rounded-full bg-stellaMarris text-lily",
 											)}
 										>
-											<a
+											<Link
 												href={"/" + makeDateSegment(day)}
 												className=" hover:cursor-pointer"
 											>
 												{day?.getDate()}
-											</a>
+											</Link>
 										</div>
 										<p
 											className={clsx(

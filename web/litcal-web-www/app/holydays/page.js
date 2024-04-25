@@ -20,8 +20,6 @@ export default function Page() {
 					<h2 className="pl-5 text-ashes">{year[0]}</h2>
 					<dl>
 						{year[1].map((day, j) => (
-							// TODO: change <a> to <Link> elsewhere (understand why)
-							// TODO: change calendar when you click on a holy day
 							// TODO: animation of the holyday nav
 							<Link
 								key={j}
