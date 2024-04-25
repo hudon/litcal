@@ -26,13 +26,34 @@ export function isSameUTCDate(date, utcDate) {
 	)
 }
 
+export function newUTCDate(y, m, d) {
+	return new Date(Date.UTC(y, m, d))
+}
+
 /**
  * Takes a date and returns the number of milliseconds from epoch to midnight (00:00 UTC) of the same day
  * @param {Date} d
  * @return {number}
  */
+export function localDateToEpochMillis(d) {
+	return localDateToEpochDate(d).getTime()
+}
+
+/**
+ * Same as {@link localDateToEpochMillis} but the result is wrapped in a Date object
+ * @param d
+ * @return {Date}
+ */
 export function localDateToEpochDate(d) {
-	return Date.UTC(d.getFullYear(), d.getMonth(), d.getDate())
+	return newUTCDate(d.getFullYear(), d.getMonth(), d.getDate())
+}
+
+/**
+ * Returns today as the number of milliseconds from epoch to 00:00 UTC of this calendar day, as a Date
+ * @return {Date}
+ */
+export function todayEpochDate() {
+	return localDateToEpochDate(new Date())
 }
 
 /**
