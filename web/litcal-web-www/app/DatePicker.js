@@ -80,6 +80,7 @@ function colorClassForCelebration(cel) {
 export default function DatePicker() {
 	let selectionEpochDate = null
 	const pathname = usePathname()
+	// TODO: when the path changes, the month needs to change too...
 	try {
 		selectionEpochDate = new Date(parseDateSegment(pathname.split("/")[1]))
 	} catch (e) {}
