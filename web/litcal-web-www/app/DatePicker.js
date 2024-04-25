@@ -74,7 +74,6 @@ function colorClassForCelebration(cel) {
 
 /**
  *
- * @param currDate
  * @return {JSX.Element}
  * @constructor
  */
