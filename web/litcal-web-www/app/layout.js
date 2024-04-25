@@ -22,7 +22,7 @@ export const metadata = {
 	description: "Roman Catholic Liturgical Calendar",
 }
 
-export default function RootLayout({ children, params }) {
+export default function RootLayout({ children }) {
 	return (
 		<html lang="en" className="h-full bg-white">
 			<body

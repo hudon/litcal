@@ -78,15 +78,12 @@ function colorClassForCelebration(cel) {
  * @constructor
  */
 export default function DatePicker() {
-	// TODO: deal with double render
-	const dateSegment = usePathname().split("/")[1] ?? null
-	console.log("the segment", dateSegment)
-	const selectionEpochDate =
-			(dateSegment &&
-				parseInt(dateSegment) &&
-				new Date(parseDateSegment(dateSegment))) ||
-			null,
-		today = new Date()
+	let selectionEpochDate = null
+	const pathname = usePathname()
+	try {
+		selectionEpochDate = new Date(parseDateSegment(pathname.split("/")[1]))
+	} catch (e) {}
+	const today = new Date()
 
 	// we need the UTC variants, otherwise a Jan 1 2024 date will return 2023 in
 	// PDT because of the -7 timezone offset
