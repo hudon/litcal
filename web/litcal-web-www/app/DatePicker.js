@@ -100,11 +100,20 @@ export default function DatePicker() {
 		// the selection's month is made visible
 		setVisibleMonthMS(pathEpochMS)
 	}
-	// TODO gradient
+
 	const addToMonth = useCallback(
 		(n) => {
 			const a = new Date(visibleMonthMS)
-			setVisibleMonthMS(Date.UTC(a.getUTCFullYear(), a.getUTCMonth() + n, 1))
+			let next = new Date(Date.UTC(a.getUTCFullYear(), a.getUTCMonth() + n, 1))
+			// we only support 2024 for now, so make the calendar loop around
+			if (next.getUTCFullYear() === 2025) {
+				next.setUTCFullYear(2024)
+				next.setUTCMonth(0)
+			} else if (next.getUTCFullYear() === 2023) {
+				next.setUTCFullYear(2024)
+				next.setUTCMonth(11)
+			}
+			setVisibleMonthMS(next.getTime())
 		},
 		[visibleMonthMS],
 	)

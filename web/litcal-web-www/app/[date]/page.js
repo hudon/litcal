@@ -4,6 +4,7 @@ import Image from "next/image"
 import { Button } from "@/components/Button"
 import { parseDateSegment } from "@/app/dates"
 import { fetchTodayCelebration } from "@/app/celebrations/db"
+import { redirect } from "next/navigation"
 
 /**
  * Returns the color class to be used for text given a celebration
@@ -75,7 +76,12 @@ function imgAssetForCelebration(c) {
 
 export default function Page({ params: { date } }) {
 	// TODO cache celebration for that date
+	// TODO catch and return 404 or bad request
 	const utcDateMillis = parseDateSegment(date)
+	if (new Date(utcDateMillis).getUTCFullYear() !== 2024) {
+		// we only support 2024 for now
+		redirect("/")
+	}
 	const cel = fetchTodayCelebration(utcDateMillis)
 	const dateTxt = new Date(utcDateMillis).toLocaleString("default", {
 		month: "short",
