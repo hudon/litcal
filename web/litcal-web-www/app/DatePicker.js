@@ -68,7 +68,7 @@ function colorClassForCelebration(cel) {
 		case "rose":
 			return "bg-matrimony"
 		case "white":
-			return "border"
+			return "border border-ashes"
 	}
 
 	return ""
@@ -216,7 +216,7 @@ export default function DatePicker() {
 										</div>
 										<p
 											className={clsx(
-												"absolute bottom-0.5 left-[42%] mx-auto h-1.5 w-1.5 rounded-full ",
+												"absolute bottom-0.5 left-[42%] mx-auto h-[7px] w-[7px] rounded-full ",
 												day &&
 													!isDateEqualToEpochMillis(day, selectionMS) &&
 													colorClassForCelebration(
