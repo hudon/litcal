@@ -53,6 +53,7 @@ function imgAssetForCelebration(c) {
 	// Pick a specific image for a specific key (highest priority
 	return (
 		({
+			AllSaints: "hero_saints",
 			StMaryMagdalene: "hero_mary_magdalene",
 			GoodFri: "hero_good_friday",
 			EasterVigil: "hero_holy_saturday",
