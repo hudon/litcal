@@ -100,7 +100,7 @@ export default function DatePicker() {
 		// the selection's month is made visible
 		setVisibleMonthMS(pathEpochMS)
 	}
-
+	// TODO gradient
 	const addToMonth = useCallback(
 		(n) => {
 			const a = new Date(visibleMonthMS)

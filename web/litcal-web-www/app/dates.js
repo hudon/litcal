@@ -1,8 +1,9 @@
 /**
- * Returns true if local date and UTC date represent the same date.
- * Let's say you have a date like 2024-04-17T00:00:00 -7
- * and 2024-04-17T00:00:00 UTC. They both represent the same date, even though
- * the second date is the 16th in the -7 timezone offset
+ * Takes an "epoch millis" which represents a calendar date and returns true if the provided
+ * local date is the same calendar date.
+ * For example, if you have 2024-04-17T00:00:00 PDT(-7)
+ * and 1713312000000, they both represent the same date, even though
+ * the second date would fall on the 16th if interpreted as PDT.
  *
  * @param {Date} date - a date interpreted in local timezone
  * @param {number} ms - a date interpreted in UTC
@@ -10,12 +11,7 @@
  */
 export function isDateEqualToEpochMillis(date, ms) {
 	if (!date || !ms) return false
-	const e = new Date(ms)
-	return (
-		date.getFullYear() === e.getUTCFullYear() &&
-		date.getMonth() === e.getUTCMonth() &&
-		date.getDate() === e.getUTCDate()
-	)
+	return localDateToEpochMillis(date) === ms
 }
 
 /**
@@ -28,7 +24,7 @@ export function localDateToEpochMillis(d) {
 }
 
 /**
- * Returns today as the number of milliseconds from epoch to 00:00 UTC of this calendar day
+ * Returns today as the number of milliseconds from epoch to 00:00 UTC of this calendar date
  * @return {number}
  */
 export function todayAsEpochMillis() {
@@ -45,7 +41,7 @@ function leftPad(s) {
 }
 
 /**
- * Make a URL segment out of date with the format 20240422
+ * Make a URL segment out of date with the format YYYYMMDD
  *
  * @param {Date} [date]
  * @return {string}
@@ -59,7 +55,7 @@ export function makeDateSegment(date) {
 }
 
 /**
- * Parses a date string of format 20240422 and returns milliseconds since epoch
+ * Parses a date string of format YYYYMMDD and returns milliseconds since epoch
  * up to midnight UTC at that date
  *
  * @param {string} dateStr - The date string to be parsed.
