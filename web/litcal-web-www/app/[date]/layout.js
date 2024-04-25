@@ -1,11 +1,9 @@
 import Image from "next/image"
 import DatePicker from "@/app/DatePicker"
 import { CalendarDaysIcon } from "@heroicons/react/24/outline"
-import { parseDateSegment } from "@/app/dates"
 import { clsx } from "clsx"
 
-export default function Layout({ params, children }) {
-	const utcDateMillis = parseDateSegment(params.date)
+export default function Layout({ children }) {
 	return (
 		<>
 			<nav className="flex w-96 flex-shrink-0 flex-col overflow-y-auto bg-lily ">
@@ -19,7 +17,7 @@ export default function Layout({ params, children }) {
 					/>
 				</div>
 				<div className="h-100 w-full flex-shrink-0 shadow-y">
-					<DatePicker utcDateMillis={utcDateMillis}></DatePicker>
+					<DatePicker></DatePicker>
 				</div>
 				<div className="mt-5 h-20 flex-shrink-0 bg-lily shadow-y">
 					<a
