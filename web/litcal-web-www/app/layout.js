@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
 					<div className="h-100 w-full flex-shrink-0 shadow-y">
 						<DatePicker></DatePicker>
 					</div>
-					<div className="mt-5 h-20 flex-shrink-0 bg-lily shadow-y">
+					<div className="mt-5 h-20 flex-shrink-0 bg-lily ">
 						<NavLinks />
 					</div>
 					<div className="mb-16 flex flex-grow flex-col-reverse pl-10 pt-12">
