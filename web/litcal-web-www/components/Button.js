@@ -18,7 +18,9 @@ const styles = {
 		"data-[disabled]:opacity-50",
 
 		// Icon
-		"[&>[data-slot=icon]]:-mx-0.5 [&>[data-slot=icon]]:my-0.5 [&>[data-slot=icon]]:size-5 [&>[data-slot=icon]]:shrink-0 [&>[data-slot=icon]]:text-[--btn-icon] [&>[data-slot=icon]]:sm:my-1 [&>[data-slot=icon]]:sm:size-4 forced-colors:[--btn-icon:ButtonText] forced-colors:data-[hover]:[--btn-icon:ButtonText]",
+		"[&>[data-slot=icon]]:-mx-0.5 [&>[data-slot=icon]]:my-0.5 [&>[data-slot=icon]]:size-5 [&>[data-slot=icon]]:shrink-0",
+		" [&>[data-slot=icon]]:text-[--btn-icon] [&>[data-slot=icon]]:sm:my-1 [&>[data-slot=icon]]:sm:size-4",
+		" forced-colors:[--btn-icon:ButtonText] forced-colors:data-[hover]:[--btn-icon:ButtonText]",
 	],
 	solid: [
 		// Optical border, implemented as the button background to avoid corner artifacts
@@ -62,10 +64,13 @@ const styles = {
 			"[--btn-icon:theme(colors.ashes)] data-[active]:[--btn-icon:theme(colors.ashes)] data-[hover]:[--btn-icon:theme(colors.ashes)]",
 		],
 		ourLady: [
-			"text-lily [--btn-bg:theme(colors.ourLady)] [--btn-border:theme(colors.ourLady/90%)] [--btn-hover-overlay:theme(colors.white/40%)]",
+			"text-lily [--btn-bg:theme(colors.ourLady)] [--btn-border:theme(colors.ourLady/90%)] ",
 			// Dark mode not implemented yet
 			// "dark:text-white dark:[--btn-bg:theme(colors.zinc.600)] dark:[--btn-hover-overlay:theme(colors.white/5%)]",
-			"[--btn-icon:theme(colors.lily)] data-[active]:[--btn-icon:theme(colors.lily)] data-[hover]:[--btn-icon:theme(colors.lily)]",
+			// icon
+			"[--btn-icon:theme(colors.lily)] data-[active]:[--btn-icon:theme(colors.lily)]",
+			// hover
+			"[--btn-hover-overlay:theme(colors.white/90%)] data-[hover]:[--btn-icon:theme(colors.ourLady)] data-[hover]:text-ourLady data-[hover]:bg-lily",
 		],
 		"dark/zinc": [
 			"text-white [--btn-bg:theme(colors.zinc.900)] [--btn-border:theme(colors.zinc.950/90%)] [--btn-hover-overlay:theme(colors.white/10%)]",
