@@ -8,7 +8,6 @@ const holyDaysPath = "/holydays"
 
 export function NavLinks() {
 	const pathname = usePathname()
-	console.log("pathname", pathname)
 	return (
 		<Link
 			href={holyDaysPath}
@@ -24,7 +23,9 @@ export function NavLinks() {
 			<p className="z-20  flex gap-x-4">
 				<CalendarDaysIcon
 					className={clsx(
-						pathname === holyDaysPath ? "text-ourLady" : " text-ashes",
+						pathname === holyDaysPath
+							? "text-ourLady"
+							: " text-ashes group-hover:text-lily",
 						"h-6 w-6 shrink-0",
 					)}
 					aria-hidden="true"
