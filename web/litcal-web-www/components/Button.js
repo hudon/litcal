@@ -108,10 +108,11 @@ const styles = {
 /**
  * Button component
  *
- * @param {string} color
- * @param {string} className
- * @param {Array<JSX.Element>} children
- * @param {Object} props
+ * @param props
+ * @param {string} props.color
+ * @param {string} props.className
+ * @param {Array<JSX.Element>} props.children
+ * @param {any} ref
  * @returns {JSX.Element}
  */
 export const Button = React.forwardRef(function Button(

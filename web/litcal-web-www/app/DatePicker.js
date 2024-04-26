@@ -77,7 +77,6 @@ function colorClassForCelebration(cel) {
 /**
  *
  * @return {JSX.Element}
- * @constructor
  */
 export default function DatePicker() {
 	// "MS" dates are milliseconds from epoch to 00:00 UTC

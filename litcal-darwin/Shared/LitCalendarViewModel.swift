@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SQLite3
 
 private let secondsInADay = 86400.0
 
