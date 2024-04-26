@@ -17,7 +17,6 @@
 		5E425DAB2BC6CDDC00C764D6 /* litdb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF4E2BC41504005FBAF2 /* litdb.swift */; };
 		5E425DAC2BC6CDE100C764D6 /* fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF572BC48328005FBAF2 /* fonts.swift */; };
 		5E425DAD2BC6CDE500C764D6 /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF5A2BC48355005FBAF2 /* colors.swift */; };
-		5E425DAE2BC6CF0C00C764D6 /* liblitdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDBEF322BC2DFF5005FBAF2 /* liblitdb.a */; };
 		5E42770128AE80E800C65EE4 /* LCalendarBridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E42770028AE80E800C65EE4 /* LCalendarBridgeTests.swift */; };
 		5E4957032892F15100AC9B04 /* CalWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4957022892F15100AC9B04 /* CalWheelView.swift */; };
 		5E6F1DA628DBD51200021942 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6F1DA528DBD51200021942 /* WidgetKit.framework */; };
@@ -39,15 +38,10 @@
 		5EC3BDD5289C688E0044D774 /* dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC3BDD4289C688E0044D774 /* dates.swift */; };
 		5ED6D7DD288B54CC0052F74B /* DayImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED6D7DC288B54CC0052F74B /* DayImageView.swift */; };
 		5ED6D7DF288F07CF0052F74B /* LitCalendarPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED6D7DE288F07CF0052F74B /* LitCalendarPicker.swift */; };
-		5EDBEF402BC2E021005FBAF2 /* litdb.c in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF3C2BC2E021005FBAF2 /* litdb.c */; };
-		5EDBEF412BC2E021005FBAF2 /* errors.c in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF3F2BC2E021005FBAF2 /* errors.c */; };
-		5EDBEF492BC355A7005FBAF2 /* dates.c in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF472BC355A3005FBAF2 /* dates.c */; };
-		5EDBEF4A2BC355F1005FBAF2 /* liblitdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDBEF322BC2DFF5005FBAF2 /* liblitdb.a */; };
 		5EDBEF4F2BC41504005FBAF2 /* litdb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF4E2BC41504005FBAF2 /* litdb.swift */; };
 		5EDBEF502BC41504005FBAF2 /* litdb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF4E2BC41504005FBAF2 /* litdb.swift */; };
 		5EDBEF522BC41A81005FBAF2 /* litcal.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5EDBEF512BC41A81005FBAF2 /* litcal.sqlite */; };
 		5EDBEF532BC41A81005FBAF2 /* litcal.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5EDBEF512BC41A81005FBAF2 /* litcal.sqlite */; };
-		5EDBEF542BC4269C005FBAF2 /* liblitdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDBEF322BC2DFF5005FBAF2 /* liblitdb.a */; };
 		5EDBEF582BC48328005FBAF2 /* fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF572BC48328005FBAF2 /* fonts.swift */; };
 		5EDBEF592BC48328005FBAF2 /* fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF572BC48328005FBAF2 /* fonts.swift */; };
 		5EDBEF5B2BC48355005FBAF2 /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBEF5A2BC48355005FBAF2 /* colors.swift */; };
@@ -63,33 +57,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5E425DAF2BC6CF0C00C764D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5EEF937D286A622E0086B9DC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5EDBEF312BC2DFF5005FBAF2;
-			remoteInfo = litdb;
-		};
 		5EA1039628FDB97000FCFC3D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5EEF937D286A622E0086B9DC /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5E6F1DA328DBD51200021942;
 			remoteInfo = widgetExtension;
-		};
-		5EDBEF4B2BC355F1005FBAF2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5EEF937D286A622E0086B9DC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5EDBEF312BC2DFF5005FBAF2;
-			remoteInfo = litdb;
-		};
-		5EDBEF552BC4269C005FBAF2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5EEF937D286A622E0086B9DC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5EDBEF312BC2DFF5005FBAF2;
-			remoteInfo = litdb;
 		};
 		5EEF9397286A62300086B9DC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -119,15 +92,6 @@
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5EDBEF302BC2DFF5005FBAF2 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -155,13 +119,6 @@
 		5ED6D7DC288B54CC0052F74B /* DayImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayImageView.swift; sourceTree = "<group>"; };
 		5ED6D7DE288F07CF0052F74B /* LitCalendarPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitCalendarPicker.swift; sourceTree = "<group>"; };
 		5ED8D84B28D2DAC500C52180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		5EDBEF322BC2DFF5005FBAF2 /* liblitdb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblitdb.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EDBEF3C2BC2E021005FBAF2 /* litdb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = litdb.c; path = ../litdb/src/litdb.c; sourceTree = "<group>"; };
-		5EDBEF3E2BC2E021005FBAF2 /* litdb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = litdb.h; path = ../litdb/src/litdb.h; sourceTree = "<group>"; };
-		5EDBEF3F2BC2E021005FBAF2 /* errors.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = errors.c; path = ../litdb/src/errors.c; sourceTree = "<group>"; };
-		5EDBEF462BC355A3005FBAF2 /* errors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = errors.h; path = ../litdb/src/errors.h; sourceTree = "<group>"; };
-		5EDBEF472BC355A3005FBAF2 /* dates.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = dates.c; path = ../litdb/src/dates.c; sourceTree = "<group>"; };
-		5EDBEF482BC355A3005FBAF2 /* dates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = dates.h; path = ../litdb/src/dates.h; sourceTree = "<group>"; };
 		5EDBEF4E2BC41504005FBAF2 /* litdb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = litdb.swift; sourceTree = "<group>"; };
 		5EDBEF512BC41A81005FBAF2 /* litcal.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = litcal.sqlite; path = ../../litcal.sqlite; sourceTree = "<group>"; };
 		5EDBEF572BC48328005FBAF2 /* fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fonts.swift; sourceTree = "<group>"; };
@@ -177,7 +134,6 @@
 		5EEF93A0286A62300086B9DC /* litcal-darwinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "litcal-darwinUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EEF93A4286A62300086B9DC /* litcal_darwinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = litcal_darwinUITests.swift; sourceTree = "<group>"; };
 		5EEF93A6286A62300086B9DC /* litcal_darwinUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = litcal_darwinUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		5EEF93B8286A70740086B9DC /* litcal-darwin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "litcal-darwin-Bridging-Header.h"; sourceTree = "<group>"; };
 		5EEF93BB286A70F50086B9DC /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,14 +144,6 @@
 			files = (
 				5E6F1DA828DBD51200021942 /* SwiftUI.framework in Frameworks */,
 				5E6F1DA628DBD51200021942 /* WidgetKit.framework in Frameworks */,
-				5EDBEF542BC4269C005FBAF2 /* liblitdb.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5EDBEF2F2BC2DFF5005FBAF2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +151,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EDBEF4A2BC355F1005FBAF2 /* liblitdb.a in Frameworks */,
 				5E71CCB72B6695B00010B9A7 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,7 +159,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E425DAE2BC6CF0C00C764D6 /* liblitdb.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +203,6 @@
 		5E6F1DB628DBD63800021942 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				5EEF93B8286A70740086B9DC /* litcal-darwin-Bridging-Header.h */,
 				5E13A5A728D2D9C5008F9429 /* fonts */,
 				5E2AF3C628C7B79600DD9A59 /* LitCalendarViewModel.swift */,
 				5EC3BDD4289C688E0044D774 /* dates.swift */,
@@ -268,24 +213,10 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		5EDBEF3B2BC2E00A005FBAF2 /* litdb */ = {
-			isa = PBXGroup;
-			children = (
-				5EDBEF472BC355A3005FBAF2 /* dates.c */,
-				5EDBEF482BC355A3005FBAF2 /* dates.h */,
-				5EDBEF462BC355A3005FBAF2 /* errors.h */,
-				5EDBEF3F2BC2E021005FBAF2 /* errors.c */,
-				5EDBEF3C2BC2E021005FBAF2 /* litdb.c */,
-				5EDBEF3E2BC2E021005FBAF2 /* litdb.h */,
-			);
-			name = litdb;
-			sourceTree = "<group>";
-		};
 		5EEF937C286A622E0086B9DC = {
 			isa = PBXGroup;
 			children = (
 				5E06E0292BCCA448009F76E1 /* .gitignore */,
-				5EDBEF3B2BC2E00A005FBAF2 /* litdb */,
 				5E6F1DB628DBD63800021942 /* Shared */,
 				5EEF9387286A622E0086B9DC /* litcal-darwin */,
 				5E6F1DA928DBD51200021942 /* widget */,
@@ -304,7 +235,6 @@
 				5EEF9396286A62300086B9DC /* litcal-darwinTests.xctest */,
 				5EEF93A0286A62300086B9DC /* litcal-darwinUITests.xctest */,
 				5E6F1DA428DBD51200021942 /* widgetExtension.appex */,
-				5EDBEF322BC2DFF5005FBAF2 /* liblitdb.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -390,29 +320,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				5EDBEF562BC4269C005FBAF2 /* PBXTargetDependency */,
 			);
 			name = widgetExtension;
 			productName = widgetExtension;
 			productReference = 5E6F1DA428DBD51200021942 /* widgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
-		};
-		5EDBEF312BC2DFF5005FBAF2 /* litdb */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5EDBEF382BC2DFF5005FBAF2 /* Build configuration list for PBXNativeTarget "litdb" */;
-			buildPhases = (
-				5EDBEF2E2BC2DFF5005FBAF2 /* Sources */,
-				5EDBEF2F2BC2DFF5005FBAF2 /* Frameworks */,
-				5EDBEF302BC2DFF5005FBAF2 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = litdb;
-			productName = litdb;
-			productReference = 5EDBEF322BC2DFF5005FBAF2 /* liblitdb.a */;
-			productType = "com.apple.product-type.library.static";
 		};
 		5EEF9384286A622E0086B9DC /* litcal-darwin */ = {
 			isa = PBXNativeTarget;
@@ -427,7 +339,6 @@
 			);
 			dependencies = (
 				5EA1039728FDB97000FCFC3D /* PBXTargetDependency */,
-				5EDBEF4C2BC355F1005FBAF2 /* PBXTargetDependency */,
 			);
 			name = "litcal-darwin";
 			productName = "litcal-darwin";
@@ -446,7 +357,6 @@
 			);
 			dependencies = (
 				5EEF9398286A62300086B9DC /* PBXTargetDependency */,
-				5E425DB02BC6CF0C00C764D6 /* PBXTargetDependency */,
 			);
 			name = "litcal-darwinTests";
 			productName = "litcal-darwinTests";
@@ -484,9 +394,6 @@
 					5E6F1DA328DBD51200021942 = {
 						CreatedOnToolsVersion = 14.0;
 					};
-					5EDBEF312BC2DFF5005FBAF2 = {
-						CreatedOnToolsVersion = 15.3;
-					};
 					5EEF9384286A622E0086B9DC = {
 						CreatedOnToolsVersion = 14.0;
 					};
@@ -516,7 +423,6 @@
 				5EEF9395286A62300086B9DC /* litcal-darwinTests */,
 				5EEF939F286A62300086B9DC /* litcal-darwinUITests */,
 				5E6F1DA328DBD51200021942 /* widgetExtension */,
-				5EDBEF312BC2DFF5005FBAF2 /* litdb */,
 			);
 		};
 /* End PBXProject section */
@@ -578,16 +484,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5EDBEF2E2BC2DFF5005FBAF2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5EDBEF492BC355A7005FBAF2 /* dates.c in Sources */,
-				5EDBEF412BC2E021005FBAF2 /* errors.c in Sources */,
-				5EDBEF402BC2E021005FBAF2 /* litdb.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5EEF9381286A622E0086B9DC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -637,25 +533,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5E425DB02BC6CF0C00C764D6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5EDBEF312BC2DFF5005FBAF2 /* litdb */;
-			targetProxy = 5E425DAF2BC6CF0C00C764D6 /* PBXContainerItemProxy */;
-		};
 		5EA1039728FDB97000FCFC3D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5E6F1DA328DBD51200021942 /* widgetExtension */;
 			targetProxy = 5EA1039628FDB97000FCFC3D /* PBXContainerItemProxy */;
-		};
-		5EDBEF4C2BC355F1005FBAF2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5EDBEF312BC2DFF5005FBAF2 /* litdb */;
-			targetProxy = 5EDBEF4B2BC355F1005FBAF2 /* PBXContainerItemProxy */;
-		};
-		5EDBEF562BC4269C005FBAF2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5EDBEF312BC2DFF5005FBAF2 /* litdb */;
-			targetProxy = 5EDBEF552BC4269C005FBAF2 /* PBXContainerItemProxy */;
 		};
 		5EEF9398286A62300086B9DC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -693,7 +574,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Shared/litcal-darwin-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -722,46 +602,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Shared/litcal-darwin-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		5EDBEF392BC2DFF5005FBAF2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JCRQGL8873;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		5EDBEF3A2BC2DFF5005FBAF2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JCRQGL8873;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -922,7 +764,6 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Shared/litcal-darwin-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -963,7 +804,6 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Shared/litcal-darwin-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1075,15 +915,6 @@
 			buildConfigurations = (
 				5E6F1DB328DBD51400021942 /* Debug */,
 				5E6F1DB428DBD51400021942 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5EDBEF382BC2DFF5005FBAF2 /* Build configuration list for PBXNativeTarget "litdb" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5EDBEF392BC2DFF5005FBAF2 /* Debug */,
-				5EDBEF3A2BC2DFF5005FBAF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -151,7 +151,7 @@ struct DayView: View {
 							gradient: litGradient,
 							startPoint: UnitPoint(x: 0.5, y: 0),
 							endPoint: UnitPoint(x: 0.5, y: 1.0))
-						.opacity(litCel.color == LIT_WHITE ? 0.0 : 1.0)
+						.opacity(litCel.color == .white ? 0.0 : 1.0)
 					}
 					TitleCard(
 						dateSeconds: dateSeconds,
