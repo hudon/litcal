@@ -36,17 +36,12 @@ class LitCalendarViewModel: ObservableObject {
 			throw LitcalModelError.databaseError("Database file not found in bundle.")
 		}
 
-		var errPtr: UnsafeMutablePointer<lit_error>?
-		if(!lit_open_db(fileURL.path, &self.db, &errPtr)) {
-			throw LitError(errPtr)
-		}
+		try openDB(fileURL.path, &db)
 
 		var max: Int64 = 0
-		if (!lit_get_min_and_max(
-			self.db, LitDB.calID, &minDateSeconds, &max, &errPtr
-		)) {
-			throw LitError(errPtr)
-		}
+		(minDateSeconds, max) = try litGetMinAndMax(db, Int(LitDB.calID))
+
+		var errPtr: UnsafeMutablePointer<lit_error>?
 
 		var cels: UnsafeMutablePointer<lit_celebration>?
 		var count: Int32 = 0

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SQLite3
 
 struct LitDB {
 	static let calID: Int32 = 1
@@ -70,4 +71,46 @@ struct LitCelebration {
 		self.epochSeconds = cel.epoch_seconds
 		self.season = fixedCStrToString(cel, \.season)
 	}
+}
+
+func openDB(_ filename: String, _ ppDB: UnsafeMutablePointer<OpaquePointer?>!) throws {
+	if sqlite3_open(filename, ppDB) != SQLITE_OK {
+		sqlite3_close(ppDB.pointee)
+		let msg = String(cString: sqlite3_errmsg(ppDB.pointee))
+		throw LitError.error(message: "can't open database: " + msg)
+	}
+}
+
+func litGetMinAndMax(_ db: OpaquePointer?, _ calID: Int) throws -> (Int64, Int64)  {
+	let queryStr =
+		"SELECT MIN(ld.secular_date_s), MAX(ld.secular_date_s) " +
+		"FROM lit_day ld, lit_season ls, lit_year ly, lit_calendar lc " +
+	       "WHERE ld.lit_season_id = ls.id " +
+	       "AND ls.lit_year_id = ly.id " +
+	       "AND ly.lit_calendar_id = ?;"
+
+	var stmt: OpaquePointer?
+	var rc = sqlite3_prepare_v2(db, queryStr, -1, &stmt, nil);
+	if (rc != SQLITE_OK) {
+		let msg = String(cString: sqlite3_errmsg(db))
+		throw LitError.error(message: "Failed to prepare statement: \(msg)")
+	}
+	defer {
+		sqlite3_finalize(stmt)
+	}
+	rc = sqlite3_bind_int64(stmt, 1, Int64(calID));
+	if (rc != SQLITE_OK) {
+		let msg = String(cString: sqlite3_errmsg(db))
+		throw LitError.error(message: "Failed to bind parameter: \(msg)")
+	}
+
+	rc = sqlite3_step(stmt);
+	if (rc != SQLITE_ROW) {
+		let msg = String(cString: sqlite3_errmsg(db))
+		throw LitError.error(message: "Failed to step: \(msg)")
+	}
+	return (
+		sqlite3_column_int64(stmt, 0),
+		sqlite3_column_int64(stmt, 1)
+	)
 }
