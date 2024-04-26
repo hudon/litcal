@@ -37,7 +37,7 @@ extension Color {
 }
 
 func gradientFromLitColor(
-	_ c: lit_color,
+	_ c: LitColor,
 	colorScheme: ColorScheme,
 	lightStartOpacity: CGFloat = 0.3,
 	darkStartOpacity: CGFloat = 0.25
@@ -46,25 +46,17 @@ func gradientFromLitColor(
 	return Gradient(colors: [color.opacity(colorScheme == .light ? lightStartOpacity : darkStartOpacity), color.opacity(0)])
 }
 
-func uiColorFromLitColor(_ color: lit_color) throws -> Color {
+func uiColorFromLitColor(_ color: LitColor) throws -> Color {
 	switch (color) {
-	case LIT_BLACK:
-		return .allSouls
-	case LIT_GREEN:
+	case .green:
 		return .figTree
-	case LIT_RED:
+	case .red:
 		return .passion
-	case LIT_WHITE:
+	case .white:
 		return .lily
-	case LIT_VIOLET:
+	case .violet:
 		return .wine
-	case LIT_ROSE:
+	case .rose:
 		return.matrimony
-	case LIT_GOLD:
-		return .chalice
-	case LIT_SILVER:
-		return .ashes
-	default:
-		throw LitError.unknown
 	}
 }

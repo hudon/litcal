@@ -35,3 +35,18 @@ func makeGMTFormatter(_ dateFormat: String) -> DateFormatter {
 	f.timeZone = TimeZone(identifier: "GMT")
 	return f
 }
+
+
+/// Computes the current date (no time) and returns it
+/// - Returns: the current date as number of seconds from epoch
+///  to 00:00 UTC of the current date
+func todayAsEpochSeconds() -> Int64 {
+	let calendar = Calendar(identifier: .gregorian)
+	let now = calendar.dateComponents([.year, .month, .day], from: Date())
+	var dateComponents = DateComponents()
+	dateComponents.year = now.year
+	dateComponents.month = now.month
+	dateComponents.day = now.day
+	dateComponents.timeZone = TimeZone(identifier: "GMT")
+	return Int64(calendar.date(from: dateComponents)!.timeIntervalSince1970)
+}

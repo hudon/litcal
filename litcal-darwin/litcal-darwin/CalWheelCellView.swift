@@ -72,7 +72,7 @@ struct WheelColumnView: View {
 	}
 
 	private func feastDotColor(_ date: Date) -> Color {
-		if celebration.color == LIT_WHITE {
+		if celebration.color == .white {
 			return colorScheme == .light ? Color.clear : .lily
 		}
 		return try! uiColorFromLitColor(
@@ -81,7 +81,7 @@ struct WheelColumnView: View {
 	}
 
 	func feastDotBorderColor(_ date: Date) -> Color {
-		if celebration.color == LIT_WHITE {
+		if celebration.color == .white {
 			return colorScheme == .light ? .ashes : .lily
 		}
 		return try! uiColorFromLitColor(celebration.color)

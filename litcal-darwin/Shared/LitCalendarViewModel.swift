@@ -36,33 +36,19 @@ class LitCalendarViewModel: ObservableObject {
 			throw LitcalModelError.databaseError("Database file not found in bundle.")
 		}
 
+		self.todaySeconds = todayAsEpochSeconds()
+		self.todayTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+			self.todaySeconds = todayAsEpochSeconds()
+		}
+
 		try openDB(fileURL.path, &db)
 
 		var max: Int64 = 0
-		(minDateSeconds, max) = try litGetMinAndMax(db, Int(LitDB.calID))
+		(minDateSeconds, max) = try litGetMinAndMax(db!, Int(LitDB.calID))
 
-		var errPtr: UnsafeMutablePointer<lit_error>?
-
-		var cels: UnsafeMutablePointer<lit_celebration>?
-		var count: Int32 = 0
-		if(!lit_celebrations_in_range(
-			db, LitDB.calID,
-			minDateSeconds, max,
-			&cels, &count, &errPtr)
-		) {
-			throw LitError(errPtr)
-		}
-		let array = UnsafeBufferPointer(start: cels, count: Int(count))
-		for i in 0..<Int(count) {
-			let cel = LitCelebration(array[i])
+		try litCelebrationsInRange(db!, Int(LitDB.calID), minDateSeconds, max) { cel in
 			celebrations[cel.epochSeconds] = cel
 			datesInSeconds.append(cel.epochSeconds)
-		}
-		lit_celebrations_free(cels, count)
-
-		self.todaySeconds = Int64(lit_start_of_today_seconds())
-		self.todayTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-			self.todaySeconds = Int64(lit_start_of_today_seconds())
 		}
 	}
 
