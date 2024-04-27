@@ -1,5 +1,6 @@
 # ignore database backups
 litcal_*_*.sqlite
+database/litcal.sqlite
 
 # etl
 dbmigrate/dbmigrate

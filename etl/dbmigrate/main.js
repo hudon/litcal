@@ -19,7 +19,7 @@ function parseArgs(a) {
 		fatal("SQLite file path argument is required")
 	}
 
-	const sqlitePath = process.argv[1]
+	const sqlitePath = argv[1]
 
 	const db = new Database(sqlitePath, {
 		fileMustExist: true,
@@ -35,17 +35,17 @@ function parseArgs(a) {
 		migrationsPath = process.cwd()
 
 	if (argv.length > 2) {
-		migrationsPath = process.argv[2]
+		migrationsPath = argv[2]
 	}
 	if (argv.length > 3) {
-		targetVersion = parseInt(process.argv[2])
-		if (targetVersion < 0) {
+		targetVersion = parseInt(argv[3])
+		if (isNaN(targetVersion) || targetVersion < 0) {
 			fatal("Invalid target version")
 		}
 	}
 	if (argv.length > 4) {
-		secondTarget = parseInt(process.argv[3])
-		if (secondTarget < 0) {
+		secondTarget = parseInt(argv[4])
+		if (isNaN(secondTarget) || secondTarget < 0) {
 			fatal("Invalid second target version")
 		}
 	}
@@ -55,7 +55,7 @@ function parseArgs(a) {
 export default function main() {
 	try {
 		let [db, migPath, t1, t2] = parseArgs(process.argv)
-		backup(migPath)
+		backup(db.name)
 		migrate(db, migPath, t1)
 		if (t2 !== null) migrate(db, migPath, t2)
 	} catch (error) {
