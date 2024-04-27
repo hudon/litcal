@@ -102,8 +102,8 @@ export default function Page({ params: { date } }) {
 					alt="Image of the day"
 					fill
 					className="rounded-lg"
-					objectFit="cover"
-					objectPosition="center top"
+					style={{ objectFit: "cover", objectPosition: "center top" }}
+					priority
 				/>
 				<div
 					className={

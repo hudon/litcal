@@ -32,9 +32,9 @@ export default function RootLayout({ children }) {
 					<div className="h-28 flex-shrink-0 pl-10 pt-12">
 						<Image
 							src="/litcal.svg"
-							alt="Litcal Logo"
 							width={94}
 							height={30}
+							alt="Litcal Logo"
 							priority
 						/>
 					</div>
