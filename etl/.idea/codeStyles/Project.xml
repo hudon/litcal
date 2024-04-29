@@ -12,6 +12,9 @@
       <option name="SPACES_WITHIN_OBJECT_LITERAL_BRACES" value="true" />
       <option name="SPACES_WITHIN_IMPORTS" value="true" />
     </JSCodeStyleSettings>
+    <JetCodeStyleSettings>
+      <option name="CODE_STYLE_DEFAULTS" value="KOTLIN_OFFICIAL" />
+    </JetCodeStyleSettings>
     <TypeScriptCodeStyleSettings version="0">
       <option name="USE_SEMICOLON_AFTER_STATEMENT" value="false" />
       <option name="FORCE_SEMICOLON_STYLE" value="true" />
@@ -37,9 +40,9 @@
     <codeStyleSettings language="JavaScript">
       <option name="SOFT_MARGINS" value="80" />
       <indentOptions>
-        <option name="INDENT_SIZE" value="2" />
-        <option name="CONTINUATION_INDENT_SIZE" value="2" />
-        <option name="TAB_SIZE" value="2" />
+        <option name="INDENT_SIZE" value="8" />
+        <option name="CONTINUATION_INDENT_SIZE" value="8" />
+        <option name="TAB_SIZE" value="8" />
         <option name="USE_TAB_CHARACTER" value="true" />
       </indentOptions>
     </codeStyleSettings>
@@ -71,6 +74,9 @@
         <option name="CONTINUATION_INDENT_SIZE" value="2" />
         <option name="USE_TAB_CHARACTER" value="true" />
       </indentOptions>
+    </codeStyleSettings>
+    <codeStyleSettings language="kotlin">
+      <option name="CODE_STYLE_DEFAULTS" value="KOTLIN_OFFICIAL" />
     </codeStyleSettings>
   </code_scheme>
 </component>
