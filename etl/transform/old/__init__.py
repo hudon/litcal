@@ -535,25 +535,6 @@ def transform(j, max_ev=-1):
 
     return (j, messages)
 
-def minify(j):
-    messages = []
-
-    # Received data could be just events, or events wrapped alongside years and season data
-    orig = None
-    if 'litEvents' in j:
-        orig = j
-        j = j['litEvents']
-
-    j = remove_vigil_mass(j)
-    j = remove_extra_events(j, messages)
-    j = remove_fields(j, messages)
-
-    if orig:
-        orig['litEvents'] = j
-    else:
-        orig = j
-
-    return (orig, messages)
 
 def main():
     """Process files. Try not to overwrite data we've already processed

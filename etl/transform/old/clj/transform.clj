@@ -480,16 +480,7 @@
       (find-missing-dates start-str end-str)
       serialize-lit-years-seasons)))
       
-; "2025-01-12" is "next year baptism date" for 2024
-(defn -main [& args]
-  (let [filename (nth args 0)
-        next-year-baptism-str (nth args 1)]
-    (println (str "Reading file " filename))
-    (let [json (json/parse-string (slurp filename) true)
-          next-year-baptism-date (LocalDate/parse next-year-baptism-str)]
-      (spit
-        (str filename ".transformed.json")
-        (json/generate-string (transform json next-year-baptism-date) {:pretty true})))))
+
 
 (comment
   (-main "data/LCAPI-USA-2024.json.transformed-pp-fixed.json" "2025-01-12")
