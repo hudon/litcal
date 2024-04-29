@@ -6,7 +6,49 @@ function fatal(s) {
 	process.exit(1)
 }
 
+/**
+ * returns json with the \"LitCal\" key turned to 'events' if it exists, otherwise returns the json as-is
+ * @param data
+ * @return {{messages: [], events: {}}}
+ */
+function eventify(data) {
+	if (data.hasOwnProperty("LitCal")) {
+		return {
+			events: data["LitCal"],
+			messages: [],
+		}
+	}
+	if (!data.hasOwnProperty("events")) {
+		fatal(
+			"ERROR: data in invalid format. Expected 'LitCal' or 'events' at top level",
+		)
+	}
+	return data
+}
+
+/**
+ *
+ * @param {import('types').TransformedCal} data
+ * @param nextBaptismDate
+ */
+function addTopLevelSeasons(data, nextBaptismDate) {
+	function makeLitYears() {}
+	function makeLitSeasons() {}
+	data["litYears"] = makeLitYears()
+	data["litSeasons"] = makeLitSeasons()
+	// TODO here
+}
+
+/**
+ *
+ * @param {import('types').InputCal} data
+ * @param nextBaptismDate
+ * @return {import('types').TransformedCal}
+ */
 function transform(data, nextBaptismDate) {
+	// Because some transforms depend on data from previous ones, order generally matters
+	data = eventify(data)
+	addTopLevelSeasons(data, nextBaptismDate)
 	return data
 }
 

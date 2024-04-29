@@ -536,36 +536,6 @@ def transform(j, max_ev=-1):
     return (j, messages)
 
 
-def main():
-    """Process files. Try not to overwrite data we've already processed
-
-    Supports reading both original files, which have a {"LitCal": events} structures, as well
-    as files we've already processed, which are just {...events}
-    """
-    filename = sys.argv[1]
-    with open(filename, 'r', encoding="utf-8") as f:
-        read_data = f.read()
-        j = json.loads(read_data)
-        if 'LitCal' in j:
-            j = j['LitCal']
-
-        if len(sys.argv) < 3:
-            raise ValueError("Incorrect arguments. Third argument should be 'transform or 'minify'")
-        mode = sys.argv[2]
-        if mode == 'transform':
-            j, messages = transform(j)
-        elif mode == 'minify':
-            j, messages = minify(j)
-        else:
-            raise ValueError("Incorrect third argument. should be 'transform' or 'minify'")
-
-        for msg in messages:
-            print(msg)
-        if mode == 'transform':
-            print(json.dumps(j, indent=2))
-        elif mode == 'minify':
-            print(json.dumps(j, separators=(',', ':')))
-        return j
 
 
 import unittest

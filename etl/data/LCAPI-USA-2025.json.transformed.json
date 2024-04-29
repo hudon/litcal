@@ -1,15 +1,5 @@
 {
-  "Settings": {
-    "Year": 2025,
-    "Epiphany": "SUNDAY_JAN2_JAN8",
-    "Ascension": "SUNDAY",
-    "CorpusChristi": "SUNDAY",
-    "Locale": "EN",
-    "ReturnType": "JSON",
-    "CalendarType": "LITURGICAL",
-    "NationalCalendar": "USA"
-  },
-  "LitCal": {
+  "events": {
     "Advent1_vigil": {
       "eventIdx": 1120,
       "name": "First Sunday of Advent Vigil Mass",
@@ -16027,5 +16017,6 @@
       "liturgicalSeason": "ORDINARY_TIME",
       "liturgicalSeasonLcl": "Ordinary Time"
     }
-  }
+  },
+  "messages": []
 }

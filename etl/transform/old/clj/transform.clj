@@ -412,14 +412,7 @@
         (update :litYears (update-lit-entities serialize-dates))
         (update :litSeasons (update-lit-entities #(map serialize-dates %))))))
 
-(defn litcal-or-events
-  "returns json with the \"LitCal\" key turned to 'events' if it exists, otherwise returns the json as-is"
-  [json]
-  (let [evs (if (contains? json :LitCal)
-              (:LitCal (dissoc json :Settings :Metadata :Messages))
-              (get json :events []))
-        msgs (get json :messages [])]
-    {:events evs :messages msgs}))
+
 
 (defn keep-one-event-per-date
   "returns json with only one event per date"
@@ -467,7 +460,7 @@
       end-str (.toString (LocalDate/of year 12 31))]
   (-> json
       ;; Because some transforms depend on data from previous ones, order generally matters
-      litcal-or-events
+;;       litcal-or-events
       (add-seasons-top-level next-year-baptism-date)
       add-urls
       add-gospels
