@@ -8,7 +8,7 @@ const directions = {
 
 /**
  *
- * @param {Database} db
+ * @param db
  * @param {string} path
  * @param {number} target
  */
@@ -79,7 +79,7 @@ export default function migrate(db, migPath, target) {
 		`INFO: migrating ${dir} to version ${target}. Executing: ${filesToRun}`,
 	)
 
-	const fromV = currVersion
+	let fromV = currVersion
 	for (let toV of versionsToRun) {
 		const filePath = path.join(migPath, sqlFiles[toV])
 		const fileContent = fs.readFileSync(filePath, "utf8")
@@ -106,8 +106,20 @@ export default function migrate(db, migPath, target) {
 				? lines.slice(1, downIndex)
 				: lines.slice(downIndex + 1)
 		).join("\n")
-		console.log("running lines", migSQL)
-		// db.exec(sql)
-		// db.prepare("UPDATE version SET version = ?").run(toV)
+
+		db.transaction((migSQL) => {
+			db.exec(migSQL)
+			if (dir === directions.DOWN) {
+				toV--
+			}
+			db.prepare("UPDATE version SET version = ? WHERE version = ?").run(
+				toV,
+				fromV,
+			)
+		})(migSQL)
+		console.log(`INFO: migrated to version ${toV} by executing:\n${migSQL}`)
+		fromV = toV
 	}
+	const currV = db.prepare("SELECT version FROM version").pluck().get()
+	console.log(`INFO: Migration complete. Current version is now ${currV}`)
 }
