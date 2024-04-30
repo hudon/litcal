@@ -1,5 +1,5 @@
 interface TransformedCal {
-	events: { [key: string]: any }
+	events: { [key: string]: any; year: number; month: number; day: number }
 	messages: string[]
 }
 
