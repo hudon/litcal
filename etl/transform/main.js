@@ -161,6 +161,26 @@ function addTopLevelSeasons(data) {
 
 /**
  *
+ * @param {import('./types').TransformedCal}data
+ */
+function addURLs(data) {
+	const pad = (n) => ("0" + n).slice(-2)
+	Object.entries(data.events).forEach(([evKey, ev]) => {
+		const base = "http://bible.usccb.org/bible/readings/"
+		if (!("readingsURL" in ev))
+			ev["readingsURL"] =
+				base + pad(ev.month) + pad(ev.day) + pad(ev.year) + ".cfm"
+	})
+}
+
+/**
+ *
+ * @param {import('./types').TransformedCal} data
+ */
+function addGospels(data) {}
+
+/**
+ *
  * @param {import('./types').InputCal} data
  * @return {import('./types').TransformedCal}
  */
@@ -168,6 +188,8 @@ function transform(data) {
 	// Because some transforms depend on data from previous ones, order generally matters
 	data = eventify(data)
 	addTopLevelSeasons(data)
+	addURLs(data) // TODO: double check manually that this works. Stopped here on 2024-04-29 bc USCCB hasn't uploaded readings for 2025 yet
+	addGospels(data)
 	return data
 }
 
