@@ -44,66 +44,6 @@
   (let [computed-easter (compute-easter-gregorian year)]
     (LocalDate/of ^int year ^int (computed-easter :month) ^int (computed-easter :day))))
 
-(defn add-seasons-top-level
-  "NOTE that this will overwrite existing seasons/years. This is necessary given the other transformations that depend on
- these values being LocalDate's, not strings."
-  [json next-year-baptism-date]
-  (let [baptism-date (-> json
-                         :events
-                         :BaptismLord
-                         ((fn [ev]
-                            (if ev
-                              (local-date-from-event ev)
-                              (throw (Exception. "No BaptismLord event found"))))))
-
-        int-to-key #(keyword (str %))
-
-        compute-advent-start
-        (fn [secular-year]
-          (let [nativity-date (LocalDate/of ^int secular-year 12 25)
-                sunday-before-nat (.minusDays nativity-date (.getValue (.getDayOfWeek nativity-date)))]
-            (.minusWeeks sunday-before-nat 3)))
-
-        ; NOTE: we're assuming the given file is all for the same secular year,
-        ; so checking any event's year will do.
-        secular-year
-        (.getYear (local-date-from-event (second (first (:events json)))))
-
-        compute-lit-year
-        (fn [year]
-          (let [start-date (compute-advent-start (- year 1))
-                end-date (.minusDays (compute-advent-start year) 1)]
-            {:startDate start-date :endDate end-date :secular year}))
-
-        lit-years
-        (let [next-year (+ 1 secular-year)]
-          {(int-to-key secular-year) (compute-lit-year secular-year)
-           (int-to-key next-year)    (compute-lit-year next-year)})
-
-        lit-seasons
-        (let [christmas-start (LocalDate/of ^int (- secular-year 1) 12 25)
-              easter-date (compute-easter-date secular-year)
-              next-secular-year (+ 1 secular-year)
-              next-advent-start (compute-advent-start secular-year)
-              next-christmas-start (LocalDate/of ^int secular-year 12 25)
-              vec-to-seasons #(map (fn [[n c sd ed]] {:name n :color c :startDate sd :endDate ed}) %)]
-          {(int-to-key secular-year)
-           (vec-to-seasons
-            [["Christmas" "white" christmas-start baptism-date]
-             ["Ordinary Time" "green" (.plusDays baptism-date 1) (.minusDays easter-date 47)]
-             ["Lent" "violet" (.minusDays easter-date 46) (.minusDays easter-date 4)]
-             ["Paschal Triduum" "red" (.minusDays easter-date 3) (.minusDays easter-date 1)]
-             ["Easter" "white" easter-date (.plusDays easter-date 49)]
-             ["Ordinary Time" "green" (.plusDays easter-date 50) (.minusDays next-advent-start 1)]])
-           (int-to-key next-secular-year)
-           (vec-to-seasons
-            [["Advent" "violet" next-advent-start (.minusDays next-christmas-start 1)]
-             ["Christmas" "white" next-christmas-start next-year-baptism-date]])})]
-    (if baptism-date
-      (-> json
-          (assoc :litYears lit-years)
-          (assoc :litSeasons lit-seasons))
-      (update json :messages conj "ERROR: No baptism date found, cannot compute seasons."))))
 
 (defn add-urls
   "Takes in the events object of the LCAPI and returns a map of { events: {<event id>: <event map>}, messages: [] }
@@ -412,14 +352,7 @@
         (update :litYears (update-lit-entities serialize-dates))
         (update :litSeasons (update-lit-entities #(map serialize-dates %))))))
 
-(defn litcal-or-events
-  "returns json with the \"LitCal\" key turned to 'events' if it exists, otherwise returns the json as-is"
-  [json]
-  (let [evs (if (contains? json :LitCal)
-              (:LitCal (dissoc json :Settings :Metadata :Messages))
-              (get json :events []))
-        msgs (get json :messages [])]
-    {:events evs :messages msgs}))
+
 
 (defn keep-one-event-per-date
   "returns json with only one event per date"
@@ -467,8 +400,8 @@
       end-str (.toString (LocalDate/of year 12 31))]
   (-> json
       ;; Because some transforms depend on data from previous ones, order generally matters
-      litcal-or-events
-      (add-seasons-top-level next-year-baptism-date)
+;;       litcal-or-events
+
       add-urls
       add-gospels
       warn-if-many-refs
@@ -480,16 +413,7 @@
       (find-missing-dates start-str end-str)
       serialize-lit-years-seasons)))
       
-; "2025-01-12" is "next year baptism date" for 2024
-(defn -main [& args]
-  (let [filename (nth args 0)
-        next-year-baptism-str (nth args 1)]
-    (println (str "Reading file " filename))
-    (let [json (json/parse-string (slurp filename) true)
-          next-year-baptism-date (LocalDate/parse next-year-baptism-str)]
-      (spit
-        (str filename ".transformed.json")
-        (json/generate-string (transform json next-year-baptism-date) {:pretty true})))))
+
 
 (comment
   (-main "data/LCAPI-USA-2024.json.transformed-pp-fixed.json" "2025-01-12")

@@ -9,7 +9,7 @@ const directions = {
 /**
  *
  * @param db
- * @param {string} path
+ * @param {string} migPath
  * @param {number} target
  */
 export default function migrate(db, migPath, target) {
