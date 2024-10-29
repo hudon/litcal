@@ -73,12 +73,14 @@ function eventify(data) {
  * @param {import('./types').TransformedCal} data
  */
 function addTopLevelSeasons(data) {
-	// NOTE: we're assuming the given file is all for the same secular year,
-	// so checking any event's year will do.
-	const secularYear = data.events[Object.keys(data.events)[0]].year,
-		bev = data.events["BaptismLord"],
+	// NOTE: we're assuming:
+	// 1. The given file is all for the same secular year,
+	// 2. The file has one 'BaptismLord' event, and the year of that event is the secular year of the whole file
+	// 3. The file might contain events from the previous secular year but the same liturgical year
+	const bev = data.events["BaptismLord"],
 		baptismDate = new Date(bev.year, bev.month - 1, bev.day),
-		nextBaptismDate = baptismDates[secularYear + 1]
+		nextBaptismDate = baptismDates[bev.year + 1],
+		secularYear = bev.year
 
 	if (!nextBaptismDate) {
 		fatal(

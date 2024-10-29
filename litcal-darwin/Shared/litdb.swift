@@ -19,7 +19,6 @@ enum LitError: Error {
 	init() {
 		self = .unknown
 	}
-
 }
 
 enum LitColor: String {
