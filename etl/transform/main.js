@@ -167,7 +167,7 @@ function addTopLevelSeasons(data) {
  */
 function addURLs(data) {
 	const pad = (n) => ("0" + n).slice(-2)
-	Object.entries(data.events).forEach(([evKey, ev]) => {
+	Object.entries(data.events).forEach(([, ev]) => {
 		const base = "http://bible.usccb.org/bible/readings/"
 		if (!("readingsURL" in ev))
 			ev["readingsURL"] =
