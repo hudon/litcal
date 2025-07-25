@@ -26,7 +26,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "Advent1"
+      "isVigilFor": "Advent1",
+      "readingsURL": "http://bible.usccb.org/bible/readings/113024.cfm"
     },
     "Advent1": {
       "eventIdx": 598,
@@ -58,7 +59,8 @@
       "hasVesperII": true,
       "psalterWeek": 1,
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/120124.cfm"
     },
     "AdventWeekday1": {
       "eventIdx": 690,
@@ -85,7 +87,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/120224.cfm"
     },
     "AdventWeekday2": {
       "eventIdx": 691,
@@ -112,7 +115,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/120324.cfm"
     },
     "StFrancisXavier": {
       "eventIdx": 796,
@@ -141,7 +145,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/120324.cfm"
     },
     "AdventWeekday3": {
       "eventIdx": 692,
@@ -168,7 +173,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/120424.cfm"
     },
     "StJohnDamascene": {
       "eventIdx": 877,
@@ -198,7 +204,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/120424.cfm"
     },
     "AdventWeekday4": {
       "eventIdx": 693,
@@ -225,7 +232,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/120524.cfm"
     },
     "AdventWeekday5": {
       "eventIdx": 694,
@@ -252,7 +260,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/120624.cfm"
     },
     "StNicholas": {
       "eventIdx": 878,
@@ -281,7 +290,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/120624.cfm"
     },
     "AdventWeekday6": {
       "eventIdx": 695,
@@ -308,7 +318,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/120724.cfm"
     },
     "StAmbrose": {
       "eventIdx": 797,
@@ -337,7 +348,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/120724.cfm"
     },
     "Advent2_vigil": {
       "eventIdx": 1121,
@@ -365,7 +377,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "Advent2"
+      "isVigilFor": "Advent2",
+      "readingsURL": "http://bible.usccb.org/bible/readings/120724.cfm"
     },
     "Advent2": {
       "eventIdx": 599,
@@ -397,7 +410,8 @@
       "hasVesperII": true,
       "psalterWeek": 2,
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/120824.cfm"
     },
     "ImmaculateConception": {
       "eventIdx": 636,
@@ -430,7 +444,8 @@
       "hasVesperI": false,
       "hasVesperII": true,
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/120924.cfm"
     },
     "AdventWeekday9": {
       "eventIdx": 696,
@@ -457,7 +472,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/121024.cfm"
     },
     "LadyLoreto": {
       "eventIdx": 904,
@@ -486,7 +502,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/121024.cfm"
     },
     "AdventWeekday10": {
       "eventIdx": 697,
@@ -513,7 +530,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/121124.cfm"
     },
     "StDamasusIPope": {
       "eventIdx": 879,
@@ -542,7 +560,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/121124.cfm"
     },
     "AdventWeekday11": {
       "eventIdx": 698,
@@ -569,7 +588,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/121224.cfm"
     },
     "LadyGuadalupe": {
       "eventIdx": 901,
@@ -598,7 +618,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/121224.cfm"
     },
     "AdventWeekday12": {
       "eventIdx": 699,
@@ -625,7 +646,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/121324.cfm"
     },
     "StLucySyracuse": {
       "eventIdx": 798,
@@ -657,7 +679,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/121324.cfm"
     },
     "AdventWeekday13": {
       "eventIdx": 700,
@@ -684,7 +707,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/121424.cfm"
     },
     "StJohnCross": {
       "eventIdx": 799,
@@ -713,7 +737,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/121424.cfm"
     },
     "Advent3_vigil": {
       "eventIdx": 1122,
@@ -741,7 +766,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "Advent3"
+      "isVigilFor": "Advent3",
+      "readingsURL": "http://bible.usccb.org/bible/readings/121424.cfm"
     },
     "Advent3": {
       "eventIdx": 600,
@@ -773,7 +799,8 @@
       "hasVesperII": true,
       "psalterWeek": 3,
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/121524.cfm"
     },
     "AdventWeekday15": {
       "eventIdx": 701,
@@ -800,7 +827,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/121624.cfm"
     },
     "AdventWeekday16": {
       "eventIdx": 702,
@@ -827,7 +855,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/121724.cfm"
     },
     "AdventWeekday17": {
       "eventIdx": 703,
@@ -854,7 +883,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/121824.cfm"
     },
     "AdventWeekday18": {
       "eventIdx": 704,
@@ -881,7 +911,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/121924.cfm"
     },
     "AdventWeekday19": {
       "eventIdx": 705,
@@ -908,7 +939,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/122024.cfm"
     },
     "AdventWeekday20": {
       "eventIdx": 706,
@@ -935,7 +967,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/122124.cfm"
     },
     "StPeterCanisius": {
       "eventIdx": 880,
@@ -965,7 +998,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/122124.cfm"
     },
     "Advent4_vigil": {
       "eventIdx": 1123,
@@ -993,7 +1027,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "Advent4"
+      "isVigilFor": "Advent4",
+      "readingsURL": "http://bible.usccb.org/bible/readings/122124.cfm"
     },
     "Advent4": {
       "eventIdx": 601,
@@ -1025,7 +1060,8 @@
       "hasVesperII": true,
       "psalterWeek": 4,
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/122224.cfm"
     },
     "AdventWeekday22": {
       "eventIdx": 707,
@@ -1052,7 +1088,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/122324.cfm"
     },
     "StJohnKanty": {
       "eventIdx": 882,
@@ -1082,7 +1119,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/122324.cfm"
     },
     "AdventWeekday23": {
       "eventIdx": 708,
@@ -1109,7 +1147,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ADVENT",
-      "liturgicalSeasonLcl": "Advent"
+      "liturgicalSeasonLcl": "Advent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/122424.cfm"
     },
     "Christmas_vigil": {
       "eventIdx": 1116,
@@ -1137,7 +1176,8 @@
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "Christmas"
+      "isVigilFor": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/122424.cfm"
     },
     "Christmas": {
       "eventIdx": 585,
@@ -1168,7 +1208,8 @@
       "hasVesperI": true,
       "hasVesperII": true,
       "liturgicalSeason": "CHRISTMAS",
-      "liturgicalSeasonLcl": "Christmas"
+      "liturgicalSeasonLcl": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/122524.cfm"
     },
     "StStephenProtomartyr": {
       "eventIdx": 687,
@@ -1197,7 +1238,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "CHRISTMAS",
-      "liturgicalSeasonLcl": "Christmas"
+      "liturgicalSeasonLcl": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/122624.cfm"
     },
     "StJohnEvangelist": {
       "eventIdx": 688,
@@ -1226,7 +1268,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "CHRISTMAS",
-      "liturgicalSeasonLcl": "Christmas"
+      "liturgicalSeasonLcl": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/122724.cfm"
     },
     "HolyInnocents": {
       "eventIdx": 689,
@@ -1255,7 +1298,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "CHRISTMAS",
-      "liturgicalSeasonLcl": "Christmas"
+      "liturgicalSeasonLcl": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/122824.cfm"
     },
     "HolyFamily_vigil": {
       "eventIdx": 1147,
@@ -1283,7 +1327,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "HolyFamily"
+      "isVigilFor": "HolyFamily",
+      "readingsURL": "http://bible.usccb.org/bible/readings/122824.cfm"
     },
     "HolyFamily": {
       "eventIdx": 643,
@@ -1314,7 +1359,8 @@
       "hasVesperI": true,
       "hasVesperII": true,
       "liturgicalSeason": "CHRISTMAS",
-      "liturgicalSeasonLcl": "Christmas"
+      "liturgicalSeasonLcl": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/122924.cfm"
     },
     "ChristmasWeekday5": {
       "eventIdx": 709,
@@ -1341,7 +1387,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "CHRISTMAS",
-      "liturgicalSeasonLcl": "Christmas"
+      "liturgicalSeasonLcl": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/123024.cfm"
     },
     "ChristmasWeekday6": {
       "eventIdx": 710,
@@ -1368,7 +1415,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "CHRISTMAS",
-      "liturgicalSeasonLcl": "Christmas"
+      "liturgicalSeasonLcl": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/123124.cfm"
     },
     "StSylvesterIPope": {
       "eventIdx": 884,
@@ -1397,7 +1445,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "CHRISTMAS",
-      "liturgicalSeasonLcl": "Christmas"
+      "liturgicalSeasonLcl": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/123124.cfm"
     },
     "MotherGod_vigil": {
       "eventIdx": 545,
@@ -1425,7 +1474,8 @@
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "MotherGod"
+      "isVigilFor": "MotherGod",
+      "readingsURL": "http://bible.usccb.org/bible/readings/123124.cfm"
     },
     "MotherGod": {
       "eventIdx": 45,
@@ -1456,7 +1506,8 @@
       "hasVesperI": true,
       "hasVesperII": true,
       "liturgicalSeason": "CHRISTMAS",
-      "liturgicalSeasonLcl": "Christmas"
+      "liturgicalSeasonLcl": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/010125.cfm"
     },
     "StsBasilGreg": {
       "eventIdx": 152,
@@ -1485,7 +1536,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "CHRISTMAS",
-      "liturgicalSeasonLcl": "Christmas"
+      "liturgicalSeasonLcl": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/010225.cfm"
     },
     "DayBeforeEpiphany2": {
       "eventIdx": 7,
@@ -1512,7 +1564,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "CHRISTMAS",
-      "liturgicalSeasonLcl": "Christmas"
+      "liturgicalSeasonLcl": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/010325.cfm"
     },
     "NameJesus": {
       "eventIdx": 298,
@@ -1541,7 +1594,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "CHRISTMAS",
-      "liturgicalSeasonLcl": "Christmas"
+      "liturgicalSeasonLcl": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/010325.cfm"
     },
     "StElizabethSeton": {
       "eventIdx": 489,
@@ -1570,7 +1624,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "CHRISTMAS",
-      "liturgicalSeasonLcl": "Christmas"
+      "liturgicalSeasonLcl": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/010425.cfm"
     },
     "Epiphany_vigil": {
       "eventIdx": 523,
@@ -1598,7 +1653,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "Epiphany"
+      "isVigilFor": "Epiphany",
+      "readingsURL": "http://bible.usccb.org/bible/readings/010425.cfm"
     },
     "Epiphany": {
       "eventIdx": 5,
@@ -1629,7 +1685,8 @@
       "hasVesperI": true,
       "hasVesperII": true,
       "liturgicalSeason": "CHRISTMAS",
-      "liturgicalSeasonLcl": "Christmas"
+      "liturgicalSeasonLcl": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/010525.cfm"
     },
     "DayAfterEpiphany1": {
       "eventIdx": 8,
@@ -1656,7 +1713,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "CHRISTMAS",
-      "liturgicalSeasonLcl": "Christmas"
+      "liturgicalSeasonLcl": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/010625.cfm"
     },
     "StAndreBessette": {
       "eventIdx": 490,
@@ -1685,7 +1743,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "CHRISTMAS",
-      "liturgicalSeasonLcl": "Christmas"
+      "liturgicalSeasonLcl": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/010625.cfm"
     },
     "DayAfterEpiphany2": {
       "eventIdx": 9,
@@ -1712,7 +1771,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "CHRISTMAS",
-      "liturgicalSeasonLcl": "Christmas"
+      "liturgicalSeasonLcl": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/010725.cfm"
     },
     "StRayPenyafort": {
       "eventIdx": 221,
@@ -1741,7 +1801,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "CHRISTMAS",
-      "liturgicalSeasonLcl": "Christmas"
+      "liturgicalSeasonLcl": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/010725.cfm"
     },
     "DayAfterEpiphany3": {
       "eventIdx": 10,
@@ -1768,7 +1829,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "CHRISTMAS",
-      "liturgicalSeasonLcl": "Christmas"
+      "liturgicalSeasonLcl": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/010825.cfm"
     },
     "DayAfterEpiphany4": {
       "eventIdx": 11,
@@ -1795,7 +1857,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "CHRISTMAS",
-      "liturgicalSeasonLcl": "Christmas"
+      "liturgicalSeasonLcl": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/010925.cfm"
     },
     "DayAfterEpiphany5": {
       "eventIdx": 12,
@@ -1822,7 +1885,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "CHRISTMAS",
-      "liturgicalSeasonLcl": "Christmas"
+      "liturgicalSeasonLcl": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/011025.cfm"
     },
     "BaptismLord_vigil": {
       "eventIdx": 553,
@@ -1850,7 +1914,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "BaptismLord"
+      "isVigilFor": "BaptismLord",
+      "readingsURL": "http://bible.usccb.org/bible/readings/011125.cfm"
     },
     "BaptismLord": {
       "eventIdx": 55,
@@ -1881,7 +1946,8 @@
       "hasVesperI": true,
       "hasVesperII": true,
       "liturgicalSeason": "CHRISTMAS",
-      "liturgicalSeasonLcl": "Christmas"
+      "liturgicalSeasonLcl": "Christmas",
+      "readingsURL": "http://bible.usccb.org/bible/readings/011225.cfm"
     },
     "FirstOrdWeekday1": {
       "eventIdx": 350,
@@ -1910,7 +1976,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/011325.cfm"
     },
     "StHilaryPoitiers": {
       "eventIdx": 222,
@@ -1940,7 +2007,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/011325.cfm"
     },
     "FirstOrdWeekday2": {
       "eventIdx": 351,
@@ -1969,7 +2037,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/011425.cfm"
     },
     "FirstOrdWeekday3": {
       "eventIdx": 352,
@@ -1998,7 +2067,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/011525.cfm"
     },
     "FirstOrdWeekday4": {
       "eventIdx": 353,
@@ -2027,7 +2097,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/011625.cfm"
     },
     "StAnthonyEgypt": {
       "eventIdx": 153,
@@ -2056,7 +2127,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/011725.cfm"
     },
     "FirstOrdWeekday6": {
       "eventIdx": 354,
@@ -2085,7 +2157,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/011825.cfm"
     },
     "SatMemBVM1": {
       "eventIdx": 502,
@@ -2114,7 +2187,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/011825.cfm"
     },
     "OrdSunday2_vigil": {
       "eventIdx": 558,
@@ -2142,7 +2216,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday2"
+      "isVigilFor": "OrdSunday2",
+      "readingsURL": "http://bible.usccb.org/bible/readings/011825.cfm"
     },
     "OrdSunday2": {
       "eventIdx": 61,
@@ -2174,7 +2249,8 @@
       "hasVesperII": true,
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/011925.cfm"
     },
     "FirstOrdWeekday8": {
       "eventIdx": 355,
@@ -2203,7 +2279,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/012025.cfm"
     },
     "StFabianPope": {
       "eventIdx": 223,
@@ -2235,7 +2312,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/012025.cfm"
     },
     "StSebastian": {
       "eventIdx": 224,
@@ -2264,7 +2342,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/012025.cfm"
     },
     "StAgnes": {
       "eventIdx": 154,
@@ -2296,7 +2375,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/012125.cfm"
     },
     "FirstOrdWeekday10": {
       "eventIdx": 356,
@@ -2325,7 +2405,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/012225.cfm"
     },
     "PrayerUnborn": {
       "eventIdx": 491,
@@ -2354,7 +2435,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/012225.cfm"
     },
     "FirstOrdWeekday11": {
       "eventIdx": 357,
@@ -2383,7 +2465,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/012325.cfm"
     },
     "StVincentDeacon": {
       "eventIdx": 225,
@@ -2412,7 +2495,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/012325.cfm"
     },
     "StFrancisDeSales": {
       "eventIdx": 155,
@@ -2442,7 +2526,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/012425.cfm"
     },
     "ConversionStPaul": {
       "eventIdx": 84,
@@ -2471,7 +2556,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/012525.cfm"
     },
     "OrdSunday3_vigil": {
       "eventIdx": 559,
@@ -2499,7 +2585,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday3"
+      "isVigilFor": "OrdSunday3",
+      "readingsURL": "http://bible.usccb.org/bible/readings/012525.cfm"
     },
     "OrdSunday3": {
       "eventIdx": 62,
@@ -2531,7 +2618,8 @@
       "hasVesperII": true,
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/012625.cfm"
     },
     "FirstOrdWeekday15": {
       "eventIdx": 358,
@@ -2560,7 +2648,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/012725.cfm"
     },
     "StAngelaMerici": {
       "eventIdx": 226,
@@ -2590,7 +2679,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/012725.cfm"
     },
     "StThomasAquinas": {
       "eventIdx": 156,
@@ -2620,7 +2710,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/012825.cfm"
     },
     "FirstOrdWeekday17": {
       "eventIdx": 359,
@@ -2649,7 +2740,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/012925.cfm"
     },
     "FirstOrdWeekday18": {
       "eventIdx": 360,
@@ -2678,7 +2770,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/013025.cfm"
     },
     "StJohnBosco": {
       "eventIdx": 157,
@@ -2708,7 +2801,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/013125.cfm"
     },
     "FirstOrdWeekday20": {
       "eventIdx": 361,
@@ -2737,7 +2831,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/020125.cfm"
     },
     "SatMemBVM2": {
       "eventIdx": 503,
@@ -2766,7 +2861,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/020125.cfm"
     },
     "Presentation_vigil": {
       "eventIdx": 554,
@@ -2796,7 +2892,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "Presentation"
+      "isVigilFor": "Presentation",
+      "readingsURL": "http://bible.usccb.org/bible/readings/020125.cfm"
     },
     "Presentation": {
       "eventIdx": 56,
@@ -2829,7 +2926,8 @@
       "hasVesperI": true,
       "hasVesperII": true,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/020225.cfm"
     },
     "FirstOrdWeekday22": {
       "eventIdx": 362,
@@ -2858,7 +2956,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/020325.cfm"
     },
     "StBlase": {
       "eventIdx": 227,
@@ -2890,7 +2989,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/020325.cfm"
     },
     "StAnsgar": {
       "eventIdx": 228,
@@ -2920,7 +3020,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/020325.cfm"
     },
     "FirstOrdWeekday23": {
       "eventIdx": 363,
@@ -2949,7 +3050,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/020425.cfm"
     },
     "StAgatha": {
       "eventIdx": 158,
@@ -2981,7 +3083,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/020525.cfm"
     },
     "StsPaulMiki": {
       "eventIdx": 159,
@@ -3010,7 +3113,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/020625.cfm"
     },
     "FirstOrdWeekday26": {
       "eventIdx": 364,
@@ -3039,7 +3143,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/020725.cfm"
     },
     "FirstOrdWeekday27": {
       "eventIdx": 365,
@@ -3068,7 +3173,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/020825.cfm"
     },
     "StJeromeEmiliani": {
       "eventIdx": 229,
@@ -3097,7 +3203,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/020825.cfm"
     },
     "StJosephineBakhita": {
       "eventIdx": 299,
@@ -3126,7 +3233,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/020825.cfm"
     },
     "SatMemBVM3": {
       "eventIdx": 504,
@@ -3155,7 +3263,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/020825.cfm"
     },
     "OrdSunday5_vigil": {
       "eventIdx": 560,
@@ -3183,7 +3292,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday5"
+      "isVigilFor": "OrdSunday5",
+      "readingsURL": "http://bible.usccb.org/bible/readings/020825.cfm"
     },
     "OrdSunday5": {
       "eventIdx": 63,
@@ -3215,7 +3325,8 @@
       "hasVesperII": true,
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/020925.cfm"
     },
     "StScholastica": {
       "eventIdx": 160,
@@ -3245,7 +3356,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/021025.cfm"
     },
     "FirstOrdWeekday30": {
       "eventIdx": 366,
@@ -3274,7 +3386,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/021125.cfm"
     },
     "LadyLourdes": {
       "eventIdx": 230,
@@ -3303,7 +3416,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/021125.cfm"
     },
     "FirstOrdWeekday31": {
       "eventIdx": 367,
@@ -3332,7 +3446,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/021225.cfm"
     },
     "FirstOrdWeekday32": {
       "eventIdx": 368,
@@ -3361,7 +3476,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/021325.cfm"
     },
     "StsCyrilMethodius": {
       "eventIdx": 161,
@@ -3390,7 +3506,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/021425.cfm"
     },
     "FirstOrdWeekday34": {
       "eventIdx": 369,
@@ -3419,7 +3536,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/021525.cfm"
     },
     "SatMemBVM4": {
       "eventIdx": 505,
@@ -3448,7 +3566,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/021525.cfm"
     },
     "OrdSunday6_vigil": {
       "eventIdx": 561,
@@ -3476,7 +3595,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday6"
+      "isVigilFor": "OrdSunday6",
+      "readingsURL": "http://bible.usccb.org/bible/readings/021525.cfm"
     },
     "OrdSunday6": {
       "eventIdx": 64,
@@ -3508,7 +3628,8 @@
       "hasVesperII": true,
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/021625.cfm"
     },
     "FirstOrdWeekday36": {
       "eventIdx": 370,
@@ -3537,7 +3658,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/021725.cfm"
     },
     "SevenHolyFounders": {
       "eventIdx": 231,
@@ -3566,7 +3688,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/021725.cfm"
     },
     "FirstOrdWeekday37": {
       "eventIdx": 371,
@@ -3595,7 +3718,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/021825.cfm"
     },
     "FirstOrdWeekday38": {
       "eventIdx": 372,
@@ -3624,7 +3748,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/021925.cfm"
     },
     "FirstOrdWeekday39": {
       "eventIdx": 373,
@@ -3653,7 +3778,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/022025.cfm"
     },
     "FirstOrdWeekday40": {
       "eventIdx": 374,
@@ -3682,7 +3808,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/022125.cfm"
     },
     "StPeterDamian": {
       "eventIdx": 232,
@@ -3712,7 +3839,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/022125.cfm"
     },
     "ChairStPeter": {
       "eventIdx": 85,
@@ -3741,7 +3869,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/022225.cfm"
     },
     "OrdSunday7_vigil": {
       "eventIdx": 562,
@@ -3769,7 +3898,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday7"
+      "isVigilFor": "OrdSunday7",
+      "readingsURL": "http://bible.usccb.org/bible/readings/022225.cfm"
     },
     "OrdSunday7": {
       "eventIdx": 65,
@@ -3801,7 +3931,8 @@
       "hasVesperII": true,
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/022325.cfm"
     },
     "FirstOrdWeekday43": {
       "eventIdx": 375,
@@ -3830,7 +3961,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/022425.cfm"
     },
     "FirstOrdWeekday44": {
       "eventIdx": 376,
@@ -3859,7 +3991,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/022525.cfm"
     },
     "FirstOrdWeekday45": {
       "eventIdx": 377,
@@ -3888,7 +4021,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/022625.cfm"
     },
     "FirstOrdWeekday46": {
       "eventIdx": 378,
@@ -3917,7 +4051,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/022725.cfm"
     },
     "StGregoryNarek": {
       "eventIdx": 317,
@@ -3947,7 +4082,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/022725.cfm"
     },
     "FirstOrdWeekday47": {
       "eventIdx": 379,
@@ -3976,7 +4112,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/022825.cfm"
     },
     "FirstOrdWeekday48": {
       "eventIdx": 380,
@@ -4005,7 +4142,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/030125.cfm"
     },
     "SatMemBVM5": {
       "eventIdx": 506,
@@ -4034,7 +4172,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/030125.cfm"
     },
     "OrdSunday8_vigil": {
       "eventIdx": 563,
@@ -4062,7 +4201,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday8"
+      "isVigilFor": "OrdSunday8",
+      "readingsURL": "http://bible.usccb.org/bible/readings/030125.cfm"
     },
     "OrdSunday8": {
       "eventIdx": 66,
@@ -4094,7 +4234,8 @@
       "hasVesperII": true,
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/030225.cfm"
     },
     "FirstOrdWeekday50": {
       "eventIdx": 381,
@@ -4123,7 +4264,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/030325.cfm"
     },
     "StKatharineDrexel": {
       "eventIdx": 492,
@@ -4152,7 +4294,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/030325.cfm"
     },
     "FirstOrdWeekday51": {
       "eventIdx": 382,
@@ -4181,7 +4324,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/030425.cfm"
     },
     "StCasimir": {
       "eventIdx": 233,
@@ -4210,7 +4354,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/030425.cfm"
     },
     "AshWednesday": {
       "eventIdx": 33,
@@ -4240,7 +4385,8 @@
       "hasVigilMass": false,
       "hasVesperI": false,
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/030525.cfm"
     },
     "LentWeekday1": {
       "eventIdx": 120,
@@ -4267,7 +4413,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/030625.cfm"
     },
     "LentWeekday2": {
       "eventIdx": 121,
@@ -4294,7 +4441,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/030725.cfm"
     },
     "StsPerpetuaFelicity": {
       "eventIdx": 162,
@@ -4323,7 +4471,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/030725.cfm"
     },
     "LentWeekday3": {
       "eventIdx": 122,
@@ -4350,7 +4499,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/030825.cfm"
     },
     "StJohnGod": {
       "eventIdx": 234,
@@ -4380,7 +4530,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/030825.cfm"
     },
     "Lent1_vigil": {
       "eventIdx": 530,
@@ -4408,7 +4559,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "Lent1"
+      "isVigilFor": "Lent1",
+      "readingsURL": "http://bible.usccb.org/bible/readings/030825.cfm"
     },
     "Lent1": {
       "eventIdx": 19,
@@ -4440,7 +4592,8 @@
       "hasVesperII": true,
       "psalterWeek": 1,
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/030925.cfm"
     },
     "LentWeekday5": {
       "eventIdx": 123,
@@ -4467,7 +4620,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/031025.cfm"
     },
     "LentWeekday6": {
       "eventIdx": 124,
@@ -4494,7 +4648,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/031125.cfm"
     },
     "LentWeekday7": {
       "eventIdx": 125,
@@ -4521,7 +4676,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/031225.cfm"
     },
     "LentWeekday8": {
       "eventIdx": 126,
@@ -4548,7 +4704,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/031325.cfm"
     },
     "LentWeekday9": {
       "eventIdx": 127,
@@ -4575,7 +4732,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/031425.cfm"
     },
     "LentWeekday10": {
       "eventIdx": 128,
@@ -4602,7 +4760,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/031525.cfm"
     },
     "Lent2_vigil": {
       "eventIdx": 531,
@@ -4630,7 +4789,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "Lent2"
+      "isVigilFor": "Lent2",
+      "readingsURL": "http://bible.usccb.org/bible/readings/031525.cfm"
     },
     "Lent2": {
       "eventIdx": 20,
@@ -4662,7 +4822,8 @@
       "hasVesperII": true,
       "psalterWeek": 2,
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/031625.cfm"
     },
     "LentWeekday12": {
       "eventIdx": 129,
@@ -4689,7 +4850,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/031725.cfm"
     },
     "StPatrick": {
       "eventIdx": 236,
@@ -4719,7 +4881,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/031725.cfm"
     },
     "LentWeekday13": {
       "eventIdx": 130,
@@ -4746,7 +4909,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/031825.cfm"
     },
     "StCyrilJerusalem": {
       "eventIdx": 238,
@@ -4776,7 +4940,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/031825.cfm"
     },
     "StJoseph_vigil": {
       "eventIdx": 546,
@@ -4806,7 +4971,8 @@
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "StJoseph"
+      "isVigilFor": "StJoseph",
+      "readingsURL": "http://bible.usccb.org/bible/readings/031825.cfm"
     },
     "StJoseph": {
       "eventIdx": 46,
@@ -4839,7 +5005,8 @@
       "hasVesperI": true,
       "hasVesperII": true,
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/031925.cfm"
     },
     "LentWeekday15": {
       "eventIdx": 131,
@@ -4866,7 +5033,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/032025.cfm"
     },
     "LentWeekday16": {
       "eventIdx": 132,
@@ -4893,7 +5061,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/032125.cfm"
     },
     "LentWeekday17": {
       "eventIdx": 133,
@@ -4920,7 +5089,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/032225.cfm"
     },
     "Lent3_vigil": {
       "eventIdx": 532,
@@ -4948,7 +5118,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "Lent3"
+      "isVigilFor": "Lent3",
+      "readingsURL": "http://bible.usccb.org/bible/readings/032225.cfm"
     },
     "Lent3": {
       "eventIdx": 21,
@@ -4980,7 +5151,8 @@
       "hasVesperII": true,
       "psalterWeek": 3,
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/032325.cfm"
     },
     "LentWeekday19": {
       "eventIdx": 134,
@@ -5007,7 +5179,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/032425.cfm"
     },
     "Annunciation_vigil": {
       "eventIdx": 547,
@@ -5037,7 +5210,8 @@
       "dayOfTheWeekLong": "Monday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "Annunciation"
+      "isVigilFor": "Annunciation",
+      "readingsURL": "http://bible.usccb.org/bible/readings/032425.cfm"
     },
     "Annunciation": {
       "eventIdx": 47,
@@ -5070,7 +5244,8 @@
       "hasVesperI": true,
       "hasVesperII": true,
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/032525.cfm"
     },
     "LentWeekday21": {
       "eventIdx": 135,
@@ -5097,7 +5272,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/032625.cfm"
     },
     "LentWeekday22": {
       "eventIdx": 136,
@@ -5124,7 +5300,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/032725.cfm"
     },
     "LentWeekday23": {
       "eventIdx": 137,
@@ -5151,7 +5328,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/032825.cfm"
     },
     "LentWeekday24": {
       "eventIdx": 138,
@@ -5178,7 +5356,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/032925.cfm"
     },
     "Lent4_vigil": {
       "eventIdx": 533,
@@ -5206,7 +5385,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "Lent4"
+      "isVigilFor": "Lent4",
+      "readingsURL": "http://bible.usccb.org/bible/readings/032925.cfm"
     },
     "Lent4": {
       "eventIdx": 22,
@@ -5238,7 +5418,8 @@
       "hasVesperII": true,
       "psalterWeek": 4,
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/033025.cfm"
     },
     "LentWeekday26": {
       "eventIdx": 139,
@@ -5265,7 +5446,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/033125.cfm"
     },
     "LentWeekday27": {
       "eventIdx": 140,
@@ -5292,7 +5474,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/040125.cfm"
     },
     "LentWeekday28": {
       "eventIdx": 141,
@@ -5319,7 +5502,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/040225.cfm"
     },
     "StFrancisPaola": {
       "eventIdx": 240,
@@ -5348,7 +5532,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/040225.cfm"
     },
     "LentWeekday29": {
       "eventIdx": 142,
@@ -5375,7 +5560,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/040325.cfm"
     },
     "LentWeekday30": {
       "eventIdx": 143,
@@ -5402,7 +5588,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/040425.cfm"
     },
     "LentWeekday31": {
       "eventIdx": 144,
@@ -5429,7 +5616,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/040525.cfm"
     },
     "StVincentFerrer": {
       "eventIdx": 244,
@@ -5458,7 +5646,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/040525.cfm"
     },
     "Lent5_vigil": {
       "eventIdx": 534,
@@ -5486,7 +5675,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "Lent5"
+      "isVigilFor": "Lent5",
+      "readingsURL": "http://bible.usccb.org/bible/readings/040525.cfm"
     },
     "Lent5": {
       "eventIdx": 23,
@@ -5518,7 +5708,8 @@
       "hasVesperII": true,
       "psalterWeek": 1,
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/040625.cfm"
     },
     "LentWeekday33": {
       "eventIdx": 145,
@@ -5545,7 +5736,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/040725.cfm"
     },
     "StJohnBaptistDeLaSalle": {
       "eventIdx": 164,
@@ -5575,7 +5767,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/040725.cfm"
     },
     "LentWeekday34": {
       "eventIdx": 146,
@@ -5602,7 +5795,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/040825.cfm"
     },
     "LentWeekday35": {
       "eventIdx": 147,
@@ -5629,7 +5823,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/040925.cfm"
     },
     "LentWeekday36": {
       "eventIdx": 148,
@@ -5656,7 +5851,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/041025.cfm"
     },
     "LentWeekday37": {
       "eventIdx": 149,
@@ -5683,7 +5879,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/041125.cfm"
     },
     "StStanislaus": {
       "eventIdx": 166,
@@ -5715,7 +5912,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/041125.cfm"
     },
     "LentWeekday38": {
       "eventIdx": 150,
@@ -5742,7 +5940,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/041225.cfm"
     },
     "PalmSun_vigil": {
       "eventIdx": 535,
@@ -5770,7 +5969,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "PalmSun"
+      "isVigilFor": "PalmSun",
+      "readingsURL": "http://bible.usccb.org/bible/readings/041225.cfm"
     },
     "PalmSun": {
       "eventIdx": 24,
@@ -5801,7 +6001,8 @@
       "hasVesperI": true,
       "hasVesperII": true,
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/041325.cfm"
     },
     "MonHolyWeek": {
       "eventIdx": 34,
@@ -5828,7 +6029,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/041425.cfm"
     },
     "TueHolyWeek": {
       "eventIdx": 35,
@@ -5855,7 +6057,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/041525.cfm"
     },
     "WedHolyWeek": {
       "eventIdx": 36,
@@ -5882,7 +6085,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/041625.cfm"
     },
     "HolyThurs": {
       "eventIdx": 0,
@@ -5909,7 +6113,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "LENT",
-      "liturgicalSeasonLcl": "Lent"
+      "liturgicalSeasonLcl": "Lent",
+      "readingsURL": "http://bible.usccb.org/bible/readings/041725.cfm"
     },
     "GoodFri": {
       "eventIdx": 1,
@@ -5936,7 +6141,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "EASTER_TRIDUUM",
-      "liturgicalSeasonLcl": "Easter Triduum"
+      "liturgicalSeasonLcl": "Easter Triduum",
+      "readingsURL": "http://bible.usccb.org/bible/readings/041825.cfm"
     },
     "EasterVigil": {
       "eventIdx": 2,
@@ -5963,7 +6169,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "EASTER_TRIDUUM",
-      "liturgicalSeasonLcl": "Easter Triduum"
+      "liturgicalSeasonLcl": "Easter Triduum",
+      "readingsURL": "http://bible.usccb.org/bible/readings/041925.cfm"
     },
     "Easter": {
       "eventIdx": 3,
@@ -5990,7 +6197,8 @@
       "dayOfTheWeekShort": "Sun",
       "dayOfTheWeekLong": "Sunday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/042025.cfm"
     },
     "MonOctaveEaster": {
       "eventIdx": 37,
@@ -6017,7 +6225,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/042125.cfm"
     },
     "TueOctaveEaster": {
       "eventIdx": 38,
@@ -6044,7 +6253,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/042225.cfm"
     },
     "WedOctaveEaster": {
       "eventIdx": 39,
@@ -6071,7 +6281,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/042325.cfm"
     },
     "ThuOctaveEaster": {
       "eventIdx": 40,
@@ -6098,7 +6309,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/042425.cfm"
     },
     "FriOctaveEaster": {
       "eventIdx": 41,
@@ -6125,7 +6337,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/042525.cfm"
     },
     "SatOctaveEaster": {
       "eventIdx": 42,
@@ -6152,7 +6365,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/042625.cfm"
     },
     "Easter2_vigil": {
       "eventIdx": 536,
@@ -6180,7 +6394,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "Easter2"
+      "isVigilFor": "Easter2",
+      "readingsURL": "http://bible.usccb.org/bible/readings/042625.cfm"
     },
     "Easter2": {
       "eventIdx": 25,
@@ -6212,7 +6427,8 @@
       "hasVesperII": true,
       "psalterWeek": 2,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/042725.cfm"
     },
     "EasterWeekday8": {
       "eventIdx": 322,
@@ -6240,7 +6456,8 @@
       "dayOfTheWeekLong": "Monday",
       "psalterWeek": 2,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/042825.cfm"
     },
     "StPeterChanel": {
       "eventIdx": 246,
@@ -6272,7 +6489,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/042825.cfm"
     },
     "StLouisGrignionMontfort": {
       "eventIdx": 300,
@@ -6301,7 +6519,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/042825.cfm"
     },
     "StCatherineSiena": {
       "eventIdx": 168,
@@ -6330,7 +6549,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/042925.cfm"
     },
     "EasterWeekday10": {
       "eventIdx": 323,
@@ -6358,7 +6578,8 @@
       "dayOfTheWeekLong": "Wednesday",
       "psalterWeek": 2,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/043025.cfm"
     },
     "StPiusV": {
       "eventIdx": 247,
@@ -6387,7 +6608,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/043025.cfm"
     },
     "EasterWeekday11": {
       "eventIdx": 324,
@@ -6415,7 +6637,8 @@
       "dayOfTheWeekLong": "Thursday",
       "psalterWeek": 2,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/050125.cfm"
     },
     "StJosephWorker": {
       "eventIdx": 248,
@@ -6444,7 +6667,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/050125.cfm"
     },
     "StAthanasius": {
       "eventIdx": 169,
@@ -6473,7 +6697,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/050225.cfm"
     },
     "StsPhilipJames": {
       "eventIdx": 86,
@@ -6502,7 +6727,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/050325.cfm"
     },
     "Easter3_vigil": {
       "eventIdx": 537,
@@ -6530,7 +6756,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "Easter3"
+      "isVigilFor": "Easter3",
+      "readingsURL": "http://bible.usccb.org/bible/readings/050325.cfm"
     },
     "Easter3": {
       "eventIdx": 26,
@@ -6562,7 +6789,8 @@
       "hasVesperII": true,
       "psalterWeek": 3,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/050425.cfm"
     },
     "EasterWeekday15": {
       "eventIdx": 325,
@@ -6590,7 +6818,8 @@
       "dayOfTheWeekLong": "Monday",
       "psalterWeek": 3,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/050525.cfm"
     },
     "EasterWeekday16": {
       "eventIdx": 326,
@@ -6618,7 +6847,8 @@
       "dayOfTheWeekLong": "Tuesday",
       "psalterWeek": 3,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/050625.cfm"
     },
     "EasterWeekday17": {
       "eventIdx": 327,
@@ -6646,7 +6876,8 @@
       "dayOfTheWeekLong": "Wednesday",
       "psalterWeek": 3,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/050725.cfm"
     },
     "EasterWeekday18": {
       "eventIdx": 328,
@@ -6674,7 +6905,8 @@
       "dayOfTheWeekLong": "Thursday",
       "psalterWeek": 3,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/050825.cfm"
     },
     "EasterWeekday19": {
       "eventIdx": 329,
@@ -6702,7 +6934,8 @@
       "dayOfTheWeekLong": "Friday",
       "psalterWeek": 3,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/050925.cfm"
     },
     "EasterWeekday20": {
       "eventIdx": 330,
@@ -6730,7 +6963,8 @@
       "dayOfTheWeekLong": "Saturday",
       "psalterWeek": 3,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/051025.cfm"
     },
     "StJohnAvila": {
       "eventIdx": 318,
@@ -6760,7 +6994,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/051025.cfm"
     },
     "StDamienVeuster": {
       "eventIdx": 493,
@@ -6789,7 +7024,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/051025.cfm"
     },
     "Easter4_vigil": {
       "eventIdx": 538,
@@ -6817,7 +7053,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "Easter4"
+      "isVigilFor": "Easter4",
+      "readingsURL": "http://bible.usccb.org/bible/readings/051025.cfm"
     },
     "Easter4": {
       "eventIdx": 27,
@@ -6849,7 +7086,8 @@
       "hasVesperII": true,
       "psalterWeek": 4,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/051125.cfm"
     },
     "EasterWeekday22": {
       "eventIdx": 331,
@@ -6877,7 +7115,8 @@
       "dayOfTheWeekLong": "Monday",
       "psalterWeek": 4,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/051225.cfm"
     },
     "StsNereusAchilleus": {
       "eventIdx": 249,
@@ -6906,7 +7145,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/051225.cfm"
     },
     "StPancras": {
       "eventIdx": 250,
@@ -6935,7 +7175,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/051225.cfm"
     },
     "EasterWeekday23": {
       "eventIdx": 332,
@@ -6963,7 +7204,8 @@
       "dayOfTheWeekLong": "Tuesday",
       "psalterWeek": 4,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/051325.cfm"
     },
     "LadyFatima": {
       "eventIdx": 301,
@@ -6992,7 +7234,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/051325.cfm"
     },
     "StMatthiasAp": {
       "eventIdx": 87,
@@ -7021,7 +7264,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/051425.cfm"
     },
     "EasterWeekday25": {
       "eventIdx": 333,
@@ -7049,7 +7293,8 @@
       "dayOfTheWeekLong": "Thursday",
       "psalterWeek": 4,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/051525.cfm"
     },
     "StIsidore": {
       "eventIdx": 494,
@@ -7078,7 +7323,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/051525.cfm"
     },
     "EasterWeekday26": {
       "eventIdx": 334,
@@ -7106,7 +7352,8 @@
       "dayOfTheWeekLong": "Friday",
       "psalterWeek": 4,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/051625.cfm"
     },
     "EasterWeekday27": {
       "eventIdx": 335,
@@ -7134,7 +7381,8 @@
       "dayOfTheWeekLong": "Saturday",
       "psalterWeek": 4,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/051725.cfm"
     },
     "Easter5_vigil": {
       "eventIdx": 539,
@@ -7162,7 +7410,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "Easter5"
+      "isVigilFor": "Easter5",
+      "readingsURL": "http://bible.usccb.org/bible/readings/051725.cfm"
     },
     "Easter5": {
       "eventIdx": 28,
@@ -7194,7 +7443,8 @@
       "hasVesperII": true,
       "psalterWeek": 1,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/051825.cfm"
     },
     "EasterWeekday29": {
       "eventIdx": 336,
@@ -7222,7 +7472,8 @@
       "dayOfTheWeekLong": "Monday",
       "psalterWeek": 1,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/051925.cfm"
     },
     "EasterWeekday30": {
       "eventIdx": 337,
@@ -7250,7 +7501,8 @@
       "dayOfTheWeekLong": "Tuesday",
       "psalterWeek": 1,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/052025.cfm"
     },
     "StBernardineSiena": {
       "eventIdx": 251,
@@ -7280,7 +7532,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/052025.cfm"
     },
     "EasterWeekday31": {
       "eventIdx": 338,
@@ -7308,7 +7561,8 @@
       "dayOfTheWeekLong": "Wednesday",
       "psalterWeek": 1,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/052125.cfm"
     },
     "StChristopherMagallanes": {
       "eventIdx": 302,
@@ -7337,7 +7591,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/052125.cfm"
     },
     "EasterWeekday32": {
       "eventIdx": 339,
@@ -7365,7 +7620,8 @@
       "dayOfTheWeekLong": "Thursday",
       "psalterWeek": 1,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/052225.cfm"
     },
     "StRitaCascia": {
       "eventIdx": 303,
@@ -7394,7 +7650,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/052225.cfm"
     },
     "EasterWeekday33": {
       "eventIdx": 340,
@@ -7422,7 +7679,8 @@
       "dayOfTheWeekLong": "Friday",
       "psalterWeek": 1,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/052325.cfm"
     },
     "EasterWeekday34": {
       "eventIdx": 341,
@@ -7450,7 +7708,8 @@
       "dayOfTheWeekLong": "Saturday",
       "psalterWeek": 1,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/052425.cfm"
     },
     "Easter6_vigil": {
       "eventIdx": 540,
@@ -7478,7 +7737,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "Easter6"
+      "isVigilFor": "Easter6",
+      "readingsURL": "http://bible.usccb.org/bible/readings/052425.cfm"
     },
     "Easter6": {
       "eventIdx": 29,
@@ -7510,7 +7770,8 @@
       "hasVesperII": true,
       "psalterWeek": 2,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/052525.cfm"
     },
     "StPhilipNeri": {
       "eventIdx": 170,
@@ -7539,7 +7800,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/052625.cfm"
     },
     "EasterWeekday37": {
       "eventIdx": 342,
@@ -7567,7 +7829,8 @@
       "dayOfTheWeekLong": "Tuesday",
       "psalterWeek": 2,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/052725.cfm"
     },
     "StAugustineCanterbury": {
       "eventIdx": 252,
@@ -7597,7 +7860,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/052725.cfm"
     },
     "EasterWeekday38": {
       "eventIdx": 343,
@@ -7625,7 +7889,8 @@
       "dayOfTheWeekLong": "Wednesday",
       "psalterWeek": 2,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/052825.cfm"
     },
     "EasterWeekday39": {
       "eventIdx": 344,
@@ -7653,7 +7918,8 @@
       "dayOfTheWeekLong": "Thursday",
       "psalterWeek": 2,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/052925.cfm"
     },
     "StPaulVI": {
       "eventIdx": 316,
@@ -7682,7 +7948,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/052925.cfm"
     },
     "EasterWeekday40": {
       "eventIdx": 345,
@@ -7710,7 +7977,8 @@
       "dayOfTheWeekLong": "Friday",
       "psalterWeek": 2,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/053025.cfm"
     },
     "Visitation": {
       "eventIdx": 88,
@@ -7739,7 +8007,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/053125.cfm"
     },
     "Ascension_vigil": {
       "eventIdx": 524,
@@ -7767,7 +8036,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "Ascension"
+      "isVigilFor": "Ascension",
+      "readingsURL": "http://bible.usccb.org/bible/readings/053125.cfm"
     },
     "Ascension": {
       "eventIdx": 13,
@@ -7798,7 +8068,8 @@
       "hasVesperI": true,
       "hasVesperII": true,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/060125.cfm"
     },
     "EasterWeekday43": {
       "eventIdx": 346,
@@ -7826,7 +8097,8 @@
       "dayOfTheWeekLong": "Monday",
       "psalterWeek": 3,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/060225.cfm"
     },
     "StsMarcellinusPeter": {
       "eventIdx": 253,
@@ -7855,7 +8127,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/060225.cfm"
     },
     "StsCharlesLwanga": {
       "eventIdx": 171,
@@ -7884,7 +8157,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/060325.cfm"
     },
     "EasterWeekday45": {
       "eventIdx": 347,
@@ -7912,7 +8186,8 @@
       "dayOfTheWeekLong": "Wednesday",
       "psalterWeek": 3,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/060425.cfm"
     },
     "StBoniface": {
       "eventIdx": 172,
@@ -7944,7 +8219,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/060525.cfm"
     },
     "EasterWeekday47": {
       "eventIdx": 348,
@@ -7972,7 +8248,8 @@
       "dayOfTheWeekLong": "Friday",
       "psalterWeek": 3,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/060625.cfm"
     },
     "StNorbert": {
       "eventIdx": 254,
@@ -8002,7 +8279,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/060625.cfm"
     },
     "EasterWeekday48": {
       "eventIdx": 349,
@@ -8030,7 +8308,8 @@
       "dayOfTheWeekLong": "Saturday",
       "psalterWeek": 3,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/060725.cfm"
     },
     "Pentecost_vigil": {
       "eventIdx": 525,
@@ -8058,7 +8337,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "Pentecost"
+      "isVigilFor": "Pentecost",
+      "readingsURL": "http://bible.usccb.org/bible/readings/060725.cfm"
     },
     "Pentecost": {
       "eventIdx": 14,
@@ -8089,7 +8369,8 @@
       "hasVesperI": true,
       "hasVesperII": true,
       "liturgicalSeason": "EASTER",
-      "liturgicalSeasonLcl": "Easter"
+      "liturgicalSeasonLcl": "Easter",
+      "readingsURL": "http://bible.usccb.org/bible/readings/060825.cfm"
     },
     "MaryMotherChurch": {
       "eventIdx": 219,
@@ -8118,7 +8399,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/060925.cfm"
     },
     "LastOrdWeekday2": {
       "eventIdx": 383,
@@ -8147,7 +8429,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/061025.cfm"
     },
     "StBarnabasAp": {
       "eventIdx": 173,
@@ -8176,7 +8459,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/061125.cfm"
     },
     "LastOrdWeekday4": {
       "eventIdx": 384,
@@ -8205,7 +8489,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/061225.cfm"
     },
     "StAnthonyPadua": {
       "eventIdx": 174,
@@ -8236,7 +8521,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/061325.cfm"
     },
     "LastOrdWeekday6": {
       "eventIdx": 385,
@@ -8265,7 +8551,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/061425.cfm"
     },
     "SatMemBVM6": {
       "eventIdx": 507,
@@ -8294,7 +8581,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/061425.cfm"
     },
     "Trinity_vigil": {
       "eventIdx": 541,
@@ -8322,7 +8610,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "Trinity"
+      "isVigilFor": "Trinity",
+      "readingsURL": "http://bible.usccb.org/bible/readings/061425.cfm"
     },
     "Trinity": {
       "eventIdx": 30,
@@ -8353,7 +8642,8 @@
       "hasVesperI": true,
       "hasVesperII": true,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/061525.cfm"
     },
     "LastOrdWeekday8": {
       "eventIdx": 386,
@@ -8382,7 +8672,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/061625.cfm"
     },
     "LastOrdWeekday9": {
       "eventIdx": 387,
@@ -8411,7 +8702,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/061725.cfm"
     },
     "LastOrdWeekday10": {
       "eventIdx": 388,
@@ -8440,7 +8732,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/061825.cfm"
     },
     "LastOrdWeekday11": {
       "eventIdx": 389,
@@ -8469,7 +8762,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/061925.cfm"
     },
     "StRomuald": {
       "eventIdx": 255,
@@ -8498,7 +8792,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/061925.cfm"
     },
     "LastOrdWeekday12": {
       "eventIdx": 390,
@@ -8527,7 +8822,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/062025.cfm"
     },
     "StAloysiusGonzaga": {
       "eventIdx": 175,
@@ -8556,7 +8852,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/062125.cfm"
     },
     "CorpusChristi_vigil": {
       "eventIdx": 542,
@@ -8584,7 +8881,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "CorpusChristi"
+      "isVigilFor": "CorpusChristi",
+      "readingsURL": "http://bible.usccb.org/bible/readings/062125.cfm"
     },
     "CorpusChristi": {
       "eventIdx": 31,
@@ -8615,7 +8913,8 @@
       "hasVesperI": true,
       "hasVesperII": true,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/062225.cfm"
     },
     "LastOrdWeekday15": {
       "eventIdx": 391,
@@ -8644,7 +8943,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/062325.cfm"
     },
     "NativityJohnBaptist_vigil": {
       "eventIdx": 548,
@@ -8674,7 +8974,8 @@
       "dayOfTheWeekLong": "Monday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "NativityJohnBaptist"
+      "isVigilFor": "NativityJohnBaptist",
+      "readingsURL": "http://bible.usccb.org/bible/readings/062325.cfm"
     },
     "NativityJohnBaptist": {
       "eventIdx": 48,
@@ -8707,7 +9008,8 @@
       "hasVesperI": true,
       "hasVesperII": true,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/062425.cfm"
     },
     "LastOrdWeekday17": {
       "eventIdx": 392,
@@ -8736,7 +9038,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/062525.cfm"
     },
     "LastOrdWeekday18": {
       "eventIdx": 393,
@@ -8765,7 +9068,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/062625.cfm"
     },
     "SacredHeart_vigil": {
       "eventIdx": 543,
@@ -8793,7 +9097,8 @@
       "dayOfTheWeekLong": "Thursday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "SacredHeart"
+      "isVigilFor": "SacredHeart",
+      "readingsURL": "http://bible.usccb.org/bible/readings/062625.cfm"
     },
     "SacredHeart": {
       "eventIdx": 43,
@@ -8824,7 +9129,8 @@
       "hasVesperI": true,
       "hasVesperII": true,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/062725.cfm"
     },
     "ImmaculateHeart": {
       "eventIdx": 151,
@@ -8851,7 +9157,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/062825.cfm"
     },
     "StIrenaeus": {
       "eventIdx": 177,
@@ -8882,7 +9189,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/062825.cfm"
     },
     "StsPeterPaulAp_vigil": {
       "eventIdx": 549,
@@ -8912,7 +9220,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "StsPeterPaulAp"
+      "isVigilFor": "StsPeterPaulAp",
+      "readingsURL": "http://bible.usccb.org/bible/readings/062825.cfm"
     },
     "StsPeterPaulAp": {
       "eventIdx": 49,
@@ -8945,7 +9254,8 @@
       "hasVesperI": true,
       "hasVesperII": true,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/062925.cfm"
     },
     "LastOrdWeekday22": {
       "eventIdx": 394,
@@ -8974,7 +9284,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/063025.cfm"
     },
     "FirstMartyrsRome": {
       "eventIdx": 256,
@@ -9003,7 +9314,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/063025.cfm"
     },
     "LastOrdWeekday23": {
       "eventIdx": 395,
@@ -9032,7 +9344,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/070125.cfm"
     },
     "JuniperoSerra": {
       "eventIdx": 495,
@@ -9062,7 +9375,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/070125.cfm"
     },
     "LastOrdWeekday24": {
       "eventIdx": 396,
@@ -9091,7 +9405,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/070225.cfm"
     },
     "StThomasAp": {
       "eventIdx": 89,
@@ -9120,7 +9435,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/070325.cfm"
     },
     "LastOrdWeekday26": {
       "eventIdx": 397,
@@ -9149,7 +9465,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/070425.cfm"
     },
     "IndependenceDay": {
       "eventIdx": 496,
@@ -9178,7 +9495,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/070425.cfm"
     },
     "LastOrdWeekday27": {
       "eventIdx": 398,
@@ -9207,7 +9525,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/070525.cfm"
     },
     "StElizabethPortugal": {
       "eventIdx": 257,
@@ -9236,7 +9555,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/070525.cfm"
     },
     "StAnthonyZaccaria": {
       "eventIdx": 258,
@@ -9267,7 +9587,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/070525.cfm"
     },
     "SatMemBVM7": {
       "eventIdx": 508,
@@ -9296,7 +9617,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/070525.cfm"
     },
     "OrdSunday14_vigil": {
       "eventIdx": 580,
@@ -9324,7 +9646,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday14"
+      "isVigilFor": "OrdSunday14",
+      "readingsURL": "http://bible.usccb.org/bible/readings/070525.cfm"
     },
     "OrdSunday14": {
       "eventIdx": 83,
@@ -9356,7 +9679,8 @@
       "hasVesperII": true,
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/070625.cfm"
     },
     "LastOrdWeekday29": {
       "eventIdx": 399,
@@ -9385,7 +9709,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/070725.cfm"
     },
     "LastOrdWeekday30": {
       "eventIdx": 400,
@@ -9414,7 +9739,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/070825.cfm"
     },
     "LastOrdWeekday31": {
       "eventIdx": 401,
@@ -9443,7 +9769,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/070925.cfm"
     },
     "StAugustineZhaoRong": {
       "eventIdx": 304,
@@ -9472,7 +9799,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/070925.cfm"
     },
     "LastOrdWeekday32": {
       "eventIdx": 402,
@@ -9501,7 +9829,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/071025.cfm"
     },
     "StBenedict": {
       "eventIdx": 178,
@@ -9530,7 +9859,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/071125.cfm"
     },
     "LastOrdWeekday34": {
       "eventIdx": 403,
@@ -9559,7 +9889,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/071225.cfm"
     },
     "SatMemBVM8": {
       "eventIdx": 509,
@@ -9588,7 +9919,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/071225.cfm"
     },
     "OrdSunday15_vigil": {
       "eventIdx": 579,
@@ -9616,7 +9948,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday15"
+      "isVigilFor": "OrdSunday15",
+      "readingsURL": "http://bible.usccb.org/bible/readings/071225.cfm"
     },
     "OrdSunday15": {
       "eventIdx": 82,
@@ -9648,7 +9981,8 @@
       "hasVesperII": true,
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/071325.cfm"
     },
     "LastOrdWeekday36": {
       "eventIdx": 404,
@@ -9677,7 +10011,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/071425.cfm"
     },
     "KateriTekakwitha": {
       "eventIdx": 497,
@@ -9706,7 +10041,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/071425.cfm"
     },
     "StBonaventure": {
       "eventIdx": 179,
@@ -9736,7 +10072,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/071525.cfm"
     },
     "LastOrdWeekday38": {
       "eventIdx": 405,
@@ -9765,7 +10102,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/071625.cfm"
     },
     "LadyMountCarmel": {
       "eventIdx": 260,
@@ -9794,7 +10132,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/071625.cfm"
     },
     "LastOrdWeekday39": {
       "eventIdx": 406,
@@ -9823,7 +10162,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/071725.cfm"
     },
     "LastOrdWeekday40": {
       "eventIdx": 407,
@@ -9852,7 +10192,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/071825.cfm"
     },
     "StCamillusDeLellis": {
       "eventIdx": 259,
@@ -9881,7 +10222,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/071825.cfm"
     },
     "LastOrdWeekday41": {
       "eventIdx": 408,
@@ -9910,7 +10252,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/071925.cfm"
     },
     "SatMemBVM9": {
       "eventIdx": 510,
@@ -9939,7 +10282,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/071925.cfm"
     },
     "OrdSunday16_vigil": {
       "eventIdx": 578,
@@ -9967,7 +10311,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday16"
+      "isVigilFor": "OrdSunday16",
+      "readingsURL": "http://bible.usccb.org/bible/readings/071925.cfm"
     },
     "OrdSunday16": {
       "eventIdx": 81,
@@ -9999,7 +10344,8 @@
       "hasVesperII": true,
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/072025.cfm"
     },
     "LastOrdWeekday43": {
       "eventIdx": 409,
@@ -10028,7 +10374,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/072125.cfm"
     },
     "StLawrenceBrindisi": {
       "eventIdx": 261,
@@ -10059,7 +10406,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/072125.cfm"
     },
     "StMaryMagdalene": {
       "eventIdx": 180,
@@ -10088,7 +10436,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/072225.cfm"
     },
     "LastOrdWeekday45": {
       "eventIdx": 410,
@@ -10117,7 +10466,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/072325.cfm"
     },
     "StBridget": {
       "eventIdx": 262,
@@ -10147,7 +10497,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/072325.cfm"
     },
     "LastOrdWeekday46": {
       "eventIdx": 411,
@@ -10176,7 +10527,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/072425.cfm"
     },
     "StSharbelMakhluf": {
       "eventIdx": 305,
@@ -10206,7 +10558,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/072425.cfm"
     },
     "StJamesAp": {
       "eventIdx": 90,
@@ -10235,7 +10588,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/072525.cfm"
     },
     "StsJoachimAnne": {
       "eventIdx": 181,
@@ -10264,7 +10618,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/072625.cfm"
     },
     "OrdSunday17_vigil": {
       "eventIdx": 577,
@@ -10292,7 +10647,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday17"
+      "isVigilFor": "OrdSunday17",
+      "readingsURL": "http://bible.usccb.org/bible/readings/072625.cfm"
     },
     "OrdSunday17": {
       "eventIdx": 80,
@@ -10324,7 +10680,8 @@
       "hasVesperII": true,
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/072725.cfm"
     },
     "LastOrdWeekday50": {
       "eventIdx": 412,
@@ -10353,7 +10710,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/072825.cfm"
     },
     "StMartha": {
       "eventIdx": 182,
@@ -10382,7 +10740,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/072925.cfm"
     },
     "LastOrdWeekday52": {
       "eventIdx": 413,
@@ -10411,7 +10770,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/073025.cfm"
     },
     "StPeterChrysologus": {
       "eventIdx": 263,
@@ -10441,7 +10801,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/073025.cfm"
     },
     "StIgnatiusLoyola": {
       "eventIdx": 183,
@@ -10470,7 +10831,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/073125.cfm"
     },
     "StAlphonsusMariaDeLiguori": {
       "eventIdx": 184,
@@ -10500,7 +10862,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/080125.cfm"
     },
     "LastOrdWeekday55": {
       "eventIdx": 414,
@@ -10529,7 +10892,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/080225.cfm"
     },
     "StEusebius": {
       "eventIdx": 264,
@@ -10558,7 +10922,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/080225.cfm"
     },
     "StPeterJulianEymard": {
       "eventIdx": 306,
@@ -10588,7 +10953,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/080225.cfm"
     },
     "SatMemBVM10": {
       "eventIdx": 511,
@@ -10617,7 +10983,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/080225.cfm"
     },
     "OrdSunday18_vigil": {
       "eventIdx": 576,
@@ -10645,7 +11012,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday18"
+      "isVigilFor": "OrdSunday18",
+      "readingsURL": "http://bible.usccb.org/bible/readings/080225.cfm"
     },
     "OrdSunday18": {
       "eventIdx": 79,
@@ -10677,7 +11045,8 @@
       "hasVesperII": true,
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/080325.cfm"
     },
     "StJeanVianney": {
       "eventIdx": 185,
@@ -10706,7 +11075,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/080425.cfm"
     },
     "LastOrdWeekday58": {
       "eventIdx": 415,
@@ -10735,7 +11105,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/080525.cfm"
     },
     "DedicationStMaryMajor": {
       "eventIdx": 265,
@@ -10764,7 +11135,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/080525.cfm"
     },
     "Transfiguration": {
       "eventIdx": 57,
@@ -10794,7 +11166,8 @@
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalYear": "YEAR C",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/080625.cfm"
     },
     "LastOrdWeekday60": {
       "eventIdx": 416,
@@ -10823,7 +11196,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/080725.cfm"
     },
     "StSixtusIIPope": {
       "eventIdx": 266,
@@ -10852,7 +11226,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/080725.cfm"
     },
     "StCajetan": {
       "eventIdx": 267,
@@ -10882,7 +11257,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/080725.cfm"
     },
     "StDominic": {
       "eventIdx": 186,
@@ -10911,7 +11287,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/080825.cfm"
     },
     "LastOrdWeekday62": {
       "eventIdx": 417,
@@ -10940,7 +11317,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/080925.cfm"
     },
     "StEdithStein": {
       "eventIdx": 307,
@@ -10972,7 +11350,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/080925.cfm"
     },
     "SatMemBVM11": {
       "eventIdx": 512,
@@ -11001,7 +11380,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/080925.cfm"
     },
     "OrdSunday19_vigil": {
       "eventIdx": 575,
@@ -11029,7 +11409,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday19"
+      "isVigilFor": "OrdSunday19",
+      "readingsURL": "http://bible.usccb.org/bible/readings/080925.cfm"
     },
     "OrdSunday19": {
       "eventIdx": 78,
@@ -11061,7 +11442,8 @@
       "hasVesperII": true,
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/081025.cfm"
     },
     "StClare": {
       "eventIdx": 187,
@@ -11091,7 +11473,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/081125.cfm"
     },
     "LastOrdWeekday65": {
       "eventIdx": 418,
@@ -11120,7 +11503,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/081225.cfm"
     },
     "StJaneFrancesDeChantal": {
       "eventIdx": 268,
@@ -11149,7 +11533,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/081225.cfm"
     },
     "LastOrdWeekday66": {
       "eventIdx": 419,
@@ -11178,7 +11563,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/081325.cfm"
     },
     "StsPontianHippolytus": {
       "eventIdx": 269,
@@ -11210,7 +11596,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/081325.cfm"
     },
     "StMaximilianKolbe": {
       "eventIdx": 215,
@@ -11241,7 +11628,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/081425.cfm"
     },
     "Assumption_vigil": {
       "eventIdx": 550,
@@ -11271,7 +11659,8 @@
       "dayOfTheWeekLong": "Thursday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "Assumption"
+      "isVigilFor": "Assumption",
+      "readingsURL": "http://bible.usccb.org/bible/readings/081425.cfm"
     },
     "Assumption": {
       "eventIdx": 50,
@@ -11304,7 +11693,8 @@
       "hasVesperI": true,
       "hasVesperII": true,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/081525.cfm"
     },
     "LastOrdWeekday69": {
       "eventIdx": 420,
@@ -11333,7 +11723,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/081625.cfm"
     },
     "StStephenHungary": {
       "eventIdx": 270,
@@ -11362,7 +11753,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/081625.cfm"
     },
     "SatMemBVM12": {
       "eventIdx": 513,
@@ -11391,7 +11783,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/081625.cfm"
     },
     "OrdSunday20_vigil": {
       "eventIdx": 574,
@@ -11419,7 +11812,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday20"
+      "isVigilFor": "OrdSunday20",
+      "readingsURL": "http://bible.usccb.org/bible/readings/081625.cfm"
     },
     "OrdSunday20": {
       "eventIdx": 77,
@@ -11451,7 +11845,8 @@
       "hasVesperII": true,
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/081725.cfm"
     },
     "LastOrdWeekday71": {
       "eventIdx": 421,
@@ -11480,7 +11875,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/081825.cfm"
     },
     "LastOrdWeekday72": {
       "eventIdx": 422,
@@ -11509,7 +11905,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/081925.cfm"
     },
     "StJohnEudes": {
       "eventIdx": 271,
@@ -11539,7 +11936,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/081925.cfm"
     },
     "StBernardClairvaux": {
       "eventIdx": 188,
@@ -11568,7 +11966,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/082025.cfm"
     },
     "StPiusX": {
       "eventIdx": 189,
@@ -11597,7 +11996,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/082125.cfm"
     },
     "QueenshipMary": {
       "eventIdx": 190,
@@ -11626,7 +12026,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/082225.cfm"
     },
     "LastOrdWeekday76": {
       "eventIdx": 423,
@@ -11655,7 +12056,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/082325.cfm"
     },
     "StRoseLima": {
       "eventIdx": 272,
@@ -11684,7 +12086,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/082325.cfm"
     },
     "SatMemBVM13": {
       "eventIdx": 514,
@@ -11713,7 +12116,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/082325.cfm"
     },
     "OrdSunday21_vigil": {
       "eventIdx": 573,
@@ -11741,7 +12145,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday21"
+      "isVigilFor": "OrdSunday21",
+      "readingsURL": "http://bible.usccb.org/bible/readings/082325.cfm"
     },
     "OrdSunday21": {
       "eventIdx": 76,
@@ -11773,7 +12178,8 @@
       "hasVesperII": true,
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/082425.cfm"
     },
     "LastOrdWeekday78": {
       "eventIdx": 424,
@@ -11802,7 +12208,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/082525.cfm"
     },
     "StLouis": {
       "eventIdx": 273,
@@ -11831,7 +12238,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/082525.cfm"
     },
     "StJosephCalasanz": {
       "eventIdx": 274,
@@ -11861,7 +12269,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/082525.cfm"
     },
     "LastOrdWeekday79": {
       "eventIdx": 425,
@@ -11890,7 +12299,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/082625.cfm"
     },
     "StMonica": {
       "eventIdx": 191,
@@ -11919,7 +12329,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/082725.cfm"
     },
     "StAugustineHippo": {
       "eventIdx": 192,
@@ -11948,7 +12359,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/082825.cfm"
     },
     "BeheadingJohnBaptist": {
       "eventIdx": 193,
@@ -11977,7 +12389,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/082925.cfm"
     },
     "LastOrdWeekday83": {
       "eventIdx": 426,
@@ -12006,7 +12419,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/083025.cfm"
     },
     "SatMemBVM14": {
       "eventIdx": 515,
@@ -12035,7 +12449,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/083025.cfm"
     },
     "OrdSunday22_vigil": {
       "eventIdx": 572,
@@ -12063,7 +12478,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday22"
+      "isVigilFor": "OrdSunday22",
+      "readingsURL": "http://bible.usccb.org/bible/readings/083025.cfm"
     },
     "OrdSunday22": {
       "eventIdx": 75,
@@ -12095,7 +12511,8 @@
       "hasVesperII": true,
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/083125.cfm"
     },
     "LastOrdWeekday85": {
       "eventIdx": 427,
@@ -12124,7 +12541,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/090125.cfm"
     },
     "LastOrdWeekday86": {
       "eventIdx": 428,
@@ -12153,7 +12571,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/090225.cfm"
     },
     "StGregoryGreat": {
       "eventIdx": 194,
@@ -12182,7 +12601,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/090325.cfm"
     },
     "LastOrdWeekday88": {
       "eventIdx": 429,
@@ -12211,7 +12631,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/090425.cfm"
     },
     "LastOrdWeekday89": {
       "eventIdx": 430,
@@ -12240,7 +12661,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/090525.cfm"
     },
     "LastOrdWeekday90": {
       "eventIdx": 431,
@@ -12269,7 +12691,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/090625.cfm"
     },
     "SatMemBVM15": {
       "eventIdx": 516,
@@ -12298,7 +12721,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/090625.cfm"
     },
     "OrdSunday23_vigil": {
       "eventIdx": 571,
@@ -12326,7 +12750,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday23"
+      "isVigilFor": "OrdSunday23",
+      "readingsURL": "http://bible.usccb.org/bible/readings/090625.cfm"
     },
     "OrdSunday23": {
       "eventIdx": 74,
@@ -12358,7 +12783,8 @@
       "hasVesperII": true,
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/090725.cfm"
     },
     "NativityVirginMary": {
       "eventIdx": 91,
@@ -12387,7 +12813,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/090825.cfm"
     },
     "LastOrdWeekday93": {
       "eventIdx": 432,
@@ -12416,7 +12843,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/090925.cfm"
     },
     "StPeterClaver": {
       "eventIdx": 498,
@@ -12446,7 +12874,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/090925.cfm"
     },
     "LastOrdWeekday94": {
       "eventIdx": 433,
@@ -12475,7 +12904,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/091025.cfm"
     },
     "LastOrdWeekday95": {
       "eventIdx": 434,
@@ -12504,7 +12934,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/091125.cfm"
     },
     "LastOrdWeekday96": {
       "eventIdx": 435,
@@ -12533,7 +12964,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/091225.cfm"
     },
     "HolyNameMary": {
       "eventIdx": 309,
@@ -12562,7 +12994,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/091225.cfm"
     },
     "StJohnChrysostom": {
       "eventIdx": 195,
@@ -12591,7 +13024,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/091325.cfm"
     },
     "ExaltationCross_vigil": {
       "eventIdx": 555,
@@ -12621,7 +13055,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "ExaltationCross"
+      "isVigilFor": "ExaltationCross",
+      "readingsURL": "http://bible.usccb.org/bible/readings/091325.cfm"
     },
     "ExaltationCross": {
       "eventIdx": 58,
@@ -12654,7 +13089,8 @@
       "hasVesperI": true,
       "hasVesperII": true,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/091425.cfm"
     },
     "LadySorrows": {
       "eventIdx": 196,
@@ -12683,7 +13119,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/091525.cfm"
     },
     "StsCorneliusCyprian": {
       "eventIdx": 197,
@@ -12715,7 +13152,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/091625.cfm"
     },
     "LastOrdWeekday101": {
       "eventIdx": 436,
@@ -12744,7 +13182,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/091725.cfm"
     },
     "StRobertBellarmine": {
       "eventIdx": 275,
@@ -12774,7 +13213,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/091725.cfm"
     },
     "StHildegardBingen": {
       "eventIdx": 319,
@@ -12804,7 +13244,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/091725.cfm"
     },
     "LastOrdWeekday102": {
       "eventIdx": 437,
@@ -12833,7 +13274,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/091825.cfm"
     },
     "LastOrdWeekday103": {
       "eventIdx": 438,
@@ -12862,7 +13304,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/091925.cfm"
     },
     "StJanuarius": {
       "eventIdx": 276,
@@ -12894,7 +13337,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/091925.cfm"
     },
     "StAndrewKimTaegon": {
       "eventIdx": 216,
@@ -12923,7 +13367,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/092025.cfm"
     },
     "OrdSunday25_vigil": {
       "eventIdx": 570,
@@ -12951,7 +13396,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday25"
+      "isVigilFor": "OrdSunday25",
+      "readingsURL": "http://bible.usccb.org/bible/readings/092025.cfm"
     },
     "OrdSunday25": {
       "eventIdx": 73,
@@ -12983,7 +13429,8 @@
       "hasVesperII": true,
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/092125.cfm"
     },
     "LastOrdWeekday106": {
       "eventIdx": 439,
@@ -13012,7 +13459,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/092225.cfm"
     },
     "StPioPietrelcina": {
       "eventIdx": 218,
@@ -13042,7 +13490,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/092325.cfm"
     },
     "LastOrdWeekday108": {
       "eventIdx": 440,
@@ -13071,7 +13520,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/092425.cfm"
     },
     "LastOrdWeekday109": {
       "eventIdx": 441,
@@ -13100,7 +13550,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/092525.cfm"
     },
     "LastOrdWeekday110": {
       "eventIdx": 442,
@@ -13129,7 +13580,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/092625.cfm"
     },
     "StsCosmasDamian": {
       "eventIdx": 277,
@@ -13158,7 +13610,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/092625.cfm"
     },
     "StVincentDePaul": {
       "eventIdx": 198,
@@ -13187,7 +13640,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/092725.cfm"
     },
     "OrdSunday26_vigil": {
       "eventIdx": 569,
@@ -13215,7 +13669,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday26"
+      "isVigilFor": "OrdSunday26",
+      "readingsURL": "http://bible.usccb.org/bible/readings/092725.cfm"
     },
     "OrdSunday26": {
       "eventIdx": 72,
@@ -13247,7 +13702,8 @@
       "hasVesperII": true,
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/092825.cfm"
     },
     "StsArchangels": {
       "eventIdx": 92,
@@ -13276,7 +13732,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/092925.cfm"
     },
     "StJerome": {
       "eventIdx": 199,
@@ -13305,7 +13762,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/093025.cfm"
     },
     "StThereseChildJesus": {
       "eventIdx": 200,
@@ -13334,7 +13792,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/100125.cfm"
     },
     "GuardianAngels": {
       "eventIdx": 201,
@@ -13363,7 +13822,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/100225.cfm"
     },
     "LastOrdWeekday117": {
       "eventIdx": 443,
@@ -13392,7 +13852,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/100325.cfm"
     },
     "StFrancisAssisi": {
       "eventIdx": 202,
@@ -13421,7 +13882,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/100425.cfm"
     },
     "OrdSunday27_vigil": {
       "eventIdx": 568,
@@ -13449,7 +13911,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday27"
+      "isVigilFor": "OrdSunday27",
+      "readingsURL": "http://bible.usccb.org/bible/readings/100425.cfm"
     },
     "OrdSunday27": {
       "eventIdx": 71,
@@ -13481,7 +13944,8 @@
       "hasVesperII": true,
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/100525.cfm"
     },
     "LastOrdWeekday120": {
       "eventIdx": 444,
@@ -13510,7 +13974,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/100625.cfm"
     },
     "StBruno": {
       "eventIdx": 278,
@@ -13540,7 +14005,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/100625.cfm"
     },
     "MarieDurocher": {
       "eventIdx": 499,
@@ -13569,7 +14035,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/100625.cfm"
     },
     "LadyRosary": {
       "eventIdx": 203,
@@ -13598,7 +14065,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/100725.cfm"
     },
     "LastOrdWeekday122": {
       "eventIdx": 445,
@@ -13627,7 +14095,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/100825.cfm"
     },
     "LastOrdWeekday123": {
       "eventIdx": 446,
@@ -13656,7 +14125,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/100925.cfm"
     },
     "StDenis": {
       "eventIdx": 279,
@@ -13685,7 +14155,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/100925.cfm"
     },
     "StJohnLeonardi": {
       "eventIdx": 280,
@@ -13715,7 +14186,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/100925.cfm"
     },
     "LastOrdWeekday124": {
       "eventIdx": 447,
@@ -13744,7 +14216,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/101025.cfm"
     },
     "LastOrdWeekday125": {
       "eventIdx": 448,
@@ -13773,7 +14246,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/101125.cfm"
     },
     "StJohnXXIII": {
       "eventIdx": 313,
@@ -13802,7 +14276,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/101125.cfm"
     },
     "SatMemBVM16": {
       "eventIdx": 517,
@@ -13831,7 +14306,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/101125.cfm"
     },
     "OrdSunday28_vigil": {
       "eventIdx": 567,
@@ -13859,7 +14335,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday28"
+      "isVigilFor": "OrdSunday28",
+      "readingsURL": "http://bible.usccb.org/bible/readings/101125.cfm"
     },
     "OrdSunday28": {
       "eventIdx": 70,
@@ -13891,7 +14368,8 @@
       "hasVesperII": true,
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/101225.cfm"
     },
     "LastOrdWeekday127": {
       "eventIdx": 449,
@@ -13920,7 +14398,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/101325.cfm"
     },
     "LastOrdWeekday128": {
       "eventIdx": 450,
@@ -13949,7 +14428,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/101425.cfm"
     },
     "StCallistusIPope": {
       "eventIdx": 281,
@@ -13981,7 +14461,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/101425.cfm"
     },
     "StTeresaJesus": {
       "eventIdx": 204,
@@ -14010,7 +14491,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/101525.cfm"
     },
     "LastOrdWeekday130": {
       "eventIdx": 451,
@@ -14039,7 +14521,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/101625.cfm"
     },
     "StHedwig": {
       "eventIdx": 282,
@@ -14069,7 +14552,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/101625.cfm"
     },
     "StMargaretAlacoque": {
       "eventIdx": 283,
@@ -14098,7 +14582,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/101625.cfm"
     },
     "StIgnatiusAntioch": {
       "eventIdx": 205,
@@ -14129,7 +14614,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/101725.cfm"
     },
     "StLukeEvangelist": {
       "eventIdx": 93,
@@ -14158,7 +14644,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/101825.cfm"
     },
     "OrdSunday29_vigil": {
       "eventIdx": 566,
@@ -14186,7 +14673,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday29"
+      "isVigilFor": "OrdSunday29",
+      "readingsURL": "http://bible.usccb.org/bible/readings/101825.cfm"
     },
     "OrdSunday29": {
       "eventIdx": 69,
@@ -14218,7 +14706,8 @@
       "hasVesperII": true,
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/101925.cfm"
     },
     "LastOrdWeekday134": {
       "eventIdx": 452,
@@ -14247,7 +14736,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/102025.cfm"
     },
     "StPaulCross": {
       "eventIdx": 482,
@@ -14276,7 +14766,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/102025.cfm"
     },
     "LastOrdWeekday135": {
       "eventIdx": 453,
@@ -14305,7 +14796,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/102125.cfm"
     },
     "LastOrdWeekday136": {
       "eventIdx": 454,
@@ -14334,7 +14826,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/102225.cfm"
     },
     "StJohnPaulII": {
       "eventIdx": 314,
@@ -14363,7 +14856,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/102225.cfm"
     },
     "LastOrdWeekday137": {
       "eventIdx": 455,
@@ -14392,7 +14886,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/102325.cfm"
     },
     "StJohnCapistrano": {
       "eventIdx": 284,
@@ -14422,7 +14917,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/102325.cfm"
     },
     "LastOrdWeekday138": {
       "eventIdx": 456,
@@ -14451,7 +14947,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/102425.cfm"
     },
     "StAnthonyMaryClaret": {
       "eventIdx": 285,
@@ -14481,7 +14978,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/102425.cfm"
     },
     "LastOrdWeekday139": {
       "eventIdx": 457,
@@ -14510,7 +15008,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/102525.cfm"
     },
     "SatMemBVM17": {
       "eventIdx": 518,
@@ -14539,7 +15038,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/102525.cfm"
     },
     "OrdSunday30_vigil": {
       "eventIdx": 565,
@@ -14567,7 +15067,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday30"
+      "isVigilFor": "OrdSunday30",
+      "readingsURL": "http://bible.usccb.org/bible/readings/102525.cfm"
     },
     "OrdSunday30": {
       "eventIdx": 68,
@@ -14599,7 +15100,8 @@
       "hasVesperII": true,
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/102625.cfm"
     },
     "LastOrdWeekday141": {
       "eventIdx": 458,
@@ -14628,7 +15130,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/102725.cfm"
     },
     "StSimonStJudeAp": {
       "eventIdx": 94,
@@ -14657,7 +15160,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/102825.cfm"
     },
     "LastOrdWeekday143": {
       "eventIdx": 459,
@@ -14686,7 +15190,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/102925.cfm"
     },
     "LastOrdWeekday144": {
       "eventIdx": 460,
@@ -14715,7 +15220,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/103025.cfm"
     },
     "LastOrdWeekday145": {
       "eventIdx": 461,
@@ -14744,7 +15250,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/103125.cfm"
     },
     "AllSaints_vigil": {
       "eventIdx": 551,
@@ -14774,7 +15281,8 @@
       "dayOfTheWeekLong": "Friday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "AllSaints"
+      "isVigilFor": "AllSaints",
+      "readingsURL": "http://bible.usccb.org/bible/readings/103125.cfm"
     },
     "AllSaints": {
       "eventIdx": 51,
@@ -14807,7 +15315,8 @@
       "hasVesperI": true,
       "hasVesperII": true,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/110125.cfm"
     },
     "AllSouls": {
       "eventIdx": 52,
@@ -14839,7 +15348,8 @@
       "hasVigilMass": false,
       "hasVesperI": false,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/110225.cfm"
     },
     "LastOrdWeekday148": {
       "eventIdx": 462,
@@ -14868,7 +15378,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/110325.cfm"
     },
     "StMartinPorres": {
       "eventIdx": 286,
@@ -14897,7 +15408,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/110325.cfm"
     },
     "StCharlesBorromeo": {
       "eventIdx": 206,
@@ -14926,7 +15438,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/110425.cfm"
     },
     "LastOrdWeekday150": {
       "eventIdx": 463,
@@ -14955,7 +15468,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/110525.cfm"
     },
     "LastOrdWeekday151": {
       "eventIdx": 464,
@@ -14984,7 +15498,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/110625.cfm"
     },
     "LastOrdWeekday152": {
       "eventIdx": 465,
@@ -15013,7 +15528,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/110725.cfm"
     },
     "LastOrdWeekday153": {
       "eventIdx": 466,
@@ -15042,7 +15558,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 3,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/110825.cfm"
     },
     "SatMemBVM18": {
       "eventIdx": 519,
@@ -15071,7 +15588,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/110825.cfm"
     },
     "DedicationLateran_vigil": {
       "eventIdx": 556,
@@ -15101,7 +15619,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "DedicationLateran"
+      "isVigilFor": "DedicationLateran",
+      "readingsURL": "http://bible.usccb.org/bible/readings/110825.cfm"
     },
     "DedicationLateran": {
       "eventIdx": 59,
@@ -15134,7 +15653,8 @@
       "hasVesperI": true,
       "hasVesperII": true,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/110925.cfm"
     },
     "StLeoGreat": {
       "eventIdx": 207,
@@ -15163,7 +15683,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/111025.cfm"
     },
     "StMartinTours": {
       "eventIdx": 208,
@@ -15192,7 +15713,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/111125.cfm"
     },
     "StJosaphat": {
       "eventIdx": 209,
@@ -15223,7 +15745,8 @@
       "dayOfTheWeekShort": "Wed",
       "dayOfTheWeekLong": "Wednesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/111225.cfm"
     },
     "LastOrdWeekday158": {
       "eventIdx": 467,
@@ -15252,7 +15775,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/111325.cfm"
     },
     "StFrancesXCabrini": {
       "eventIdx": 500,
@@ -15282,7 +15806,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/111325.cfm"
     },
     "LastOrdWeekday159": {
       "eventIdx": 468,
@@ -15311,7 +15836,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/111425.cfm"
     },
     "LastOrdWeekday160": {
       "eventIdx": 469,
@@ -15340,7 +15866,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 4,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/111525.cfm"
     },
     "StAlbertGreat": {
       "eventIdx": 287,
@@ -15370,7 +15897,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/111525.cfm"
     },
     "SatMemBVM19": {
       "eventIdx": 520,
@@ -15399,7 +15927,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/111525.cfm"
     },
     "OrdSunday33_vigil": {
       "eventIdx": 564,
@@ -15427,7 +15956,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "OrdSunday33"
+      "isVigilFor": "OrdSunday33",
+      "readingsURL": "http://bible.usccb.org/bible/readings/111525.cfm"
     },
     "OrdSunday33": {
       "eventIdx": 67,
@@ -15459,7 +15989,8 @@
       "hasVesperII": true,
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/111625.cfm"
     },
     "StElizabethHungary": {
       "eventIdx": 210,
@@ -15488,7 +16019,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/111725.cfm"
     },
     "LastOrdWeekday163": {
       "eventIdx": 470,
@@ -15517,7 +16049,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/111825.cfm"
     },
     "DedicationStsPeterPaul": {
       "eventIdx": 288,
@@ -15546,7 +16079,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/111825.cfm"
     },
     "StRoseDuchesne": {
       "eventIdx": 501,
@@ -15575,7 +16109,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/111825.cfm"
     },
     "LastOrdWeekday164": {
       "eventIdx": 471,
@@ -15604,7 +16139,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/111925.cfm"
     },
     "LastOrdWeekday165": {
       "eventIdx": 472,
@@ -15633,7 +16169,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 1,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/112025.cfm"
     },
     "PresentationMary": {
       "eventIdx": 211,
@@ -15662,7 +16199,8 @@
       "dayOfTheWeekShort": "Fri",
       "dayOfTheWeekLong": "Friday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/112125.cfm"
     },
     "StCecilia": {
       "eventIdx": 212,
@@ -15694,7 +16232,8 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/112225.cfm"
     },
     "ChristKing_vigil": {
       "eventIdx": 544,
@@ -15722,7 +16261,8 @@
       "dayOfTheWeekLong": "Saturday",
       "liturgicalYear": "YEAR C",
       "isVigilMass": true,
-      "isVigilFor": "ChristKing"
+      "isVigilFor": "ChristKing",
+      "readingsURL": "http://bible.usccb.org/bible/readings/112225.cfm"
     },
     "ChristKing": {
       "eventIdx": 44,
@@ -15753,7 +16293,8 @@
       "hasVesperI": true,
       "hasVesperII": true,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/112325.cfm"
     },
     "StAndrewDungLac": {
       "eventIdx": 217,
@@ -15782,7 +16323,8 @@
       "dayOfTheWeekShort": "Mon",
       "dayOfTheWeekLong": "Monday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/112425.cfm"
     },
     "LastOrdWeekday170": {
       "eventIdx": 473,
@@ -15811,7 +16353,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/112525.cfm"
     },
     "StCatherineAlexandria": {
       "eventIdx": 310,
@@ -15843,7 +16386,8 @@
       "dayOfTheWeekShort": "Tue",
       "dayOfTheWeekLong": "Tuesday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/112525.cfm"
     },
     "LastOrdWeekday171": {
       "eventIdx": 474,
@@ -15872,7 +16416,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/112625.cfm"
     },
     "LastOrdWeekday172": {
       "eventIdx": 475,
@@ -15901,7 +16446,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/112725.cfm"
     },
     "ThanksgivingDay": {
       "eventIdx": 486,
@@ -15928,7 +16474,8 @@
       "dayOfTheWeekShort": "Thu",
       "dayOfTheWeekLong": "Thursday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/112725.cfm"
     },
     "LastOrdWeekday173": {
       "eventIdx": 476,
@@ -15957,7 +16504,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/112825.cfm"
     },
     "LastOrdWeekday174": {
       "eventIdx": 477,
@@ -15986,7 +16534,8 @@
       "liturgicalYear": "YEAR I",
       "psalterWeek": 2,
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/112925.cfm"
     },
     "SatMemBVM20": {
       "eventIdx": 521,
@@ -16015,8 +16564,75 @@
       "dayOfTheWeekShort": "Sat",
       "dayOfTheWeekLong": "Saturday",
       "liturgicalSeason": "ORDINARY_TIME",
-      "liturgicalSeasonLcl": "Ordinary Time"
+      "liturgicalSeasonLcl": "Ordinary Time",
+      "readingsURL": "http://bible.usccb.org/bible/readings/112925.cfm"
     }
   },
-  "messages": []
+  "messages": [],
+  "litYears": {
+    "2025": {
+      "startDate": "2024-12-01T08:00:00.000Z",
+      "endDate": "2025-11-29T08:00:00.000Z",
+      "secular": 2025
+    },
+    "2026": {
+      "startDate": "2025-11-30T08:00:00.000Z",
+      "endDate": "2026-11-28T08:00:00.000Z",
+      "secular": 2026
+    }
+  },
+  "litSeasons": {
+    "2025": [
+      {
+        "name": "Christmas",
+        "color": "white",
+        "startDate": "2024-12-25T08:00:00.000Z",
+        "endDate": "2025-01-12T08:00:00.000Z"
+      },
+      {
+        "name": "Ordinary Time",
+        "color": "green",
+        "startDate": "2025-01-13T08:00:00.000Z",
+        "endDate": "2025-03-04T07:00:00.000Z"
+      },
+      {
+        "name": "Lent",
+        "color": "violet",
+        "startDate": "2025-03-05T07:00:00.000Z",
+        "endDate": "2025-04-16T07:00:00.000Z"
+      },
+      {
+        "name": "Paschal Triduum",
+        "color": "red",
+        "startDate": "2025-04-17T07:00:00.000Z",
+        "endDate": "2025-04-19T07:00:00.000Z"
+      },
+      {
+        "name": "Easter",
+        "color": "white",
+        "startDate": "2025-04-20T07:00:00.000Z",
+        "endDate": "2025-06-08T07:00:00.000Z"
+      },
+      {
+        "name": "Ordinary Time",
+        "color": "green",
+        "startDate": "2025-06-09T07:00:00.000Z",
+        "endDate": "2025-11-29T08:00:00.000Z"
+      }
+    ],
+    "2026": [
+      {
+        "name": "Advent",
+        "color": "violet",
+        "startDate": "2025-11-30T08:00:00.000Z",
+        "endDate": "2025-12-24T08:00:00.000Z"
+      },
+      {
+        "name": "Christmas",
+        "color": "white",
+        "startDate": "2025-12-25T08:00:00.000Z",
+        "endDate": "2026-01-11T08:00:00.000Z"
+      }
+    ]
+  }
 }
