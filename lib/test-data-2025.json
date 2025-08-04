@@ -28,38 +28,33 @@
   "Fri Jan 03 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-01-04T00:00:00.000Z",
-      "name": "Christmas Weekday",
-      "rank": 13
-    },
-    {
-      "date": "2025-01-04T00:00:00.000Z",
-      "name": "[ US ] Saint Elizabeth Ann Seton, Religious",
+      "name": "Saint Elizabeth Ann Seton, Religious",
       "rank": 11
     }
   ],
   "Sat Jan 04 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-01-05T00:00:00.000Z",
-      "name": "Epiphany",
+      "name": "The Epiphany of the Lord",
       "rank": 2
     }
   ],
   "Sun Jan 05 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-01-06T00:00:00.000Z",
-      "name": "Christmas Weekday",
+      "name": "Monday after Epiphany Sunday",
       "rank": 13
     },
     {
       "date": "2025-01-06T00:00:00.000Z",
-      "name": "[ US ] Saint André Bessette, Religious",
+      "name": "Saint André Bessette, Religious",
       "rank": 12
     }
   ],
   "Mon Jan 06 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-01-07T00:00:00.000Z",
-      "name": "Christmas Weekday",
+      "name": "Tuesday after Epiphany Sunday",
       "rank": 13
     },
     {
@@ -71,35 +66,35 @@
   "Tue Jan 07 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-01-08T00:00:00.000Z",
-      "name": "Christmas Weekday",
+      "name": "Wednesday after Epiphany Sunday",
       "rank": 13
     }
   ],
   "Wed Jan 08 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-01-09T00:00:00.000Z",
-      "name": "Christmas Weekday",
+      "name": "Thursday after Epiphany Sunday",
       "rank": 13
     }
   ],
   "Thu Jan 09 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-01-10T00:00:00.000Z",
-      "name": "Christmas Weekday",
+      "name": "Friday after Epiphany Sunday",
       "rank": 13
     }
   ],
   "Fri Jan 10 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-01-11T00:00:00.000Z",
-      "name": "Christmas Weekday",
+      "name": "Saturday after Epiphany Sunday",
       "rank": 13
     }
   ],
   "Sat Jan 11 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-01-12T00:00:00.000Z",
-      "name": "Baptism of the Lord",
+      "name": "The Baptism of the Lord",
       "rank": 5
     }
   ],
@@ -189,17 +184,7 @@
   "Tue Jan 21 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-01-22T00:00:00.000Z",
-      "name": "Wednesday of the 2nd Week of Ordinary Time",
-      "rank": 13
-    },
-    {
-      "date": "2025-01-22T00:00:00.000Z",
-      "name": "Saint Vincent, Deacon and Martyr",
-      "rank": 12
-    },
-    {
-      "date": "2025-01-22T00:00:00.000Z",
-      "name": "[ US ] Day of Prayer for the Legal Protection of Unborn Children",
+      "name": "Day of Prayer for the Legal Protection of Unborn Children",
       "rank": 11
     }
   ],
@@ -288,11 +273,6 @@
       "date": "2025-02-02T00:00:00.000Z",
       "name": "Presentation of the Lord",
       "rank": 5
-    },
-    {
-      "date": "2025-02-02T00:00:00.000Z",
-      "name": "4th Sunday of Ordinary Time",
-      "rank": 6
     }
   ],
   "Sun Feb 02 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
@@ -554,7 +534,7 @@
     },
     {
       "date": "2025-03-03T00:00:00.000Z",
-      "name": "[ US ] Saint Katharine Drexel, Virgin",
+      "name": "Saint Katharine Drexel, Virgin",
       "rank": 12
     }
   ],
@@ -585,11 +565,6 @@
     }
   ],
   "Thu Mar 06 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
-    {
-      "date": "2025-03-07T00:00:00.000Z",
-      "name": "Friday after Ash Wednesday",
-      "rank": 13
-    },
     {
       "date": "2025-03-07T00:00:00.000Z",
       "name": "Saints Perpetua and Felicity, Martyrs",
@@ -1105,7 +1080,7 @@
     },
     {
       "date": "2025-05-10T00:00:00.000Z",
-      "name": "[ US ] Saint Damien de Veuster, Priest",
+      "name": "Saint Damien de Veuster, Priest",
       "rank": 12
     }
   ],
@@ -1160,7 +1135,7 @@
     },
     {
       "date": "2025-05-15T00:00:00.000Z",
-      "name": "[ US ] Saint Isidore",
+      "name": "Saint Isidore",
       "rank": 12
     }
   ],
@@ -1549,7 +1524,7 @@
     },
     {
       "date": "2025-07-01T00:00:00.000Z",
-      "name": "[ US ] Blessed Junípero Serra, Priest",
+      "name": "Blessed Junípero Serra, Priest",
       "rank": 12
     }
   ],
@@ -1570,17 +1545,7 @@
   "Thu Jul 03 2025 17:00:00 GMT-0700 (Pacific Daylight Time)": [
     {
       "date": "2025-07-04T00:00:00.000Z",
-      "name": "Friday of the 13th Week of Ordinary Time",
-      "rank": 13
-    },
-    {
-      "date": "2025-07-04T00:00:00.000Z",
-      "name": "Saint Elizabeth of Portugal",
-      "rank": 12
-    },
-    {
-      "date": "2025-07-04T00:00:00.000Z",
-      "name": "[ US ] Independence Day",
+      "name": "Independence Day",
       "rank": 11
     }
   ],
@@ -1670,17 +1635,7 @@
   "Sun Jul 13 2025 17:00:00 GMT-0700 (Pacific Daylight Time)": [
     {
       "date": "2025-07-14T00:00:00.000Z",
-      "name": "Monday of the 15th Week of Ordinary Time",
-      "rank": 13
-    },
-    {
-      "date": "2025-07-14T00:00:00.000Z",
-      "name": "Saint Camillus de Lellis, Priest",
-      "rank": 12
-    },
-    {
-      "date": "2025-07-14T00:00:00.000Z",
-      "name": "[ US ] Blessed Kateri Tekakwitha, Virgin",
+      "name": "Blessed Kateri Tekakwitha, Virgin",
       "rank": 11
     }
   ],
@@ -2204,12 +2159,7 @@
   "Mon Sep 08 2025 17:00:00 GMT-0700 (Pacific Daylight Time)": [
     {
       "date": "2025-09-09T00:00:00.000Z",
-      "name": "Tuesday of the 23rd Week of Ordinary Time",
-      "rank": 13
-    },
-    {
-      "date": "2025-09-09T00:00:00.000Z",
-      "name": "[ US ] Saint Peter Claver, Priest",
+      "name": "Saint Peter Claver, Priest",
       "rank": 11
     }
   ],
@@ -2251,11 +2201,6 @@
       "date": "2025-09-14T00:00:00.000Z",
       "name": "Exaltation of the Holy Cross",
       "rank": 5
-    },
-    {
-      "date": "2025-09-14T00:00:00.000Z",
-      "name": "24th Sunday of Ordinary Time",
-      "rank": 6
     }
   ],
   "Sun Sep 14 2025 17:00:00 GMT-0700 (Pacific Daylight Time)": [
@@ -2438,7 +2383,7 @@
     },
     {
       "date": "2025-10-06T00:00:00.000Z",
-      "name": "[ US ] Blessed Marie Rose Durocher, Virgin",
+      "name": "Blessed Marie Rose Durocher, Virgin",
       "rank": 12
     }
   ],
@@ -2748,11 +2693,6 @@
       "date": "2025-11-09T00:00:00.000Z",
       "name": "The Dedication of the Lateran Basilica",
       "rank": 5
-    },
-    {
-      "date": "2025-11-09T00:00:00.000Z",
-      "name": "32nd Sunday of Ordinary Time",
-      "rank": 6
     }
   ],
   "Sun Nov 09 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
@@ -2779,12 +2719,7 @@
   "Wed Nov 12 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-11-13T00:00:00.000Z",
-      "name": "Thursday of the 32nd Week of Ordinary Time",
-      "rank": 13
-    },
-    {
-      "date": "2025-11-13T00:00:00.000Z",
-      "name": "[ US ] Saint Frances Xavier Cabrini, Virgin",
+      "name": "Saint Frances Xavier Cabrini, Virgin",
       "rank": 11
     }
   ],
@@ -2839,7 +2774,7 @@
     },
     {
       "date": "2025-11-18T00:00:00.000Z",
-      "name": "[ US ] Saint Rose Philippine Duchesne, Virgin",
+      "name": "Saint Rose Philippine Duchesne, Virgin",
       "rank": 12
     }
   ],
@@ -2907,12 +2842,7 @@
   "Wed Nov 26 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-11-27T00:00:00.000Z",
-      "name": "Thursday of the 34th Week of Ordinary Time",
-      "rank": 13
-    },
-    {
-      "date": "2025-11-27T00:00:00.000Z",
-      "name": "[ USA ] Thanksgiving",
+      "name": "Thanksgiving",
       "rank": 11
     }
   ],
@@ -3047,12 +2977,7 @@
   "Thu Dec 11 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-12-12T00:00:00.000Z",
-      "name": "Friday of the 2nd Week of Advent",
-      "rank": 13
-    },
-    {
-      "date": "2025-12-12T00:00:00.000Z",
-      "name": "[ USA ] Our Lady of Guadalupe",
+      "name": "Our Lady of Guadalupe",
       "rank": 8
     }
   ],
