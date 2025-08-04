@@ -1482,7 +1482,7 @@
     },
     {
       "date": "2025-06-30T00:00:00.000Z",
-      "name": "The 1st Martyrs of the Holy Roman Church",
+      "name": "the First Martyrs of the Holy Roman Church",
       "rank": 12
     }
   ],
@@ -1515,8 +1515,18 @@
   "Thu Jul 03 2025 17:00:00 GMT-0700 (Pacific Daylight Time)": [
     {
       "date": "2025-07-04T00:00:00.000Z",
+      "name": "Friday of the 13th Week of Ordinary Time",
+      "rank": 13
+    },
+    {
+      "date": "2025-07-04T00:00:00.000Z",
+      "name": "Saint Elizabeth of Portugal",
+      "rank": 12
+    },
+    {
+      "date": "2025-07-04T00:00:00.000Z",
       "name": "Independence Day",
-      "rank": 11
+      "rank": 12
     }
   ],
   "Fri Jul 04 2025 17:00:00 GMT-0700 (Pacific Daylight Time)": [
@@ -1605,8 +1615,8 @@
   "Sun Jul 13 2025 17:00:00 GMT-0700 (Pacific Daylight Time)": [
     {
       "date": "2025-07-14T00:00:00.000Z",
-      "name": "Blessed Kateri Tekakwitha, Virgin",
-      "rank": 11
+      "name": "Saint Kateri Tekakwitha, Virgin",
+      "rank": 10
     }
   ],
   "Mon Jul 14 2025 17:00:00 GMT-0700 (Pacific Daylight Time)": [
@@ -1700,7 +1710,7 @@
     },
     {
       "date": "2025-07-24T00:00:00.000Z",
-      "name": "Saint Sharbel Makhluf, Hermit",
+      "name": "Saint Sharbel Makhlūf, Priest",
       "rank": 12
     }
   ],
@@ -1985,7 +1995,7 @@
     },
     {
       "date": "2025-08-23T00:00:00.000Z",
-      "name": "Saint Rose of Lima, virgin",
+      "name": "Saint Rose of Lima, Virgin",
       "rank": 12
     },
     {
@@ -2042,7 +2052,7 @@
   "Thu Aug 28 2025 17:00:00 GMT-0700 (Pacific Daylight Time)": [
     {
       "date": "2025-08-29T00:00:00.000Z",
-      "name": "The Beheading of Saint John the Baptist, Martyr",
+      "name": "The Passion of Saint John the Baptist",
       "rank": 10
     }
   ],
@@ -2169,7 +2179,7 @@
   "Sat Sep 13 2025 17:00:00 GMT-0700 (Pacific Daylight Time)": [
     {
       "date": "2025-09-14T00:00:00.000Z",
-      "name": "Exaltation of the Holy Cross",
+      "name": "The Exaltation of the Holy Cross",
       "rank": 5
     }
   ],
@@ -2226,7 +2236,7 @@
   "Fri Sep 19 2025 17:00:00 GMT-0700 (Pacific Daylight Time)": [
     {
       "date": "2025-09-20T00:00:00.000Z",
-      "name": "Saint Andrew Kim Tae-gŏn, Priest, and Paul Chŏng Ha-sang, and Companions, Martyrs",
+      "name": "Saints Andrew Kim Tae-gŏn, Priest, Paul Chŏng Ha-sang, and Companions, Martyrs",
       "rank": 10
     }
   ],
@@ -2294,7 +2304,7 @@
   "Sun Sep 28 2025 17:00:00 GMT-0700 (Pacific Daylight Time)": [
     {
       "date": "2025-09-29T00:00:00.000Z",
-      "name": "Saints Michael, Gabriel and Raphael, Archangels",
+      "name": "Saints Michael, Gabriel, and Raphael, Archangels",
       "rank": 7
     }
   ],
@@ -2602,7 +2612,7 @@
   "Sat Nov 01 2025 17:00:00 GMT-0700 (Pacific Daylight Time)": [
     {
       "date": "2025-11-02T00:00:00.000Z",
-      "name": "The Commemoration of all the Faithful Departed (All Souls' Day)",
+      "name": "The Commemoration of All the Faithful Departed",
       "rank": 3
     }
   ],
@@ -2765,7 +2775,7 @@
   "Thu Nov 20 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-11-21T00:00:00.000Z",
-      "name": "The The Presentation of the Blessed Virgin Mary",
+      "name": "The Presentation of the Blessed Virgin Mary",
       "rank": 10
     }
   ],
@@ -2779,7 +2789,7 @@
   "Sat Nov 22 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-11-23T00:00:00.000Z",
-      "name": "Christ the King",
+      "name": "Our Lord Jesus Christ, King of the Universe",
       "rank": 3
     }
   ],
@@ -2812,8 +2822,13 @@
   "Wed Nov 26 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-11-27T00:00:00.000Z",
-      "name": "Thanksgiving",
-      "rank": 11
+      "name": "Thursday of the 34th Week of Ordinary Time",
+      "rank": 13
+    },
+    {
+      "date": "2025-11-27T00:00:00.000Z",
+      "name": "Thanksgiving Day",
+      "rank": 12
     }
   ],
   "Thu Nov 27 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
@@ -2904,8 +2919,8 @@
   "Sun Dec 07 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-12-08T00:00:00.000Z",
-      "name": "The Immaculate Conception of the Blessed Virgin Mary, Patronal feastday of the United States of America",
-      "rank": 3
+      "name": "The Immaculate Conception of the Blessed Virgin Mary",
+      "rank": 4
     }
   ],
   "Mon Dec 08 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
@@ -2928,7 +2943,7 @@
     },
     {
       "date": "2025-12-10T00:00:00.000Z",
-      "name": "Blessed Virgin Mary of Loreto",
+      "name": "Our Lady of Loreto",
       "rank": 12
     }
   ],
@@ -2954,14 +2969,14 @@
   "Fri Dec 12 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-12-13T00:00:00.000Z",
-      "name": "Saint Lucy of Syracuse, Virgin and Martyr",
+      "name": "Saint Lucy, Virgin and Martyr",
       "rank": 10
     }
   ],
   "Sat Dec 13 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-12-14T00:00:00.000Z",
-      "name": "3rd Sunday of Advent (Gaudete)",
+      "name": "3rd Sunday of Advent",
       "rank": 2
     }
   ],
@@ -2983,28 +2998,28 @@
     {
       "date": "2025-12-17T00:00:00.000Z",
       "name": "Wednesday of the 3rd Week of Advent",
-      "rank": 13
+      "rank": 9
     }
   ],
   "Wed Dec 17 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-12-18T00:00:00.000Z",
       "name": "Thursday of the 3rd Week of Advent",
-      "rank": 13
+      "rank": 9
     }
   ],
   "Thu Dec 18 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-12-19T00:00:00.000Z",
       "name": "Friday of the 3rd Week of Advent",
-      "rank": 13
+      "rank": 9
     }
   ],
   "Fri Dec 19 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-12-20T00:00:00.000Z",
       "name": "Saturday of the 3rd Week of Advent",
-      "rank": 13
+      "rank": 9
     }
   ],
   "Sat Dec 20 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
@@ -3018,39 +3033,34 @@
     {
       "date": "2025-12-22T00:00:00.000Z",
       "name": "Monday of the 4th Week of Advent",
-      "rank": 13
+      "rank": 9
     }
   ],
   "Mon Dec 22 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-12-23T00:00:00.000Z",
       "name": "Tuesday of the 4th Week of Advent",
-      "rank": 13
-    },
-    {
-      "date": "2025-12-23T00:00:00.000Z",
-      "name": "Saint John of Kanty, Priest",
-      "rank": 12
+      "rank": 9
     }
   ],
   "Tue Dec 23 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-12-24T00:00:00.000Z",
       "name": "Wednesday of the 4th Week of Advent",
-      "rank": 13
+      "rank": 9
     }
   ],
   "Wed Dec 24 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-12-25T00:00:00.000Z",
-      "name": "Christmas",
+      "name": "The Nativity of the Lord",
       "rank": 2
     }
   ],
   "Thu Dec 25 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-12-26T00:00:00.000Z",
-      "name": "Saint Stephen, The 1st Martyr",
+      "name": "Saint Stephen, the First Martyr",
       "rank": 7
     }
   ],
@@ -3064,39 +3074,29 @@
   "Sat Dec 27 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-12-28T00:00:00.000Z",
-      "name": "Holy Family of Jesus, Mary and Joseph",
+      "name": "The Holy Family of Jesus, Mary, and Joseph",
       "rank": 5
     }
   ],
   "Sun Dec 28 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-12-29T00:00:00.000Z",
-      "name": "5th Day of the Octave of Christmas",
-      "rank": 13
-    },
-    {
-      "date": "2025-12-29T00:00:00.000Z",
-      "name": "Saint Thomas Becket, Bishop and Martyr",
-      "rank": 12
+      "name": "5th Day within the Octave of Christmas",
+      "rank": 9
     }
   ],
   "Mon Dec 29 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-12-30T00:00:00.000Z",
-      "name": "6th Day of the Octave of Christmas",
-      "rank": 13
+      "name": "6th Day within the Octave of Christmas",
+      "rank": 9
     }
   ],
   "Tue Dec 30 2025 16:00:00 GMT-0800 (Pacific Standard Time)": [
     {
       "date": "2025-12-31T00:00:00.000Z",
-      "name": "7th Day of the Octave of Christmas",
-      "rank": 13
-    },
-    {
-      "date": "2025-12-31T00:00:00.000Z",
-      "name": "Saint Sylvester I, Pope",
-      "rank": 12
+      "name": "7th Day within the Octave of Christmas",
+      "rank": 9
     }
   ]
 }
