@@ -1,6 +1,6 @@
 # Litcal
 
-This script [lib/main.js]() to compute the liturgical celebrations of the day
+This script [lib/main.js](./lib/main.js) to compute the liturgical celebrations of the day
 is self-contained with 0 dependencies, so it may be simply loaded in a <script> tag.
 It was written with the Archdiocese of San Francisco in mind but is
 suitable for any diocese with the same rules (eg. Epiphany and Ascension on Sunday). 
